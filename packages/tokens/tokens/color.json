@@ -1,0 +1,106 @@
+{
+  "color": {
+    "primitive": {
+      "black": {
+        "$value": "#0F0E0C",
+        "$type": "color",
+        "$description": "Warm near-black base"
+      },
+      "white": {
+        "$value": "#F7F5F0",
+        "$type": "color",
+        "$description": "Warm off-white surface"
+      },
+      "vermillion-500": {
+        "$value": "#E8340A",
+        "$type": "color",
+        "$description": "DAVE accent — primary brand colour"
+      },
+      "vermillion-50": {
+        "$value": "#FFF0EC",
+        "$type": "color",
+        "$description": "Accent tint for backgrounds"
+      },
+      "vermillion-700": {
+        "$value": "#B52608",
+        "$type": "color",
+        "$description": "Accent — pressed/active state"
+      },
+      "neutral-100": {
+        "$value": "#F0EEE9",
+        "$type": "color"
+      },
+      "neutral-200": {
+        "$value": "#E2DED7",
+        "$type": "color"
+      },
+      "neutral-300": {
+        "$value": "#C8C3BA",
+        "$type": "color"
+      },
+      "neutral-400": {
+        "$value": "#9E9890",
+        "$type": "color"
+      },
+      "neutral-500": {
+        "$value": "#706A62",
+        "$type": "color"
+      },
+      "neutral-600": {
+        "$value": "#4A4640",
+        "$type": "color"
+      },
+      "neutral-700": {
+        "$value": "#2E2B27",
+        "$type": "color"
+      }
+    },
+    "semantic": {
+      "background": {
+        "$value": "{color.primitive.white}",
+        "$type": "color",
+        "$description": "Page background"
+      },
+      "surface": {
+        "$value": "{color.primitive.neutral-100}",
+        "$type": "color",
+        "$description": "Card / elevated surface"
+      },
+      "border": {
+        "$value": "{color.primitive.neutral-200}",
+        "$type": "color",
+        "$description": "Default border"
+      },
+      "text-primary": {
+        "$value": "{color.primitive.black}",
+        "$type": "color",
+        "$description": "Primary text"
+      },
+      "text-secondary": {
+        "$value": "{color.primitive.neutral-500}",
+        "$type": "color",
+        "$description": "Secondary / muted text"
+      },
+      "text-disabled": {
+        "$value": "{color.primitive.neutral-300}",
+        "$type": "color",
+        "$description": "Disabled text"
+      },
+      "accent": {
+        "$value": "{color.primitive.vermillion-500}",
+        "$type": "color",
+        "$description": "Primary brand accent"
+      },
+      "accent-subtle": {
+        "$value": "{color.primitive.vermillion-50}",
+        "$type": "color",
+        "$description": "Accent background tint"
+      },
+      "accent-hover": {
+        "$value": "{color.primitive.vermillion-700}",
+        "$type": "color",
+        "$description": "Accent hover/active state"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@dave/tokens",
+  "version": "0.0.1",
+  "description": "DAVE design tokens — platform-agnostic DTCG source of truth",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "style-dictionary build",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.0"
+  }
+}
