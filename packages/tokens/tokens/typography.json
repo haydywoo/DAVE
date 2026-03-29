@@ -2,14 +2,14 @@
   "font": {
     "family": {
       "display": {
-        "$value": "'Syne', sans-serif",
+        "$value": "'Bricolage Grotesque', sans-serif",
         "$type": "fontFamily",
-        "$description": "Display and heading typeface — geometric, distinctive"
+        "$description": "Display and heading typeface — geometric grotesque, distinctive at large sizes"
       },
       "body": {
-        "$value": "'Instrument Sans', sans-serif",
+        "$value": "'Cabinet Grotesk', sans-serif",
         "$type": "fontFamily",
-        "$description": "UI and body typeface — clean, interface-optimised"
+        "$description": "UI and body typeface — warm geometric grotesque, clean and purposeful"
       },
       "mono": {
         "$value": "'JetBrains Mono', monospace",
