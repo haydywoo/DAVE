@@ -1,106 +1,89 @@
 {
   "color": {
     "primitive": {
-      "black": {
-        "$value": "#0F0E0C",
-        "$type": "color",
-        "$description": "Warm near-black base"
-      },
-      "white": {
-        "$value": "#F7F5F0",
-        "$type": "color",
-        "$description": "Warm off-white surface"
-      },
-      "vermillion-500": {
-        "$value": "#E8340A",
-        "$type": "color",
-        "$description": "DAVE accent — primary brand colour"
-      },
-      "vermillion-50": {
-        "$value": "#FFF0EC",
-        "$type": "color",
-        "$description": "Accent tint for backgrounds"
-      },
-      "vermillion-700": {
-        "$value": "#B52608",
-        "$type": "color",
-        "$description": "Accent — pressed/active state"
-      },
-      "neutral-100": {
-        "$value": "#F0EEE9",
-        "$type": "color"
-      },
-      "neutral-200": {
-        "$value": "#E2DED7",
-        "$type": "color"
-      },
-      "neutral-300": {
-        "$value": "#C8C3BA",
-        "$type": "color"
-      },
-      "neutral-400": {
-        "$value": "#9E9890",
-        "$type": "color"
-      },
-      "neutral-500": {
-        "$value": "#706A62",
-        "$type": "color"
-      },
-      "neutral-600": {
-        "$value": "#4A4640",
-        "$type": "color"
-      },
-      "neutral-700": {
-        "$value": "#2E2B27",
-        "$type": "color"
-      }
+
+      "neutral-1":  { "$value": "#F7F5F0", "$type": "color", "$description": "Warm off-white — page background" },
+      "neutral-2":  { "$value": "#F0EEE9", "$type": "color", "$description": "Subtle tint — card / surface" },
+      "neutral-3":  { "$value": "#E8E5DF", "$type": "color", "$description": "Hovered surface" },
+      "neutral-4":  { "$value": "#E2DED7", "$type": "color", "$description": "Default border" },
+      "neutral-5":  { "$value": "#D6D1CA", "$type": "color", "$description": "Subtle border / divider" },
+      "neutral-6":  { "$value": "#C8C3BA", "$type": "color", "$description": "Strong border" },
+      "neutral-7":  { "$value": "#B0AAA1", "$type": "color", "$description": "Placeholder indicator" },
+      "neutral-8":  { "$value": "#9E9890", "$type": "color", "$description": "Muted element — do not use for text" },
+      "neutral-9":  { "$value": "#706A62", "$type": "color", "$description": "Secondary text — 4.9:1 on neutral-1" },
+      "neutral-10": { "$value": "#4A4640", "$type": "color", "$description": "Subdued text" },
+      "neutral-11": { "$value": "#2E2B27", "$type": "color", "$description": "High contrast text" },
+      "neutral-12": { "$value": "#0F0E0C", "$type": "color", "$description": "Near-black — primary text" },
+
+      "accent-1":  { "$value": "#F5F5FE", "$type": "color", "$description": "Accent app background" },
+      "accent-2":  { "$value": "#EAEAFB", "$type": "color", "$description": "Accent subtle background — badges, chips" },
+      "accent-3":  { "$value": "#D9D8F7", "$type": "color", "$description": "Accent UI element background" },
+      "accent-4":  { "$value": "#C5C4F2", "$type": "color", "$description": "Hovered UI element background" },
+      "accent-5":  { "$value": "#AEADEA", "$type": "color", "$description": "Active / selected element background" },
+      "accent-6":  { "$value": "#9290E1", "$type": "color", "$description": "Subtle border and separator" },
+      "accent-7":  { "$value": "#7977D6", "$type": "color", "$description": "UI border and focus rings — 3.55:1 on bg" },
+      "accent-8":  { "$value": "#5755C5", "$type": "color", "$description": "Hovered border" },
+      "accent-9":  { "$value": "#2D24AE", "$type": "color", "$description": "Solid background — button, badge — 9.76:1 on bg" },
+      "accent-10": { "$value": "#231B9A", "$type": "color", "$description": "Hovered solid background — 11.37:1 on bg" },
+      "accent-11": { "$value": "#3B33BB", "$type": "color", "$description": "Low-contrast text on tinted bg — 8.11:1 on bg" },
+      "accent-12": { "$value": "#14107A", "$type": "color", "$description": "High-contrast text — 13.92:1 on bg" },
+
+      "green-1":  { "$value": "#F0FDF4", "$type": "color" },
+      "green-2":  { "$value": "#DCFCE7", "$type": "color" },
+      "green-3":  { "$value": "#BBF7D0", "$type": "color" },
+      "green-9":  { "$value": "#16A34A", "$type": "color", "$description": "Success solid" },
+      "green-10": { "$value": "#15803D", "$type": "color", "$description": "Success hover" },
+      "green-11": { "$value": "#166534", "$type": "color", "$description": "Success text on light bg — 7.3:1 on white" },
+
+      "amber-1":  { "$value": "#FFFBEB", "$type": "color" },
+      "amber-2":  { "$value": "#FEF3C7", "$type": "color" },
+      "amber-3":  { "$value": "#FDE68A", "$type": "color" },
+      "amber-9":  { "$value": "#D97706", "$type": "color", "$description": "Warning solid" },
+      "amber-10": { "$value": "#B45309", "$type": "color", "$description": "Warning hover" },
+      "amber-11": { "$value": "#92400E", "$type": "color", "$description": "Warning text on light bg — 8.9:1 on white" },
+
+      "red-1":  { "$value": "#FFF5F5", "$type": "color" },
+      "red-2":  { "$value": "#FEE2E2", "$type": "color" },
+      "red-3":  { "$value": "#FECACA", "$type": "color" },
+      "red-9":  { "$value": "#DC2626", "$type": "color", "$description": "Error solid" },
+      "red-10": { "$value": "#B91C1C", "$type": "color", "$description": "Error hover" },
+      "red-11": { "$value": "#991B1B", "$type": "color", "$description": "Error text on light bg — 9.2:1 on white" }
+
     },
     "semantic": {
-      "background": {
-        "$value": "{color.primitive.white}",
-        "$type": "color",
-        "$description": "Page background"
-      },
-      "surface": {
-        "$value": "{color.primitive.neutral-100}",
-        "$type": "color",
-        "$description": "Card / elevated surface"
-      },
-      "border": {
-        "$value": "{color.primitive.neutral-200}",
-        "$type": "color",
-        "$description": "Default border"
-      },
-      "text-primary": {
-        "$value": "{color.primitive.black}",
-        "$type": "color",
-        "$description": "Primary text"
-      },
-      "text-secondary": {
-        "$value": "{color.primitive.neutral-500}",
-        "$type": "color",
-        "$description": "Secondary / muted text"
-      },
-      "text-disabled": {
-        "$value": "{color.primitive.neutral-300}",
-        "$type": "color",
-        "$description": "Disabled text"
-      },
-      "accent": {
-        "$value": "{color.primitive.vermillion-500}",
-        "$type": "color",
-        "$description": "Primary brand accent"
-      },
-      "accent-subtle": {
-        "$value": "{color.primitive.vermillion-50}",
-        "$type": "color",
-        "$description": "Accent background tint"
-      },
-      "accent-hover": {
-        "$value": "{color.primitive.vermillion-700}",
-        "$type": "color",
-        "$description": "Accent hover/active state"
-      }
+
+      "background":       { "$value": "{color.primitive.neutral-1}",  "$type": "color", "$description": "Page background" },
+      "surface":          { "$value": "{color.primitive.neutral-2}",  "$type": "color", "$description": "Card / elevated surface" },
+      "surface-hovered":  { "$value": "{color.primitive.neutral-3}",  "$type": "color", "$description": "Hovered surface" },
+      "border":           { "$value": "{color.primitive.neutral-4}",  "$type": "color", "$description": "Default border" },
+      "border-strong":    { "$value": "{color.primitive.neutral-6}",  "$type": "color", "$description": "Focused / strong border" },
+
+      "text-primary":     { "$value": "{color.primitive.neutral-12}", "$type": "color", "$description": "Primary text" },
+      "text-secondary":   { "$value": "{color.primitive.neutral-9}",  "$type": "color", "$description": "Secondary text — 4.9:1 on background" },
+      "text-placeholder": { "$value": "{color.primitive.neutral-9}",  "$type": "color", "$description": "Input placeholder — 4.9:1 on white" },
+      "text-disabled":    { "$value": "{color.primitive.neutral-6}",  "$type": "color", "$description": "Disabled text — intentionally low contrast" },
+
+      "accent-bg":          { "$value": "{color.primitive.accent-2}",  "$type": "color", "$description": "Accent tinted background" },
+      "accent-border":      { "$value": "{color.primitive.accent-7}",  "$type": "color", "$description": "Accent border / focus ring" },
+      "accent-solid":       { "$value": "{color.primitive.accent-9}",  "$type": "color", "$description": "Solid accent — button background" },
+      "accent-solid-hover": { "$value": "{color.primitive.accent-10}", "$type": "color", "$description": "Solid accent hover" },
+      "accent-text":        { "$value": "{color.primitive.accent-11}", "$type": "color", "$description": "Accent text on tinted bg" },
+
+      "success-bg":     { "$value": "{color.primitive.green-1}",  "$type": "color" },
+      "success-border": { "$value": "{color.primitive.green-3}",  "$type": "color" },
+      "success-solid":  { "$value": "{color.primitive.green-9}",  "$type": "color" },
+      "success-text":   { "$value": "{color.primitive.green-11}", "$type": "color" },
+
+      "warning-bg":     { "$value": "{color.primitive.amber-1}",  "$type": "color" },
+      "warning-border": { "$value": "{color.primitive.amber-3}",  "$type": "color" },
+      "warning-solid":  { "$value": "{color.primitive.amber-9}",  "$type": "color" },
+      "warning-text":   { "$value": "{color.primitive.amber-11}", "$type": "color" },
+
+      "error-bg":     { "$value": "{color.primitive.red-1}",  "$type": "color" },
+      "error-border": { "$value": "{color.primitive.red-3}",  "$type": "color" },
+      "error-solid":  { "$value": "{color.primitive.red-9}",  "$type": "color" },
+      "error-text":   { "$value": "{color.primitive.red-11}", "$type": "color" }
+
     }
   }
 }
