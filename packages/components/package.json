@@ -13,6 +13,7 @@
     "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@dave/tokens": "workspace:*"
+    "@dave/tokens": "workspace:*",
+    "@radix-ui/react-alert-dialog": "^1.1.15"
   }
 }

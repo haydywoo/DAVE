@@ -10,7 +10,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 }
 
 const base =
-  'w-full rounded-[3px] border bg-white font-[family-name:var(--font-body)] transition-colors placeholder:text-[#9E9890] focus:outline-none focus:ring-2 focus:ring-[#E8340A] focus:ring-offset-0 focus:border-[#E8340A] disabled:cursor-not-allowed disabled:bg-[#F0EEE9] disabled:text-[#C8C3BA] disabled:border-[#E2DED7]';
+  'w-full rounded-[3px] border bg-white font-[family-name:var(--font-body)] transition-colors placeholder:text-fg-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border';
 
 const sizes: Record<InputSize, string> = {
   sm: 'h-7 px-2.5 text-xs',
@@ -32,7 +32,7 @@ export function Input({
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
-        <label htmlFor={inputId} className="text-sm font-semibold text-[#0F0E0C]">
+        <label htmlFor={inputId} className="text-sm font-semibold text-foreground">
           {label}
         </label>
       )}
@@ -42,14 +42,14 @@ export function Input({
           base,
           sizes[size],
           error
-            ? 'border-[#E8340A] bg-[#FFF0EC] focus:ring-[#E8340A]'
-            : 'border-[#E2DED7]',
+            ? 'border-error bg-error-subtle focus:ring-error focus:border-error'
+            : 'border-border',
           className,
         ].filter(Boolean).join(' ')}
         {...props}
       />
       {hint && (
-        <p className={`text-xs ${error ? 'text-[#B52608]' : 'text-[#9E9890]'}`}>
+        <p className={`text-xs ${error ? 'text-error-foreground' : 'text-fg-secondary'}`}>
           {hint}
         </p>
       )}

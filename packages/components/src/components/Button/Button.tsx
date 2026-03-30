@@ -16,13 +16,13 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8340A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F5F0] disabled:pointer-events-none disabled:opacity-40';
+  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40';
 
 const variants: Record<ButtonVariant, string> = {
-  primary:   'bg-[#E8340A] text-[#F7F5F0] hover:bg-[#B52608]',
-  secondary: 'bg-[#F7F5F0] text-[#0F0E0C] border border-[#E2DED7] hover:border-[#C8C3BA]',
-  ghost:     'bg-transparent text-[#0F0E0C] hover:bg-[#F0EEE9]',
-  inverse:   'bg-[#0F0E0C] text-[#F7F5F0] hover:bg-[#2E2B27]',
+  primary:   'bg-accent text-background hover:bg-accent-hover',
+  secondary: 'bg-background text-foreground border border-border hover:border-border-strong',
+  ghost:     'bg-transparent text-foreground hover:bg-surface',
+  inverse:   'bg-inverse text-background hover:bg-inverse-hover',
 };
 
 const sizes: Record<ButtonSize, string> = {

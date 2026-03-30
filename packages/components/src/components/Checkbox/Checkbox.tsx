@@ -26,11 +26,11 @@ export function Checkbox({ label, indeterminate, className, id, ...props }: Chec
         ref={ref}
         id={inputId}
         type="checkbox"
-        className="h-4 w-4 rounded-[3px] border border-[#C8C3BA] bg-white text-[#E8340A] transition-colors checked:bg-[#E8340A] checked:border-[#E8340A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8340A] focus-visible:ring-offset-2 disabled:cursor-not-allowed accent-[#E8340A]"
+        className="h-4 w-4 rounded-[3px] border border-border-strong bg-white text-accent transition-colors checked:bg-accent checked:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed accent-[var(--color-accent)]"
         {...props}
       />
       {label && (
-        <span className="text-sm text-[#0F0E0C] select-none">{label}</span>
+        <span className="text-sm text-foreground select-none">{label}</span>
       )}
     </label>
   );

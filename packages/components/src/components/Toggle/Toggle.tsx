@@ -38,22 +38,24 @@ export function Toggle({ checked, defaultChecked, disabled, onChange, label, id 
           onChange={handleChange}
           className="sr-only peer"
         />
+        {/* Track — peer-focus-visible mirrors keyboard focus onto the visual element */}
         <div
           className={[
             'w-9 h-5 rounded-full transition-colors duration-150',
-            on ? 'bg-[#E8340A]' : 'bg-[#C8C3BA]',
-            disabled ? 'opacity-60' : '',
+            'peer-focus-visible:ring-2 peer-focus-visible:ring-accent peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-background',
+            on ? 'bg-accent' : 'bg-border-strong',
           ].filter(Boolean).join(' ')}
         />
+        {/* Knob */}
         <div
           className={[
-            'absolute top-[3px] w-3.5 h-3.5 rounded-full bg-white shadow-sm transition-transform duration-150',
+            'absolute top-[3px] w-3.5 h-3.5 rounded-full bg-card shadow-sm transition-transform duration-150',
             on ? 'translate-x-[19px]' : 'translate-x-[3px]',
           ].join(' ')}
         />
       </div>
       {label && (
-        <span className="text-sm text-[#0F0E0C]">{label}</span>
+        <span className="text-sm text-foreground">{label}</span>
       )}
     </label>
   );
