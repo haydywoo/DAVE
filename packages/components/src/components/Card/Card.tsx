@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { cn } from '../../lib/cn';
 
 // ─── Root ────────────────────────────────────────────────────────────────────
 
@@ -10,11 +11,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 export function Card({ noPadding = false, className, children, ...props }: CardProps) {
   return (
     <div
-      className={[
-        'rounded-[3px] border border-border bg-card',
-        noPadding ? '' : 'p-6',
-        className,
-      ].filter(Boolean).join(' ')}
+      className={cn('rounded-[3px] border border-border bg-card', !noPadding && 'p-6', className)}
       {...props}
     >
       {children}
@@ -29,7 +26,7 @@ export interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 export function CardHeader({ className, children, ...props }: CardHeaderProps) {
   return (
     <div
-      className={['mb-4 flex flex-col gap-1', className].filter(Boolean).join(' ')}
+      className={cn('mb-4 flex flex-col gap-1', className)}
       {...props}
     >
       {children}
@@ -46,7 +43,7 @@ export interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement>
 export function CardTitle({ as: Tag = 'h3', className, children, ...props }: CardTitleProps) {
   return (
     <Tag
-      className={['text-base font-semibold text-foreground', className].filter(Boolean).join(' ')}
+      className={cn('text-base font-semibold text-foreground', className)}
       {...props}
     >
       {children}
@@ -61,7 +58,7 @@ export interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraph
 export function CardDescription({ className, children, ...props }: CardDescriptionProps) {
   return (
     <p
-      className={['text-sm text-fg-secondary', className].filter(Boolean).join(' ')}
+      className={cn('text-sm text-fg-secondary', className)}
       {...props}
     >
       {children}
@@ -88,11 +85,38 @@ export interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 export function CardFooter({ className, children, ...props }: CardFooterProps) {
   return (
     <div
-      className={['mt-6 flex items-center gap-3', className].filter(Boolean).join(' ')}
+      className={cn('mt-6 flex items-center gap-3', className)}
       {...props}
     >
       {children}
     </div>
+  );
+}
+
+// ─── Image ───────────────────────────────────────────────────────────────────
+
+export interface CardImageProps {
+  src: string;
+  alt?: string;
+  /** Which edge the image sits flush against — controls rounding and layout hints */
+  position?: 'top' | 'bottom' | 'left' | 'right';
+  className?: string;
+}
+
+const imageStyles: Record<string, string> = {
+  top:    'w-full aspect-video object-cover rounded-t-[2px]',
+  bottom: 'w-full aspect-video object-cover rounded-b-[2px]',
+  left:   'w-36 shrink-0 self-stretch object-cover rounded-l-[2px]',
+  right:  'w-36 shrink-0 self-stretch object-cover rounded-r-[2px]',
+};
+
+export function CardImage({ src, alt = '', position = 'top', className }: CardImageProps) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={cn(imageStyles[position], className)}
+    />
   );
 }
 
@@ -102,7 +126,7 @@ export function CardFooter({ className, children, ...props }: CardFooterProps) {
 export function CardDivider({ className }: { className?: string }) {
   return (
     <hr
-      className={['-mx-6 my-6 border-t border-border', className].filter(Boolean).join(' ')}
+      className={cn('-mx-6 my-6 border-t border-border', className)}
       aria-hidden="true"
     />
   );

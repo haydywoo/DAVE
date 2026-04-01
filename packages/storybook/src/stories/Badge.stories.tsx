@@ -12,7 +12,7 @@ const meta: Meta<typeof Badge> = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md'],
+      options: ['sm', 'md', 'lg'],
     },
     children: { control: 'text' },
   },
@@ -42,6 +42,7 @@ export const Sizes: Story = {
     <div className="flex items-center gap-2">
       <Badge size="sm">Small</Badge>
       <Badge size="md">Medium</Badge>
+      <Badge size="lg">Large</Badge>
     </div>
   ),
 };
@@ -50,15 +51,15 @@ export const InContext: Story = {
   render: () => (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-semibold text-[#0F0E0C]">Pull request merged</span>
+        <span className="text-sm font-semibold text-foreground">Pull request merged</span>
         <Badge variant="success">Merged</Badge>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-sm font-semibold text-[#0F0E0C]">Build failed</span>
+        <span className="text-sm font-semibold text-foreground">Build failed</span>
         <Badge variant="error">Failed</Badge>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-sm font-semibold text-[#0F0E0C]">Review pending</span>
+        <span className="text-sm font-semibold text-foreground">Review pending</span>
         <Badge variant="warning">Pending</Badge>
       </div>
     </div>

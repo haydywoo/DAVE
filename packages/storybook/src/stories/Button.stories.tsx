@@ -20,12 +20,12 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'ghost', 'inverse'],
+      options: ['primary', 'secondary', 'ghost', 'soft', 'link', 'inverse'],
       description: 'Visual style',
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg'],
+      options: ['sm', 'md', 'lg', 'xl'],
       description: 'Height and padding scale',
     },
     isLoading: {
@@ -56,12 +56,22 @@ export const Inverse: Story = {
   args: { variant: 'inverse', children: 'Button' },
 };
 
+export const Soft: Story = {
+  args: { variant: 'soft', children: 'Button' },
+};
+
+export const Link: Story = {
+  args: { variant: 'link', children: 'Read the docs' },
+};
+
 export const AllVariants: Story = {
   render: () => (
     <div className="flex items-center gap-3">
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="ghost">Ghost</Button>
+      <Button variant="soft">Soft</Button>
+      <Button variant="link">Link</Button>
       <Button variant="inverse">Inverse</Button>
     </div>
   ),
@@ -73,6 +83,7 @@ export const Sizes: Story = {
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>
       <Button size="lg">Large</Button>
+      <Button size="xl">X-Large</Button>
     </div>
   ),
 };
@@ -102,6 +113,7 @@ export const Disabled: Story = {
       <Button variant="primary" disabled>Primary</Button>
       <Button variant="secondary" disabled>Secondary</Button>
       <Button variant="ghost" disabled>Ghost</Button>
+      <Button variant="soft" disabled>Soft</Button>
     </div>
   ),
 };

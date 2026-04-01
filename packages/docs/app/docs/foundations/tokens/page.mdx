@@ -1,0 +1,79 @@
+export const metadata = { title: 'Tokens' }
+
+# Tokens
+
+DAVE uses a two-layer token system. Primitive variables define the raw values. Semantic aliases give those values meaning. Components always reference semantics — never primitives directly.
+
+```
+Primitive          Semantic alias           Tailwind class
+──────────────────────────────────────────────────────────
+--accent-9         --color-accent           bg-accent
+--accent-10        --color-accent-hover     bg-accent-hover
+--accent-2         --color-accent-subtle    bg-accent-subtle
+--neutral-12       --color-foreground       text-foreground
+```
+
+## Installation
+
+Import the token CSS file before your Tailwind directives:
+
+```css
+/* globals.css */
+@import '@dave/tokens/dist/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+## Theming
+
+To swap the accent colour, override the `--accent-*` primitive scale in your own CSS. All semantic aliases update automatically.
+
+```css
+/* globals.css */
+:root {
+  --accent-1:  #f0f4ff;
+  --accent-2:  #e0e9ff;
+  --accent-3:  #c7d7ff;
+  --accent-4:  #a5bcff;
+  --accent-5:  #809fff;
+  --accent-6:  #6080ff;
+  --accent-7:  #4060f0;
+  --accent-8:  #2040d8;
+  --accent-9:  #2563eb;   /* solid — buttons, focus rings */
+  --accent-10: #1d4ed8;   /* hover */
+  --accent-11: #1e40af;   /* text on tinted backgrounds */
+  --accent-12: #1e3a8a;   /* high-contrast text */
+}
+```
+
+You only need to override the accent scale. Neutral, success, warning, and error are intentionally fixed — they carry meaning that should remain consistent.
+
+## Primitive reference
+
+All primitives are set in `tokens.css`. You can inspect or copy them from there. The naming convention is `--{scale}-{step}`, where step follows the 12-point Radix scale.
+
+| Variable | Example |
+|----------|---------|
+| `--neutral-1` → `--neutral-12` | Warm grays, background through foreground |
+| `--accent-1` → `--accent-12` | Indigo, default brand colour |
+| `--green-1`, `--green-2`, `--green-3`, `--green-9`, `--green-10`, `--green-11` | Success |
+| `--amber-1`, `--amber-2`, `--amber-3`, `--amber-9`, `--amber-10`, `--amber-11` | Warning |
+| `--red-1`, `--red-2`, `--red-3`, `--red-9`, `--red-10`, `--red-11` | Error |
+
+## Semantic aliases
+
+Semantic tokens are the contract between the token system and components. Override these directly if you need a specific semantic to point to a different value without changing the whole primitive scale.
+
+```css
+:root {
+  /* Example: use a custom card background */
+  --color-card: #f8f8f8;
+
+  /* Example: stronger border by default */
+  --color-border: var(--neutral-5);
+}
+```
+
+See the [Colours](/docs/foundations/colours) page for the full semantic token reference.

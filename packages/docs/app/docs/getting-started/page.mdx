@@ -1,0 +1,79 @@
+export const metadata = { title: 'Getting Started' }
+
+# Getting started
+
+DAVE is a React component library built on Tailwind CSS. Components are unstyled at the Tailwind level — they use semantic CSS custom properties, so you can theme the entire system by overriding a handful of variables.
+
+## Installation
+
+Install the component library and token package:
+
+```bash
+pnpm add @dave/react @dave/tokens
+```
+
+## Set up tokens
+
+Import the token CSS file into your global stylesheet. This sets up all the CSS custom properties that components depend on:
+
+```css
+/* globals.css */
+@import '@dave/tokens/dist/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+## Configure Tailwind
+
+Add the semantic colour map to your `tailwind.config.js` so component class names resolve correctly:
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{ts,tsx}',
+    './node_modules/@dave/react/dist/**/*.js',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background:     'var(--color-background)',
+        surface:        'var(--color-surface)',
+        card:           'var(--color-card)',
+        foreground:     'var(--color-foreground)',
+        'fg-secondary': 'var(--color-foreground-secondary)',
+        border: {
+          DEFAULT: 'var(--color-border)',
+          strong:  'var(--color-border-strong)',
+        },
+        accent: {
+          DEFAULT:    'var(--color-accent)',
+          hover:      'var(--color-accent-hover)',
+          subtle:     'var(--color-accent-subtle)',
+          border:     'var(--color-accent-border)',
+          foreground: 'var(--color-accent-foreground)',
+        },
+        // ... success, warning, error
+      },
+    },
+  },
+};
+```
+
+## Use a component
+
+```tsx
+import { Button } from '@dave/react';
+
+export default function Page() {
+  return <Button variant="primary">Get started</Button>;
+}
+```
+
+## What's next
+
+- [Theming](/docs/getting-started/theming) — swap the accent colour for your brand
+- [Colours](/docs/foundations/colours) — the full token scale
+- [Components](/docs/components/button) — browse the component library
