@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { cn } from '../../lib/cn';
 
-// ─── Context ────────────────────────────────────────────────────────────────
+// ─── Context ─────────────────────────────────────────────────────────────────
 
 interface AccordionCtx {
   openValues: string[];
@@ -31,11 +32,10 @@ function useAccordionItem() {
   return ctx;
 }
 
-// ─── Root ────────────────────────────────────────────────────────────────────
+// ─── Root ─────────────────────────────────────────────────────────────────────
 
 interface AccordionSingleProps {
   type: 'single';
-  /** Allow closing the open item by clicking it again */
   collapsible?: boolean;
   value?: string;
   defaultValue?: string;
@@ -67,7 +67,6 @@ export function Accordion(props: AccordionProps) {
   };
 
   const [internal, setInternal] = React.useState<string[]>(getDefault);
-
   const isControlled = rest.value !== undefined;
   const openValues: string[] = isControlled
     ? (Array.isArray(rest.value) ? (rest.value as string[]) : [(rest.value as string)])
@@ -75,7 +74,6 @@ export function Accordion(props: AccordionProps) {
 
   function onToggle(val: string) {
     let next: string[];
-
     if (type === 'single') {
       const collapsible = (rest as AccordionSingleProps).collapsible ?? false;
       next = openValues.includes(val) && collapsible ? [] : [val];
@@ -84,9 +82,7 @@ export function Accordion(props: AccordionProps) {
         ? openValues.filter(v => v !== val)
         : [...openValues, val];
     }
-
     if (!isControlled) setInternal(next);
-
     if (type === 'single') {
       (rest as AccordionSingleProps).onValueChange?.(next[0] ?? '');
     } else {
@@ -96,14 +92,14 @@ export function Accordion(props: AccordionProps) {
 
   return (
     <AccordionContext.Provider value={{ openValues, onToggle, rootRef }}>
-      <div ref={rootRef} className={['divide-y divide-border', className].filter(Boolean).join(' ')}>
+      <div ref={rootRef} className={cn('divide-y divide-border', className)}>
         {children}
       </div>
     </AccordionContext.Provider>
   );
 }
 
-// ─── Item ────────────────────────────────────────────────────────────────────
+// ─── Item ─────────────────────────────────────────────────────────────────────
 
 export interface AccordionItemProps {
   value: string;
@@ -122,9 +118,7 @@ export function AccordionItem({ value, children, className }: AccordionItemProps
 
   return (
     <AccordionItemContext.Provider value={{ value, isOpen, triggerId, contentId }}>
-      <div className={className}>
-        {children}
-      </div>
+      <div className={className}>{children}</div>
     </AccordionItemContext.Provider>
   );
 }
@@ -146,24 +140,11 @@ export function AccordionTrigger({ children, className }: AccordionTriggerProps)
       rootRef.current.querySelectorAll<HTMLButtonElement>('[data-accordion-trigger]')
     );
     const idx = triggers.indexOf(e.currentTarget);
-
     switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        triggers[(idx + 1) % triggers.length]?.focus();
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        triggers[(idx - 1 + triggers.length) % triggers.length]?.focus();
-        break;
-      case 'Home':
-        e.preventDefault();
-        triggers[0]?.focus();
-        break;
-      case 'End':
-        e.preventDefault();
-        triggers[triggers.length - 1]?.focus();
-        break;
+      case 'ArrowDown': e.preventDefault(); triggers[(idx + 1) % triggers.length]?.focus(); break;
+      case 'ArrowUp':   e.preventDefault(); triggers[(idx - 1 + triggers.length) % triggers.length]?.focus(); break;
+      case 'Home':      e.preventDefault(); triggers[0]?.focus(); break;
+      case 'End':       e.preventDefault(); triggers[triggers.length - 1]?.focus(); break;
     }
   }
 
@@ -176,26 +157,19 @@ export function AccordionTrigger({ children, className }: AccordionTriggerProps)
       aria-controls={contentId}
       onClick={() => onToggle(value)}
       onKeyDown={handleKeyDown}
-      className={[
+      className={cn(
         'flex w-full items-center justify-between py-4 text-sm font-semibold text-foreground',
         'hover:text-fg-secondary transition-colors text-left',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background',
         className,
-      ].filter(Boolean).join(' ')}
+      )}
     >
       {children}
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
         aria-hidden="true"
-        className={`shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+        className={cn('shrink-0 transition-transform duration-200', isOpen && 'rotate-180')}
       >
         <path d="m6 9 6 6 6-6" />
       </svg>
@@ -218,12 +192,13 @@ export function AccordionContent({ children, className }: AccordionContentProps)
       id={contentId}
       role="region"
       aria-labelledby={triggerId}
-      className={`grid transition-all duration-200 ease-in-out ${
-        isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-      }`}
+      className={cn(
+        'grid transition-all duration-200 ease-in-out',
+        isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
+      )}
     >
       <div className="overflow-hidden">
-        <div className={['pb-4 text-sm text-fg-secondary', className].filter(Boolean).join(' ')}>
+        <div className={cn('pb-4 text-sm text-fg-secondary', className)}>
           {children}
         </div>
       </div>

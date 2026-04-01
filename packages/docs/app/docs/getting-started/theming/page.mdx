@@ -1,0 +1,90 @@
+export const metadata = { title: 'Theming' }
+
+# Theming
+
+DAVE uses a two-layer token system. Primitive variables hold raw values. Semantic aliases give them meaning. You theme by overriding primitives — semantics update automatically.
+
+## Swap the accent colour
+
+The accent scale controls buttons, focus rings, links, badges, and any interactive element. Override it in your global CSS, after the token import:
+
+```css
+/* globals.css */
+@import '@dave/tokens/dist/tokens.css';
+
+:root {
+  --accent-1:  #fef3c7;
+  --accent-2:  #fde68a;
+  --accent-3:  #fcd34d;
+  --accent-4:  #fbbf24;
+  --accent-5:  #f59e0b;
+  --accent-6:  #d97706;
+  --accent-7:  #b45309;
+  --accent-8:  #92400e;
+  --accent-9:  #d97706;   /* solid — buttons, focus rings */
+  --accent-10: #b45309;   /* hover */
+  --accent-11: #92400e;   /* text on tinted backgrounds */
+  --accent-12: #78350f;   /* high-contrast text */
+}
+```
+
+Steps 1–8 fill the subtle tints used for `bg-accent-subtle` and borders. Steps 9–12 are the four you'll most often need to tune.
+
+## Override a single semantic
+
+If you only need to change one specific use — say, card backgrounds — you can override the semantic directly without touching the primitive scale:
+
+```css
+:root {
+  --color-card: #ffffff;
+  --color-border: var(--neutral-5);
+}
+```
+
+See the [Tokens](/docs/foundations/tokens) page for the full primitive and semantic reference.
+
+## Dark mode
+
+DAVE ships light-mode tokens only. To add dark mode, wrap your overrides in a `prefers-color-scheme` query (or a `.dark` class if you're using a JS toggle):
+
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background:       #0f0e0c;
+    --color-surface:          #1a1917;
+    --color-card:             #242220;
+    --color-border:           #2e2b27;
+    --color-border-strong:    #3d3a35;
+    --color-foreground:       #f7f5f0;
+    --color-foreground-secondary: #9e9890;
+  }
+}
+```
+
+Only the semantic aliases need overriding — status colours (success, warning, error) are intentionally fixed regardless of mode.
+
+## Border radius
+
+DAVE uses a subtle 3px radius on most elements. To apply a different radius system-wide, set the `--radius` primitive and reference it in your Tailwind config:
+
+```css
+:root {
+  --radius: 8px; /* default is 3px */
+}
+```
+
+Then update your `tailwind.config.js` to use it:
+
+```js
+theme: {
+  extend: {
+    borderRadius: {
+      DEFAULT: 'var(--radius)',
+    },
+  },
+},
+```
+
+## What not to override
+
+The neutral, success, warning, and error scales carry semantic meaning that should stay consistent across products. Override the **accent scale** for brand colour. Override **semantic aliases** for one-off adjustments. Leave the rest alone.

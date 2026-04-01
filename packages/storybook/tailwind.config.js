@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        13: '3.25rem',
+      },
       colors: {
         background:   'var(--color-background)',
         surface:      'var(--color-surface)',
@@ -32,6 +35,7 @@ module.exports = {
           'subtle-border': 'var(--color-accent-subtle-border)',
           border:          'var(--color-accent-border)',
           foreground:      'var(--color-accent-foreground)',
+          on:              'var(--color-on-accent)',
         },
 
         success: {

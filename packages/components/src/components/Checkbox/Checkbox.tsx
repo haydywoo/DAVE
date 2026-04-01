@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { cn } from '../../lib/cn';
 
 export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'size'> {
   label?: string;
@@ -16,17 +17,17 @@ export function Checkbox({ label, indeterminate, className, id, ...props }: Chec
   return (
     <label
       htmlFor={inputId}
-      className={[
+      className={cn(
         'inline-flex items-center gap-2 cursor-pointer',
-        props.disabled ? 'cursor-not-allowed opacity-40' : '',
+        props.disabled && 'cursor-not-allowed opacity-40',
         className,
-      ].filter(Boolean).join(' ')}
+      )}
     >
       <input
         ref={ref}
         id={inputId}
         type="checkbox"
-        className="h-4 w-4 rounded-[3px] border border-border-strong bg-white text-accent transition-colors checked:bg-accent checked:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed accent-[var(--color-accent)]"
+        className="h-4 w-4 rounded-[3px] border border-border-strong bg-card text-accent transition-colors checked:bg-accent checked:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed accent-[var(--color-accent)]"
         {...props}
       />
       {label && (
