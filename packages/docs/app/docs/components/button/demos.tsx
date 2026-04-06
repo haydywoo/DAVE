@@ -66,6 +66,20 @@ export function ButtonDemos() {
         <Button variant="secondary" isLoading>Loading</Button>
       </Preview>
 
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Icon only</h3>
+      <Preview
+        code={`<Button icon={<PlusIcon />} aria-label="Add item" />
+<Button variant="secondary" icon={<PlusIcon />} aria-label="Add item" />
+<Button variant="ghost" icon={<PlusIcon />} aria-label="Add item" />`}
+      >
+        <Button icon={<PlusIcon />} aria-label="Add item" size="sm" />
+        <Button icon={<PlusIcon />} aria-label="Add item" />
+        <Button icon={<PlusIcon />} aria-label="Add item" size="lg" />
+        <Button variant="secondary" icon={<PlusIcon />} aria-label="Add item" />
+        <Button variant="ghost" icon={<PlusIcon />} aria-label="Add item" />
+        <Button variant="soft" icon={<PlusIcon />} aria-label="Add item" />
+      </Preview>
+
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Disabled</h3>
       <Preview
         code={`<Button disabled>Primary</Button>

@@ -1,10 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import {
   Dropdown,
   DropdownTrigger,
   DropdownContent,
   DropdownItem,
+  DropdownCheckboxItem,
+  DropdownRadioGroup,
+  DropdownRadioItem,
   DropdownLabel,
   DropdownSeparator,
   DropdownSub,
@@ -107,6 +111,77 @@ export function DropdownDemos() {
             <DropdownItem destructive>Sign out</DropdownItem>
           </DropdownContent>
         </Dropdown>
+      </Preview>
+
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Shortcuts and descriptions</h3>
+      <Preview code={`<DropdownItem shortcut="⌘Z">Undo</DropdownItem>
+<DropdownItem shortcut="⌘C">Copy</DropdownItem>
+<DropdownItem description="Export as PDF" shortcut="⌘E">Export</DropdownItem>`}>
+        <Dropdown>
+          <DropdownTrigger asChild>
+            <Button variant="secondary">Edit</Button>
+          </DropdownTrigger>
+          <DropdownContent>
+            <DropdownItem shortcut="⌘Z">Undo</DropdownItem>
+            <DropdownItem shortcut="⌘⇧Z">Redo</DropdownItem>
+            <DropdownSeparator />
+            <DropdownItem shortcut="⌘X">Cut</DropdownItem>
+            <DropdownItem shortcut="⌘C">Copy</DropdownItem>
+            <DropdownItem shortcut="⌘V">Paste</DropdownItem>
+            <DropdownSeparator />
+            <DropdownItem description="Export this document as a PDF file" shortcut="⌘E">Export</DropdownItem>
+          </DropdownContent>
+        </Dropdown>
+      </Preview>
+
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Checkbox items</h3>
+      <Preview code={`<DropdownCheckboxItem checked={toolbar} onCheckedChange={setToolbar}>
+  Toolbar
+</DropdownCheckboxItem>`}>
+        {(() => {
+          const [toolbar, setToolbar] = useState(true);
+          const [statusBar, setStatusBar] = useState(false);
+          const [sidebar, setSidebar] = useState(true);
+          return (
+            <Dropdown>
+              <DropdownTrigger asChild>
+                <Button variant="secondary">View</Button>
+              </DropdownTrigger>
+              <DropdownContent>
+                <DropdownLabel>Toggle panels</DropdownLabel>
+                <DropdownCheckboxItem checked={toolbar} onCheckedChange={setToolbar}>Toolbar</DropdownCheckboxItem>
+                <DropdownCheckboxItem checked={statusBar} onCheckedChange={setStatusBar} shortcut="⌘B">Status bar</DropdownCheckboxItem>
+                <DropdownCheckboxItem checked={sidebar} onCheckedChange={setSidebar}>Sidebar</DropdownCheckboxItem>
+              </DropdownContent>
+            </Dropdown>
+          );
+        })()}
+      </Preview>
+
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Radio items</h3>
+      <Preview code={`<DropdownRadioGroup value={theme} onValueChange={setTheme}>
+  <DropdownRadioItem value="light">Light</DropdownRadioItem>
+  <DropdownRadioItem value="dark">Dark</DropdownRadioItem>
+  <DropdownRadioItem value="system">System</DropdownRadioItem>
+</DropdownRadioGroup>`}>
+        {(() => {
+          const [theme, setTheme] = useState('system');
+          return (
+            <Dropdown>
+              <DropdownTrigger asChild>
+                <Button variant="secondary">Theme</Button>
+              </DropdownTrigger>
+              <DropdownContent>
+                <DropdownLabel>Appearance</DropdownLabel>
+                <DropdownRadioGroup value={theme} onValueChange={setTheme}>
+                  <DropdownRadioItem value="light">Light</DropdownRadioItem>
+                  <DropdownRadioItem value="dark">Dark</DropdownRadioItem>
+                  <DropdownRadioItem value="system">System</DropdownRadioItem>
+                </DropdownRadioGroup>
+              </DropdownContent>
+            </Dropdown>
+          );
+        })()}
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">With submenu</h3>

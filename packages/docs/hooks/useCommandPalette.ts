@@ -6,14 +6,19 @@ export function useCommandPalette() {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
-    function handler(e: KeyboardEvent) {
+    function onKeydown(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         setOpen((v) => !v);
       }
     }
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    function onEvent() { setOpen(true); }
+    window.addEventListener('keydown', onKeydown);
+    window.addEventListener('dave:open-search', onEvent);
+    return () => {
+      window.removeEventListener('keydown', onKeydown);
+      window.removeEventListener('dave:open-search', onEvent);
+    };
   }, []);
 
   return { open, setOpen };

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Slot } from '@radix-ui/react-slot';
 import { cn } from '../../lib/cn';
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
@@ -53,8 +54,9 @@ export interface BreadcrumbLinkProps extends React.AnchorHTMLAttributes<HTMLAnch
 }
 
 export function BreadcrumbLink({ children, asChild, className, ...props }: BreadcrumbLinkProps) {
+  const Comp = asChild ? Slot : 'a';
   return (
-    <a
+    <Comp
       className={cn(
         'hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-[2px]',
         className,
@@ -62,7 +64,7 @@ export function BreadcrumbLink({ children, asChild, className, ...props }: Bread
       {...props}
     >
       {children}
-    </a>
+    </Comp>
   );
 }
 
@@ -90,7 +92,7 @@ export function BreadcrumbSeparator({ children, className }: BreadcrumbSeparator
 
 export function BreadcrumbEllipsis({ className }: { className?: string }) {
   return (
-    <li role="presentation" aria-label="More pages" className={cn('inline-flex items-center', className)}>
+    <li role="presentation" aria-hidden="true" className={cn('inline-flex items-center', className)}>
       <span className="select-none px-1">…</span>
     </li>
   );

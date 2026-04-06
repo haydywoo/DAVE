@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import { cn } from '../../lib/cn';
 
@@ -16,6 +18,10 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
   prefix?: React.ReactNode;
   /** Text/label attached to the right outside edge (e.g. ".com") */
   suffix?: React.ReactNode;
+  /** Shows a clear (×) button when the input has a value */
+  clearable?: boolean;
+  /** Shows a character count below the input. Pair with maxLength for "12 / 100" display. */
+  showCount?: boolean;
 }
 
 const base =
@@ -65,7 +71,7 @@ const addonSizes: Record<InputSize, string> = {
   xl: 'h-13 px-4 text-base',
 };
 
-export function Input({
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input({
   size = 'md',
   error = false,
   label,
@@ -74,13 +80,49 @@ export function Input({
   rightIcon,
   prefix,
   suffix,
+  clearable = false,
+  showCount = false,
   className,
   id,
+  value,
+  defaultValue,
+  onChange,
+  maxLength,
   ...props
-}: InputProps) {
+}, ref) {
   const inputId = id ?? label?.toLowerCase().replace(/\s+/g, '-');
   const hasPrefix = Boolean(prefix);
   const hasSuffix = Boolean(suffix);
+
+  // Track value internally for clearable and showCount features
+  const isControlled = value !== undefined;
+  const [internalValue, setInternalValue] = React.useState<string>(
+    (defaultValue as string) ?? '',
+  );
+  const currentValue = isControlled ? (value as string) : internalValue;
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    if (!isControlled) setInternalValue(e.target.value);
+    onChange?.(e);
+  }
+
+  function handleClear() {
+    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+      window.HTMLInputElement.prototype, 'value',
+    )?.set;
+    const inputEl = (typeof ref === 'object' && ref?.current) ? ref.current : null;
+    if (inputEl && nativeInputValueSetter) {
+      nativeInputValueSetter.call(inputEl, '');
+      inputEl.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+    if (!isControlled) setInternalValue('');
+    // Synthesize a change event so controlled consumers can update
+    const syntheticEvent = { target: { value: '' } } as React.ChangeEvent<HTMLInputElement>;
+    onChange?.(syntheticEvent);
+  }
+
+  const showClear = clearable && currentValue.length > 0;
+  const hasRightSlot = showClear || !!rightIcon;
 
   const addonBase = cn(
     'inline-flex items-center border border-border bg-surface text-fg-secondary font-[family-name:var(--font-body)] select-none shrink-0',
@@ -98,12 +140,17 @@ export function Input({
         </span>
       )}
       <input
+        ref={ref}
         id={inputId}
+        value={isControlled ? value : internalValue}
+        defaultValue={isControlled ? undefined : undefined}
+        onChange={handleChange}
+        maxLength={maxLength}
         className={cn(
           base,
           sizes[size],
           paddingLeft[size][leftIcon ? 'icon' : 'default'],
-          paddingRight[size][rightIcon ? 'icon' : 'default'],
+          paddingRight[size][hasRightSlot ? 'icon' : 'default'],
           error ? 'border-error bg-error-subtle focus:ring-error focus:border-error' : 'border-border',
           hasPrefix && 'rounded-l-none border-l-0',
           hasSuffix && 'rounded-r-none border-r-0',
@@ -111,14 +158,29 @@ export function Input({
         )}
         {...props}
       />
-      {rightIcon && (
+      {showClear ? (
+        <button
+          type="button"
+          aria-label="Clear"
+          onClick={handleClear}
+          tabIndex={-1}
+          className={cn(
+            'absolute inset-y-0 right-0 flex items-center justify-center text-fg-secondary hover:text-foreground transition-colors',
+            iconSizes[size],
+          )}
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+      ) : rightIcon ? (
         <span aria-hidden="true" className={cn(
           'pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center text-fg-secondary',
           iconSizes[size], iconElementSizes[size],
         )}>
           {rightIcon}
         </span>
-      )}
+      ) : null}
     </div>
   );
 
@@ -146,13 +208,22 @@ export function Input({
       ) : (
         inputEl
       )}
-      {hint && (
-        <p className={cn('text-xs', error ? 'text-error-foreground' : 'text-fg-secondary')}>
-          {hint}
-        </p>
+      {(hint || showCount) && (
+        <div className="flex items-center justify-between gap-2">
+          {hint ? (
+            <p className={cn('text-xs', error ? 'text-error-foreground' : 'text-fg-secondary')}>
+              {hint}
+            </p>
+          ) : <span />}
+          {showCount && (
+            <p className="text-xs text-fg-secondary tabular-nums shrink-0">
+              {maxLength ? `${currentValue.length} / ${maxLength}` : currentValue.length}
+            </p>
+          )}
+        </div>
       )}
     </div>
   );
 
   return wrapped;
-}
+});

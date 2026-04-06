@@ -1,9 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useState } from 'react';
 import {
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,
   ContextMenuItem,
+  ContextMenuCheckboxItem,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
   ContextMenuLabel,
   ContextMenuSeparator,
   ContextMenuSub,
@@ -45,18 +49,20 @@ const ShareIcon = () => (
   </svg>
 );
 
+const Trigger = () => (
+  <div className="flex h-32 w-64 items-center justify-center rounded-[3px] border-2 border-dashed border-border text-sm text-fg-secondary select-none">
+    Right-click here
+  </div>
+);
+
 export const Default: Story = {
   render: () => (
     <ContextMenu>
-      <ContextMenuTrigger>
-        <div className="flex h-32 w-64 items-center justify-center rounded-[3px] border-2 border-dashed border-border text-sm text-fg-secondary select-none">
-          Right-click here
-        </div>
-      </ContextMenuTrigger>
+      <ContextMenuTrigger><Trigger /></ContextMenuTrigger>
       <ContextMenuContent>
         <ContextMenuLabel>Actions</ContextMenuLabel>
-        <ContextMenuItem icon={<EditIcon />}>Edit</ContextMenuItem>
-        <ContextMenuItem icon={<CopyIcon />}>Duplicate</ContextMenuItem>
+        <ContextMenuItem icon={<EditIcon />} shortcut="⌘E">Edit</ContextMenuItem>
+        <ContextMenuItem icon={<CopyIcon />} shortcut="⌘D">Duplicate</ContextMenuItem>
         <ContextMenuSeparator />
         <ContextMenuSub>
           <ContextMenuSubTrigger icon={<ShareIcon />}>Share</ContextMenuSubTrigger>
@@ -66,8 +72,46 @@ export const Default: Story = {
           </ContextMenuSubContent>
         </ContextMenuSub>
         <ContextMenuSeparator />
-        <ContextMenuItem icon={<TrashIcon />} destructive>Delete</ContextMenuItem>
+        <ContextMenuItem icon={<TrashIcon />} destructive shortcut="⌘⌫">Delete</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
   ),
+};
+
+export const WithCheckboxItems: Story = {
+  render: () => {
+    const [showGrid, setShowGrid] = useState(true);
+    const [snapToGrid, setSnapToGrid] = useState(false);
+    const [rulers, setRulers] = useState(false);
+    return (
+      <ContextMenu>
+        <ContextMenuTrigger><Trigger /></ContextMenuTrigger>
+        <ContextMenuContent>
+          <ContextMenuLabel>View</ContextMenuLabel>
+          <ContextMenuCheckboxItem checked={showGrid} onCheckedChange={setShowGrid}>Show grid</ContextMenuCheckboxItem>
+          <ContextMenuCheckboxItem checked={snapToGrid} onCheckedChange={setSnapToGrid}>Snap to grid</ContextMenuCheckboxItem>
+          <ContextMenuCheckboxItem checked={rulers} onCheckedChange={setRulers}>Show rulers</ContextMenuCheckboxItem>
+        </ContextMenuContent>
+      </ContextMenu>
+    );
+  },
+};
+
+export const WithRadioItems: Story = {
+  render: () => {
+    const [density, setDensity] = useState('comfortable');
+    return (
+      <ContextMenu>
+        <ContextMenuTrigger><Trigger /></ContextMenuTrigger>
+        <ContextMenuContent>
+          <ContextMenuLabel>Density</ContextMenuLabel>
+          <ContextMenuRadioGroup value={density} onValueChange={setDensity}>
+            <ContextMenuRadioItem value="compact">Compact</ContextMenuRadioItem>
+            <ContextMenuRadioItem value="comfortable">Comfortable</ContextMenuRadioItem>
+            <ContextMenuRadioItem value="spacious">Spacious</ContextMenuRadioItem>
+          </ContextMenuRadioGroup>
+        </ContextMenuContent>
+      </ContextMenu>
+    );
+  },
 };

@@ -22,10 +22,12 @@ export function BadgeDemos() {
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Sizes</h3>
       <Preview
-        code={`<Badge size="sm">Small</Badge>
+        code={`<Badge size="xs">Extra small</Badge>
+<Badge size="sm">Small</Badge>
 <Badge size="md">Medium</Badge>
 <Badge size="lg">Large</Badge>`}
       >
+        <Badge size="xs">Extra small</Badge>
         <Badge size="sm">Small</Badge>
         <Badge size="md">Medium</Badge>
         <Badge size="lg">Large</Badge>

@@ -23,7 +23,6 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
         <Sidebar
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
-          onSearchOpen={() => setPaletteOpen(true)}
         />
 
         <main className="flex-1 min-w-0 px-6 lg:px-12 py-10">

@@ -1,16 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useState } from 'react';
 import {
   Dropdown,
   DropdownTrigger,
   DropdownContent,
   DropdownItem,
+  DropdownCheckboxItem,
+  DropdownRadioGroup,
+  DropdownRadioItem,
   DropdownLabel,
   DropdownSeparator,
   DropdownSub,
   DropdownSubTrigger,
   DropdownSubContent,
+  Button,
 } from '@dave/react';
-import { Button } from '@dave/react';
 
 const meta: Meta = {
   title: 'Components/Dropdown',
@@ -131,4 +135,77 @@ export const WithDisabledItem: Story = {
       </DropdownContent>
     </Dropdown>
   ),
+};
+
+export const WithShortcutsAndDescriptions: Story = {
+  render: () => (
+    <Dropdown>
+      <DropdownTrigger asChild>
+        <Button variant="secondary">Edit</Button>
+      </DropdownTrigger>
+      <DropdownContent>
+        <DropdownItem shortcut="⌘Z">Undo</DropdownItem>
+        <DropdownItem shortcut="⌘⇧Z">Redo</DropdownItem>
+        <DropdownSeparator />
+        <DropdownItem shortcut="⌘X">Cut</DropdownItem>
+        <DropdownItem shortcut="⌘C">Copy</DropdownItem>
+        <DropdownItem shortcut="⌘V">Paste</DropdownItem>
+        <DropdownSeparator />
+        <DropdownItem
+          description="Export this document as a PDF file"
+          shortcut="⌘E"
+        >
+          Export
+        </DropdownItem>
+      </DropdownContent>
+    </Dropdown>
+  ),
+};
+
+export const WithCheckboxItems: Story = {
+  render: () => {
+    const [toolbar, setToolbar] = useState(true);
+    const [statusBar, setStatusBar] = useState(false);
+    const [sidebar, setSidebar] = useState(true);
+    return (
+      <Dropdown>
+        <DropdownTrigger asChild>
+          <Button variant="secondary">View</Button>
+        </DropdownTrigger>
+        <DropdownContent>
+          <DropdownLabel>Toggle panels</DropdownLabel>
+          <DropdownCheckboxItem checked={toolbar} onCheckedChange={setToolbar}>
+            Toolbar
+          </DropdownCheckboxItem>
+          <DropdownCheckboxItem checked={statusBar} onCheckedChange={setStatusBar} shortcut="⌘B">
+            Status bar
+          </DropdownCheckboxItem>
+          <DropdownCheckboxItem checked={sidebar} onCheckedChange={setSidebar}>
+            Sidebar
+          </DropdownCheckboxItem>
+        </DropdownContent>
+      </Dropdown>
+    );
+  },
+};
+
+export const WithRadioItems: Story = {
+  render: () => {
+    const [theme, setTheme] = useState('system');
+    return (
+      <Dropdown>
+        <DropdownTrigger asChild>
+          <Button variant="secondary">Theme</Button>
+        </DropdownTrigger>
+        <DropdownContent>
+          <DropdownLabel>Appearance</DropdownLabel>
+          <DropdownRadioGroup value={theme} onValueChange={setTheme}>
+            <DropdownRadioItem value="light">Light</DropdownRadioItem>
+            <DropdownRadioItem value="dark">Dark</DropdownRadioItem>
+            <DropdownRadioItem value="system">System</DropdownRadioItem>
+          </DropdownRadioGroup>
+        </DropdownContent>
+      </Dropdown>
+    );
+  },
 };

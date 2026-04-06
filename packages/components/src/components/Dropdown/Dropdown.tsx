@@ -7,6 +7,13 @@ export const Dropdown        = RadixDropdown.Root;
 export const DropdownTrigger = RadixDropdown.Trigger;
 export const DropdownGroup   = RadixDropdown.Group;
 export const DropdownSub     = RadixDropdown.Sub;
+export const DropdownRadioGroup = RadixDropdown.RadioGroup;
+
+// Shared item base classes
+const itemBase = [
+  'relative flex cursor-default select-none items-center gap-2 rounded-[2px] px-2.5 py-1.5 outline-none transition-colors',
+  'focus:bg-surface',
+].join(' ');
 
 // ─── Content ─────────────────────────────────────────────────────────────────
 
@@ -52,6 +59,10 @@ export interface DropdownItemProps {
   disabled?: boolean;
   destructive?: boolean;
   icon?: React.ReactNode;
+  /** Keyboard shortcut hint shown on the right, e.g. "⌘K" */
+  shortcut?: string;
+  /** Secondary description line below the label */
+  description?: string;
   className?: string;
 }
 
@@ -61,6 +72,8 @@ export function DropdownItem({
   disabled,
   destructive,
   icon,
+  shortcut,
+  description,
   className,
 }: DropdownItemProps) {
   return (
@@ -68,16 +81,116 @@ export function DropdownItem({
       onSelect={onSelect}
       disabled={disabled}
       className={cn(
-        'relative flex cursor-default select-none items-center gap-2 rounded-[2px] px-2.5 py-1.5 outline-none transition-colors',
-        'focus:bg-surface',
+        itemBase,
         destructive ? 'text-error focus:bg-error-subtle focus:text-error' : 'text-foreground',
         disabled && 'pointer-events-none opacity-40',
         className,
       )}
     >
-      {icon && <span className="shrink-0 text-fg-secondary">{icon}</span>}
-      {children}
+      {icon && <span className="shrink-0 text-fg-secondary" aria-hidden="true">{icon}</span>}
+      <span className="flex flex-1 flex-col min-w-0">
+        <span>{children}</span>
+        {description && <span className="text-xs text-fg-secondary font-normal leading-tight mt-0.5">{description}</span>}
+      </span>
+      {shortcut && (
+        <span className="ml-auto pl-4 text-xs text-fg-secondary tracking-widest shrink-0" aria-label={`Shortcut: ${shortcut}`}>
+          {shortcut}
+        </span>
+      )}
     </RadixDropdown.Item>
+  );
+}
+
+// ─── CheckboxItem ─────────────────────────────────────────────────────────────
+
+export interface DropdownCheckboxItemProps {
+  children: React.ReactNode;
+  checked?: boolean;
+  onCheckedChange?: (checked: boolean) => void;
+  disabled?: boolean;
+  shortcut?: string;
+  className?: string;
+}
+
+export function DropdownCheckboxItem({
+  children,
+  checked,
+  onCheckedChange,
+  disabled,
+  shortcut,
+  className,
+}: DropdownCheckboxItemProps) {
+  return (
+    <RadixDropdown.CheckboxItem
+      checked={checked}
+      onCheckedChange={onCheckedChange}
+      disabled={disabled}
+      className={cn(
+        'relative flex cursor-default select-none items-center gap-2 rounded-[2px] pl-8 pr-2.5 py-1.5 outline-none transition-colors',
+        'text-foreground focus:bg-surface',
+        disabled && 'pointer-events-none opacity-40',
+        className,
+      )}
+    >
+      <span className="absolute left-2 flex h-4 w-4 items-center justify-center text-accent">
+        <RadixDropdown.ItemIndicator>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+        </RadixDropdown.ItemIndicator>
+      </span>
+      <span className="flex-1">{children}</span>
+      {shortcut && (
+        <span className="ml-auto pl-4 text-xs text-fg-secondary tracking-widest shrink-0">
+          {shortcut}
+        </span>
+      )}
+    </RadixDropdown.CheckboxItem>
+  );
+}
+
+// ─── RadioItem ────────────────────────────────────────────────────────────────
+
+export interface DropdownRadioItemProps {
+  children: React.ReactNode;
+  value: string;
+  disabled?: boolean;
+  shortcut?: string;
+  className?: string;
+}
+
+export function DropdownRadioItem({
+  children,
+  value,
+  disabled,
+  shortcut,
+  className,
+}: DropdownRadioItemProps) {
+  return (
+    <RadixDropdown.RadioItem
+      value={value}
+      disabled={disabled}
+      className={cn(
+        'relative flex cursor-default select-none items-center gap-2 rounded-[2px] pl-8 pr-2.5 py-1.5 outline-none transition-colors',
+        'text-foreground focus:bg-surface',
+        disabled && 'pointer-events-none opacity-40',
+        className,
+      )}
+    >
+      <span className="absolute left-2 flex h-4 w-4 items-center justify-center text-accent">
+        <RadixDropdown.ItemIndicator>
+          <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true">
+            <circle cx="4" cy="4" r="4" fill="currentColor" />
+          </svg>
+        </RadixDropdown.ItemIndicator>
+      </span>
+      <span className="flex-1">{children}</span>
+      {shortcut && (
+        <span className="ml-auto pl-4 text-xs text-fg-secondary tracking-widest shrink-0">
+          {shortcut}
+        </span>
+      )}
+    </RadixDropdown.RadioItem>
   );
 }
 
@@ -97,25 +210,29 @@ export function DropdownLabel({ children, className }: { children: React.ReactNo
 
 export function DropdownSeparator({ className }: { className?: string }) {
   return (
-    <RadixDropdown.Separator
-      className={cn('-mx-1 my-1 h-px bg-border', className)}
-    />
+    <RadixDropdown.Separator className={cn('-mx-1 my-1 h-px bg-border', className)} />
   );
 }
 
 // ─── Sub trigger ──────────────────────────────────────────────────────────────
 
-export function DropdownSubTrigger({ children, icon, className }: { children: React.ReactNode; icon?: React.ReactNode; className?: string }) {
+export interface DropdownSubTriggerProps {
+  children: React.ReactNode;
+  icon?: React.ReactNode;
+  className?: string;
+}
+
+export function DropdownSubTrigger({ children, icon, className }: DropdownSubTriggerProps) {
   return (
     <RadixDropdown.SubTrigger
       className={cn(
-        'relative flex cursor-default select-none items-center gap-2 rounded-[2px] px-2.5 py-1.5 outline-none transition-colors',
+        itemBase,
         'text-foreground focus:bg-surface data-[state=open]:bg-surface',
         className,
       )}
     >
-      {icon && <span className="shrink-0 text-fg-secondary">{icon}</span>}
-      {children}
+      {icon && <span className="shrink-0 text-fg-secondary" aria-hidden="true">{icon}</span>}
+      <span className="flex-1">{children}</span>
       <svg className="ml-auto h-4 w-4 text-fg-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="m9 18 6-6-6-6" />
       </svg>

@@ -7,12 +7,14 @@ export const metadata: Metadata = { title: 'Input' };
 const props = [
   { name: 'label', type: 'string', description: 'Visible label rendered above the input.' },
   { name: 'hint', type: 'string', description: 'Helper or error text rendered below the input.' },
-  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Controls height and padding.' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Controls height and padding.' },
   { name: 'error', type: 'boolean', default: 'false', description: 'Applies error styles and colours the hint text red.' },
   { name: 'leftIcon', type: 'ReactNode', description: 'Icon rendered inside the left edge of the input.' },
   { name: 'rightIcon', type: 'ReactNode', description: 'Icon rendered inside the right edge of the input.' },
   { name: 'prefix', type: 'ReactNode', description: 'Text or element attached to the left outside edge (e.g. "https://").' },
   { name: 'suffix', type: 'ReactNode', description: 'Text or element attached to the right outside edge (e.g. ".com").' },
+  { name: 'clearable', type: 'boolean', default: 'false', description: 'Shows a clear (×) button inside the right edge when the input has a value.' },
+  { name: 'showCount', type: 'boolean', default: 'false', description: 'Displays a character count below the input. Shows "n / max" when maxLength is set.' },
   { name: 'disabled', type: 'boolean', description: 'Disables the input.' },
   { name: 'placeholder', type: 'string', description: 'Placeholder text shown when empty.' },
 ];

@@ -1,5 +1,42 @@
 export { cn } from './lib/cn';
 
+export { SegmentedControl } from './components/SegmentedControl/SegmentedControl';
+export type { SegmentedControlProps, SegmentedControlOption, SegmentedControlSize } from './components/SegmentedControl/SegmentedControl';
+
+export {
+  FormField,
+  FormLabel,
+  FormControl,
+  FormHint,
+  FormSection,
+  useFormField,
+} from './components/FormField/FormField';
+export type {
+  FormFieldProps,
+  FormLabelProps,
+  FormControlProps,
+  FormHintProps,
+  FormSectionProps,
+} from './components/FormField/FormField';
+
+export {
+  Command,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandSeparator,
+  CommandDialog,
+} from './components/Command/Command';
+export type {
+  CommandProps,
+  CommandInputProps,
+  CommandGroupProps,
+  CommandItemProps,
+  CommandDialogProps,
+} from './components/Command/Command';
+
 export { Kbd } from './components/Kbd/Kbd';
 export type { KbdProps, KbdSize } from './components/Kbd/Kbd';
 
@@ -24,6 +61,9 @@ export type { CalendarProps } from './components/Calendar/Calendar';
 export { DatePicker } from './components/DatePicker/DatePicker';
 export type { DatePickerProps, DatePickerSize } from './components/DatePicker/DatePicker';
 
+export { DateRangePicker, RangeCalendar } from './components/DateRangePicker/DateRangePicker';
+export type { DateRangePickerProps, DateRangePickerSize, RangeCalendarProps, DateRange } from './components/DateRangePicker/DateRangePicker';
+
 export { Timeline, TimelineItem } from './components/Timeline/Timeline';
 export type { TimelineProps, TimelineItemProps } from './components/Timeline/Timeline';
 
@@ -44,6 +84,9 @@ export {
   ContextMenuTrigger,
   ContextMenuContent,
   ContextMenuItem,
+  ContextMenuCheckboxItem,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
   ContextMenuLabel,
   ContextMenuSeparator,
   ContextMenuGroup,
@@ -51,7 +94,12 @@ export {
   ContextMenuSubTrigger,
   ContextMenuSubContent,
 } from './components/ContextMenu/ContextMenu';
-export type { ContextMenuContentProps, ContextMenuItemProps } from './components/ContextMenu/ContextMenu';
+export type {
+  ContextMenuContentProps,
+  ContextMenuItemProps,
+  ContextMenuCheckboxItemProps,
+  ContextMenuRadioItemProps,
+} from './components/ContextMenu/ContextMenu';
 
 export { Combobox } from './components/Combobox/Combobox';
 export type { ComboboxProps, ComboboxOption, ComboboxGroup, ComboboxSize } from './components/Combobox/Combobox';
@@ -62,8 +110,32 @@ export type { EmptyStateProps } from './components/EmptyState/EmptyState';
 export { Stat } from './components/Stat/Stat';
 export type { StatProps } from './components/Stat/Stat';
 
-export { Navbar, NavbarBrand, NavbarContent, NavbarActions, NavbarLink, NavbarDivider } from './components/Navbar/Navbar';
-export type { NavbarProps, NavbarContentProps, NavbarLinkProps } from './components/Navbar/Navbar';
+export {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarActions,
+  NavbarLink,
+  NavbarDivider,
+  NavbarSearch,
+  NavbarMenuButton,
+  NavbarMobileMenu,
+  NavbarMobileLink,
+} from './components/Navbar/Navbar';
+export type {
+  NavbarProps,
+  NavbarColor,
+  NavbarContentProps,
+  NavbarActionsProps,
+  NavbarLinkProps,
+  NavbarSearchProps,
+  NavbarMenuButtonProps,
+  NavbarMobileMenuProps,
+  NavbarMobileLinkProps,
+} from './components/Navbar/Navbar';
+
+export { Nav, NavSection, NavItem, NavGroup, NavSeparator } from './components/Nav/Nav';
+export type { NavProps, NavSize, NavSectionProps, NavItemProps, NavGroupProps } from './components/Nav/Nav';
 
 export { Drawer, DrawerTrigger, DrawerClose, DrawerContent, DrawerOverlay, DrawerHeader, DrawerTitle, DrawerDescription, DrawerBody, DrawerFooter } from './components/Drawer/Drawer';
 export type { DrawerContentProps, DrawerSide } from './components/Drawer/Drawer';
@@ -76,6 +148,9 @@ export type { ButtonProps, ButtonVariant, ButtonSize } from './components/Button
 
 export { Input } from './components/Input/Input';
 export type { InputProps, InputSize } from './components/Input/Input';
+
+export { FileInput } from './components/FileInput/FileInput';
+export type { FileInputProps, FileInputSize } from './components/FileInput/FileInput';
 
 export { Badge } from './components/Badge/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './components/Badge/Badge';
@@ -150,6 +225,9 @@ export {
   DropdownTrigger,
   DropdownContent,
   DropdownItem,
+  DropdownCheckboxItem,
+  DropdownRadioGroup,
+  DropdownRadioItem,
   DropdownLabel,
   DropdownSeparator,
   DropdownGroup,
@@ -160,6 +238,8 @@ export {
 export type {
   DropdownContentProps,
   DropdownItemProps,
+  DropdownCheckboxItemProps,
+  DropdownRadioItemProps,
 } from './components/Dropdown/Dropdown';
 
 export { Chip } from './components/Chip/Chip';
@@ -252,6 +332,51 @@ export {
   ToastProviderWithHook,
   ToastViewport,
   Toast,
+  ToastAction,
   useToast,
 } from './components/Toast/Toast';
-export type { ToastProps, ToastVariant, ToastOptions } from './components/Toast/Toast';
+export type { ToastProps, ToastVariant, ToastOptions, ToastActionProps } from './components/Toast/Toast';
+
+// ─── AI Components ────────────────────────────────────────────────────────────
+
+export { CodeBlock } from './components/ai/CodeBlock/CodeBlock';
+export type { CodeBlockProps } from './components/ai/CodeBlock/CodeBlock';
+
+export { StreamingText } from './components/ai/StreamingText/StreamingText';
+export type { StreamingTextProps } from './components/ai/StreamingText/StreamingText';
+
+export { ThinkingBlock } from './components/ai/ThinkingBlock/ThinkingBlock';
+export type { ThinkingBlockProps } from './components/ai/ThinkingBlock/ThinkingBlock';
+
+export { ToolCall, ToolResult } from './components/ai/ToolCall/ToolCall';
+export type { ToolCallProps, ToolResultProps, ToolStatus } from './components/ai/ToolCall/ToolCall';
+
+export { FileAttachment } from './components/ai/FileAttachment/FileAttachment';
+export type { FileAttachmentProps } from './components/ai/FileAttachment/FileAttachment';
+
+export { FeedbackBar } from './components/ai/FeedbackBar/FeedbackBar';
+export type { FeedbackBarProps } from './components/ai/FeedbackBar/FeedbackBar';
+
+export { SuggestionChips } from './components/ai/SuggestionChips/SuggestionChips';
+export type { SuggestionChipsProps, SuggestionChip } from './components/ai/SuggestionChips/SuggestionChips';
+
+export { ModelSelector } from './components/ai/ModelSelector/ModelSelector';
+export type { ModelSelectorProps, AIModel, ModelGroup } from './components/ai/ModelSelector/ModelSelector';
+
+export { SourceCard } from './components/ai/SourceCard/SourceCard';
+export type { SourceCardProps } from './components/ai/SourceCard/SourceCard';
+
+export { ApprovalGate } from './components/ai/ApprovalGate/ApprovalGate';
+export type { ApprovalGateProps } from './components/ai/ApprovalGate/ApprovalGate';
+
+export { Message } from './components/ai/Message/Message';
+export type { MessageProps, MessageRole } from './components/ai/Message/Message';
+
+export { MessageInput } from './components/ai/MessageInput/MessageInput';
+export type { MessageInputProps, AttachedFile } from './components/ai/MessageInput/MessageInput';
+
+export { ChatContainer } from './components/ai/ChatContainer/ChatContainer';
+export type { ChatContainerProps } from './components/ai/ChatContainer/ChatContainer';
+
+export { ConversationList } from './components/ai/ConversationList/ConversationList';
+export type { ConversationListProps, Conversation, ConversationGroup } from './components/ai/ConversationList/ConversationList';

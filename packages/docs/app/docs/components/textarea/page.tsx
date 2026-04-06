@@ -8,6 +8,7 @@ const props = [
   { name: 'label', type: 'string', description: 'Label rendered above the textarea.' },
   { name: 'hint', type: 'string', description: 'Helper text below. Turns error colour when error is true.' },
   { name: 'error', type: 'boolean', description: 'Error border and hint colour.' },
+  { name: 'showCount', type: 'boolean', default: 'false', description: 'Displays a character count below the textarea. Shows "n / max" when maxLength is set.' },
   { name: 'disabled', type: 'boolean', description: 'Disables input and dims the field.' },
 ];
 

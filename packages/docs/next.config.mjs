@@ -18,11 +18,20 @@ const withMDX = createMDX({
   },
 });
 
+const daveSrc = path.resolve(__dirname, '../components/src/index.ts');
+const chartsSrc = path.resolve(__dirname, '../charts/src/index.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    // Let Next.js tree-shake the components package per-page
+    optimizePackageImports: ['@dave/react'],
+  },
+  // Alias for webpack (production build)
   webpack: (config) => {
-    config.resolve.alias['@dave/react'] = path.resolve(__dirname, '../components/src/index.ts');
+    config.resolve.alias['@dave/react'] = daveSrc;
+    config.resolve.alias['@dave/charts'] = chartsSrc;
     return config;
   },
 };

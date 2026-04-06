@@ -1,22 +1,43 @@
+'use client';
+
 import Link from 'next/link';
 import { ThemeToggle } from './ThemeToggle';
+
+function openSearch() {
+  window.dispatchEvent(new Event('dave:open-search'));
+}
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-sm">
-      <div className="mx-auto max-w-screen-xl px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-display font-extrabold text-lg text-foreground tracking-tight">
-          DAVE
-        </Link>
+      <div className="mx-auto max-w-screen-xl px-6 h-14 flex items-center gap-4">
+        {/* Logo — same width as the sidebar so the search aligns with content */}
+        <div className="shrink-0 lg:w-56 xl:w-64">
+          <Link href="/" className="font-display font-extrabold text-lg text-foreground tracking-tight">
+            DAVE
+          </Link>
+        </div>
 
-        <nav className="flex items-center gap-1 sm:gap-2">
+        {/* Search */}
+        <button
+          onClick={openSearch}
+          className="flex items-center gap-2.5 h-8 px-3 rounded-[3px] border border-border bg-surface text-fg-secondary text-sm hover:border-border-strong hover:text-foreground transition-colors w-48 sm:w-64"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+          </svg>
+          <span className="flex-1 text-left text-sm">Search…</span>
+          <kbd className="hidden sm:inline-flex items-center rounded border border-border bg-background px-1.5 text-[10px] font-sans">⌘K</kbd>
+        </button>
+
+        <nav className="flex items-center gap-1 sm:gap-2 ml-auto">
           <Link href="/docs/getting-started" className="hidden sm:block px-3 py-1.5 text-sm text-fg-secondary hover:text-foreground transition-colors rounded-[3px] hover:bg-surface">
             Docs
           </Link>
           <Link href="/docs/foundations/colours" className="hidden sm:block px-3 py-1.5 text-sm text-fg-secondary hover:text-foreground transition-colors rounded-[3px] hover:bg-surface">
             Foundations
           </Link>
-          <Link href="/docs/components/button" className="hidden sm:block px-3 py-1.5 text-sm text-fg-secondary hover:text-foreground transition-colors rounded-[3px] hover:bg-surface">
+          <Link href="/docs/components" className="hidden sm:block px-3 py-1.5 text-sm text-fg-secondary hover:text-foreground transition-colors rounded-[3px] hover:bg-surface">
             Components
           </Link>
           <ThemeToggle />

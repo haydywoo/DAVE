@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: 'Badge' };
 
 const props = [
   { name: 'variant', type: "'neutral' | 'primary' | 'success' | 'warning' | 'error'", default: "'neutral'", description: 'Colour style of the badge.' },
-  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Controls text size and padding.' },
+  { name: 'size', type: "'xs' | 'sm' | 'md' | 'lg'", default: "'md'", description: 'Controls text size and padding.' },
   { name: 'children', type: 'ReactNode', required: true, description: 'Badge label content.' },
 ];
 

@@ -8,6 +8,7 @@ const props = [
   { name: 'variant', type: "'primary' | 'secondary' | 'ghost' | 'soft' | 'link' | 'inverse'", default: "'primary'", description: 'Visual style of the button.' },
   { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Controls height and padding.' },
   { name: 'isLoading', type: 'boolean', default: 'false', description: 'Shows a spinner and disables interaction.' },
+  { name: 'icon', type: 'ReactNode', description: 'Renders a square icon-only button when provided without children. Set aria-label for accessibility.' },
   { name: 'leftIcon', type: 'ReactNode', description: 'Icon rendered before the label.' },
   { name: 'rightIcon', type: 'ReactNode', description: 'Icon rendered after the label.' },
   { name: 'asChild', type: 'boolean', default: 'false', description: 'Merges props onto the child element — use with an <a> or Next.js Link to render a link styled as a button.' },

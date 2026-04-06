@@ -39,6 +39,11 @@ export const ErrorState: Story = {
   decorators: [Story => <div className="w-80"><Story /></div>],
 };
 
+export const WithCharacterCount: Story = {
+  args: { showCount: true, maxLength: 200, label: 'Bio', placeholder: 'Tell us about yourself…', hint: 'Keep it concise.' },
+  decorators: [Story => <div className="w-80"><Story /></div>],
+};
+
 export const Disabled: Story = {
   args: {
     label: 'Notes',

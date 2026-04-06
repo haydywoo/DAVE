@@ -11,6 +11,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  /** Renders a square icon-only button. Provide an aria-label for accessibility. */
+  icon?: React.ReactNode;
   asChild?: boolean;
   children?: React.ReactNode;
 }
@@ -34,6 +36,13 @@ const sizes: Record<ButtonSize, string> = {
   xl: 'h-13 px-6 text-base',
 };
 
+const iconSizes: Record<ButtonSize, string> = {
+  sm: 'h-7 w-7 text-xs',
+  md: 'h-9 w-9 text-sm',
+  lg: 'h-11 w-11 text-base',
+  xl: 'h-13 w-13 text-base',
+};
+
 const spinnerSizes: Record<ButtonSize, string> = {
   sm: 'h-3 w-3', md: 'h-4 w-4', lg: 'h-5 w-5', xl: 'h-5 w-5',
 };
@@ -48,20 +57,23 @@ function Spinner({ size }: { size: ButtonSize }) {
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { variant = 'primary', size = 'md', isLoading = false, asChild = false, leftIcon, rightIcon, className, disabled, children, ...props },
+  { variant = 'primary', size = 'md', isLoading = false, asChild = false, icon, leftIcon, rightIcon, className, disabled, children, ...props },
   ref,
 ) {
   const Comp = asChild ? Slot : 'button';
+  const isIconOnly = !!icon && !children;
   return (
     <Comp
       ref={ref}
-      className={cn(base, variants[variant], sizes[size], className)}
+      className={cn(base, variants[variant], isIconOnly ? iconSizes[size] : sizes[size], className)}
       disabled={!asChild ? (disabled || isLoading) : undefined}
       aria-busy={isLoading || undefined}
       {...props}
     >
       {isLoading ? (
-        <><Spinner size={size} />{children}</>
+        <><Spinner size={size} />{!isIconOnly && children}</>
+      ) : isIconOnly ? (
+        icon
       ) : (
         <>{leftIcon}{children}{rightIcon}</>
       )}

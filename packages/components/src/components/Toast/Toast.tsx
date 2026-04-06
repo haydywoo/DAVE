@@ -107,6 +107,33 @@ export function Toast({ open, onOpenChange, title, description, action, variant 
   );
 }
 
+// ─── Action ───────────────────────────────────────────────────────────────────
+
+export interface ToastActionProps {
+  children: React.ReactNode;
+  /** Describes the action for screen readers in case the toast auto-dismisses. Required by Radix. */
+  altText: string;
+  onClick?: () => void;
+  className?: string;
+}
+
+export function ToastAction({ children, altText, onClick, className }: ToastActionProps) {
+  return (
+    <RadixToast.Action
+      altText={altText}
+      onClick={onClick}
+      className={cn(
+        'inline-flex items-center justify-center rounded-[3px] border border-border bg-transparent px-2.5 py-1 text-xs font-semibold text-foreground transition-colors',
+        'hover:bg-surface hover:border-border-strong',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-card',
+        className,
+      )}
+    >
+      {children}
+    </RadixToast.Action>
+  );
+}
+
 // ─── useToast hook ────────────────────────────────────────────────────────────
 
 export interface ToastOptions {
