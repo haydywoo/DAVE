@@ -15,14 +15,17 @@ export const searchIndex: SearchItem[] = [
 
   // Navigation
   { title: 'Breadcrumb',   href: '/docs/components/breadcrumb',   group: 'Navigation',   keywords: 'breadcrumb trail path navigation location hierarchy' },
-  { title: 'Navbar',       href: '/docs/components/navbar',       group: 'Navigation',   keywords: 'navbar navigation bar header nav links brand logo sticky' },
+  { title: 'Nav',          href: '/docs/components/nav',          group: 'Navigation',   keywords: 'nav menu sidebar navigation vertical items sections groups collapsible icons badges' },
+  { title: 'Navbar',       href: '/docs/components/navbar',       group: 'Navigation',   keywords: 'navbar navigation bar header nav links brand logo sticky search mobile hamburger' },
   { title: 'Pagination',   href: '/docs/components/pagination',   group: 'Navigation',   keywords: 'pages paging next previous page numbers' },
   { title: 'Stepper',      href: '/docs/components/stepper',      group: 'Navigation',   keywords: 'stepper steps wizard progress multi-step flow onboarding' },
 
   // Forms
   { title: 'Button',       href: '/docs/components/button',       group: 'Forms',        keywords: 'button click action primary secondary ghost link cta submit' },
+  { title: 'Form Field',   href: '/docs/components/form-field',   group: 'Forms',        keywords: 'form field label hint error required control wrapper validation accessibility' },
   { title: 'Calendar',     href: '/docs/components/calendar',     group: 'Forms',        keywords: 'calendar date pick month grid day week navigation' },
-  { title: 'Date Picker',  href: '/docs/components/date-picker',  group: 'Forms',        keywords: 'date picker datepicker input calendar popover format date-fns' },
+  { title: 'Date Picker',        href: '/docs/components/date-picker',        group: 'Forms', keywords: 'date picker datepicker input calendar popover format date-fns' },
+  { title: 'Date Range Picker', href: '/docs/components/date-range-picker', group: 'Forms', keywords: 'date range picker daterangepicker from to interval calendar popover date-fns' },
   { title: 'Copy Button',  href: '/docs/components/copy-button',  group: 'Forms',        keywords: 'copy button clipboard copy-to-clipboard code snippet text' },
   { title: 'Dropzone',     href: '/docs/components/dropzone',     group: 'Forms',        keywords: 'dropzone file upload drag drop input attachment document image' },
   { title: 'Combobox',     href: '/docs/components/combobox',     group: 'Forms',        keywords: 'combobox searchable select autocomplete filter dropdown grouped options' },
@@ -31,6 +34,7 @@ export const searchIndex: SearchItem[] = [
   { title: 'Input',        href: '/docs/components/input',        group: 'Forms',        keywords: 'input text field form email search password addon icon' },
   { title: 'Number Input', href: '/docs/components/number-input', group: 'Forms',        keywords: 'number input increment decrement stepper quantity counter spin' },
   { title: 'Radio',        href: '/docs/components/radio',        group: 'Forms',        keywords: 'radio button select one option group choice' },
+  { title: 'Segmented Control', href: '/docs/components/segmented-control', group: 'Forms', keywords: 'segmented control toggle button group radio switch view mode filter tabs' },
   { title: 'Select',       href: '/docs/components/select',       group: 'Forms',        keywords: 'select dropdown pick option list choose' },
   { title: 'Slider',       href: '/docs/components/slider',       group: 'Forms',        keywords: 'slider range input drag thumb track min max value' },
   { title: 'Switch',       href: '/docs/components/switch',       group: 'Forms',        keywords: 'switch toggle on off boolean enable disable' },
@@ -39,6 +43,7 @@ export const searchIndex: SearchItem[] = [
 
   // Overlays
   { title: 'Alert Dialog',  href: '/docs/components/alert-dialog',  group: 'Overlays',     keywords: 'alert dialog modal confirm destructive delete warning interrupt' },
+  { title: 'Command',       href: '/docs/components/command',       group: 'Overlays',     keywords: 'command palette spotlight search cmdk keyboard shortcut actions navigation dialog' },
   { title: 'Context Menu',  href: '/docs/components/context-menu',  group: 'Overlays',     keywords: 'context menu right-click actions contextual surface trigger' },
   { title: 'Dialog',       href: '/docs/components/dialog',       group: 'Overlays',     keywords: 'dialog modal overlay popup form detail' },
   { title: 'Drawer',       href: '/docs/components/drawer',       group: 'Overlays',     keywords: 'drawer side panel slide settings filter detail sheet mobile navigation' },

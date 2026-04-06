@@ -13,7 +13,22 @@ const itemProps = [
   { name: 'onSelect', type: '(event: Event) => void', description: 'Called when the item is selected. Menu closes automatically.' },
   { name: 'disabled', type: 'boolean', description: 'Prevents interaction and dims the item.' },
   { name: 'destructive', type: 'boolean', description: 'Applies error colour — use for delete or irreversible actions.' },
-  { name: 'icon', type: 'ReactNode', description: 'Optional icon rendered before the label.' },
+  { name: 'icon', type: 'ReactNode', description: 'Icon rendered before the label.' },
+  { name: 'shortcut', type: 'string', description: 'Keyboard shortcut hint shown right-aligned, e.g. "⌘K". Decorative — does not bind the key.' },
+  { name: 'description', type: 'string', description: 'Secondary description line rendered below the label in a smaller muted style.' },
+];
+
+const checkboxItemProps = [
+  { name: 'checked', type: 'boolean', description: 'Whether the item is checked.' },
+  { name: 'onCheckedChange', type: '(checked: boolean) => void', description: 'Called when the checked state changes.' },
+  { name: 'disabled', type: 'boolean', description: 'Prevents interaction and dims the item.' },
+  { name: 'shortcut', type: 'string', description: 'Keyboard shortcut hint shown right-aligned.' },
+];
+
+const radioItemProps = [
+  { name: 'value', type: 'string', required: true, description: 'The value this item represents within a DropdownRadioGroup.' },
+  { name: 'disabled', type: 'boolean', description: 'Prevents interaction and dims the item.' },
+  { name: 'shortcut', type: 'string', description: 'Keyboard shortcut hint shown right-aligned.' },
 ];
 
 export default function DropdownPage() {
@@ -39,11 +54,16 @@ export default function DropdownPage() {
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DropdownDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">DropdownContent props</h2>
+      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h3 className="font-semibold text-sm text-foreground mb-3">DropdownContent</h3>
       <PropsTable props={contentProps} />
-
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">DropdownItem props</h2>
+      <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">DropdownItem</h3>
       <PropsTable props={itemProps} />
+      <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">DropdownCheckboxItem</h3>
+      <PropsTable props={checkboxItemProps} />
+      <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">DropdownRadioItem</h3>
+      <p className="text-xs text-fg-secondary mb-3">Wrap in <code className="font-code">DropdownRadioGroup</code> with a <code className="font-code">value</code> and <code className="font-code">onValueChange</code> prop.</p>
+      <PropsTable props={radioItemProps} />
     </div>
   );
 }

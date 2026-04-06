@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ToastProviderWithHook, useToast, Button } from '@dave/react';
+import { ToastProviderWithHook, useToast, ToastAction, Button } from '@dave/react';
 
 const meta: Meta = {
   title: 'Components/Toast',
@@ -32,6 +32,26 @@ export const Warning: StoryObj = {
 
 export const Error: StoryObj = {
   render: () => <ToastDemo variant="error" title="Something went wrong" description="Please try again or contact support." />,
+};
+
+export const WithAction: StoryObj = {
+  render: function WithActionDemo() {
+    const { toast } = useToast();
+    return (
+      <Button
+        variant="secondary"
+        onClick={() =>
+          toast({
+            title: 'File deleted',
+            description: 'document.pdf has been moved to trash.',
+            action: <ToastAction altText="Undo file deletion" onClick={() => console.log('Undo')}>Undo</ToastAction>,
+          })
+        }
+      >
+        Delete file
+      </Button>
+    );
+  },
 };
 
 export const AllVariants: StoryObj = {

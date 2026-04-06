@@ -12,7 +12,7 @@ const meta: Meta<typeof Badge> = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg'],
+      options: ['xs', 'sm', 'md', 'lg'],
     },
     children: { control: 'text' },
   },
@@ -40,6 +40,7 @@ export const AllVariants: Story = {
 export const Sizes: Story = {
   render: () => (
     <div className="flex items-center gap-2">
+      <Badge size="xs">Extra small</Badge>
       <Badge size="sm">Small</Badge>
       <Badge size="md">Medium</Badge>
       <Badge size="lg">Large</Badge>

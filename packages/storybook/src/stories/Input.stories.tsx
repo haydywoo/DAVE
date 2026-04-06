@@ -121,3 +121,21 @@ export const AllStates: Story = {
     </div>
   ),
 };
+
+export const Clearable: Story = {
+  render: () => (
+    <div className="flex flex-col gap-4 w-80">
+      <Input clearable placeholder="Type to see the clear button…" defaultValue="Hello, world!" />
+      <Input clearable leftIcon={<SearchIcon />} placeholder="Search…" defaultValue="react components" />
+    </div>
+  ),
+};
+
+export const CharacterCount: Story = {
+  render: () => (
+    <div className="flex flex-col gap-4 w-80">
+      <Input showCount placeholder="Type something…" />
+      <Input showCount maxLength={100} placeholder="Max 100 characters" defaultValue="Start typing here…" hint="Keep it concise." />
+    </div>
+  ),
+};

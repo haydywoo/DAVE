@@ -304,6 +304,7 @@ export interface DateRangePickerProps {
   min?: Date;
   max?: Date;
   disabled?: boolean;
+  disabledDate?: (date: Date) => boolean;
   error?: boolean;
   size?: DateRangePickerSize;
   label?: string;
@@ -342,6 +343,7 @@ export function DateRangePicker({
   min,
   max,
   disabled = false,
+  disabledDate,
   error = false,
   size = 'md',
   label,
@@ -417,6 +419,7 @@ export function DateRangePicker({
               onValueChange={handleRangeChange}
               min={min}
               max={max}
+              disabled={disabledDate}
             />
           </RadixPopover.Content>
         </RadixPopover.Portal>

@@ -33,8 +33,15 @@ toast({ title: 'Done', variant: 'success' });`}</pre>
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <ToastDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Toast props</h2>
+      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h3 className="font-semibold text-sm text-foreground mb-3">Toast</h3>
       <PropsTable props={toastProps} />
+      <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">ToastAction</h3>
+      <PropsTable props={[
+        { name: 'altText', type: 'string', required: true, description: 'Describes the action for screen readers in case the toast has already dismissed.' },
+        { name: 'onClick', type: '() => void', description: 'Called when the action button is clicked.' },
+        { name: 'children', type: 'ReactNode', required: true, description: 'Button label.' },
+      ]} />
     </div>
   );
 }

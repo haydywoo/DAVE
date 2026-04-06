@@ -19,7 +19,22 @@ const itemProps = [
   { name: 'icon',        type: 'ReactNode',                              description: 'Icon rendered before the label.' },
   { name: 'destructive', type: 'boolean', default: 'false',              description: 'Renders the item in error colour.' },
   { name: 'disabled',    type: 'boolean', default: 'false',              description: 'Prevents selection.' },
+  { name: 'shortcut',    type: 'string',                                 description: 'Keyboard shortcut hint shown right-aligned, e.g. "⌘K". Decorative only.' },
+  { name: 'description', type: 'string',                                 description: 'Secondary description line rendered below the label.' },
   { name: 'className',   type: 'string',                                 description: 'Additional classes.' },
+];
+
+const checkboxItemProps = [
+  { name: 'checked', type: 'boolean', description: 'Whether the item is checked.' },
+  { name: 'onCheckedChange', type: '(checked: boolean) => void', description: 'Called when the checked state changes.' },
+  { name: 'disabled', type: 'boolean', description: 'Prevents interaction.' },
+  { name: 'shortcut', type: 'string', description: 'Keyboard shortcut hint shown right-aligned.' },
+];
+
+const radioItemProps = [
+  { name: 'value', type: 'string', required: true, description: 'The value this item represents within a ContextMenuRadioGroup.' },
+  { name: 'disabled', type: 'boolean', description: 'Prevents interaction.' },
+  { name: 'shortcut', type: 'string', description: 'Keyboard shortcut hint shown right-aligned.' },
 ];
 
 export default function ContextMenuPage() {
@@ -32,11 +47,15 @@ export default function ContextMenuPage() {
 
       <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
       <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`<ContextMenu>
-  <ContextMenuTrigger />       {/* right-click target */}
+  <ContextMenuTrigger />            {/* right-click target */}
   <ContextMenuContent>
-    <ContextMenuLabel />       {/* section heading */}
-    <ContextMenuItem />        {/* action */}
-    <ContextMenuSeparator />   {/* divider */}
+    <ContextMenuLabel />            {/* section heading */}
+    <ContextMenuItem />             {/* action */}
+    <ContextMenuCheckboxItem />     {/* toggle item */}
+    <ContextMenuRadioGroup>
+      <ContextMenuRadioItem />      {/* single-select item */}
+    </ContextMenuRadioGroup>
+    <ContextMenuSeparator />        {/* divider */}
     <ContextMenuSub>
       <ContextMenuSubTrigger />
       <ContextMenuSubContent>
@@ -58,6 +77,13 @@ export default function ContextMenuPage() {
 
       <h3 className="text-sm font-medium text-foreground mt-6 mb-3">ContextMenuItem</h3>
       <PropsTable props={itemProps} />
+
+      <h3 className="text-sm font-medium text-foreground mt-6 mb-3">ContextMenuCheckboxItem</h3>
+      <PropsTable props={checkboxItemProps} />
+
+      <h3 className="text-sm font-medium text-foreground mt-6 mb-3">ContextMenuRadioItem</h3>
+      <p className="text-xs text-fg-secondary mb-3">Wrap in <code className="font-code">ContextMenuRadioGroup</code> with a <code className="font-code">value</code> and <code className="font-code">onValueChange</code> prop.</p>
+      <PropsTable props={radioItemProps} />
     </div>
   );
 }

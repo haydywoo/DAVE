@@ -2,12 +2,13 @@ import * as React from 'react';
 import { cn } from '../../lib/cn';
 
 export type BadgeVariant = 'neutral' | 'primary' | 'success' | 'warning' | 'error';
-export type BadgeSize    = 'sm' | 'md' | 'lg';
+export type BadgeSize    = 'xs' | 'sm' | 'md' | 'lg';
 
 export interface BadgeProps {
   variant?: BadgeVariant;
   size?: BadgeSize;
   children: React.ReactNode;
+  className?: string;
 }
 
 const variants: Record<BadgeVariant, string> = {
@@ -19,14 +20,15 @@ const variants: Record<BadgeVariant, string> = {
 };
 
 const sizes: Record<BadgeSize, string> = {
+  xs: 'px-1 py-px text-[9px]',
   sm: 'px-1.5 py-0.5 text-[10px]',
   md: 'px-2.5 py-1 text-xs',
   lg: 'px-3 py-1.5 text-sm',
 };
 
-export function Badge({ variant = 'neutral', size = 'md', children }: BadgeProps) {
+export function Badge({ variant = 'neutral', size = 'md', children, className }: BadgeProps) {
   return (
-    <span className={cn('inline-flex items-center rounded-[3px] font-semibold', variants[variant], sizes[size])}>
+    <span className={cn('inline-flex items-center rounded-[3px] font-semibold', variants[variant], sizes[size], className)}>
       {children}
     </span>
   );

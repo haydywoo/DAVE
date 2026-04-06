@@ -47,7 +47,13 @@
       "red-3":  { "$value": "#FECACA", "$type": "color" },
       "red-9":  { "$value": "#DC2626", "$type": "color", "$description": "Error solid" },
       "red-10": { "$value": "#B91C1C", "$type": "color", "$description": "Error hover" },
-      "red-11": { "$value": "#991B1B", "$type": "color", "$description": "Error text on light bg — 9.2:1 on white" }
+      "red-11": { "$value": "#991B1B", "$type": "color", "$description": "Error text on light bg — 9.2:1 on white" },
+
+      "teal-9":   { "$value": "#0D9488", "$type": "color", "$description": "Chart teal" },
+      "rose-9":   { "$value": "#E11D48", "$type": "color", "$description": "Chart rose" },
+      "sky-9":    { "$value": "#0284C7", "$type": "color", "$description": "Chart sky blue" },
+      "violet-9": { "$value": "#7C3AED", "$type": "color", "$description": "Chart violet" },
+      "orange-9": { "$value": "#EA580C", "$type": "color", "$description": "Chart orange" }
 
     },
     "semantic": {
@@ -82,7 +88,16 @@
       "error-bg":     { "$value": "{color.primitive.red-1}",  "$type": "color" },
       "error-border": { "$value": "{color.primitive.red-3}",  "$type": "color" },
       "error-solid":  { "$value": "{color.primitive.red-9}",  "$type": "color" },
-      "error-text":   { "$value": "{color.primitive.red-11}", "$type": "color" }
+      "error-text":   { "$value": "{color.primitive.red-11}", "$type": "color" },
+
+      "chart-1": { "$value": "{color.primitive.accent-8}",  "$type": "color", "$description": "Indigo — brand anchor" },
+      "chart-2": { "$value": "{color.primitive.teal-9}",    "$type": "color", "$description": "Teal" },
+      "chart-3": { "$value": "{color.primitive.amber-9}",   "$type": "color", "$description": "Amber" },
+      "chart-4": { "$value": "{color.primitive.rose-9}",    "$type": "color", "$description": "Rose" },
+      "chart-5": { "$value": "{color.primitive.green-9}",   "$type": "color", "$description": "Green" },
+      "chart-6": { "$value": "{color.primitive.sky-9}",     "$type": "color", "$description": "Sky blue" },
+      "chart-7": { "$value": "{color.primitive.violet-9}",  "$type": "color", "$description": "Violet" },
+      "chart-8": { "$value": "{color.primitive.orange-9}",  "$type": "color", "$description": "Orange" }
 
     }
   }

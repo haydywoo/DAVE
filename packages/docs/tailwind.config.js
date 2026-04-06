@@ -65,6 +65,17 @@ module.exports = {
           hover:      'var(--color-error-hover)',
           foreground: 'var(--color-error-foreground)',
         },
+
+        chart: {
+          1: 'var(--color-chart-1)',
+          2: 'var(--color-chart-2)',
+          3: 'var(--color-chart-3)',
+          4: 'var(--color-chart-4)',
+          5: 'var(--color-chart-5)',
+          6: 'var(--color-chart-6)',
+          7: 'var(--color-chart-7)',
+          8: 'var(--color-chart-8)',
+        },
       },
     },
   },

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as RadixSwitch from '@radix-ui/react-switch';
 import { cn } from '../../lib/cn';
 
-export type SwitchSize = 'sm' | 'md';
+export type SwitchSize = 'sm' | 'md' | 'lg' | 'xl';
 
 export interface SwitchProps {
   checked?: boolean;
@@ -18,11 +18,15 @@ export interface SwitchProps {
 const trackSizes: Record<SwitchSize, string> = {
   sm: 'h-4 w-7',
   md: 'h-5 w-9',
+  lg: 'h-6 w-11',
+  xl: 'h-7 w-13',
 };
 
 const thumbSizes: Record<SwitchSize, string> = {
   sm: 'h-3 w-3 data-[state=checked]:translate-x-3',
   md: 'h-3.5 w-3.5 data-[state=checked]:translate-x-4',
+  lg: 'h-4.5 w-4.5 data-[state=checked]:translate-x-5',
+  xl: 'h-5.5 w-5.5 data-[state=checked]:translate-x-6',
 };
 
 export function Switch({

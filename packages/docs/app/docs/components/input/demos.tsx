@@ -88,6 +88,30 @@ export function InputDemos() {
           <Input label="Email" placeholder="you@example.com" disabled />
         </div>
       </Preview>
+
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Clearable</h3>
+      <Preview
+        center={false}
+        code={`<Input clearable placeholder="Type to see the clear button…" defaultValue="Hello, world!" />
+<Input clearable leftIcon={<SearchIcon />} placeholder="Search…" defaultValue="react components" />`}
+      >
+        <div className="w-full max-w-sm flex flex-col gap-4">
+          <Input clearable placeholder="Type to see the clear button…" defaultValue="Hello, world!" />
+          <Input clearable leftIcon={<SearchIcon />} placeholder="Search…" defaultValue="react components" />
+        </div>
+      </Preview>
+
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Character count</h3>
+      <Preview
+        center={false}
+        code={`<Input showCount placeholder="Type something…" />
+<Input showCount maxLength={100} placeholder="Max 100 characters" hint="Keep it concise." />`}
+      >
+        <div className="w-full max-w-sm flex flex-col gap-4">
+          <Input showCount placeholder="Type something…" />
+          <Input showCount maxLength={100} placeholder="Max 100 characters" defaultValue="Start typing here…" hint="Keep it concise." />
+        </div>
+      </Preview>
     </>
   );
 }

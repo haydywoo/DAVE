@@ -117,3 +117,16 @@ export const Disabled: Story = {
     </div>
   ),
 };
+
+export const IconOnly: Story = {
+  render: () => (
+    <div className="flex items-center gap-3">
+      <Button variant="primary" icon={<PlusIcon />} aria-label="Add item" size="sm" />
+      <Button variant="primary" icon={<PlusIcon />} aria-label="Add item" />
+      <Button variant="primary" icon={<PlusIcon />} aria-label="Add item" size="lg" />
+      <Button variant="secondary" icon={<PlusIcon />} aria-label="Add item" />
+      <Button variant="ghost" icon={<PlusIcon />} aria-label="Add item" />
+      <Button variant="soft" icon={<PlusIcon />} aria-label="Add item" />
+    </div>
+  ),
+};

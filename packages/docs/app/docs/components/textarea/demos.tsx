@@ -34,6 +34,15 @@ export function TextareaDemos() {
         </div>
       </Preview>
 
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Character count</h3>
+      <Preview code={`<Textarea showCount placeholder="Type something…" />
+<Textarea showCount maxLength={200} label="Bio" placeholder="Tell us about yourself…" hint="Keep it concise." />`}>
+        <div className="w-72 flex flex-col gap-4">
+          <Textarea showCount placeholder="Type something…" />
+          <Textarea showCount maxLength={200} label="Bio" placeholder="Tell us about yourself…" hint="Keep it concise." />
+        </div>
+      </Preview>
+
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Disabled</h3>
       <Preview code={`<Textarea label="Notes" defaultValue="Read-only content." disabled />`}>
         <div className="w-72">
