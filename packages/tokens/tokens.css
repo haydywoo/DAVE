@@ -1,0 +1,187 @@
+/*
+ * DAVE Design Tokens
+ *
+ * To theme the accent colour, override the --accent-* variables in your own CSS:
+ *
+ *   :root {
+ *     --accent-1:  #f0f4ff;
+ *     --accent-2:  #e0e9ff;
+ *     ...
+ *     --accent-9:  #2563eb;   ← solid button colour
+ *     --accent-10: #1d4ed8;   ← hover
+ *     --accent-11: #1e40af;   ← text on tinted backgrounds
+ *     --accent-12: #1e3a8a;   ← high-contrast text
+ *   }
+ */
+
+:root {
+  /* ── Neutral scale (warm grays) ───────────────────────────── */
+  --neutral-1:  #F7F5F0;
+  --neutral-2:  #F0EEE9;
+  --neutral-3:  #E8E5DF;
+  --neutral-4:  #E2DED7;
+  --neutral-5:  #D6D1CA;
+  --neutral-6:  #C8C3BA;
+  --neutral-7:  #B0AAA1;
+  --neutral-8:  #9E9890;
+  --neutral-9:  #706A62;
+  --neutral-10: #4A4640;
+  --neutral-11: #2E2B27;
+  --neutral-12: #0F0E0C;
+
+  /* ── Accent scale ─────────────────────────────────────────── */
+  --accent-1:  #F5F5FE;
+  --accent-2:  #EAEAFB;
+  --accent-3:  #D9D8F7;
+  --accent-4:  #C5C4F2;
+  --accent-5:  #AEADEA;
+  --accent-6:  #9290E1;
+  --accent-7:  #7977D6;
+  --accent-8:  #5755C5;
+  --accent-9:  #2D24AE;
+  --accent-10: #231B9A;
+  --accent-11: #3B33BB;
+  --accent-12: #14107A;
+
+  /* ── Status: Success ──────────────────────────────────────── */
+  --green-1:  #F0FDF4;
+  --green-2:  #DCFCE7;
+  --green-3:  #BBF7D0;
+  --green-9:  #16A34A;
+  --green-10: #15803D;
+  --green-11: #166534;
+
+  /* ── Status: Warning ──────────────────────────────────────── */
+  --amber-1:  #FFFBEB;
+  --amber-2:  #FEF3C7;
+  --amber-3:  #FDE68A;
+  --amber-9:  #D97706;
+  --amber-10: #B45309;
+  --amber-11: #92400E;
+
+  /* ── Status: Error ────────────────────────────────────────── */
+  --red-1:  #FFF5F5;
+  --red-2:  #FEE2E2;
+  --red-3:  #FECACA;
+  --red-9:  #DC2626;
+  --red-10: #B91C1C;
+  --red-11: #991B1B;
+
+  /* ── Semantic aliases (components use these) ──────────────── */
+
+  /* Surface & layout */
+  --color-background:      var(--neutral-1);
+  --color-surface:         var(--neutral-2);
+  --color-card:            #ffffff;
+  --color-surface-hovered: var(--neutral-3);
+  --color-border:          var(--neutral-4);
+  --color-border-strong:   var(--neutral-6);
+
+  /* Foreground */
+  --color-foreground:          var(--neutral-12);
+  --color-foreground-secondary: var(--neutral-9);
+  --color-foreground-subdued:   var(--neutral-10);
+  --color-foreground-disabled:  var(--neutral-6);
+
+  /* Inverse (for dark backgrounds) */
+  --color-inverse:       var(--neutral-12);
+  --color-inverse-hover: var(--neutral-11);
+
+  /* Accent */
+  --color-accent:            var(--accent-9);
+  --color-accent-hover:      var(--accent-10);
+  --color-accent-subtle:     var(--accent-2);
+  --color-accent-subtle-border: var(--accent-3);
+  --color-accent-border:     var(--accent-7);
+  --color-accent-foreground: var(--accent-11);
+  /* Label colour for solid accent backgrounds — always contrasts with the accent fill */
+  --color-on-accent:         #ffffff;
+
+  /* Success */
+  --color-success-subtle:     var(--green-1);
+  --color-success-border:     var(--green-3);
+  --color-success:            var(--green-9);
+  --color-success-foreground: var(--green-11);
+
+  /* Warning */
+  --color-warning-subtle:     var(--amber-1);
+  --color-warning-border:     var(--amber-3);
+  --color-warning:            var(--amber-9);
+  --color-warning-foreground: var(--amber-11);
+
+  /* Error */
+  --color-error-subtle:     var(--red-1);
+  --color-error-border:     var(--red-3);
+  --color-error:            var(--red-9);
+  --color-error-hover:      var(--red-10);
+  --color-error-foreground: var(--red-11);
+
+  /* Chart palette — categorical series colours */
+  --color-chart-1: #5755C5;
+  --color-chart-2: #0D9488;
+  --color-chart-3: #D97706;
+  --color-chart-4: #E11D48;
+  --color-chart-5: #16A34A;
+  --color-chart-6: #0284C7;
+  --color-chart-7: #7C3AED;
+  --color-chart-8: #EA580C;
+}
+
+/* ── Dark mode ────────────────────────────────────────────────────── */
+.dark {
+  /* Surface & layout */
+  --color-background:       #0F0E0C;
+  --color-surface:          #1A1917;
+  --color-card:             #242220;
+  --color-surface-hovered:  #2E2B27;
+  --color-border:           #2E2B27;
+  --color-border-strong:    #3D3A35;
+
+  /* Foreground */
+  --color-foreground:           #F7F5F0;
+  --color-foreground-secondary: #9E9890;
+  --color-foreground-subdued:   #706A62;
+  --color-foreground-disabled:  #4A4640;
+
+  /* Inverse */
+  --color-inverse:       #F7F5F0;
+  --color-inverse-hover: #E8E5DF;
+
+  /* Accent — brighter steps for dark backgrounds, white label still works */
+  --color-accent:               var(--accent-7);
+  --color-accent-hover:         var(--accent-6);
+  --color-on-accent:            #ffffff;
+  --color-accent-subtle:        #1A1932;
+  --color-accent-subtle-border: #252450;
+  --color-accent-border:        var(--accent-6);
+  --color-accent-foreground:    var(--accent-5);
+
+  /* Success */
+  --color-success-subtle:     #052e16;
+  --color-success-border:     #14532d;
+  --color-success:            var(--green-9);
+  --color-success-foreground: #86efac;
+
+  /* Warning */
+  --color-warning-subtle:     #1c1400;
+  --color-warning-border:     #3d2900;
+  --color-warning:            var(--amber-9);
+  --color-warning-foreground: #fcd34d;
+
+  /* Error */
+  --color-error-subtle:     #2d0a0a;
+  --color-error-border:     #5c1212;
+  --color-error:            var(--red-9);
+  --color-error-hover:      var(--red-10);
+  --color-error-foreground: #fca5a5;
+
+  /* Chart palette — brighter for dark backgrounds */
+  --color-chart-1: #7977D6;
+  --color-chart-2: #2DD4BF;
+  --color-chart-3: #FBBF24;
+  --color-chart-4: #FB7185;
+  --color-chart-5: #4ADE80;
+  --color-chart-6: #38BDF8;
+  --color-chart-7: #A78BFA;
+  --color-chart-8: #FB923C;
+}
