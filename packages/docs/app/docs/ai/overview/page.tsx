@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = { title: 'AI Components — Overview' };
 
@@ -18,10 +19,10 @@ export default function AIOverviewPage() {
           { name: 'MessageInput', href: '/docs/ai/message-input', desc: 'Auto-growing input with send/stop, attachments, and toolbar slots.' },
           { name: 'ConversationList', href: '/docs/ai/conversation-list', desc: 'Sidebar list of past conversations with grouping and delete.' },
         ].map(item => (
-          <a key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
+          <Link key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
             <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
             <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -32,10 +33,10 @@ export default function AIOverviewPage() {
           { name: 'StreamingText', href: '/docs/ai/streaming-text', desc: 'Text with an animated blinking cursor for streaming output.' },
           { name: 'ThinkingBlock', href: '/docs/ai/thinking-block', desc: 'Collapsible reasoning block shown while the model thinks.' },
         ].map(item => (
-          <a key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
+          <Link key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
             <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
             <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -47,10 +48,10 @@ export default function AIOverviewPage() {
           { name: 'SourceCard', href: '/docs/ai/source-card', desc: 'Clickable citation card with favicon, domain, and snippet.' },
           { name: 'ToolCall', href: '/docs/ai/tool-call', desc: 'Collapsible card showing a tool invocation and its result.' },
         ].map(item => (
-          <a key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
+          <Link key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
             <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
             <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -61,10 +62,10 @@ export default function AIOverviewPage() {
           { name: 'ModelSelector', href: '/docs/ai/model-selector', desc: 'Dropdown for switching AI models with badge and group support.' },
           { name: 'SuggestionChips', href: '/docs/ai/suggestion-chips', desc: 'Pill-shaped prompt suggestions shown below the input.' },
         ].map(item => (
-          <a key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
+          <Link key={item.name} href={item.href} className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors">
             <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
             <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
