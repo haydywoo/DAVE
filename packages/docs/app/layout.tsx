@@ -1,26 +1,7 @@
 import type { Metadata } from 'next';
-import { Syne, Instrument_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Nav } from '@/components/Nav';
 import { ThemeProvider } from '@/components/ThemeProvider';
-
-const syne = Syne({
-  subsets: ['latin'],
-  weight: ['800'],
-  variable: '--font-display',
-});
-
-const instrumentSans = Instrument_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-code',
-});
 
 export const metadata: Metadata = {
   title: { default: 'DAVE', template: '%s — DAVE' },
@@ -29,7 +10,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${syne.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+      </head>
       <body className="min-h-screen bg-background text-foreground font-body">
         <ThemeProvider>
           <Nav />
