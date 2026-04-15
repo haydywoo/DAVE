@@ -42,7 +42,10 @@ function PersonIcon() {
   );
 }
 
-export function Avatar({ src, alt = '', initials, fallback, size = 'md', shape = 'circle', status, className }: AvatarProps) {
+export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
+  { src, alt = '', initials, fallback, size = 'md', shape = 'circle', status, className, ...props },
+  ref,
+) {
   const [imgError, setImgError] = React.useState(false);
   const { container, text, status: statusSize, ring } = sizeMap[size];
   const shapeClass = shapeMap[shape];
@@ -51,7 +54,7 @@ export function Avatar({ src, alt = '', initials, fallback, size = 'md', shape =
   const showImage = src && !imgError;
 
   return (
-    <div className={cn('relative inline-flex shrink-0', container, className)}>
+    <div ref={ref} className={cn('relative inline-flex shrink-0', container, className)} {...props}>
       <div className={cn(
         'flex h-full w-full items-center justify-center overflow-hidden',
         shapeClass,
@@ -75,7 +78,7 @@ export function Avatar({ src, alt = '', initials, fallback, size = 'md', shape =
       )}
     </div>
   );
-}
+});
 
 // ─── Avatar Group ─────────────────────────────────────────────────────────────
 

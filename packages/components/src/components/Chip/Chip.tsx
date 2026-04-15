@@ -51,17 +51,21 @@ const variants: Record<ChipVariant, { default: string; selected: string }> = {
   },
 };
 
-export function Chip({
-  children,
-  variant = 'neutral',
-  size = 'md',
-  selected = false,
-  onClick,
-  onRemove,
-  icon,
-  disabled = false,
-  className,
-}: ChipProps) {
+export const Chip = React.forwardRef<HTMLButtonElement | HTMLSpanElement, ChipProps>(function Chip(
+  {
+    children,
+    variant = 'neutral',
+    size = 'md',
+    selected = false,
+    onClick,
+    onRemove,
+    icon,
+    disabled = false,
+    className,
+    ...props
+  },
+  ref,
+) {
   const { chip: chipSize, remove: removeSize } = sizes[size];
   const variantStyle = selected ? variants[variant].selected : variants[variant].default;
   const isInteractive = Boolean(onClick);
@@ -70,6 +74,8 @@ export function Chip({
 
   return (
     <Comp
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ref={ref as any}
       type={isInteractive ? 'button' : undefined}
       onClick={isInteractive ? onClick : undefined}
       disabled={isInteractive ? disabled : undefined}
@@ -110,4 +116,4 @@ export function Chip({
       )}
     </Comp>
   );
-}
+});

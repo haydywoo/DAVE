@@ -15,9 +15,13 @@ const sizes: Record<KbdSize, string> = {
   lg: 'h-6 min-w-6 px-2 text-sm',
 };
 
-export function Kbd({ children, size = 'md', className }: KbdProps) {
+export const Kbd = React.forwardRef<HTMLElement, KbdProps>(function Kbd(
+  { children, size = 'md', className, ...props },
+  ref,
+) {
   return (
     <kbd
+      ref={ref}
       className={cn(
         'inline-flex items-center justify-center rounded-[3px]',
         'border border-border bg-surface text-fg-secondary',
@@ -25,8 +29,9 @@ export function Kbd({ children, size = 'md', className }: KbdProps) {
         sizes[size],
         className,
       )}
+      {...props}
     >
       {children}
     </kbd>
   );
-}
+});
