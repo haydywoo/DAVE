@@ -270,6 +270,15 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
           ))}
         </Nav>
       </div>
+
+      <div className="px-4 py-4 border-t border-border">
+        <Link
+          href="/docs/legal"
+          className="text-xs text-fg-subdued hover:text-fg-secondary transition-colors"
+        >
+          Terms &amp; EULA
+        </Link>
+      </div>
     </aside>
   );
 }
