@@ -32,7 +32,6 @@ jobs:
 
       - name: Build packages
         run: |
-          pnpm --filter @dave/tokens build
           pnpm --filter @dave/react build
           pnpm --filter @dave/charts build
 
