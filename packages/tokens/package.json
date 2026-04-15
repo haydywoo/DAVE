@@ -4,7 +4,7 @@
   "description": "DAVE design tokens — platform-agnostic DTCG source of truth",
   "main": "dist/index.js",
   "scripts": {
-    "build": "style-dictionary build",
+    "build": "style-dictionary build --config style-dictionary.config.json",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
