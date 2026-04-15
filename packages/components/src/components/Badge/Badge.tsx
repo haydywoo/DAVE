@@ -26,10 +26,13 @@ const sizes: Record<BadgeSize, string> = {
   lg: 'px-3 py-1.5 text-sm',
 };
 
-export function Badge({ variant = 'neutral', size = 'md', children, className }: BadgeProps) {
+export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
+  { variant = 'neutral', size = 'md', children, className, ...props },
+  ref,
+) {
   return (
-    <span className={cn('inline-flex items-center rounded-[3px] font-semibold', variants[variant], sizes[size], className)}>
+    <span ref={ref} className={cn('inline-flex items-center rounded-[3px] font-semibold', variants[variant], sizes[size], className)} {...props}>
       {children}
     </span>
   );
-}
+});

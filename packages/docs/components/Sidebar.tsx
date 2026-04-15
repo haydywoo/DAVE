@@ -57,6 +57,8 @@ const standardNavigation = [
       { title: 'File Input',        href: '/docs/components/file-input' },
       { title: 'Input',             href: '/docs/components/input' },
       { title: 'Number Input',      href: '/docs/components/number-input' },
+      { title: 'OTP Input',         href: '/docs/components/otp-input' },
+      { title: 'Rating',            href: '/docs/components/rating' },
       { title: 'Radio',             href: '/docs/components/radio' },
       { title: 'Segmented Control', href: '/docs/components/segmented-control' },
       { title: 'Select',            href: '/docs/components/select' },

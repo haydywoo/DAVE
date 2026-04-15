@@ -152,6 +152,12 @@ export type { InputProps, InputSize } from './components/Input/Input';
 export { FileInput } from './components/FileInput/FileInput';
 export type { FileInputProps, FileInputSize } from './components/FileInput/FileInput';
 
+export { OTPInput } from './components/OTPInput/OTPInput';
+export type { OTPInputProps, OTPInputSize } from './components/OTPInput/OTPInput';
+
+export { Rating } from './components/Rating/Rating';
+export type { RatingProps, RatingSize } from './components/Rating/Rating';
+
 export { Badge } from './components/Badge/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './components/Badge/Badge';
 
