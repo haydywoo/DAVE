@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = { title: 'Components' };
 
@@ -97,14 +98,14 @@ export default function ComponentsPage() {
           <h2 className="font-display font-extrabold text-xl text-foreground mb-4">{section.title}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {section.items.map(item => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors"
               >
                 <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
                 <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
