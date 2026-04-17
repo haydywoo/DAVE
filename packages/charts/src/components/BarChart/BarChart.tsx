@@ -46,9 +46,22 @@ export interface BarChartProps {
   className?: string;
 }
 
-// ─── Custom axis tick ─────────────────────────────────────────────────────────
+// ─── Custom axis ticks ────────────────────────────────────────────────────────
 
-function XTick({ x, y, payload }: { x?: number; y?: number; payload?: { value: string } }) {
+// For horizontal axes (bottom) — text centred below the tick mark
+function BottomTick({
+  x, y, payload, formatter,
+}: {
+  x?: number; y?: number;
+  payload?: { value: string | number };
+  formatter?: (v: number) => string;
+}) {
+  const raw = payload?.value;
+  const label = raw === undefined
+    ? ''
+    : formatter && typeof raw === 'number'
+    ? formatter(raw)
+    : String(raw);
   return (
     <text
       x={x}
@@ -56,23 +69,25 @@ function XTick({ x, y, payload }: { x?: number; y?: number; payload?: { value: s
       textAnchor="middle"
       style={{ fill: 'var(--color-foreground-secondary)', fontSize: 11 }}
     >
-      {payload?.value}
+      {label}
     </text>
   );
 }
 
-function YTick({
-  x,
-  y,
-  payload,
-  formatter,
+// For vertical axes (left) — text right-aligned to the left of the tick mark
+function LeftTick({
+  x, y, payload, formatter,
 }: {
-  x?: number;
-  y?: number;
-  payload?: { value: number };
+  x?: number; y?: number;
+  payload?: { value: string | number };
   formatter?: (v: number) => string;
 }) {
-  const label = payload ? (formatter ? formatter(payload.value) : payload.value.toLocaleString()) : '';
+  const raw = payload?.value;
+  const label = raw === undefined
+    ? ''
+    : formatter && typeof raw === 'number'
+    ? formatter(raw)
+    : String(raw);
   return (
     <text
       x={(x ?? 0) - 8}
@@ -164,13 +179,13 @@ export function BarChart({
                 dataKey={index}
                 axisLine={false}
                 tickLine={false}
-                tick={<XTick />}
+                tick={(props) => <BottomTick {...props} />}
                 interval="preserveStartEnd"
               />
               <YAxis
                 axisLine={false}
                 tickLine={false}
-                tick={(props) => <YTick {...props} formatter={yTickFormatter} />}
+                tick={(props) => <LeftTick {...props} formatter={yTickFormatter} />}
                 width={52}
               />
             </>
@@ -180,14 +195,14 @@ export function BarChart({
                 type="number"
                 axisLine={false}
                 tickLine={false}
-                tick={(props) => <YTick {...props} formatter={yTickFormatter} />}
+                tick={(props) => <BottomTick {...props} formatter={yTickFormatter} />}
               />
               <YAxis
                 type="category"
                 dataKey={index}
                 axisLine={false}
                 tickLine={false}
-                tick={<XTick />}
+                tick={(props) => <LeftTick {...props} />}
                 width={80}
               />
             </>
