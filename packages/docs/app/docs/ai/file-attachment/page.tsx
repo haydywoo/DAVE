@@ -7,9 +7,11 @@ export const metadata: Metadata = { title: 'FileAttachment' };
 const props = [
   { name: 'name', type: 'string', required: true, description: 'File name shown in the chip.' },
   { name: 'type', type: 'string', default: "'application/octet-stream'", description: 'MIME type — determines the icon and thumbnail behaviour.' },
-  { name: 'size', type: 'number', description: 'File size in bytes — displayed as a formatted string (KB, MB).' },
+  { name: 'size', type: 'number', description: 'File size in bytes — displayed as a formatted string (KB, MB). Omit to hide.' },
   { name: 'url', type: 'string', description: 'Preview URL — renders as a thumbnail for image MIME types.' },
+  { name: 'compact', type: 'boolean', default: 'false', description: 'Single-line layout — icon and name only, no file size.' },
   { name: 'onRemove', type: '() => void', description: 'Shows a remove button and calls back when clicked.' },
+  { name: 'className', type: 'string', description: 'Extra class on the outer wrapper.' },
 ];
 
 export default function FileAttachmentPage() {
