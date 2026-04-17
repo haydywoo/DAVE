@@ -18,3 +18,9 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+
+@layer utilities {
+  .prose-link {
+    @apply text-foreground underline underline-offset-[3px] decoration-border-strong hover:decoration-foreground transition-colors;
+  }
+}
