@@ -21,6 +21,14 @@
 
 @layer utilities {
   .prose-link {
-    @apply text-foreground underline underline-offset-[3px] decoration-border-strong hover:decoration-foreground transition-colors;
+    color: var(--color-foreground);
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-border-strong);
+    transition: text-decoration-color 150ms ease;
+  }
+  .prose-link:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-foreground);
   }
 }
