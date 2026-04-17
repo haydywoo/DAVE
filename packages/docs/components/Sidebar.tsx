@@ -178,7 +178,8 @@ interface SidebarProps {
 }
 
 export function Sidebar({ open = false, onClose }: SidebarProps) {
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = rawPathname.replace(/\/$/, '');
   const router = useRouter();
   const [section, setSection] = useState<'standard' | 'ai' | 'charts'>(
     pathname.startsWith('/docs/ai') ? 'ai' : pathname.startsWith('/docs/charts') ? 'charts' : 'standard'
