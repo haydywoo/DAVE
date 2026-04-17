@@ -213,7 +213,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
       </div>
 
       {/* Section switcher */}
-      <div className="px-3 pt-6 pb-3">
+      <div className="px-3 pt-6 pb-5">
         <div className="flex rounded-[4px] bg-surface border border-border p-0.5 gap-0.5">
           <button
             onClick={() => { setSection('standard'); router.push('/docs/components'); }}
