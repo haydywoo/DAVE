@@ -35,16 +35,11 @@ export function ButtonDemos() {
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Inverse</h3>
       <Preview
-        code={`// Use inverse on coloured or dark backgrounds where primary would clash.
-<div className="bg-accent p-6 rounded-[3px] flex gap-3">
-  <Button variant="inverse">Get started</Button>
-  <Button variant="ghost">Learn more</Button>
-</div>`}
-        center={false}
+        code={`// Use on dark or coloured surfaces — footers, hero sections, dark navbars.
+<Button variant="inverse">Get started</Button>`}
       >
-        <div className="w-full flex items-center gap-3 rounded-[3px] bg-accent p-6">
+        <div className="w-full flex items-center justify-center rounded-[3px] bg-neutral-900 p-8">
           <Button variant="inverse">Get started</Button>
-          <Button variant="ghost" className="text-accent-on hover:bg-white/10 hover:text-accent-on">Learn more</Button>
         </div>
       </Preview>
 
