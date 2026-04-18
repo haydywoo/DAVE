@@ -105,7 +105,7 @@ export default function HomePage() {
               badges, checkboxes, focus rings — updates automatically.
             </p>
           </div>
-          <pre className="font-code text-xs bg-inverse text-background rounded-[3px] p-5 shrink-0 leading-relaxed">
+          <pre className="font-code text-xs bg-inverse text-background rounded-[3px] p-5 shrink-0 leading-relaxed overflow-x-auto">
             <span className="text-fg-secondary">{`/* your-theme.css */`}</span>{`
 :root {
   --accent-9:  `}<span className="text-accent" style={{ color: '#7977D6' }}>#2D24AE</span>{`;

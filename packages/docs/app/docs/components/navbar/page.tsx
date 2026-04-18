@@ -57,7 +57,7 @@ export default function NavbarPage() {
       </p>
 
       <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`<Navbar>
+      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Navbar>
   <NavbarBrand />
   <NavbarContent align="start">
     <NavbarLink href="…" active icon={…} badge="3" />

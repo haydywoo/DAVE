@@ -23,7 +23,7 @@ export default function TabsPage() {
       </p>
 
       <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`<Tabs defaultValue="tab-1">
+      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Tabs defaultValue="tab-1">
   <TabsList variant="line">
     <TabsTrigger value="tab-1" variant="line">Tab 1</TabsTrigger>
     <TabsTrigger value="tab-2" variant="line">Tab 2</TabsTrigger>
