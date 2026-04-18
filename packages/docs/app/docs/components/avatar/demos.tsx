@@ -3,14 +3,14 @@
 import { Avatar, AvatarGroup } from '@dave/react';
 import { Preview } from '@/components/Preview';
 
-const IMG = 'https://i.pravatar.cc/150?img=11';
+const IMG = '/avatar.jpg';
 
 export function AvatarDemos() {
   return (
     <>
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Image, initials, icon</h3>
       <Preview
-        code={`<Avatar src="https://i.pravatar.cc/150?img=11" alt="Haydn Phillips" />
+        code={`<Avatar src="/avatar.jpg" alt="Haydn Phillips" />
 <Avatar fallback="HP" />
 <Avatar />`}
       >
@@ -77,33 +77,33 @@ export function AvatarDemos() {
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Group</h3>
       <Preview
         code={`<AvatarGroup>
-  <Avatar src="..." alt="User 1" />
-  <Avatar src="..." alt="User 2" />
-  <Avatar src="..." alt="User 3" />
+  <Avatar src="/avatar.jpg" alt="User 1" />
+  <Avatar fallback="JD" alt="User 2" />
+  <Avatar fallback="SK" alt="User 3" />
 </AvatarGroup>
 
 {/* With overflow */}
 <AvatarGroup max={3}>
-  <Avatar src="..." alt="User 1" />
-  <Avatar src="..." alt="User 2" />
-  <Avatar src="..." alt="User 3" />
-  <Avatar src="..." alt="User 4" />
-  <Avatar src="..." alt="User 5" />
+  <Avatar src="/avatar.jpg" alt="User 1" />
+  <Avatar fallback="JD" alt="User 2" />
+  <Avatar fallback="SK" alt="User 3" />
+  <Avatar fallback="AM" alt="User 4" />
+  <Avatar fallback="RB" alt="User 5" />
 </AvatarGroup>`}
       >
         <div className="flex flex-col gap-6">
           <AvatarGroup>
-            <Avatar src="https://i.pravatar.cc/150?img=11" alt="User 1" />
-            <Avatar src="https://i.pravatar.cc/150?img=22" alt="User 2" />
-            <Avatar src="https://i.pravatar.cc/150?img=33" alt="User 3" />
+            <Avatar src={IMG} alt="User 1" />
+            <Avatar fallback="JD" alt="User 2" />
+            <Avatar fallback="SK" alt="User 3" />
           </AvatarGroup>
 
           <AvatarGroup max={3}>
-            <Avatar src="https://i.pravatar.cc/150?img=11" alt="User 1" />
-            <Avatar src="https://i.pravatar.cc/150?img=22" alt="User 2" />
-            <Avatar src="https://i.pravatar.cc/150?img=33" alt="User 3" />
-            <Avatar src="https://i.pravatar.cc/150?img=44" alt="User 4" />
-            <Avatar src="https://i.pravatar.cc/150?img=55" alt="User 5" />
+            <Avatar src={IMG} alt="User 1" />
+            <Avatar fallback="JD" alt="User 2" />
+            <Avatar fallback="SK" alt="User 3" />
+            <Avatar fallback="AM" alt="User 4" />
+            <Avatar fallback="RB" alt="User 5" />
           </AvatarGroup>
         </div>
       </Preview>
