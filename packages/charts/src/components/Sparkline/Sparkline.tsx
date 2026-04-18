@@ -109,7 +109,7 @@ export function Sparkline({
             )}
             <Tooltip
               content={tooltipContent}
-              cursor={{ fill: 'var(--color-surface)' }}
+              cursor={{ fill: 'var(--color-foreground)', fillOpacity: 0.05 }}
             />
           </BarChart>
         </ResponsiveContainer>
