@@ -102,25 +102,24 @@ function ConversationItem({
       {/* Title */}
       <span className="flex-1 min-w-0 text-sm truncate pr-1">{conversation.title}</span>
 
-      {/* Timestamp — hidden on hover to make room for delete */}
+      {/* Timestamp — hidden on hover when delete is available */}
       {conversation.updatedAt && (
         <span className={cn(
-          'text-[11px] text-fg-secondary tabular-nums shrink-0 transition-opacity',
-          'group-hover:opacity-0',
+          'text-[11px] text-fg-secondary tabular-nums shrink-0',
           onDelete && 'group-hover:hidden',
         )}>
           {formatRelative(conversation.updatedAt)}
         </span>
       )}
 
-      {/* Unread badge */}
+      {/* Unread badge — always visible */}
       {conversation.unread != null && conversation.unread > 0 && (
-        <span className="shrink-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent text-accent-on text-[10px] font-semibold px-1 group-hover:hidden">
+        <span className="shrink-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent text-accent-on text-[10px] font-semibold px-1">
           {conversation.unread > 99 ? '99+' : conversation.unread}
         </span>
       )}
 
-      {/* Delete button — appears on hover */}
+      {/* Delete button — enters flow on hover, never overlaps badge */}
       {onDelete && (
         <Tooltip content="Delete conversation">
           <button
@@ -128,9 +127,8 @@ function ConversationItem({
             aria-label={`Delete "${conversation.title}"`}
             onClick={e => { e.stopPropagation(); onDelete(conversation.id); }}
             className={cn(
-              'absolute right-1.5 shrink-0 rounded p-1',
+              'hidden group-hover:flex shrink-0 rounded p-1',
               'text-fg-secondary hover:text-error hover:bg-error-subtle',
-              'opacity-0 group-hover:opacity-100 transition-opacity',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
             )}
           >
