@@ -7,6 +7,33 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+
+#### Visual — Colour Tokens (`tokens.css`)
+- **Muted neutral scale** — chroma reduced ~50% across all 12 steps; lightness nudged up. Backgrounds now read as washed-out warm whites rather than saturated earth tones.
+- **Accent shifted to mauve** — hue moved from indigo (H=270°) to mauve (H=295°) and chroma lowered slightly. Bridges the warm neutral base without the corporate purple feel.
+- **Status colours converted to OKLCH** — success (sage green H=145°), warning (ochre H=72°), error (clay red H=22°) replaced saturated Tailwind hex values with perceptually-consistent OKLCH at lower chroma. Consistent with the softer overall palette.
+
+#### Docs
+- **Preview code tab** — replaced plain `<pre>` with the `CodeBlock` component (Shiki / github-dark). All component example code tabs now have full syntax highlighting, a language label, and a copy button — consistent with MDX code blocks.
+
+---
+
+### Fixed
+
+- **Anatomy block mobile overflow** — added `overflow-x-auto` to all `<pre>` anatomy blocks across component pages and the homepage so wide content scrolls horizontally rather than breaking the layout.
+- **ConversationList unread badge hidden on hover** — badge was using `group-hover:hidden` which made it disappear; replaced with an opacity-crossfade slot pattern so the badge and delete button transition smoothly without layout shift or judder.
+- **ConversationList delete button top-left positioning** — Radix Tooltip anchors via `getBoundingClientRect()`; a `display:none` trigger returns `{x:0, y:0}` causing the tooltip to appear at the viewport origin. Fixed by keeping the button in the DOM at all times using `opacity-0 pointer-events-none` instead of conditional rendering.
+- **Chart overview card links 404** — card `<a>` tags replaced with Next.js `<Link>` for internal routes. Static export with `trailingSlash: true` requires client-side routing for all internal links.
+- **Sparkline bar cursor** — `cursor` fill was fully opaque, covering the bars on hover. Changed to `foreground` colour at 5% opacity so bars remain visible.
+- **Message hydration mismatch** — `toLocaleTimeString()` without a pinned locale returns different formats in Node (server) vs browser. Pinned to `en-GB` for consistent HH:mm output.
+- **Calendar width rendering** — day grid uses `absolute inset-0` so doesn't contribute to the `inline-flex` intrinsic width. Header text was determining width (~170px), making 7 columns too narrow for 32px day buttons. Added `min-w-[17rem]` to the outer container.
+- **MDX internal links 404** — `<a>` elements in `mdx-components.tsx` now detect internal hrefs (starting with `/`) and render `<Link>` from `next/link` for client-side navigation.
+- **Mobile nav sidebar offset** — added `overflow-x: hidden` to `body` to prevent horizontal content overflow from making the viewport scrollable, which caused `fixed left: 0` elements to appear shifted on iOS Safari. Closed sidebar also translated 1px further off-screen to eliminate subpixel hairline.
+- **DataTable mobile scroll** — table had `w-full` inside the `overflow-x-auto` wrapper, forcing it to exactly the container width and preventing horizontal scroll. Changed to `min-w-full` so the table can grow wider than the container on small screens.
+
+---
+
 ### Added
 
 #### Components
