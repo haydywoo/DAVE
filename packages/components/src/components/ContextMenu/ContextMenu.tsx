@@ -13,7 +13,7 @@ export const ContextMenuRadioGroup = RadixContextMenu.RadioGroup;
 
 // Shared menu surface classes (mirrors Dropdown)
 const surfaceClasses = [
-  'z-50 min-w-[10rem] rounded-[3px] border border-border bg-card shadow-md',
+  'z-50 min-w-[10rem] rounded-[3px] border border-border bg-raised shadow-raised',
   'p-1 text-sm text-foreground',
   'data-[state=open]:animate-in data-[state=closed]:animate-out',
   'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',

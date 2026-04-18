@@ -25,7 +25,7 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
 }
 
 const base =
-  'w-full rounded-[3px] border bg-card text-foreground font-[family-name:var(--font-body)] transition-colors placeholder:text-fg-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border';
+  'w-full rounded-[3px] border bg-card text-foreground font-[family-name:var(--font-body)] transition-colors placeholder:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border';
 
 const sizes: Record<InputSize, string> = {
   sm: 'h-7 text-xs',
@@ -163,7 +163,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
           type="button"
           aria-label="Clear"
           onClick={handleClear}
-          tabIndex={-1}
           className={cn(
             'absolute inset-y-0 right-0 flex items-center justify-center text-fg-secondary hover:text-foreground transition-colors',
             iconSizes[size],

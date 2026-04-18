@@ -19,6 +19,22 @@
   }
 }
 
+/*
+ * Expand interactive hit areas to 44×44 px on touch devices without
+ * changing the visual layout. Add the `touch-target` class to any
+ * small interactive element (icon buttons, sm-size controls, etc.).
+ */
+@media (pointer: coarse) {
+  .touch-target {
+    position: relative;
+  }
+  .touch-target::after {
+    content: '';
+    position: absolute;
+    inset: min(0px, calc((100% - 44px) / 2));
+  }
+}
+
 @layer utilities {
   .prose-link {
     color: var(--color-foreground);

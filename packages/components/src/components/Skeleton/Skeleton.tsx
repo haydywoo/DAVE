@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { cn } from '../../lib/cn';
 
-export interface SkeletonProps {
-  className?: string;
-  width?: string | number;
-  height?: string | number;
+export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
   rounded?: 'none' | 'sm' | 'md' | 'full';
 }
 
@@ -15,15 +12,13 @@ const roundedMap: Record<string, string> = {
   full: 'rounded-full',
 };
 
-export function Skeleton({ className, width, height, rounded = 'sm' }: SkeletonProps) {
+export function Skeleton({ className, rounded = 'sm', style, ...props }: SkeletonProps) {
   return (
     <div
       className={cn('animate-pulse bg-surface', roundedMap[rounded], className)}
-      style={{
-        width: typeof width === 'number' ? `${width}px` : width,
-        height: typeof height === 'number' ? `${height}px` : height,
-      }}
+      style={style}
       aria-hidden="true"
+      {...props}
     />
   );
 }

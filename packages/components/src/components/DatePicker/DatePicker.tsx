@@ -134,7 +134,7 @@ export function DatePicker({
               'relative flex w-full items-center rounded-[3px] border bg-card transition-colors',
               'focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-0 focus-within:border-accent',
               error ? 'border-error bg-error-subtle focus-within:ring-error' : 'border-border',
-              disabled && 'opacity-50 cursor-not-allowed bg-surface',
+              disabled && 'opacity-40 cursor-not-allowed bg-surface',
             )}
           >
             <input

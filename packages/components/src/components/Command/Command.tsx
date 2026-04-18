@@ -136,7 +136,7 @@ export function CommandInput({ placeholder = 'Search…', className }: CommandIn
         )}
         aria-autocomplete="list"
         role="combobox"
-        aria-expanded="true"
+        aria-expanded={true}
       />
       {search && (
         <button
@@ -173,8 +173,13 @@ export function CommandEmpty({ children = 'No results found.', className }: { ch
   const { visibleItems, search } = useCommand();
   if (visibleItems.length > 0 || !search) return null;
   return (
-    <div className={cn('py-6 text-center text-sm text-fg-secondary', className)}>
-      {children}
+    <div className={cn('py-8 text-center text-sm text-fg-secondary', className)}>
+      <div className="flex flex-col items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-fg-disabled">
+          <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+        </svg>
+        {children}
+      </div>
     </div>
   );
 }
@@ -234,8 +239,6 @@ export interface CommandItemProps {
   className?: string;
 }
 
-let itemCounter = 0;
-
 export function CommandItem({
   children,
   onSelect,
@@ -245,7 +248,7 @@ export function CommandItem({
   shortcut,
   className,
 }: CommandItemProps) {
-  const id = React.useRef(`cmd-item-${++itemCounter}`).current;
+  const id = React.useId();
   const { search, activeId, setActiveId, registerItem, unregisterItem, notifyVisible, selectCallbacks } = useCommand();
   const groupCtx = React.useContext(GroupContext);
 
@@ -348,7 +351,7 @@ export function CommandDialog({ open, onOpenChange, children, title = 'Command p
         <RadixDialog.Content
           className={cn(
             'fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2',
-            'rounded-[4px] border border-border bg-card shadow-xl',
+            'rounded-[4px] border border-border bg-raised shadow-raised',
             'data-[state=open]:animate-in data-[state=closed]:animate-out',
             'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
             'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',

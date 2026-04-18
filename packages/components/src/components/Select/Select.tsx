@@ -13,6 +13,8 @@ export interface SelectProps {
   size?: SelectSize;
   error?: boolean;
   children: React.ReactNode;
+  /** Applied to the trigger element so a <label htmlFor> association works */
+  id?: string;
   className?: string;
 }
 
@@ -32,14 +34,16 @@ export function Select({
   size = 'md',
   error,
   children,
+  id,
   className,
 }: SelectProps) {
   return (
     <RadixSelect.Root value={value} defaultValue={defaultValue} onValueChange={onValueChange} disabled={disabled}>
       <RadixSelect.Trigger
+        id={id}
         className={cn(
           'inline-flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-foreground transition-colors',
-          'focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
           'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
           'data-[placeholder]:text-fg-secondary',
           error ? 'border-error' : 'border-border',
@@ -60,7 +64,7 @@ export function Select({
           position="popper"
           sideOffset={4}
           className={cn(
-            'z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-[3px] border border-border bg-card shadow-md',
+            'z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-[3px] border border-border bg-raised shadow-raised',
             'max-h-[var(--radix-select-content-available-height)]',
             'data-[state=open]:animate-in data-[state=closed]:animate-out',
             'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
@@ -146,14 +150,18 @@ export interface SelectFieldProps {
 }
 
 export function SelectField({ label, hint, error, id, children }: SelectFieldProps) {
+  const generatedId = React.useId();
+  const fieldId = id ?? generatedId;
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
-        <label htmlFor={id} className="text-sm font-semibold text-foreground">
+        <label htmlFor={fieldId} className="text-sm font-semibold text-foreground">
           {label}
         </label>
       )}
-      {children}
+      {React.isValidElement(children)
+        ? React.cloneElement(children as React.ReactElement<{ id?: string }>, { id: fieldId })
+        : children}
       {hint && (
         <p className={cn('text-xs', error ? 'text-error-foreground' : 'text-fg-secondary')}>{hint}</p>
       )}

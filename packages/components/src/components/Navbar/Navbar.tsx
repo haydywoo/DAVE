@@ -194,7 +194,7 @@ export function NavbarSearch({
           'h-8 w-44 rounded-[3px] border border-border bg-surface pl-8 pr-3 text-sm',
           'text-foreground placeholder:text-fg-secondary',
           'transition-[width] duration-200 focus:w-60',
-          'focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
         )}
       />
     </div>

@@ -103,7 +103,7 @@ export function Rating({
                 : filled
                   ? 'text-warning cursor-default'
                   : 'text-border cursor-default',
-              disabled && 'opacity-50',
+              disabled && 'opacity-40',
             )}
           >
             <Star filled={filled} className={starSizes[size]} />
