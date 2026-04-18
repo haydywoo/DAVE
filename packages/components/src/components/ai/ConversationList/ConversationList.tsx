@@ -100,42 +100,53 @@ function ConversationItem({
       onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && onSelect?.(conversation)}
     >
       {/* Title */}
-      <span className="flex-1 min-w-0 text-sm truncate pr-1">{conversation.title}</span>
+      <span className="flex-1 min-w-0 text-sm truncate">{conversation.title}</span>
 
-      {/* Timestamp — hidden on hover when delete is available */}
-      {conversation.updatedAt && (
-        <span className={cn(
-          'text-[11px] text-fg-secondary tabular-nums shrink-0',
-          onDelete && 'group-hover:hidden',
+      {/*
+        Right meta slot — layout never changes, only opacity transitions.
+        The slot is sized by its static content (timestamp + badge).
+        The delete button lives in an absolute layer that crossfades in on
+        hover. Neither layer ever changes display, so there is no reflow
+        and Radix Tooltip always has a real element to measure.
+      */}
+      <div className="relative shrink-0 min-w-6 flex items-center justify-end">
+        {/* Default layer: timestamp + badge */}
+        <div className={cn(
+          'flex items-center gap-1 transition-opacity duration-150',
+          onDelete && 'group-hover:opacity-0 group-hover:pointer-events-none',
         )}>
-          {formatRelative(conversation.updatedAt)}
-        </span>
-      )}
+          {conversation.updatedAt && (
+            <span className="text-[11px] text-fg-secondary tabular-nums">
+              {formatRelative(conversation.updatedAt)}
+            </span>
+          )}
+          {conversation.unread != null && conversation.unread > 0 && (
+            <span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-accent text-accent-on text-[10px] font-semibold px-1">
+              {conversation.unread > 99 ? '99+' : conversation.unread}
+            </span>
+          )}
+        </div>
 
-      {/* Unread badge — always visible */}
-      {conversation.unread != null && conversation.unread > 0 && (
-        <span className="shrink-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent text-accent-on text-[10px] font-semibold px-1">
-          {conversation.unread > 99 ? '99+' : conversation.unread}
-        </span>
-      )}
-
-      {/* Delete button — enters flow on hover, never overlaps badge */}
-      {onDelete && (
-        <Tooltip content="Delete conversation">
-          <button
-            type="button"
-            aria-label={`Delete "${conversation.title}"`}
-            onClick={e => { e.stopPropagation(); onDelete(conversation.id); }}
-            className={cn(
-              'hidden group-hover:flex shrink-0 rounded p-1',
-              'text-fg-secondary hover:text-error hover:bg-error-subtle',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
-            )}
-          >
-            <TrashIcon />
-          </button>
-        </Tooltip>
-      )}
+        {/* Hover layer: delete button */}
+        {onDelete && (
+          <div className="absolute inset-0 flex items-center justify-end opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-150">
+            <Tooltip content="Delete conversation">
+              <button
+                type="button"
+                aria-label={`Delete "${conversation.title}"`}
+                onClick={e => { e.stopPropagation(); onDelete(conversation.id); }}
+                className={cn(
+                  'shrink-0 rounded p-1 -mr-1',
+                  'text-fg-secondary hover:text-error hover:bg-error-subtle transition-colors',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
+                )}
+              >
+                <TrashIcon />
+              </button>
+            </Tooltip>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
