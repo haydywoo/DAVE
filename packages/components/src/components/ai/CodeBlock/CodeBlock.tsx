@@ -102,7 +102,7 @@ export function CodeBlock({ code, language = 'text', filename, showLineNumbers =
           className={cn(
             '[&>pre]:p-4 [&>pre]:overflow-x-auto [&>pre]:bg-transparent [&>pre]:m-0',
             '[&>pre]:text-sm [&>pre]:leading-relaxed [&>pre]:font-mono',
-            showLineNumbers && '[&_.line]:before:content-[counter(line)] [&_.line]:before:counter-increment-[line] [&_.line]:before:mr-6 [&_.line]:before:text-white/20 [&_.line]:before:text-right [&_.line]:before:min-w-[1.5rem] [&_.line]:before:inline-block',
+            showLineNumbers && '[counter-reset:line] [&_.line]:before:content-[counter(line)] [&_.line]:before:[counter-increment:line] [&_.line]:before:mr-6 [&_.line]:before:text-white/20 [&_.line]:before:text-right [&_.line]:before:min-w-[1.5rem] [&_.line]:before:inline-block',
           )}
           dangerouslySetInnerHTML={{ __html: html }}
         />

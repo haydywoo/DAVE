@@ -141,7 +141,7 @@ export function TagInput({
           error
             ? 'border-error bg-error-subtle focus-within:ring-error focus-within:border-error'
             : 'border-border',
-          disabled && 'cursor-not-allowed bg-surface opacity-60',
+          disabled && 'cursor-not-allowed bg-surface opacity-40',
         )}
         onClick={() => inputRef.current?.focus()}
       >
@@ -159,7 +159,7 @@ export function TagInput({
                 type="button"
                 onClick={(e) => { e.stopPropagation(); removeTag(i); }}
                 aria-label={`Remove ${tag}`}
-                className="shrink-0 opacity-50 hover:opacity-100 transition-opacity focus-visible:outline-none"
+                className="touch-target shrink-0 opacity-50 hover:opacity-100 transition-opacity focus-visible:outline-none"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={removeSizes[size]}>
                   <path d="M18 6 6 18M6 6l12 12" />
@@ -170,6 +170,10 @@ export function TagInput({
         ))}
 
         {!atMax && (
+          <>
+            {tags.length > 0 && (
+              <span aria-hidden="true" className="h-4 w-px shrink-0 bg-border-strong" />
+            )}
           <input
             ref={inputRef}
             id={inputId}
@@ -184,6 +188,7 @@ export function TagInput({
             aria-labelledby={label ? labelId : undefined}
             className="flex-1 min-w-[6rem] bg-transparent text-foreground placeholder:text-fg-secondary focus:outline-none disabled:cursor-not-allowed"
           />
+          </>
         )}
       </div>
 

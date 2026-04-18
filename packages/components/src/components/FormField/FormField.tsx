@@ -32,10 +32,8 @@ export interface FormFieldProps {
   className?: string;
 }
 
-let fieldCount = 0;
-
 export function FormField({ children, id, error = false, required = false, className }: FormFieldProps) {
-  const generatedId = React.useRef(`form-field-${++fieldCount}`).current;
+  const generatedId = React.useId();
   const fieldId = id ?? generatedId;
 
   return (

@@ -68,6 +68,8 @@ export function Combobox({
   const [activeIndex, setActiveIndex] = React.useState(0);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const listRef = React.useRef<HTMLUListElement>(null);
+  const listboxId = React.useId();
+  const optionIdPrefix = React.useId();
 
   const isControlled = controlledValue !== undefined;
   const selectedValue = isControlled ? controlledValue : internalValue;
@@ -138,7 +140,7 @@ export function Combobox({
           aria-expanded={open}
           className={cn(
             'inline-flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-foreground transition-colors',
-            'focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent',
+            'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
             'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
             error ? 'border-error' : 'border-border',
             triggerSizes[size],
@@ -160,7 +162,7 @@ export function Combobox({
           align="start"
           onOpenAutoFocus={(e) => e.preventDefault()}
           className={cn(
-            'z-50 w-[var(--radix-popover-trigger-width)] rounded-[3px] border border-border bg-card shadow-md overflow-hidden',
+            'z-50 w-[var(--radix-popover-trigger-width)] rounded-[3px] border border-border bg-raised shadow-raised overflow-hidden',
             'data-[state=open]:animate-in data-[state=closed]:animate-out',
             'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
             'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
@@ -174,6 +176,11 @@ export function Combobox({
             </svg>
             <input
               ref={inputRef}
+              role="combobox"
+              aria-expanded={open}
+              aria-controls={listboxId}
+              aria-activedescendant={open && flatFiltered.length > 0 ? `${optionIdPrefix}-${activeIndex}` : undefined}
+              aria-autocomplete="list"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
@@ -185,11 +192,19 @@ export function Combobox({
           {/* Options */}
           <ul
             ref={listRef}
+            id={listboxId}
             role="listbox"
             className="max-h-60 overflow-y-auto p-1"
           >
             {flatFiltered.length === 0 ? (
-              <li className="px-3 py-6 text-center text-sm text-fg-secondary">{emptyText}</li>
+              <li className="py-8 text-center text-sm text-fg-secondary">
+                <div className="flex flex-col items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-fg-disabled">
+                    <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+                  </svg>
+                  {emptyText}
+                </div>
+              </li>
             ) : isGrouped(filtered) ? (
               (filtered as ComboboxGroup[]).map((group) => (
                 <li key={group.label}>
@@ -208,6 +223,7 @@ export function Combobox({
                           selected={opt.value === selectedValue}
                           onSelect={select}
                           onHover={setActiveIndex}
+                          idPrefix={optionIdPrefix}
                         />
                       );
                     })}
@@ -224,6 +240,7 @@ export function Combobox({
                   selected={opt.value === selectedValue}
                   onSelect={select}
                   onHover={setActiveIndex}
+                  idPrefix={optionIdPrefix}
                 />
               ))
             )}
@@ -241,11 +258,13 @@ interface OptionItemProps {
   selected: boolean;
   onSelect: (val: string) => void;
   onHover: (i: number) => void;
+  idPrefix: string;
 }
 
-function OptionItem({ opt, index, active, selected, onSelect, onHover }: OptionItemProps) {
+function OptionItem({ opt, index, active, selected, onSelect, onHover, idPrefix }: OptionItemProps) {
   return (
     <li
+      id={`${idPrefix}-${index}`}
       role="option"
       aria-selected={selected}
       aria-disabled={opt.disabled}

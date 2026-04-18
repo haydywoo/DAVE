@@ -19,6 +19,7 @@ module.exports = {
         background:     'var(--color-background)',
         surface:        'var(--color-surface)',
         card:           'var(--color-card)',
+        raised:         'var(--color-raised)',
         foreground:     'var(--color-foreground)',
         'fg-secondary': 'var(--color-foreground-secondary)',
         'fg-subdued':   'var(--color-foreground-subdued)',
@@ -76,6 +77,10 @@ module.exports = {
           7: 'var(--color-chart-7)',
           8: 'var(--color-chart-8)',
         },
+      },
+      boxShadow: {
+        card:   'var(--shadow-card)',
+        raised: 'var(--shadow-raised)',
       },
       keyframes: {
         'collapsible-down': {

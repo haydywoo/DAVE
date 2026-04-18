@@ -95,7 +95,7 @@ export function FileInput({
         onClick={() => inputRef.current?.click()}
         className={cn(
           'inline-flex shrink-0 items-center justify-center rounded-r-[3px] border border-l-0 bg-surface font-[family-name:var(--font-body)] font-medium text-foreground transition-colors',
-          'hover:bg-card focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent',
+          'hover:bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
           'disabled:cursor-not-allowed disabled:text-fg-disabled',
           error ? 'border-error' : 'border-border',
           btnSizes[size],

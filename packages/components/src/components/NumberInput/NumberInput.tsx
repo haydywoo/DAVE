@@ -165,7 +165,7 @@ export function NumberInput({
           aria-valuenow={current}
           className={cn(
             'flex-1 min-w-0 bg-card text-foreground text-center font-[family-name:var(--font-body)]',
-            'placeholder:text-fg-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent transition-colors',
+            'placeholder:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent transition-colors',
             'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled',
             error && 'bg-error-subtle',
             s.input,

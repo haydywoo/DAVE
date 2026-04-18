@@ -77,12 +77,15 @@ export function TableRow({ children, selected, onClick, className }: TableRowPro
   return (
     <tr
       onClick={onClick}
+      onKeyDown={onClick ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } } : undefined}
+      tabIndex={onClick ? 0 : undefined}
       aria-selected={selected}
       className={cn(
         'transition-colors',
         selected && 'bg-accent-subtle',
         onClick && !selected && 'cursor-pointer hover:bg-surface',
         onClick && selected && 'cursor-pointer hover:bg-accent-subtle',
+        onClick && 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent',
         className,
       )}
     >
@@ -114,11 +117,13 @@ export function TableHead({ children, className, align = 'left', sortable, sortD
   return (
     <th
       onClick={sortable ? onSort : undefined}
+      onKeyDown={sortable && onSort ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSort(); } } : undefined}
+      tabIndex={sortable ? 0 : undefined}
       aria-sort={sortDirection === 'asc' ? 'ascending' : sortDirection === 'desc' ? 'descending' : undefined}
       className={cn(
         'px-4 py-3 text-xs font-semibold text-fg-secondary uppercase tracking-wider whitespace-nowrap',
         alignClasses[align],
-        sortable && 'cursor-pointer select-none hover:text-foreground transition-colors',
+        sortable && 'cursor-pointer select-none hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent',
         className,
       )}
     >

@@ -6,6 +6,7 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '.
 import { Checkbox } from '../Checkbox/Checkbox';
 import { Pagination, PageSizeSelect } from '../Pagination/Pagination';
 import { EmptyState } from '../EmptyState/EmptyState';
+import { Skeleton } from '../Skeleton/Skeleton';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -49,6 +50,12 @@ export interface DataTableProps<TData extends Record<string, unknown>> {
   emptyDescription?: string;
   emptyIcon?: React.ReactNode;
 
+  // ── Loading state ─────────────────────────────────────────────
+  /** Show skeleton rows instead of data while fetching */
+  isLoading?: boolean;
+  /** Number of skeleton rows to show. Defaults to pageSize or 5. */
+  loadingRows?: number;
+
   className?: string;
 }
 
@@ -77,6 +84,8 @@ export function DataTable<TData extends Record<string, unknown>>({
   emptyTitle = 'No results',
   emptyDescription,
   emptyIcon,
+  isLoading = false,
+  loadingRows,
   className,
 }: DataTableProps<TData>) {
   // ── Sort state ──────────────────────────────────────────────────────────
@@ -194,7 +203,22 @@ export function DataTable<TData extends Record<string, unknown>>({
         </TableHeader>
 
         <TableBody>
-          {visibleData.length === 0 ? (
+          {isLoading ? (
+            Array.from({ length: loadingRows ?? defaultPageSize ?? 5 }).map((_, i) => (
+              <TableRow key={`skeleton-${i}`}>
+                {selectable && (
+                  <TableCell className="w-10">
+                    <Skeleton className="h-4 w-4" />
+                  </TableCell>
+                )}
+                {columns.map((col, j) => (
+                  <TableCell key={col.key}>
+                    <Skeleton className="h-3.5" style={{ width: `${50 + ((i * 37 + j * 17) % 40)}%` }} />
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))
+          ) : visibleData.length === 0 ? (
             <tr>
               <td colSpan={columns.length + (selectable ? 1 : 0)}>
                 <EmptyState
@@ -239,7 +263,7 @@ export function DataTable<TData extends Record<string, unknown>>({
         </TableBody>
       </Table>
 
-      {paginated && totalRows > 0 && (
+      {paginated && !isLoading && totalRows > 0 && (
         <div className="flex items-center justify-between flex-wrap gap-3 px-1">
           <PageSizeSelect
             pageSize={pageSize}

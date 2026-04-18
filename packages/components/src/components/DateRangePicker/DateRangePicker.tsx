@@ -15,6 +15,7 @@ import {
   isAfter,
   isWithinInterval,
   addMonths,
+  addWeeks,
   subMonths,
   format,
   parse,
@@ -86,9 +87,10 @@ function MonthGrid({
   onDateClick,
   onDateHover,
 }: MonthGridProps) {
+  const gridStart = startOfWeek(startOfMonth(month));
   const gridDays = eachDayOfInterval({
-    start: startOfWeek(startOfMonth(month)),
-    end:   endOfWeek(endOfMonth(month)),
+    start: gridStart,
+    end:   endOfWeek(addWeeks(gridStart, 5)),
   });
 
   function isDisabled(date: Date): boolean {
@@ -228,7 +230,7 @@ export function RangeCalendar({
   return (
     <div
       className={cn(
-        'inline-flex flex-col gap-4 rounded-[3px] border border-border bg-card p-4 shadow-sm',
+        'inline-flex flex-col gap-4 rounded-[3px] border border-border bg-raised p-4 shadow-raised',
         className,
       )}
     >
@@ -238,7 +240,7 @@ export function RangeCalendar({
           type="button"
           onClick={() => setLeftMonth((m) => subMonths(m, 1))}
           aria-label="Previous month"
-          className="flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
+          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <ChevronLeft />
         </button>
@@ -252,7 +254,7 @@ export function RangeCalendar({
           type="button"
           onClick={() => setLeftMonth((m) => addMonths(m, 1))}
           aria-label="Next month"
-          className="flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
+          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <ChevronRight />
         </button>
@@ -389,8 +391,8 @@ export function DateRangePicker({
             aria-expanded={open}
             className={cn(
               'relative flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-left transition-colors',
-              'focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-0 focus:border-accent',
-              'disabled:cursor-not-allowed disabled:bg-surface disabled:opacity-50',
+              'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
+              'disabled:cursor-not-allowed disabled:bg-surface disabled:opacity-40',
               error ? 'border-error bg-error-subtle focus:ring-error' : 'border-border',
               triggerSizes[size],
             )}

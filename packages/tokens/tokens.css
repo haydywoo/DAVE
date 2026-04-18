@@ -1,47 +1,48 @@
 /*
  * DAVE Design Tokens
  *
- * To theme the accent colour, override the --accent-* variables in your own CSS:
+ * Colour primitives are authored in OKLCH for perceptually-uniform steps and
+ * more vivid accent colours (especially in dark mode).
+ *
+ * To theme the accent colour, override the --accent-* variables in your CSS:
  *
  *   :root {
- *     --accent-1:  #f0f4ff;
- *     --accent-2:  #e0e9ff;
+ *     --accent-1:  oklch(98.5% 0.010 250);
  *     ...
- *     --accent-9:  #2563eb;   ← solid button colour
- *     --accent-10: #1d4ed8;   ← hover
- *     --accent-11: #1e40af;   ← text on tinted backgrounds
- *     --accent-12: #1e3a8a;   ← high-contrast text
+ *     --accent-9:  oklch(34% 0.20 250);   ← solid button colour
+ *     --accent-10: oklch(28% 0.19 250);   ← hover
+ *     --accent-11: oklch(38% 0.19 250);   ← text on tinted backgrounds
  *   }
  */
 
 :root {
-  /* ── Neutral scale (warm grays) ───────────────────────────── */
-  --neutral-1:  #F7F5F0;
-  --neutral-2:  #F0EEE9;
-  --neutral-3:  #E8E5DF;
-  --neutral-4:  #E2DED7;
-  --neutral-5:  #D6D1CA;
-  --neutral-6:  #C8C3BA;
-  --neutral-7:  #B0AAA1;
-  --neutral-8:  #9E9890;
-  --neutral-9:  #706A62;
-  --neutral-10: #4A4640;
-  --neutral-11: #2E2B27;
-  --neutral-12: #0F0E0C;
+  /* ── Neutral scale (warm grays, H≈80°) ────────────────────── */
+  --neutral-1:  oklch(97.5% 0.005 80);
+  --neutral-2:  oklch(94.5% 0.006 80);
+  --neutral-3:  oklch(91.0% 0.008 80);
+  --neutral-4:  oklch(89.0% 0.008 80);
+  --neutral-5:  oklch(85.5% 0.009 80);
+  --neutral-6:  oklch(80.5% 0.010 80);
+  --neutral-7:  oklch(72.0% 0.010 80);
+  --neutral-8:  oklch(64.0% 0.010 80);
+  --neutral-9:  oklch(46.0% 0.010 80);
+  --neutral-10: oklch(32.0% 0.008 80);
+  --neutral-11: oklch(21.0% 0.006 80);
+  --neutral-12: oklch(8.0%  0.004 80);
 
-  /* ── Accent scale ─────────────────────────────────────────── */
-  --accent-1:  #F5F5FE;
-  --accent-2:  #EAEAFB;
-  --accent-3:  #D9D8F7;
-  --accent-4:  #C5C4F2;
-  --accent-5:  #AEADEA;
-  --accent-6:  #9290E1;
-  --accent-7:  #7977D6;
-  --accent-8:  #5755C5;
-  --accent-9:  #2D24AE;
-  --accent-10: #231B9A;
-  --accent-11: #3B33BB;
-  --accent-12: #14107A;
+  /* ── Accent scale (indigo-purple, H=270°) ─────────────────── */
+  --accent-1:  oklch(98.5% 0.010 270);
+  --accent-2:  oklch(95.5% 0.024 270);
+  --accent-3:  oklch(90.5% 0.038 270);
+  --accent-4:  oklch(85.0% 0.058 270);
+  --accent-5:  oklch(77.0% 0.074 270);
+  --accent-6:  oklch(66.0% 0.098 270);
+  --accent-7:  oklch(57.0% 0.130 270);
+  --accent-8:  oklch(45.0% 0.168 270);
+  --accent-9:  oklch(34.0% 0.198 270);
+  --accent-10: oklch(28.0% 0.195 270);
+  --accent-11: oklch(38.0% 0.193 270);
+  --accent-12: oklch(19.0% 0.178 270);
 
   /* ── Status: Success ──────────────────────────────────────── */
   --green-1:  #F0FDF4;
@@ -69,16 +70,21 @@
 
   /* ── Semantic aliases (components use these) ──────────────── */
 
-  /* Surface & layout */
+  /* Surface & layout — 4-level hierarchy */
   --color-background:      var(--neutral-1);
   --color-surface:         var(--neutral-2);
-  --color-card:            #ffffff;
+  --color-card:            oklch(100% 0 0);
+  --color-raised:          oklch(100% 0 0);   /* popovers / dropdowns / tooltips */
   --color-surface-hovered: var(--neutral-3);
   --color-border:          var(--neutral-4);
   --color-border-strong:   var(--neutral-6);
 
+  /* Card elevation shadow (light mode: crisp; dark mode: subtle) */
+  --shadow-card:  0 1px 3px 0 oklch(0% 0 0 / 0.08), 0 1px 2px -1px oklch(0% 0 0 / 0.06);
+  --shadow-raised: 0 4px 12px -2px oklch(0% 0 0 / 0.12), 0 2px 4px -1px oklch(0% 0 0 / 0.08);
+
   /* Foreground */
-  --color-foreground:          var(--neutral-12);
+  --color-foreground:           var(--neutral-12);
   --color-foreground-secondary: var(--neutral-9);
   --color-foreground-subdued:   var(--neutral-10);
   --color-foreground-disabled:  var(--neutral-6);
@@ -88,14 +94,13 @@
   --color-inverse-hover: var(--neutral-11);
 
   /* Accent */
-  --color-accent:            var(--accent-9);
-  --color-accent-hover:      var(--accent-10);
-  --color-accent-subtle:     var(--accent-2);
+  --color-accent:               var(--accent-9);
+  --color-accent-hover:         var(--accent-10);
+  --color-accent-subtle:        var(--accent-2);
   --color-accent-subtle-border: var(--accent-3);
-  --color-accent-border:     var(--accent-7);
-  --color-accent-foreground: var(--accent-11);
-  /* Label colour for solid accent backgrounds — always contrasts with the accent fill */
-  --color-on-accent:         #ffffff;
+  --color-accent-border:        var(--accent-7);
+  --color-accent-foreground:    var(--accent-11);
+  --color-on-accent:            oklch(100% 0 0);
 
   /* Success */
   --color-success-subtle:     var(--green-1);
@@ -117,71 +122,76 @@
   --color-error-foreground: var(--red-11);
 
   /* Chart palette — categorical series colours */
-  --color-chart-1: #5755C5;
-  --color-chart-2: #0D9488;
-  --color-chart-3: #D97706;
-  --color-chart-4: #E11D48;
-  --color-chart-5: #16A34A;
-  --color-chart-6: #0284C7;
-  --color-chart-7: #7C3AED;
-  --color-chart-8: #EA580C;
+  --color-chart-1: oklch(45% 0.168 270);
+  --color-chart-2: oklch(54% 0.140 185);
+  --color-chart-3: oklch(62% 0.148 60);
+  --color-chart-4: oklch(54% 0.210 15);
+  --color-chart-5: oklch(60% 0.170 145);
+  --color-chart-6: oklch(55% 0.160 225);
+  --color-chart-7: oklch(52% 0.200 305);
+  --color-chart-8: oklch(60% 0.190 40);
 }
 
 /* ── Dark mode ────────────────────────────────────────────────────── */
 .dark {
-  /* Surface & layout */
-  --color-background:       #0F0E0C;
-  --color-surface:          #1A1917;
-  --color-card:             #242220;
-  --color-surface-hovered:  #2E2B27;
-  --color-border:           #2E2B27;
-  --color-border-strong:    #3D3A35;
+  /* Surface & layout — 4 distinct elevation levels */
+  --color-background:       oklch(8.5%  0.004 80);  /* #111110 — page bg */
+  --color-surface:          oklch(13.5% 0.005 80);  /* #1A1917 — sidebars/panels */
+  --color-card:             oklch(17.5% 0.005 80);  /* #242220 — card bg */
+  --color-raised:           oklch(22.0% 0.006 80);  /* #2E2B28 — popovers/dropdowns */
+  --color-surface-hovered:  oklch(25.0% 0.007 80);  /* hover state above raised */
+  --color-border:           oklch(22.0% 0.006 80);  /* subtle borders */
+  --color-border-strong:    oklch(28.0% 0.007 80);  /* visible borders */
+
+  /* Card elevation — in dark mode shadows are near-invisible, rely on bg diff */
+  --shadow-card:  0 1px 0 0 oklch(100% 0 0 / 0.04);   /* hairline top highlight */
+  --shadow-raised: 0 4px 16px -2px oklch(0% 0 0 / 0.5), 0 0 0 1px oklch(100% 0 0 / 0.06);
 
   /* Foreground */
-  --color-foreground:           #F7F5F0;
-  --color-foreground-secondary: #9E9890;
-  --color-foreground-subdued:   #706A62;
-  --color-foreground-disabled:  #4A4640;
+  --color-foreground:           var(--neutral-1);
+  --color-foreground-secondary: var(--neutral-8);
+  --color-foreground-subdued:   var(--neutral-9);
+  --color-foreground-disabled:  var(--neutral-10);
 
   /* Inverse */
-  --color-inverse:       #F7F5F0;
-  --color-inverse-hover: #E8E5DF;
+  --color-inverse:       var(--neutral-1);
+  --color-inverse-hover: var(--neutral-2);
 
-  /* Accent — brighter steps for dark backgrounds, white label still works */
-  --color-accent:               var(--accent-7);
-  --color-accent-hover:         var(--accent-6);
-  --color-on-accent:            #ffffff;
-  --color-accent-subtle:        #1A1932;
-  --color-accent-subtle-border: #252450;
-  --color-accent-border:        var(--accent-6);
-  --color-accent-foreground:    var(--accent-5);
+  /* Accent — more vivid in dark mode (higher chroma, tuned lightness) */
+  --color-accent:               oklch(66% 0.160 270);  /* vibrant purple, was desaturated */
+  --color-accent-hover:         oklch(72% 0.145 270);
+  --color-on-accent:            oklch(100% 0 0);
+  --color-accent-subtle:        oklch(17% 0.040 270);
+  --color-accent-subtle-border: oklch(22% 0.060 270);
+  --color-accent-border:        oklch(55% 0.140 270);
+  --color-accent-foreground:    oklch(80% 0.085 270);
 
   /* Success */
-  --color-success-subtle:     #052e16;
-  --color-success-border:     #14532d;
+  --color-success-subtle:     oklch(14% 0.060 145);
+  --color-success-border:     oklch(22% 0.080 145);
   --color-success:            var(--green-9);
-  --color-success-foreground: #86efac;
+  --color-success-foreground: oklch(80% 0.140 145);
 
   /* Warning */
-  --color-warning-subtle:     #1c1400;
-  --color-warning-border:     #3d2900;
+  --color-warning-subtle:     oklch(14% 0.050 60);
+  --color-warning-border:     oklch(22% 0.070 60);
   --color-warning:            var(--amber-9);
-  --color-warning-foreground: #fcd34d;
+  --color-warning-foreground: oklch(85% 0.130 60);
 
   /* Error */
-  --color-error-subtle:     #2d0a0a;
-  --color-error-border:     #5c1212;
+  --color-error-subtle:     oklch(14% 0.060 20);
+  --color-error-border:     oklch(22% 0.090 20);
   --color-error:            var(--red-9);
   --color-error-hover:      var(--red-10);
-  --color-error-foreground: #fca5a5;
+  --color-error-foreground: oklch(80% 0.130 20);
 
-  /* Chart palette — brighter for dark backgrounds */
-  --color-chart-1: #7977D6;
-  --color-chart-2: #2DD4BF;
-  --color-chart-3: #FBBF24;
-  --color-chart-4: #FB7185;
-  --color-chart-5: #4ADE80;
-  --color-chart-6: #38BDF8;
-  --color-chart-7: #A78BFA;
-  --color-chart-8: #FB923C;
+  /* Chart palette — more vivid for dark backgrounds */
+  --color-chart-1: oklch(65% 0.165 270);
+  --color-chart-2: oklch(70% 0.150 185);
+  --color-chart-3: oklch(78% 0.150 60);
+  --color-chart-4: oklch(68% 0.210 15);
+  --color-chart-5: oklch(72% 0.175 145);
+  --color-chart-6: oklch(68% 0.165 225);
+  --color-chart-7: oklch(68% 0.195 305);
+  --color-chart-8: oklch(72% 0.185 40);
 }

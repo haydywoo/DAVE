@@ -46,7 +46,7 @@ export function DrawerContent({ children, side = 'right', className }: DrawerCon
       <DrawerOverlay />
       <RadixDialog.Content
         className={cn(
-          'fixed z-50 bg-card shadow-xl flex flex-col',
+          'fixed z-50 bg-raised shadow-raised flex flex-col',
           'data-[state=open]:animate-in data-[state=closed]:animate-out duration-300',
           'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
           sideStyles[side],
