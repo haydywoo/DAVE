@@ -5,7 +5,7 @@ import { ButtonDemos } from './demos';
 export const metadata: Metadata = { title: 'Button' };
 
 const props = [
-  { name: 'variant', type: "'primary' | 'secondary' | 'ghost' | 'soft' | 'link' | 'inverse'", default: "'primary'", description: 'Visual style of the button.' },
+  { name: 'variant', type: "'primary' | 'secondary' | 'ghost' | 'soft' | 'link'", default: "'primary'", description: 'Visual style of the button.' },
   { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: 'Controls height and padding.' },
   { name: 'isLoading', type: 'boolean', default: 'false', description: 'Shows a spinner and disables interaction.' },
   { name: 'icon', type: 'ReactNode', description: 'Renders a square icon-only button when provided without children. Set aria-label for accessibility.' },
@@ -21,7 +21,7 @@ export default function ButtonPage() {
     <div>
       <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Button</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
-        Triggers an action or event. Supports six visual variants and four sizes, with built-in loading, icon, and as-link states.
+        Triggers an action or event. Supports five visual variants and four sizes, with built-in loading, icon, and as-link states.
       </p>
 
       <ButtonDemos />
