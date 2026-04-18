@@ -17,56 +17,56 @@
 
 :root {
   /* ── Neutral scale (warm grays, H≈80°) ────────────────────── */
-  --neutral-1:  oklch(97.5% 0.005 80);
-  --neutral-2:  oklch(94.5% 0.006 80);
-  --neutral-3:  oklch(91.0% 0.008 80);
-  --neutral-4:  oklch(89.0% 0.008 80);
-  --neutral-5:  oklch(85.5% 0.009 80);
-  --neutral-6:  oklch(80.5% 0.010 80);
-  --neutral-7:  oklch(72.0% 0.010 80);
-  --neutral-8:  oklch(64.0% 0.010 80);
-  --neutral-9:  oklch(46.0% 0.010 80);
-  --neutral-10: oklch(32.0% 0.008 80);
-  --neutral-11: oklch(21.0% 0.006 80);
-  --neutral-12: oklch(8.0%  0.004 80);
+  --neutral-1:  oklch(98.5% 0.002 80);
+  --neutral-2:  oklch(96.5% 0.003 80);
+  --neutral-3:  oklch(93.5% 0.004 80);
+  --neutral-4:  oklch(91.5% 0.004 80);
+  --neutral-5:  oklch(88.0% 0.004 80);
+  --neutral-6:  oklch(83.0% 0.005 80);
+  --neutral-7:  oklch(74.0% 0.005 80);
+  --neutral-8:  oklch(65.0% 0.005 80);
+  --neutral-9:  oklch(48.0% 0.005 80);
+  --neutral-10: oklch(34.0% 0.004 80);
+  --neutral-11: oklch(22.0% 0.003 80);
+  --neutral-12: oklch(9.0%  0.002 80);
 
-  /* ── Accent scale (indigo-purple, H=270°) ─────────────────── */
-  --accent-1:  oklch(98.5% 0.010 270);
-  --accent-2:  oklch(95.5% 0.024 270);
-  --accent-3:  oklch(90.5% 0.038 270);
-  --accent-4:  oklch(85.0% 0.058 270);
-  --accent-5:  oklch(77.0% 0.074 270);
-  --accent-6:  oklch(66.0% 0.098 270);
-  --accent-7:  oklch(57.0% 0.130 270);
-  --accent-8:  oklch(45.0% 0.168 270);
-  --accent-9:  oklch(34.0% 0.198 270);
-  --accent-10: oklch(28.0% 0.195 270);
-  --accent-11: oklch(38.0% 0.193 270);
-  --accent-12: oklch(19.0% 0.178 270);
+  /* ── Accent scale (mauve, H=295°) ─────────────────────────── */
+  --accent-1:  oklch(98.5% 0.010 295);
+  --accent-2:  oklch(95.5% 0.022 295);
+  --accent-3:  oklch(90.5% 0.036 295);
+  --accent-4:  oklch(85.0% 0.054 295);
+  --accent-5:  oklch(77.0% 0.070 295);
+  --accent-6:  oklch(66.0% 0.092 295);
+  --accent-7:  oklch(57.0% 0.120 295);
+  --accent-8:  oklch(45.0% 0.155 295);
+  --accent-9:  oklch(34.0% 0.180 295);
+  --accent-10: oklch(28.0% 0.175 295);
+  --accent-11: oklch(38.0% 0.172 295);
+  --accent-12: oklch(19.0% 0.158 295);
 
-  /* ── Status: Success ──────────────────────────────────────── */
-  --green-1:  #F0FDF4;
-  --green-2:  #DCFCE7;
-  --green-3:  #BBF7D0;
-  --green-9:  #16A34A;
-  --green-10: #15803D;
-  --green-11: #166534;
+  /* ── Status: Success (muted sage, H=145°) ────────────────── */
+  --green-1:  oklch(97.5% 0.012 145);
+  --green-2:  oklch(93.0% 0.030 145);
+  --green-3:  oklch(86.0% 0.055 145);
+  --green-9:  oklch(52.0% 0.120 145);
+  --green-10: oklch(44.0% 0.105 145);
+  --green-11: oklch(36.0% 0.090 145);
 
-  /* ── Status: Warning ──────────────────────────────────────── */
-  --amber-1:  #FFFBEB;
-  --amber-2:  #FEF3C7;
-  --amber-3:  #FDE68A;
-  --amber-9:  #D97706;
-  --amber-10: #B45309;
-  --amber-11: #92400E;
+  /* ── Status: Warning (muted ochre, H=72°) ────────────────── */
+  --amber-1:  oklch(97.5% 0.012 72);
+  --amber-2:  oklch(93.0% 0.030 72);
+  --amber-3:  oklch(86.0% 0.060 72);
+  --amber-9:  oklch(60.0% 0.120 72);
+  --amber-10: oklch(52.0% 0.110 72);
+  --amber-11: oklch(42.0% 0.095 72);
 
-  /* ── Status: Error ────────────────────────────────────────── */
-  --red-1:  #FFF5F5;
-  --red-2:  #FEE2E2;
-  --red-3:  #FECACA;
-  --red-9:  #DC2626;
-  --red-10: #B91C1C;
-  --red-11: #991B1B;
+  /* ── Status: Error (muted clay red, H=22°) ───────────────── */
+  --red-1:  oklch(97.5% 0.012 22);
+  --red-2:  oklch(93.0% 0.030 22);
+  --red-3:  oklch(86.0% 0.055 22);
+  --red-9:  oklch(52.0% 0.150 22);
+  --red-10: oklch(44.0% 0.135 22);
+  --red-11: oklch(36.0% 0.115 22);
 
   /* ── Semantic aliases (components use these) ──────────────── */
 
@@ -158,32 +158,32 @@
   --color-inverse-hover: var(--neutral-2);
 
   /* Accent — more vivid in dark mode (higher chroma, tuned lightness) */
-  --color-accent:               oklch(66% 0.160 270);  /* vibrant purple, was desaturated */
-  --color-accent-hover:         oklch(72% 0.145 270);
+  --color-accent:               oklch(66% 0.145 295);
+  --color-accent-hover:         oklch(72% 0.130 295);
   --color-on-accent:            oklch(100% 0 0);
-  --color-accent-subtle:        oklch(17% 0.040 270);
-  --color-accent-subtle-border: oklch(22% 0.060 270);
-  --color-accent-border:        oklch(55% 0.140 270);
-  --color-accent-foreground:    oklch(80% 0.085 270);
+  --color-accent-subtle:        oklch(17% 0.038 295);
+  --color-accent-subtle-border: oklch(22% 0.055 295);
+  --color-accent-border:        oklch(55% 0.125 295);
+  --color-accent-foreground:    oklch(80% 0.078 295);
 
   /* Success */
-  --color-success-subtle:     oklch(14% 0.060 145);
-  --color-success-border:     oklch(22% 0.080 145);
+  --color-success-subtle:     oklch(14% 0.030 145);
+  --color-success-border:     oklch(22% 0.055 145);
   --color-success:            var(--green-9);
-  --color-success-foreground: oklch(80% 0.140 145);
+  --color-success-foreground: oklch(78% 0.100 145);
 
   /* Warning */
-  --color-warning-subtle:     oklch(14% 0.050 60);
-  --color-warning-border:     oklch(22% 0.070 60);
+  --color-warning-subtle:     oklch(14% 0.028 72);
+  --color-warning-border:     oklch(22% 0.055 72);
   --color-warning:            var(--amber-9);
-  --color-warning-foreground: oklch(85% 0.130 60);
+  --color-warning-foreground: oklch(82% 0.100 72);
 
   /* Error */
-  --color-error-subtle:     oklch(14% 0.060 20);
-  --color-error-border:     oklch(22% 0.090 20);
+  --color-error-subtle:     oklch(14% 0.035 22);
+  --color-error-border:     oklch(22% 0.065 22);
   --color-error:            var(--red-9);
   --color-error-hover:      var(--red-10);
-  --color-error-foreground: oklch(80% 0.130 20);
+  --color-error-foreground: oklch(78% 0.110 22);
 
   /* Chart palette — more vivid for dark backgrounds */
   --color-chart-1: oklch(65% 0.165 270);
