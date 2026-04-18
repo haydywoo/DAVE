@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { SelectDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Select' };
 
@@ -27,8 +28,7 @@ export default function SelectPage() {
         Accessible single-value select. Supports groups, labels, sizes, and error state. Built on Radix UI.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Select placeholder="Pick one…" onValueChange={setValue}>
+      <AnatomyBlock>{`<Select placeholder="Pick one…" onValueChange={setValue}>
   <SelectItem value="a">Option A</SelectItem>
 
   {/* Grouped with label */}
@@ -43,7 +43,7 @@ export default function SelectPage() {
   <SelectField label="Role" hint="Controls access level." error={false}>
     <Select placeholder="Select role…">…</Select>
   </SelectField>
-</Select>`}</pre>
+</Select>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <SelectDemos />

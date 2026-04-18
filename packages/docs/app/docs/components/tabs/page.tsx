@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { TabsDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Tabs' };
 
@@ -22,15 +23,14 @@ export default function TabsPage() {
         Switches between related content panels. Two visual variants: line (default) and pill. Full keyboard navigation. Built on Radix UI.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Tabs defaultValue="tab-1">
+      <AnatomyBlock>{`<Tabs defaultValue="tab-1">
   <TabsList variant="line">
     <TabsTrigger value="tab-1" variant="line">Tab 1</TabsTrigger>
     <TabsTrigger value="tab-2" variant="line">Tab 2</TabsTrigger>
   </TabsList>
   <TabsContent value="tab-1">Content 1</TabsContent>
   <TabsContent value="tab-2">Content 2</TabsContent>
-</Tabs>`}</pre>
+</Tabs>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <TabsDemos />

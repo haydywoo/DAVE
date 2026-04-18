@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { NavbarDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Navbar' };
 
@@ -56,8 +57,7 @@ export default function NavbarPage() {
         Horizontal navigation bar with brand, nav links, and actions. Supports icons, badges, search, colour variants, and a built-in mobile menu pattern.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Navbar>
+      <AnatomyBlock>{`<Navbar>
   <NavbarBrand />
   <NavbarContent align="start">
     <NavbarLink href="…" active icon={…} badge="3" />
@@ -71,7 +71,7 @@ export default function NavbarPage() {
 </Navbar>
 <NavbarMobileMenu open={open}>                         {/* mobile panel */}
   <NavbarMobileLink href="…" active icon={…} />
-</NavbarMobileMenu>`}</pre>
+</NavbarMobileMenu>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <NavbarDemos />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { CardDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Card' };
 
@@ -27,8 +28,7 @@ export default function CardPage() {
         Surface container with white background and subtle border. Compose with sub-components or use as a bare wrapper.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Card>
+      <AnatomyBlock>{`<Card>
   <CardImage position="top" />       {/* optional */}
   <CardHeader>
     <CardTitle />
@@ -37,7 +37,7 @@ export default function CardPage() {
   <CardContent />
   <CardDivider />                    {/* optional */}
   <CardFooter />
-</Card>`}</pre>
+</Card>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <CardDemos />

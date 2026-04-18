@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { DropdownDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Dropdown' };
 
@@ -39,8 +40,7 @@ export default function DropdownPage() {
         A menu that opens from a trigger, showing a list of actions or navigation items. Built on Radix UI with full keyboard and accessibility support.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Dropdown>
+      <AnatomyBlock>{`<Dropdown>
   <DropdownTrigger asChild>
     <Button>Open</Button>
   </DropdownTrigger>
@@ -49,7 +49,7 @@ export default function DropdownPage() {
     <DropdownSeparator />
     <DropdownItem destructive onSelect={…}>Delete</DropdownItem>
   </DropdownContent>
-</Dropdown>`}</pre>
+</Dropdown>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DropdownDemos />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { AccordionDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Accordion' };
 
@@ -25,13 +26,12 @@ export default function AccordionPage() {
         Expandable sections with animated height transition. Supports single and multiple open modes, full keyboard navigation, and ARIA.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Accordion type="single" collapsible>
+      <AnatomyBlock>{`<Accordion type="single" collapsible>
   <AccordionItem value="item-1">
     <AccordionTrigger>Label</AccordionTrigger>
     <AccordionContent>Content</AccordionContent>
   </AccordionItem>
-</Accordion>`}</pre>
+</Accordion>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <AccordionDemos />

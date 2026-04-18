@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { CommandDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Command' };
 
@@ -37,8 +38,7 @@ export default function CommandPage() {
         Spotlight-style command palette with real-time search filtering, grouped results, keyboard navigation, and optional ⌘K dialog wrapper.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<CommandDialog open={open} onOpenChange={setOpen}>
+      <AnatomyBlock>{`<CommandDialog open={open} onOpenChange={setOpen}>
   <CommandInput placeholder="Type a command…" />
   <CommandList>
     <CommandEmpty />
@@ -50,7 +50,7 @@ export default function CommandPage() {
       <CommandItem onSelect={…}>New file</CommandItem>
     </CommandGroup>
   </CommandList>
-</CommandDialog>`}</pre>
+</CommandDialog>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <CommandDemos />

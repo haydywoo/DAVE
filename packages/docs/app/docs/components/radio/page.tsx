@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { RadioDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Radio' };
 
@@ -28,11 +29,10 @@ export default function RadioPage() {
         Single-selection input. Use <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">RadioGroup</code> as the container and add <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">RadioItem</code> for each option.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<RadioGroup defaultValue="member" onValueChange={setValue}>
+      <AnatomyBlock>{`<RadioGroup defaultValue="member" onValueChange={setValue}>
   <RadioItem value="admin"  label="Admin"  description="Optional description" />
   <RadioItem value="member" label="Member" />
-</RadioGroup>`}</pre>
+</RadioGroup>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <RadioDemos />
