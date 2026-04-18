@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { TimelineDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Timeline' };
 
@@ -27,8 +28,7 @@ export default function TimelinePage() {
         Vertical list of chronological events. Use for activity feeds, audit logs, order tracking, and step history. Each item supports a coloured dot or custom icon.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Timeline>
+      <AnatomyBlock>{`<Timeline>
   <TimelineItem
     title="Event label"
     description="Detail text"
@@ -37,7 +37,7 @@ export default function TimelinePage() {
     icon={<Icon />}        {/* replaces dot */}
   />
   <TimelineItem … last />  {/* last hides the connector */}
-</Timeline>`}</pre>
+</Timeline>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <TimelineDemos />

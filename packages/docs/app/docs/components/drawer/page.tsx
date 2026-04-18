@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { DrawerDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Drawer' };
 
@@ -18,8 +19,7 @@ export default function DrawerPage() {
         Side panel that slides in from any edge. Built on Radix Dialog — includes focus trap, Escape key, and backdrop dismiss. Use for settings, filters, detail views, and mobile navigation.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Drawer>
+      <AnatomyBlock>{`<Drawer>
   <DrawerTrigger />
   <DrawerContent side="right">
     <DrawerHeader>
@@ -31,7 +31,7 @@ export default function DrawerPage() {
       <DrawerClose />
     </DrawerFooter>
   </DrawerContent>
-</Drawer>`}</pre>
+</Drawer>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DrawerDemos />

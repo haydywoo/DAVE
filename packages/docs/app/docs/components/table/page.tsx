@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { TableDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Table' };
 
@@ -41,8 +42,7 @@ export default function TablePage() {
         A structured data table with header, body, and optional footer. Supports zebra striping, row selection, sortable columns, and pagination.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Table striped>
+      <AnatomyBlock>{`<Table striped>
   <TableHeader>
     <TableRow>
       <TableHead sortable sortDirection="asc" onSort={…}>Column</TableHead>
@@ -56,7 +56,7 @@ export default function TablePage() {
   <TableFooter>   {/* optional */}
     <TableRow>…</TableRow>
   </TableFooter>
-</Table>`}</pre>
+</Table>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <TableDemos />

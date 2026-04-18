@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { AlertDialogDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Alert Dialog' };
 
@@ -17,8 +18,7 @@ export default function AlertDialogPage() {
         Modal dialog that interrupts the user and requires a decision. Built on Radix UI — includes focus trap, escape key, and backdrop dismiss.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<AlertDialog>
+      <AnatomyBlock>{`<AlertDialog>
   <AlertDialogTrigger />
   <AlertDialogContent>
     <AlertDialogHeader>
@@ -30,7 +30,7 @@ export default function AlertDialogPage() {
       <AlertDialogAction />
     </AlertDialogFooter>
   </AlertDialogContent>
-</AlertDialog>`}</pre>
+</AlertDialog>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <AlertDialogDemos />

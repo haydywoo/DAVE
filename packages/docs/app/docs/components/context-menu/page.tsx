@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { ContextMenuDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Context Menu' };
 
@@ -45,8 +46,7 @@ export default function ContextMenuPage() {
         Menu triggered by right-clicking a target area. Shares the same item API as Dropdown — use Context Menu for surface-level actions, Dropdown for button-triggered menus.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<ContextMenu>
+      <AnatomyBlock>{`<ContextMenu>
   <ContextMenuTrigger />            {/* right-click target */}
   <ContextMenuContent>
     <ContextMenuLabel />            {/* section heading */}
@@ -63,7 +63,7 @@ export default function ContextMenuPage() {
       </ContextMenuSubContent>
     </ContextMenuSub>
   </ContextMenuContent>
-</ContextMenu>`}</pre>
+</ContextMenu>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <ContextMenuDemos />

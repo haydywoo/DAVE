@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { BreadcrumbDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Breadcrumb' };
 
@@ -35,8 +36,7 @@ export default function BreadcrumbPage() {
         Composable navigation trail showing the user's location within a hierarchy. Fully accessible with a nav landmark and aria-current on the current page.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Breadcrumb>
+      <AnatomyBlock>{`<Breadcrumb>
   <BreadcrumbItem>
     <BreadcrumbLink href="…">Home</BreadcrumbLink>
   </BreadcrumbItem>
@@ -46,7 +46,7 @@ export default function BreadcrumbPage() {
   <BreadcrumbItem current>
     Current page
   </BreadcrumbItem>
-</Breadcrumb>`}</pre>
+</Breadcrumb>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <BreadcrumbDemos />

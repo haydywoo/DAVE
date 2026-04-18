@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { NavDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Nav' };
 
@@ -45,8 +46,7 @@ export default function NavPage() {
         Vertical navigation menu for sidebars and dashboards. Supports sections, collapsible groups, icons, badges, active and disabled states, and router link integration via <code className="font-code text-xs">asChild</code>.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Nav>
+      <AnatomyBlock>{`<Nav>
   <NavSection title="Main">
     <NavItem href="…" active icon={…} badge="4">Label</NavItem>
     <NavItem href="…" disabled>Label</NavItem>
@@ -56,7 +56,7 @@ export default function NavPage() {
   </NavGroup>
   <NavSeparator />
   <NavItem href="…">Settings</NavItem>
-</Nav>`}</pre>
+</Nav>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <NavDemos />

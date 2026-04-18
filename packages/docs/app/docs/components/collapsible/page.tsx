@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { CollapsibleDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'Collapsible' };
 
@@ -32,11 +33,10 @@ export default function CollapsiblePage() {
         Simple show/hide toggle for a single section. Use for FAQ items, filter panels, and inline detail sections. For grouped sections use Accordion instead.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Collapsible>
+      <AnatomyBlock>{`<Collapsible>
   <CollapsibleTrigger />  {/* click to toggle */}
   <CollapsibleContent /> {/* revealed content */}
-</Collapsible>`}</pre>
+</Collapsible>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <CollapsibleDemos />

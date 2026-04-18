@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { FormFieldDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'FormField' };
 
@@ -35,8 +36,7 @@ export default function FormFieldPage() {
         Composable wrapper that wires label, control, and hint together with consistent spacing, accessibility attributes, and error state — without imposing a specific form library.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<FormField id="email" error required>
+      <AnatomyBlock>{`<FormField id="email" error required>
   <FormLabel>Email</FormLabel>        {/* label, asterisk, error colour */}
   <FormControl>
     <Input />                         {/* receives id + aria attrs */}
@@ -47,7 +47,7 @@ export default function FormFieldPage() {
 <FormSection title="Profile" description="Visible to others.">
   <FormField>…</FormField>
   <FormField>…</FormField>
-</FormSection>`}</pre>
+</FormSection>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <FormFieldDemos />

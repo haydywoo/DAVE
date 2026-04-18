@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PropsTable } from '@/components/PropsTable';
 import { DataTableDemos } from './demos';
+import { AnatomyBlock } from '@/components/AnatomyBlock';
 
 export const metadata: Metadata = { title: 'DataTable' };
 
@@ -38,14 +39,13 @@ export default function DataTablePage() {
         Feature-rich data grid with client-side sorting, pagination, and row selection. Built on top of the Table primitive — use Table directly when you only need static markup.
       </p>
 
-      <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<DataTable
+      <AnatomyBlock>{`<DataTable
   columns={columns}   {/* ColumnDef[] */}
   data={rows}         {/* TData[] */}
   getRowId={…}        {/* stable row key */}
   selectable          {/* checkbox column */}
   pageSize={10}       {/* enables pagination footer */}
-/>`}</pre>
+/>`}</AnatomyBlock>
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DataTableDemos />
