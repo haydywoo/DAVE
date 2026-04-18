@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { MDXComponents } from 'mdx/types';
 import type { ComponentPropsWithoutRef } from 'react';
 
@@ -52,14 +53,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     strong: ({ children }) => (
       <strong className="font-semibold text-foreground">{children}</strong>
     ),
-    a: ({ children, href }) => (
-      <a
-        href={href}
-        className="text-accent-foreground underline underline-offset-4 hover:text-accent transition-colors"
-      >
-        {children}
-      </a>
-    ),
+    a: ({ children, href = '' }) => {
+      const isInternal = href.startsWith('/');
+      if (isInternal) {
+        return (
+          <Link href={href} className="text-accent-foreground underline underline-offset-4 hover:text-accent transition-colors">
+            {children}
+          </Link>
+        );
+      }
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent-foreground underline underline-offset-4 hover:text-accent transition-colors">
+          {children}
+        </a>
+      );
+    },
     figure: ({ children, ...props }) => (
       <figure className="m-0" {...props}>{children}</figure>
     ),
