@@ -46,7 +46,7 @@ const ROLE_LABELS: Record<MessageRole, string> = {
 
 function formatTime(value: string | Date): string {
   const d = typeof value === 'string' ? new Date(value) : value;
-  return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  return d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
 }
 
 // ─── Markdown components ──────────────────────────────────────────────────────

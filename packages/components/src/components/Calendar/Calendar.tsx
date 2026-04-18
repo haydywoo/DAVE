@@ -182,7 +182,7 @@ export function Calendar({
   return (
     <div
       className={cn(
-        'inline-flex flex-col gap-3 rounded-[3px] border border-border bg-card p-4 shadow-sm select-none',
+        'inline-flex flex-col gap-3 rounded-[3px] border border-border bg-card p-4 shadow-sm select-none min-w-[17rem]',
         className,
       )}
       role="group"
