@@ -3,15 +3,15 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = { title: 'Charts — Overview' };
 
 const charts = [
-  { name: 'Bar Chart',   href: '/docs/charts/bar-chart',   desc: 'Grouped, stacked, and horizontal bars for comparing categorical data.' },
-  { name: 'Line Chart',  href: '/docs/charts/line-chart',  desc: 'Continuous trends over time with multiple series support.' },
-  { name: 'Area Chart',  href: '/docs/charts/area-chart',  desc: 'Filled area for volume and cumulative data over time.' },
-  { name: 'Donut Chart', href: '/docs/charts/donut-chart', desc: 'Part-to-whole proportions with an optional centre label.' },
-  { name: 'Sparkline',    href: '/docs/charts/sparkline',    desc: 'Compact inline chart for use inside stat cards and tables.' },
-  { name: 'Scatter Plot', href: '/docs/charts/scatter-plot', desc: 'Two-dimensional correlation chart with optional per-point labels.' },
-  { name: 'Combo Chart',  href: '/docs/charts/combo-chart',  desc: 'Bars and lines on the same chart, with optional dual y-axis.' },
-  { name: 'Radar Chart',  href: '/docs/charts/radar-chart',  desc: 'Multi-dimensional polygon chart for scoring and capability comparisons.' },
-  { name: 'Funnel Chart', href: '/docs/charts/funnel-chart', desc: 'Sequential drop-off chart for conversion flows and sales pipelines.' },
+  { name: 'Bar Chart',   href: '/docs/charts/bar-chart/',   desc: 'Grouped, stacked, and horizontal bars for comparing categorical data.' },
+  { name: 'Line Chart',  href: '/docs/charts/line-chart/',  desc: 'Continuous trends over time with multiple series support.' },
+  { name: 'Area Chart',  href: '/docs/charts/area-chart/',  desc: 'Filled area for volume and cumulative data over time.' },
+  { name: 'Donut Chart', href: '/docs/charts/donut-chart/', desc: 'Part-to-whole proportions with an optional centre label.' },
+  { name: 'Sparkline',    href: '/docs/charts/sparkline/',    desc: 'Compact inline chart for use inside stat cards and tables.' },
+  { name: 'Scatter Plot', href: '/docs/charts/scatter-plot/', desc: 'Two-dimensional correlation chart with optional per-point labels.' },
+  { name: 'Combo Chart',  href: '/docs/charts/combo-chart/',  desc: 'Bars and lines on the same chart, with optional dual y-axis.' },
+  { name: 'Radar Chart',  href: '/docs/charts/radar-chart/',  desc: 'Multi-dimensional polygon chart for scoring and capability comparisons.' },
+  { name: 'Funnel Chart', href: '/docs/charts/funnel-chart/', desc: 'Sequential drop-off chart for conversion flows and sales pipelines.' },
 ];
 
 export default function ChartsOverviewPage() {
