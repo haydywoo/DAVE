@@ -58,7 +58,7 @@ export function BreadcrumbLink({ children, asChild, className, ...props }: Bread
   return (
     <Comp
       className={cn(
-        'hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-[2px]',
+        'hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 rounded-[3px]',
         className,
       )}
       {...props}
