@@ -98,7 +98,7 @@ export const Chip = React.forwardRef<HTMLButtonElement | HTMLSpanElement, ChipPr
           onClick={(e) => { e.stopPropagation(); onRemove(); }}
           disabled={disabled}
           aria-label="Remove"
-          className="shrink-0 -mr-0.5 rounded-full opacity-60 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
+          className="shrink-0 -mr-0.5 rounded-full opacity-60 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <svg
             viewBox="0 0 24 24"

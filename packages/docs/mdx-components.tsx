@@ -55,15 +55,16 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     a: ({ children, href = '' }) => {
       const isInternal = href.startsWith('/');
+      const linkClass = 'text-accent-foreground underline underline-offset-4 hover:text-accent transition-colors rounded-[2px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1';
       if (isInternal) {
         return (
-          <Link href={href} className="text-accent-foreground underline underline-offset-4 hover:text-accent transition-colors">
+          <Link href={href} className={linkClass}>
             {children}
           </Link>
         );
       }
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent-foreground underline underline-offset-4 hover:text-accent transition-colors">
+        <a href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
           {children}
         </a>
       );
