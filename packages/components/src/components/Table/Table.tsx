@@ -22,7 +22,7 @@ export function Table({ children, striped = false, className }: TableProps) {
     <TableContext.Provider value={{ striped }}>
       <div className="w-full overflow-x-auto rounded-[3px] border border-border">
         <table
-          className={cn('w-full caption-bottom text-sm border-collapse', className)}
+          className={cn('min-w-full caption-bottom text-sm border-collapse', className)}
         >
           {children}
         </table>
