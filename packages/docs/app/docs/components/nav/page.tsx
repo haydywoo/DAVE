@@ -46,7 +46,7 @@ export default function NavPage() {
       </p>
 
       <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`<Nav>
+      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Nav>
   <NavSection title="Main">
     <NavItem href="…" active icon={…} badge="4">Label</NavItem>
     <NavItem href="…" disabled>Label</NavItem>

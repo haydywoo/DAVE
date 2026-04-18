@@ -26,7 +26,7 @@ export default function AccordionPage() {
       </p>
 
       <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`<Accordion type="single" collapsible>
+      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Accordion type="single" collapsible>
   <AccordionItem value="item-1">
     <AccordionTrigger>Label</AccordionTrigger>
     <AccordionContent>Content</AccordionContent>

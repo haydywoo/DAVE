@@ -28,7 +28,7 @@ export default function SelectPage() {
       </p>
 
       <h3 className="text-sm text-fg-secondary mb-2">Anatomy</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`<Select placeholder="Pick one…" onValueChange={setValue}>
+      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`<Select placeholder="Pick one…" onValueChange={setValue}>
   <SelectItem value="a">Option A</SelectItem>
 
   {/* Grouped with label */}

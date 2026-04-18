@@ -21,7 +21,7 @@ export default function ToastPage() {
       </p>
 
       <h3 className="text-sm text-fg-secondary mb-2">Setup</h3>
-      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed">{`// Wrap your app (or layout) once
+      <pre className="font-code text-xs text-fg-secondary bg-surface border border-border rounded-[3px] p-4 mb-8 leading-relaxed overflow-x-auto">{`// Wrap your app (or layout) once
 <ToastProviderWithHook>
   {children}
 </ToastProviderWithHook>
