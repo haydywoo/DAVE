@@ -33,16 +33,6 @@ export function ButtonDemos() {
         <Button variant="link">Link</Button>
       </Preview>
 
-      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Inverse</h3>
-      <Preview
-        code={`// Use on dark or coloured surfaces — footers, hero sections, dark navbars.
-<Button variant="inverse">Get started</Button>`}
-      >
-        <div className="w-full flex items-center justify-center rounded-[3px] bg-neutral-900 p-8">
-          <Button variant="inverse">Get started</Button>
-        </div>
-      </Preview>
-
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Sizes</h3>
       <Preview
         code={`<Button size="sm">Small</Button>
