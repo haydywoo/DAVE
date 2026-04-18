@@ -21,10 +21,9 @@ export default function ButtonPage() {
     <div>
       <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Button</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
-        Triggers an action or event. Supports four visual variants and three sizes, with built-in loading and icon states.
+        Triggers an action or event. Supports six visual variants and four sizes, with built-in loading, icon, and as-link states.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Variants</h2>
       <ButtonDemos />
 
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>

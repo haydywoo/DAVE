@@ -157,33 +157,33 @@
   --color-inverse:       var(--neutral-1);
   --color-inverse-hover: var(--neutral-2);
 
-  /* Accent — more vivid in dark mode (higher chroma, tuned lightness) */
-  --color-accent:               oklch(66% 0.145 295);
-  --color-accent-hover:         oklch(72% 0.130 295);
+  /* Accent — deeper in dark mode so white on-accent text passes contrast */
+  --color-accent:               oklch(46% 0.160 295);
+  --color-accent-hover:         oklch(52% 0.155 295);
   --color-on-accent:            oklch(100% 0 0);
   --color-accent-subtle:        oklch(17% 0.038 295);
   --color-accent-subtle-border: oklch(22% 0.055 295);
-  --color-accent-border:        oklch(55% 0.125 295);
-  --color-accent-foreground:    oklch(80% 0.078 295);
+  --color-accent-border:        oklch(58% 0.130 295);
+  --color-accent-foreground:    oklch(78% 0.085 295);
 
-  /* Success */
+  /* Success — brighter solid in dark mode to compensate for dark bg desaturation */
   --color-success-subtle:     oklch(14% 0.030 145);
   --color-success-border:     oklch(22% 0.055 145);
-  --color-success:            var(--green-9);
-  --color-success-foreground: oklch(78% 0.100 145);
+  --color-success:            oklch(62% 0.140 145);
+  --color-success-foreground: oklch(78% 0.105 145);
 
   /* Warning */
   --color-warning-subtle:     oklch(14% 0.028 72);
   --color-warning-border:     oklch(22% 0.055 72);
-  --color-warning:            var(--amber-9);
-  --color-warning-foreground: oklch(82% 0.100 72);
+  --color-warning:            oklch(70% 0.138 72);
+  --color-warning-foreground: oklch(84% 0.105 72);
 
   /* Error */
   --color-error-subtle:     oklch(14% 0.035 22);
   --color-error-border:     oklch(22% 0.065 22);
-  --color-error:            var(--red-9);
-  --color-error-hover:      var(--red-10);
-  --color-error-foreground: oklch(78% 0.110 22);
+  --color-error:            oklch(62% 0.170 22);
+  --color-error-hover:      oklch(68% 0.160 22);
+  --color-error-foreground: oklch(78% 0.115 22);
 
   /* Chart palette — more vivid for dark backgrounds */
   --color-chart-1: oklch(65% 0.165 270);

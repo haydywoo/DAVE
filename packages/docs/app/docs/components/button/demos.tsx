@@ -33,6 +33,16 @@ export function ButtonDemos() {
         <Button variant="link">Link</Button>
       </Preview>
 
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Inverse</h3>
+      <Preview
+        code={`<Button variant="inverse">Inverse</Button>`}
+        center
+      >
+        <div className="w-full flex items-center justify-center rounded-[3px] bg-foreground p-6">
+          <Button variant="inverse">Inverse</Button>
+        </div>
+      </Preview>
+
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Sizes</h3>
       <Preview
         code={`<Button size="sm">Small</Button>
@@ -89,6 +99,25 @@ export function ButtonDemos() {
         <Button disabled>Primary</Button>
         <Button variant="secondary" disabled>Secondary</Button>
         <Button variant="soft" disabled>Soft</Button>
+      </Preview>
+
+      <h3 className="font-semibold text-base text-foreground mt-8 mb-3">As link</h3>
+      <Preview
+        code={`// Pass asChild and nest an <a> (or Next.js Link) to render a
+// fully accessible link that looks like a button.
+<Button asChild variant="primary">
+  <a href="/docs/getting-started">Get started</a>
+</Button>
+<Button asChild variant="secondary">
+  <a href="/docs/getting-started">Get started</a>
+</Button>`}
+      >
+        <Button asChild variant="primary">
+          <a href="#">Get started</a>
+        </Button>
+        <Button asChild variant="secondary">
+          <a href="#">Documentation</a>
+        </Button>
       </Preview>
     </>
   );
