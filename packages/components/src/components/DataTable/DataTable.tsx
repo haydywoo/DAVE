@@ -179,7 +179,7 @@ export function DataTable<TData extends Record<string, unknown>>({
 
   // ── Render ──────────────────────────────────────────────────────────────
   return (
-    <div className={cn('flex flex-col gap-3', className)}>
+    <div className={cn('w-full min-w-0 flex flex-col gap-3', className)}>
       <Table striped={striped} size={size} bordered={bordered}>
         <TableHeader>
           <tr>
