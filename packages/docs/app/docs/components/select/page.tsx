@@ -10,13 +10,18 @@ const selectProps = [
   { name: 'value', type: 'string', description: 'Controlled value.' },
   { name: 'defaultValue', type: 'string', description: 'Uncontrolled initial value.' },
   { name: 'onValueChange', type: '(value: string) => void', description: 'Called when selection changes.' },
+  { name: 'variant', type: "'outline' | 'secondary' | 'ghost'", default: "'outline'", description: 'outline — form input. secondary — bordered button. ghost — borderless button.' },
+  { name: 'icon', type: 'ReactNode', description: 'Leading icon shown inside the trigger.' },
+  { name: 'iconOnly', type: 'boolean', default: 'false', description: 'Square icon-only trigger — hides value text and chevron. Requires icon.' },
+  { name: 'width', type: "'full' | 'auto'", description: "Trigger width. Defaults to 'full' for outline, 'auto' for secondary/ghost." },
   { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: 'Height and text size.' },
-  { name: 'error', type: 'boolean', description: 'Applies error border colour.' },
+  { name: 'error', type: 'boolean', description: 'Applies error border colour (outline variant).' },
   { name: 'disabled', type: 'boolean', description: 'Disables the trigger.' },
 ];
 
 const itemProps = [
   { name: 'value', type: 'string', required: true, description: 'The value submitted when this item is selected.' },
+  { name: 'icon', type: 'ReactNode', description: 'Leading icon shown beside the item label.' },
   { name: 'disabled', type: 'boolean', description: 'Dims and prevents selection of this item.' },
 ];
 
@@ -25,7 +30,7 @@ export default function SelectPage() {
     <div>
       <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Select</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
-        Accessible single-value select. Supports groups, labels, sizes, and error state. Built on Radix UI.
+        Accessible single-value select with three trigger styles: form input, bordered button, and ghost. Supports leading icons, item icons, groups, labels, sizes, and error state. Built on Radix UI.
       </p>
 
       <AnatomyBlock>{`<Select placeholder="Pick one…" onValueChange={setValue}>
