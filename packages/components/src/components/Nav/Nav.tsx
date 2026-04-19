@@ -120,7 +120,7 @@ export function NavItem({
         'group flex items-center rounded-[3px] transition-colors text-left',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         active
-          ? 'bg-surface text-foreground font-medium'
+          ? 'selected font-medium'
           : 'text-fg-secondary hover:text-foreground hover:bg-surface',
         disabled && 'pointer-events-none opacity-40',
         isIconOnly
@@ -135,7 +135,7 @@ export function NavItem({
     >
       {icon && (
         <span
-          className={cn(
+            className={cn(
             'shrink-0 transition-colors',
             active ? 'text-foreground' : 'text-fg-secondary group-hover:text-foreground',
           )}
