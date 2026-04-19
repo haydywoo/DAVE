@@ -6,7 +6,11 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:fix": "prettier --write ."
   },
   "peerDependencies": {
     "react": "^18.0.0",
