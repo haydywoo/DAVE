@@ -32,9 +32,7 @@ const nextConfig = {
   assetPrefix: isProd ? '/DAVE/' : '',
   images: { unoptimized: true },
   transpilePackages: ['recharts', 'victory-vendor', 'd3-scale', 'd3-format', 'd3-shape', 'd3-path'],
-  experimental: {
-    optimizePackageImports: ['@dave/react'],
-  },
+  experimental: {},
   webpack: (config) => {
     config.resolve.alias['@dave/react'] = daveDist;
     config.resolve.alias['@dave/charts'] = chartsDist;

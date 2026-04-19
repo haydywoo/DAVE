@@ -52,4 +52,30 @@
   .prose-link:focus-visible {
     @apply outline-none ring-2 ring-accent ring-offset-1;
   }
+
+  /* Interactive utilities using new tokens: safe defaults for hover/active/selected/focus */
+  .interactive {
+    transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+  }
+  .interactive:hover {
+    background-color: var(--color-interactive-hover);
+  }
+  .interactive:active {
+    background-color: var(--color-interactive-active);
+  }
+  .interactive[aria-pressed='true'], .interactive.is-selected {
+    background-color: var(--color-selected);
+    border-color: var(--color-selected-border);
+  }
+
+  /* Focus styling: prefer ring/glow but provide solid outline fallback */
+  .interactive:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-focus);
+    border-color: var(--color-focus-outline);
+  }
+
+  /* Selected state helpers for sidebar/docs */
+  .selected { background-color: var(--color-selected); color: var(--color-foreground); }
+  .border-selected { border-color: var(--color-selected-border); }
 }

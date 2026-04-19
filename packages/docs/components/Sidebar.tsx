@@ -96,6 +96,7 @@ const standardNavigation = [
     items: [
       { title: 'Avatar',      href: '/docs/components/avatar' },
       { title: 'Badge',       href: '/docs/components/badge' },
+      { title: 'DataList',    href: '/docs/components/data-list' },
       { title: 'DataTable',   href: '/docs/components/data-table' },
       { title: 'Empty State', href: '/docs/components/empty-state' },
       { title: 'Kbd',         href: '/docs/components/kbd' },
@@ -214,59 +215,48 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
       </div>
 
       {/* Section switcher */}
-      <div className="px-3 pt-6 pb-5">
+      <div className="px-3 pt-5 pb-4">
         <div className="flex rounded-[4px] bg-surface border border-border p-0.5 gap-0.5">
-          <button
-            onClick={() => { setSection('standard'); router.push('/docs/components'); }}
-            className={[
-              'flex-1 rounded-[3px] px-2 py-1 text-xs font-medium transition-all duration-150',
-              section === 'standard'
-                ? 'bg-card text-foreground shadow-sm'
-                : 'text-fg-secondary hover:text-foreground',
-            ].join(' ')}
-          >
-            Components
-          </button>
-          <button
-            onClick={() => { setSection('charts'); router.push('/docs/charts/overview'); }}
-            className={[
-              'flex-1 rounded-[3px] px-2 py-1 text-xs font-medium transition-all duration-150',
-              section === 'charts'
-                ? 'bg-card text-foreground shadow-sm'
-                : 'text-fg-secondary hover:text-foreground',
-            ].join(' ')}
-          >
-            Charts
-          </button>
-          <button
-            onClick={() => { setSection('ai'); router.push('/docs/ai/overview'); }}
-            className={[
-              'flex-1 rounded-[3px] px-2 py-1 text-xs font-medium transition-all duration-150',
-              section === 'ai'
-                ? 'bg-card text-foreground shadow-sm'
-                : 'text-fg-secondary hover:text-foreground',
-            ].join(' ')}
-          >
-            AI
-          </button>
+          {([
+            { key: 'standard', label: 'Components', href: '/docs/components' },
+            { key: 'charts',   label: 'Charts',     href: '/docs/charts/overview' },
+            { key: 'ai',       label: 'AI',          href: '/docs/ai/overview' },
+          ] as const).map(({ key, label, href }) => (
+            <button
+              key={key}
+              onClick={() => { setSection(key); router.push(href); }}
+              className={[
+                'flex-1 rounded-[3px] px-2 py-1 text-xs font-medium transition-all duration-150',
+                section === key
+                  ? 'bg-card text-foreground shadow-sm'
+                  : 'text-fg-secondary hover:text-foreground',
+              ].join(' ')}
+            >
+              {label}
+            </button>
+          ))}
         </div>
       </div>
 
-      <div className="px-3 pb-4">
+      <div className="px-3 pt-2 pb-4">
         <Nav>
           {navigation.map((s) => (
             <NavSection key={s.title} title={s.title}>
-              {s.items.map((item) => (
-                <NavItem
-                  key={item.href}
-                  as={Link}
-                  href={item.href}
-                  active={pathname === item.href}
-                  onClick={onClose}
-                >
-                  {item.title}
-                </NavItem>
-              ))}
+              {s.items.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <NavItem
+                    key={item.href}
+                    as={Link}
+                    href={item.href}
+                    active={isActive}
+                    onClick={onClose}
+                    className={isActive ? 'selected' : undefined}
+                  >
+                    {item.title}
+                  </NavItem>
+                );
+              })}
             </NavSection>
           ))}
         </Nav>
