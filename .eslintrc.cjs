@@ -44,6 +44,17 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['**/*.stories.tsx'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        'import/no-duplicates': 'off',
+      },
+    },
+  ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
