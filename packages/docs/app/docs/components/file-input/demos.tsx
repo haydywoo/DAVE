@@ -9,14 +9,14 @@ export function FileInputDemos() {
 
   return (
     <>
-      <Preview code={`<FileInput />`}>
+      <Preview center={false} code={`<FileInput />`}>
         <div className="w-full max-w-sm">
           <FileInput />
         </div>
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Sizes</h3>
-      <Preview
+      <Preview center={false}
         code={`<FileInput size="sm" />
 <FileInput size="md" />
 <FileInput size="lg" />
@@ -31,7 +31,7 @@ export function FileInputDemos() {
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Accept specific types</h3>
-      <Preview
+      <Preview center={false}
         code={`<FileInput accept="image/*" placeholder="No image chosen" />
 <FileInput accept=".pdf,.doc,.docx" placeholder="No document chosen" />`}
       >
@@ -42,7 +42,7 @@ export function FileInputDemos() {
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Multiple files</h3>
-      <Preview
+      <Preview center={false}
         code={`<FileInput multiple placeholder="No files chosen" />`}
       >
         <div className="w-full max-w-sm">
@@ -51,7 +51,7 @@ export function FileInputDemos() {
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Error state</h3>
-      <Preview
+      <Preview center={false}
         code={`<FileInput error placeholder="No file chosen" />`}
       >
         <div className="w-full max-w-sm">
@@ -60,7 +60,7 @@ export function FileInputDemos() {
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Disabled</h3>
-      <Preview
+      <Preview center={false}
         code={`<FileInput disabled />`}
       >
         <div className="w-full max-w-sm">
@@ -69,7 +69,7 @@ export function FileInputDemos() {
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Custom button label</h3>
-      <Preview
+      <Preview center={false}
         code={`<FileInput buttonLabel="Choose file" />`}
       >
         <div className="w-full max-w-sm">

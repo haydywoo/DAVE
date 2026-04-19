@@ -130,6 +130,14 @@
   --color-chart-6: oklch(55% 0.160 225);
   --color-chart-7: oklch(52% 0.200 305);
   --color-chart-8: oklch(60% 0.190 40);
+
+  /* Interactive & accessibility helpers */
+  --color-interactive-hover:  oklch(52% 0.080 295 / 0.08);
+  --color-interactive-active: oklch(52% 0.100 295 / 0.14);
+  --color-selected:           var(--neutral-3);
+  --color-selected-border:    var(--neutral-4);
+  --color-focus:              oklch(50% 0.120 210 / 0.22);
+  --color-focus-outline:      oklch(48% 0.090 210);
 }
 
 /* ── Dark mode ────────────────────────────────────────────────────── */
