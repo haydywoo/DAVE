@@ -37,6 +37,9 @@ export interface ComboboxProps {
   searchPlaceholder?: string;
   emptyText?: string;
   size?: ComboboxSize;
+  side?: 'top' | 'right' | 'bottom' | 'left';
+  align?: 'start' | 'center' | 'end';
+  sideOffset?: number;
   disabled?: boolean;
   error?: boolean;
   className?: string;
@@ -58,6 +61,9 @@ export function Combobox({
   searchPlaceholder = 'Search…',
   emptyText = 'No results found.',
   size = 'md',
+  side = 'bottom',
+  align = 'start',
+  sideOffset = 4,
   disabled = false,
   error = false,
   className,
@@ -158,8 +164,9 @@ export function Combobox({
 
       <RadixPopover.Portal>
         <RadixPopover.Content
-          sideOffset={4}
-          align="start"
+          side={side}
+          align={align}
+          sideOffset={sideOffset}
           onOpenAutoFocus={(e) => e.preventDefault()}
           className={cn(
             'z-50 w-[var(--radix-popover-trigger-width)] rounded-[3px] border border-border bg-raised shadow-raised overflow-hidden',

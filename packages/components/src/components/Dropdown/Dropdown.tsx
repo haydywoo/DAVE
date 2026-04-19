@@ -19,6 +19,7 @@ const itemBase = [
 
 export interface DropdownContentProps {
   children: React.ReactNode;
+  side?: 'top' | 'right' | 'bottom' | 'left';
   align?: 'start' | 'center' | 'end';
   sideOffset?: number;
   className?: string;
@@ -26,6 +27,7 @@ export interface DropdownContentProps {
 
 export function DropdownContent({
   children,
+  side = 'bottom',
   align = 'start',
   sideOffset = 4,
   className,
@@ -33,6 +35,7 @@ export function DropdownContent({
   return (
     <RadixDropdown.Portal>
       <RadixDropdown.Content
+        side={side}
         align={align}
         sideOffset={sideOffset}
         className={cn(
@@ -42,6 +45,7 @@ export function DropdownContent({
           'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
           'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
           'data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2',
+          'data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2',
           className,
         )}
       >

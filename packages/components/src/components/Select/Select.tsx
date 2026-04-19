@@ -18,6 +18,9 @@ export interface SelectProps {
   icon?:            React.ReactNode;
   /** Square icon-only trigger — hides value text and chevron. Requires icon. */
   iconOnly?:        boolean;
+  side?:            'top' | 'right' | 'bottom' | 'left';
+  align?:           'start' | 'center' | 'end';
+  sideOffset?:      number;
   /** Override trigger width. Defaults to 'full' for outline, 'auto' for secondary/ghost. */
   width?:           'full' | 'auto';
   error?:           boolean;
@@ -67,6 +70,9 @@ export function Select({
   variant = 'outline',
   icon,
   iconOnly = false,
+  side = 'bottom',
+  align = 'start',
+  sideOffset = 4,
   width,
   error,
   children,
@@ -102,7 +108,9 @@ export function Select({
       <RadixSelect.Portal>
         <RadixSelect.Content
           position="popper"
-          sideOffset={4}
+          side={side}
+          align={align}
+          sideOffset={sideOffset}
           className={cn(
             'z-50 min-w-[var(--radix-select-trigger-width)] overflow-hidden rounded-[3px] border border-border bg-raised shadow-raised',
             'max-h-[var(--radix-select-content-available-height)]',
