@@ -32,6 +32,7 @@ module.exports = {
       jsx: true,
     },
   },
+  ignorePatterns: ['dist/**', '.next/**', 'storybook-static/**', 'node_modules/**'],
   plugins,
   extends: extendsConfig,
   settings: {
