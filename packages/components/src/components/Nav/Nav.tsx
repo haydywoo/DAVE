@@ -13,9 +13,10 @@ export type NavSize = 'sm' | 'md' | 'lg';
 interface NavContextValue {
   collapsed: boolean;
   size: NavSize;
+  depth: number;
 }
 
-const NavContext = React.createContext<NavContextValue>({ collapsed: false, size: 'md' });
+const NavContext = React.createContext<NavContextValue>({ collapsed: false, size: 'md', depth: 0 });
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
 
@@ -41,8 +42,8 @@ const navItemPadding: Record<NavSize, string> = {
 
 export function Nav({ children, size = 'md', collapsed = false, className }: NavProps) {
   return (
-    <NavContext.Provider value={{ collapsed, size }}>
-      <nav className={cn('flex flex-col gap-1', navSizeText[size], !collapsed && navItemPadding[size], className)}>
+    <NavContext.Provider value={{ collapsed, size, depth: 0 }}>
+      <nav className={cn('flex flex-col gap-0.5', navSizeText[size], !collapsed && navItemPadding[size], className)}>
         {children}
       </nav>
     </NavContext.Provider>
@@ -105,7 +106,7 @@ export function NavItem({
   className,
   ...props
 }: NavItemProps) {
-  const { collapsed, size } = React.useContext(NavContext);
+  const { collapsed, size, depth } = React.useContext(NavContext);
   const isIconOnly = iconOnlyProp || collapsed;
 
   const element = (
@@ -116,15 +117,18 @@ export function NavItem({
       aria-label={isIconOnly ? tooltip ?? (typeof children === 'string' ? children : undefined) : undefined}
       tabIndex={disabled ? -1 : undefined}
       className={cn(
-        'group flex items-center rounded-[3px] transition-colors',
+        'group flex items-center rounded-[3px] transition-colors text-left',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         active
-          ? 'bg-accent-subtle text-accent-foreground font-semibold'
+          ? 'bg-surface text-foreground font-semibold'
           : 'text-fg-secondary hover:text-foreground hover:bg-surface',
         disabled && 'pointer-events-none opacity-40',
         isIconOnly
           ? cn('justify-center self-center', iconOnlySizes[size])
-          : 'w-full gap-2.5',
+          : cn(
+              'w-full gap-2.5',
+              depth === 0 && cn('border-l-2', active ? 'border-accent' : 'border-transparent'),
+            ),
         className,
       )}
       {...props}
@@ -133,7 +137,7 @@ export function NavItem({
         <span
           className={cn(
             'shrink-0 transition-colors',
-            active ? 'text-accent' : 'text-fg-secondary group-hover:text-foreground',
+            active ? 'text-foreground' : 'text-fg-secondary group-hover:text-foreground',
           )}
           aria-hidden="true"
         >
@@ -171,6 +175,7 @@ export interface NavGroupProps {
   children: React.ReactNode;
   title: string;
   icon?: React.ReactNode;
+  active?: boolean;
   defaultOpen?: boolean;
   className?: string;
 }
@@ -179,30 +184,34 @@ export function NavGroup({
   children,
   title,
   icon,
+  active = false,
   defaultOpen = false,
   className,
 }: NavGroupProps) {
-  const { collapsed } = React.useContext(NavContext);
+  const { collapsed, size, depth } = React.useContext(NavContext);
   const [open, setOpen] = React.useState(defaultOpen);
 
   // In collapsed mode, groups are hidden — only icon-only flat items make sense
   if (collapsed) return null;
 
   return (
-    <div className={cn('flex flex-col gap-0.5 mt-2 first:mt-0', className)}>
+    <div className={cn('flex flex-col gap-0.5', className)}>
       <button
         type="button"
         data-nav-item=""
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
         className={cn(
-          'group flex w-full items-center gap-2.5 rounded-[3px] font-medium transition-colors',
-          'text-fg-secondary hover:text-foreground hover:bg-surface',
+          'group flex w-full items-center gap-2.5 rounded-[3px] font-medium transition-colors text-left',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
+          active
+            ? 'bg-surface text-foreground font-semibold'
+            : 'text-fg-secondary hover:text-foreground hover:bg-surface',
+          depth === 0 && cn('border-l-2', active ? 'border-accent' : 'border-transparent'),
         )}
       >
         {icon && (
-          <span className="shrink-0 text-fg-secondary group-hover:text-foreground" aria-hidden="true">
+          <span className={cn('shrink-0', active ? 'text-foreground' : 'text-fg-secondary group-hover:text-foreground')} aria-hidden="true">
             {icon}
           </span>
         )}
@@ -217,9 +226,11 @@ export function NavGroup({
       </button>
 
       {open && (
-        <div className="ml-3 mt-0.5 border-l border-border pl-3 flex flex-col gap-0.5">
-          {children}
-        </div>
+        <NavContext.Provider value={{ collapsed, size, depth: depth + 1 }}>
+          <div className="ml-2 mt-0.5 border-l border-border pl-2.5 flex flex-col gap-0.5">
+            {children}
+          </div>
+        </NavContext.Provider>
       )}
     </div>
   );

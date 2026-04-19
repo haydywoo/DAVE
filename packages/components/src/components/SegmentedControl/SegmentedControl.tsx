@@ -26,9 +26,9 @@ export interface SegmentedControlProps {
 }
 
 const sizes: Record<SegmentedControlSize, { root: string; trigger: string }> = {
-  sm: { root: 'p-0.5 gap-0.5', trigger: 'h-6 px-2.5 text-xs' },
-  md: { root: 'p-0.5 gap-0.5', trigger: 'h-8 px-3 text-sm' },
-  lg: { root: 'p-1 gap-1',     trigger: 'h-10 px-4 text-base' },
+  sm: { root: 'p-0.5 gap-0.5', trigger: 'h-7 px-2.5 text-xs' },
+  md: { root: 'p-0.5 gap-0.5', trigger: 'h-9 px-3 text-sm' },
+  lg: { root: 'p-1 gap-1',     trigger: 'h-11 px-4 text-base' },
 };
 
 export function SegmentedControl({

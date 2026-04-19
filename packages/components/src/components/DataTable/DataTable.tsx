@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { cn } from '../../lib/cn';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '../Table/Table';
+import type { TableSize } from '../Table/Table';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { Pagination, PageSizeSelect } from '../Pagination/Pagination';
 import { EmptyState } from '../EmptyState/EmptyState';
@@ -56,6 +57,7 @@ export interface DataTableProps<TData extends Record<string, unknown>> {
   /** Number of skeleton rows to show. Defaults to pageSize or 5. */
   loadingRows?: number;
 
+  size?: TableSize;
   className?: string;
 }
 
@@ -86,6 +88,7 @@ export function DataTable<TData extends Record<string, unknown>>({
   emptyIcon,
   isLoading = false,
   loadingRows,
+  size,
   className,
 }: DataTableProps<TData>) {
   // ── Sort state ──────────────────────────────────────────────────────────
@@ -174,7 +177,7 @@ export function DataTable<TData extends Record<string, unknown>>({
   // ── Render ──────────────────────────────────────────────────────────────
   return (
     <div className={cn('flex flex-col gap-3', className)}>
-      <Table striped={striped}>
+      <Table striped={striped} size={size}>
         <TableHeader>
           <tr>
             {selectable && (
