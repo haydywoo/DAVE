@@ -8,7 +8,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
+    "lint": "pnpm --filter @dave/docs lint",
+    "lint:all": "turbo lint",
     "typecheck": "turbo run typecheck",
     "format": "prettier --write .",
     "format:fix": "prettier --write .",
