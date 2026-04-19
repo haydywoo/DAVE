@@ -2,12 +2,14 @@ import * as React from 'react';
 import * as RadixTooltip from '@radix-ui/react-tooltip';
 import { cn } from '../../lib/cn';
 
-export type TooltipSide = 'top' | 'right' | 'bottom' | 'left';
+export type TooltipSide  = 'top' | 'right' | 'bottom' | 'left';
+export type TooltipAlign = 'start' | 'center' | 'end';
 
 export interface TooltipProps {
   content: React.ReactNode;
   children: React.ReactNode;
   side?: TooltipSide;
+  align?: TooltipAlign;
   sideOffset?: number;
   delayDuration?: number;
 }
@@ -16,6 +18,7 @@ export function Tooltip({
   content,
   children,
   side = 'top',
+  align = 'center',
   sideOffset = 6,
   delayDuration = 300,
 }: TooltipProps) {
@@ -28,6 +31,7 @@ export function Tooltip({
         <RadixTooltip.Portal>
           <RadixTooltip.Content
             side={side}
+            align={align}
             sideOffset={sideOffset}
             className={cn(
               'z-50 max-w-xs rounded-[3px] bg-foreground px-2.5 py-1.5 text-xs text-background shadow-sm',
