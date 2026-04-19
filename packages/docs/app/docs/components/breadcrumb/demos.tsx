@@ -7,6 +7,7 @@ export function BreadcrumbDemos() {
   return (
     <>
       <Preview
+        center={false}
         code={`<Breadcrumb>
   <BreadcrumbItem><BreadcrumbLink href="#">Home</BreadcrumbLink></BreadcrumbItem>
   <BreadcrumbSeparator />
@@ -26,6 +27,7 @@ export function BreadcrumbDemos() {
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">With ellipsis</h3>
       <Preview
+        center={false}
         code={`<Breadcrumb>
   <BreadcrumbItem><BreadcrumbLink href="#">Home</BreadcrumbLink></BreadcrumbItem>
   <BreadcrumbSeparator />
@@ -49,6 +51,7 @@ export function BreadcrumbDemos() {
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Custom separator</h3>
       <Preview
+        center={false}
         code={`<Breadcrumb>
   <BreadcrumbItem><BreadcrumbLink href="#">Home</BreadcrumbLink></BreadcrumbItem>
   <BreadcrumbSeparator>/</BreadcrumbSeparator>
