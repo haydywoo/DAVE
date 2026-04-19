@@ -25,7 +25,7 @@ const variants: Record<ButtonVariant, string> = {
   secondary: 'bg-background text-foreground border border-border hover:bg-surface hover:border-border-strong',
   ghost:     'bg-transparent text-foreground hover:bg-surface',
   soft:      'bg-accent-subtle text-accent-foreground hover:bg-accent-subtle-border',
-  link:      'bg-transparent text-accent underline underline-offset-4 hover:no-underline hover:text-accent-hover',
+  link:      'bg-transparent text-accent underline underline-offset-4 hover:text-accent-hover',
 };
 
 const sizes: Record<ButtonSize, string> = {
