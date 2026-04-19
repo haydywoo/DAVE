@@ -52,6 +52,10 @@ Bar Chart · Line Chart · Area Chart · Donut Chart · Sparkline · Scatter Plo
 
 ---
 
+> **Heads up** — DAVE is a personal design system built for my own projects. It's MIT licensed and you're welcome to use it, but it comes with no stability guarantees, no versioning promise, and no support commitment. Things can change between releases without notice. Use it at your own risk, and fork it if you need something you can rely on long-term.
+
+---
+
 ## Getting Started
 
 ### Installation
