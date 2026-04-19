@@ -61,8 +61,8 @@ importers:
         specifier: ^18.0.0
         version: 18.3.7(@types/react@18.3.28)
       typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
+        specifier: 5.3.3
+        version: 5.3.3
 
   packages/components:
     dependencies:
@@ -146,8 +146,8 @@ importers:
         specifier: ^18.0.0
         version: 18.3.7(@types/react@18.3.28)
       typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
+        specifier: 5.3.3
+        version: 5.3.3
 
   packages/docs:
     dependencies:
@@ -219,8 +219,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.19(yaml@2.8.3)
       typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
+        specifier: 5.3.3
+        version: 5.3.3
 
   packages/storybook:
     dependencies:
@@ -257,10 +257,10 @@ importers:
         version: 8.6.14(@types/react@18.3.28)(storybook@8.6.18(prettier@3.8.1))
       '@storybook/react':
         specifier: ^8.4.0
-        version: 8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.9.3)
+        version: 8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.3.3)
       '@storybook/react-vite':
         specifier: ^8.4.0
-        version: 8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.60.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.9.3)(vite@5.4.21(@types/node@25.5.0))
+        version: 8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.60.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.3.3)(vite@5.4.21(@types/node@25.5.0))
       '@types/react':
         specifier: ^18.0.0
         version: 18.3.28
@@ -289,8 +289,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.19(yaml@2.8.3))
       typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
+        specifier: 5.3.3
+        version: 5.3.3
       vite:
         specifier: ^5.4.0
         version: 5.4.21(@types/node@25.5.0)
@@ -4419,6 +4419,11 @@ packages:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
     engines: {node: '>= 0.4'}
 
+  typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
@@ -4980,14 +4985,14 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.5.0(typescript@5.9.3)(vite@5.4.21(@types/node@25.5.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.5.0(typescript@5.3.3)(vite@5.4.21(@types/node@25.5.0))':
     dependencies:
       glob: 10.5.0
       magic-string: 0.27.0
-      react-docgen-typescript: 2.4.0(typescript@5.9.3)
+      react-docgen-typescript: 2.4.0(typescript@5.3.3)
       vite: 5.4.21(@types/node@25.5.0)
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 5.3.3
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -6052,12 +6057,12 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.6.18(prettier@3.8.1)
 
-  '@storybook/react-vite@8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.60.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.9.3)(vite@5.4.21(@types/node@25.5.0))':
+  '@storybook/react-vite@8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.60.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.3.3)(vite@5.4.21(@types/node@25.5.0))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.5.0(typescript@5.9.3)(vite@5.4.21(@types/node@25.5.0))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.5.0(typescript@5.3.3)(vite@5.4.21(@types/node@25.5.0))
       '@rollup/pluginutils': 5.3.0(rollup@4.60.1)
       '@storybook/builder-vite': 8.6.18(storybook@8.6.18(prettier@3.8.1))(vite@5.4.21(@types/node@25.5.0))
-      '@storybook/react': 8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.9.3)
+      '@storybook/react': 8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.3.3)
       find-up: 5.0.0
       magic-string: 0.30.21
       react: 18.3.1
@@ -6074,7 +6079,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@storybook/react@8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.9.3)':
+  '@storybook/react@8.6.18(@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.3.3)':
     dependencies:
       '@storybook/components': 8.6.18(storybook@8.6.18(prettier@3.8.1))
       '@storybook/global': 5.0.0
@@ -6087,7 +6092,7 @@ snapshots:
       storybook: 8.6.18(prettier@3.8.1)
     optionalDependencies:
       '@storybook/test': 8.6.18(storybook@8.6.18(prettier@3.8.1))
-      typescript: 5.9.3
+      typescript: 5.3.3
 
   '@storybook/test@8.6.18(storybook@8.6.18(prettier@3.8.1))':
     dependencies:
@@ -8693,9 +8698,9 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-docgen-typescript@2.4.0(typescript@5.9.3):
+  react-docgen-typescript@2.4.0(typescript@5.3.3):
     dependencies:
-      typescript: 5.9.3
+      typescript: 5.3.3
 
   react-docgen@7.1.1:
     dependencies:
@@ -9426,6 +9431,8 @@ snapshots:
       is-typed-array: 1.1.15
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
+
+  typescript@5.3.3: {}
 
   typescript@5.9.3: {}
 
