@@ -135,23 +135,23 @@
 /* ── Dark mode ────────────────────────────────────────────────────── */
 .dark {
   /* Surface & layout — 4 distinct elevation levels */
-  --color-background:       oklch(8.5%  0.004 80);  /* #111110 — page bg */
-  --color-surface:          oklch(13.5% 0.005 80);  /* #1A1917 — sidebars/panels */
-  --color-card:             oklch(17.5% 0.005 80);  /* #242220 — card bg */
-  --color-raised:           oklch(22.0% 0.006 80);  /* #2E2B28 — popovers/dropdowns */
-  --color-surface-hovered:  oklch(25.0% 0.007 80);  /* hover state above raised */
-  --color-border:           oklch(22.0% 0.006 80);  /* subtle borders */
-  --color-border-strong:    oklch(28.0% 0.007 80);  /* visible borders */
+  --color-background:       oklch(7.5%  0.004 80);  /* page bg — slightly deeper */
+  --color-surface:          oklch(12.5% 0.005 80);  /* sidebars/panels */
+  --color-card:             oklch(18.5% 0.006 80);  /* card bg — wider step from surface */
+  --color-raised:           oklch(25.0% 0.007 80);  /* popovers/dropdowns */
+  --color-surface-hovered:  oklch(29.0% 0.008 80);  /* hover state above raised */
+  --color-border:           oklch(26.5% 0.007 80);  /* distinct from raised */
+  --color-border-strong:    oklch(36.0% 0.008 80);  /* clearly visible borders */
 
   /* Card elevation — in dark mode shadows are near-invisible, rely on bg diff */
-  --shadow-card:  0 1px 0 0 oklch(100% 0 0 / 0.04);   /* hairline top highlight */
-  --shadow-raised: 0 4px 16px -2px oklch(0% 0 0 / 0.5), 0 0 0 1px oklch(100% 0 0 / 0.06);
+  --shadow-card:  0 1px 0 0 oklch(100% 0 0 / 0.06);   /* hairline top highlight */
+  --shadow-raised: 0 4px 16px -2px oklch(0% 0 0 / 0.5), 0 0 0 1px oklch(100% 0 0 / 0.08);
 
   /* Foreground */
   --color-foreground:           var(--neutral-1);
-  --color-foreground-secondary: var(--neutral-8);
-  --color-foreground-subdued:   var(--neutral-9);
-  --color-foreground-disabled:  var(--neutral-10);
+  --color-foreground-secondary: var(--neutral-7);
+  --color-foreground-subdued:   var(--neutral-8);
+  --color-foreground-disabled:  var(--neutral-9);
 
   /* Inverse */
   --color-inverse:       var(--neutral-1);

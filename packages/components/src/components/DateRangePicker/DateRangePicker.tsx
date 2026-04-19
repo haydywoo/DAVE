@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import * as RadixPopover from '@radix-ui/react-popover';
+import { Button } from '../Button/Button';
 import {
   startOfMonth,
   endOfMonth,
@@ -18,7 +19,6 @@ import {
   addWeeks,
   subMonths,
   format,
-  parse,
   isValid,
   startOfDay,
 } from 'date-fns';
@@ -100,14 +100,21 @@ function MonthGrid({
     return false;
   }
 
-  // Compute the "preview" range for hover highlighting
   function getEffectiveRange(): { from: Date; to: Date } | undefined {
     if (!range?.from) return undefined;
     const anchor = range.from;
-    const end = selecting === 'to' ? (hoverDate ?? range.to) : undefined;
-    if (!end) return { from: anchor, to: anchor };
-    if (isBefore(end, anchor)) return { from: end, to: anchor };
-    return { from: anchor, to: end };
+
+    if (selecting === 'to') {
+      // Show hover preview while picking the end date
+      const end = hoverDate ?? range.to;
+      if (!end) return { from: anchor, to: anchor };
+      if (isBefore(end, anchor)) return { from: end, to: anchor };
+      return { from: anchor, to: end };
+    }
+
+    // Both dates committed — keep the range highlighted
+    if (!range.to) return { from: anchor, to: anchor };
+    return { from: anchor, to: range.to };
   }
 
   const effective = getEffectiveRange();
@@ -122,26 +129,23 @@ function MonthGrid({
         ))}
 
         {gridDays.map((date) => {
-          const inMonth   = isSameMonth(date, month);
-          const disabled  = isDisabled(date);
-          const isFrom    = effective && isSameDay(date, effective.from);
-          const isTo      = effective?.to && isSameDay(date, effective.to);
-          const inRange   = effective?.to && isWithinInterval(date, { start: effective.from, end: effective.to });
+          const inMonth    = isSameMonth(date, month);
+          const disabled   = isDisabled(date);
+          const isFrom     = effective && isSameDay(date, effective.from);
+          const isTo       = effective?.to && isSameDay(date, effective.to);
+          const inRange    = effective?.to && isWithinInterval(date, { start: effective.from, end: effective.to });
           const isEndpoints = isFrom || isTo;
-          const isCurrent = isToday(date);
-          const isSingle  = effective && isSameDay(effective.from, effective.to ?? effective.from);
+          const isCurrent  = isToday(date);
+          const isSingle   = effective && isSameDay(effective.from, effective.to ?? effective.from);
 
           return (
             <div
               key={date.toISOString()}
               className={cn(
                 'relative flex h-8 items-center justify-center',
-                // Range fill (between from and to, excluding endpoints row edges)
                 inRange && !isEndpoints && 'bg-accent-subtle',
-                // Left-side rounding for range fill
                 inRange && isFrom && !isSingle && 'rounded-l-full',
-                // Right-side rounding for range fill
-                inRange && isTo && !isSingle && 'rounded-r-full',
+                inRange && isTo  && !isSingle && 'rounded-r-full',
               )}
             >
               <button
@@ -182,6 +186,10 @@ export interface RangeCalendarProps {
   min?: Date;
   max?: Date;
   disabled?: (date: Date) => boolean;
+  /** Override the default footer hint — pass null to hide it entirely */
+  footer?: React.ReactNode;
+  /** Which month to show on the left when first rendered */
+  initialMonth?: Date;
   className?: string;
 }
 
@@ -191,6 +199,8 @@ export function RangeCalendar({
   min,
   max,
   disabled: disabledFn,
+  footer,
+  initialMonth,
   className,
 }: RangeCalendarProps) {
   const isControlled = controlledValue !== undefined;
@@ -199,7 +209,7 @@ export function RangeCalendar({
 
   const [selecting, setSelecting] = React.useState<'from' | 'to'>('from');
   const [hoverDate, setHoverDate] = React.useState<Date | undefined>();
-  const [leftMonth, setLeftMonth] = React.useState(range?.from ?? new Date());
+  const [leftMonth, setLeftMonth] = React.useState(initialMonth ?? range?.from ?? new Date());
 
   const rightMonth = addMonths(leftMonth, 1);
 
@@ -210,12 +220,10 @@ export function RangeCalendar({
 
   function handleDateClick(date: Date) {
     const d = startOfDay(date);
-
     if (selecting === 'from' || !range?.from) {
       commit({ from: d });
       setSelecting('to');
     } else {
-      // If clicked before existing from, swap
       const from = range.from;
       if (isBefore(d, from)) {
         commit({ from: d, to: from });
@@ -226,6 +234,12 @@ export function RangeCalendar({
       setHoverDate(undefined);
     }
   }
+
+  const defaultFooter = (
+    <p className="text-xs text-fg-secondary text-center">
+      {selecting === 'from' ? 'Select start date' : 'Select end date'}
+    </p>
+  );
 
   return (
     <div
@@ -287,10 +301,7 @@ export function RangeCalendar({
         />
       </div>
 
-      {/* Footer hint */}
-      <p className="text-xs text-fg-secondary text-center">
-        {selecting === 'from' ? 'Select start date' : 'Select end date'}
-      </p>
+      {footer !== null && (footer ?? defaultFooter)}
     </div>
   );
 }
@@ -300,6 +311,8 @@ export function RangeCalendar({
 export interface DateRangePickerProps {
   value?: DateRange;
   defaultValue?: DateRange;
+  onChange?: (range: DateRange | undefined) => void;
+  /** @deprecated use onChange */
   onValueChange?: (range: DateRange | undefined) => void;
   dateFormat?: string;
   placeholder?: string;
@@ -339,8 +352,9 @@ function formatRange(range: DateRange | undefined, fmt: string): string {
 export function DateRangePicker({
   value: controlledValue,
   defaultValue,
+  onChange,
   onValueChange,
-  dateFormat = 'dd/MM/yyyy',
+  dateFormat = 'dd MMM yyyy',
   placeholder = 'Select date range…',
   min,
   max,
@@ -355,23 +369,59 @@ export function DateRangePicker({
 }: DateRangePickerProps) {
   const uid = React.useId();
   const inputId = id ?? uid;
+  const emit = onChange ?? onValueChange;
 
   const isControlled = controlledValue !== undefined;
   const [internalValue, setInternalValue] = React.useState<DateRange | undefined>(defaultValue);
-  const range = isControlled ? controlledValue : internalValue;
+  const committedRange = isControlled ? controlledValue : internalValue;
 
   const [open, setOpen] = React.useState(false);
+  // Draft: the in-progress selection while the popover is open
+  const [draft, setDraft] = React.useState<DateRange | undefined>(committedRange);
 
-  function handleRangeChange(next: DateRange | undefined) {
-    if (!isControlled) setInternalValue(next);
-    onValueChange?.(next);
-    // Close once a complete range is selected
-    if (next?.from && next?.to) {
-      setTimeout(() => setOpen(false), 150);
-    }
+  // Sync draft from committed value when popover opens
+  React.useEffect(() => {
+    if (open) setDraft(committedRange);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  function handleApply() {
+    if (!isControlled) setInternalValue(draft);
+    emit?.(draft);
+    setOpen(false);
   }
 
-  const displayValue = formatRange(range, dateFormat);
+  function handleCancel() {
+    setOpen(false);
+  }
+
+  function handleClear() {
+    setDraft(undefined);
+  }
+
+  const canApply = !!draft?.from && !!draft?.to;
+  const displayValue = formatRange(committedRange, dateFormat);
+
+  const pickerFooter = (
+    <div className="flex items-center justify-between gap-3 border-t border-border pt-3 -mb-1">
+      <div className="flex items-center gap-3">
+        <span className="text-xs text-fg-secondary">
+          {draft?.from && draft?.to
+            ? `${format(draft.from, 'd MMM yyyy')} → ${format(draft.to, 'd MMM yyyy')}`
+            : draft?.from
+            ? `${format(draft.from, 'd MMM yyyy')} → select end`
+            : 'Select start date'}
+        </span>
+        {draft?.from && (
+          <Button variant="link" size="sm" onClick={handleClear}>Clear</Button>
+        )}
+      </div>
+      <div className="flex items-center gap-2 shrink-0">
+        <Button variant="ghost" size="sm" onClick={handleCancel}>Cancel</Button>
+        <Button variant="primary" size="sm" onClick={handleApply} disabled={!canApply}>Apply</Button>
+      </div>
+    </div>
+  );
 
   return (
     <div className={cn('flex flex-col gap-1.5', className)}>
@@ -417,11 +467,13 @@ export function DateRangePicker({
             )}
           >
             <RangeCalendar
-              value={range}
-              onValueChange={handleRangeChange}
+              value={draft}
+              onValueChange={setDraft}
               min={min}
               max={max}
               disabled={disabledDate}
+              footer={pickerFooter}
+              initialMonth={draft?.to ? subMonths(draft.to, 1) : draft?.from ?? new Date()}
             />
           </RadixPopover.Content>
         </RadixPopover.Portal>
