@@ -155,7 +155,7 @@ export default function HomePage() {
                 <Button variant="secondary">Cancel</Button>
                 <Button variant="ghost">View logs</Button>
                 <Button variant="destructive">Delete</Button>
-                <Button variant="outline">Settings</Button>
+                <Button variant="secondary">Settings</Button>
                 <Button variant="link">Learn more</Button>
               </div>
               <div className="flex flex-wrap gap-2 mt-4 items-center">
@@ -176,13 +176,13 @@ export default function HomePage() {
                   <Badge variant="neutral">Archived</Badge>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="info" size="sm">info</Badge>
-                  <Badge variant="accent" size="sm">accent</Badge>
+                  <Badge variant="neutral" size="sm">neutral</Badge>
+                  <Badge variant="primary" size="sm">primary</Badge>
                   <Badge variant="success" size="sm">success</Badge>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="neutral" appearance="outline">Draft</Badge>
-                  <Badge variant="success" appearance="outline">Published</Badge>
+                  <Badge variant="neutral">Draft</Badge>
+                  <Badge variant="success">Published</Badge>
                 </div>
               </div>
             </ShowcaseCard>
