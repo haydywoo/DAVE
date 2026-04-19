@@ -59,6 +59,7 @@ export function CopyButton({
   resetDelay = 2000,
   label,
   className,
+  onCopy,
 }: CopyButtonProps) {
   const [copied, setCopied] = React.useState(false);
 
