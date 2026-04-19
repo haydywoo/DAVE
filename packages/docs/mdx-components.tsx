@@ -1,6 +1,17 @@
 import Link from 'next/link';
 import type { MDXComponents } from 'mdx/types';
-import type { ComponentPropsWithoutRef } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { DocCodeBlock } from '@/components/DocCodeBlock';
+
+function getTextContent(node: ReactNode): string {
+  if (typeof node === 'string') return node;
+  if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(getTextContent).join('');
+  if (node !== null && typeof node === 'object' && 'props' in node) {
+    return getTextContent((node.props as { children?: ReactNode }).children);
+  }
+  return '';
+}
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -14,7 +25,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">{children}</h3>
     ),
     p: ({ children }) => (
-      <p className="text-sm text-fg-secondary leading-relaxed">{children}</p>
+      <p className="text-sm text-fg-secondary leading-relaxed mb-3">{children}</p>
     ),
     ul: ({ children }) => (
       <ul className="list-disc list-outside pl-5 mb-6 space-y-1.5 text-sm text-fg-secondary">{children}</ul>
@@ -32,7 +43,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       const hasNewline = typeof children === 'string' && children.includes('\n');
       const isBlock = Boolean(className) || 'data-language' in props || hasNewline;
       if (isBlock) {
-        return <code className={className} {...props}>{children}</code>;
+        const { style: _, ...rest } = props;
+        return <code className={className} {...rest}>{children}</code>;
       }
       return (
         <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">
@@ -40,16 +52,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         </code>
       );
     },
-    pre: ({ children, ...props }) => (
-      <div className="relative group mb-6">
-        <pre
-          className="rounded-lg bg-[#0d1117] text-[#e6edf3] text-xs font-code p-5 overflow-x-auto leading-relaxed"
-          {...props}
-        >
+    pre: ({ children, style: _, ...props }) => {
+      const language = (props as Record<string, unknown>)['data-language'] as string | undefined;
+      const code = getTextContent(children);
+      return (
+        <DocCodeBlock language={language} code={code} {...props}>
           {children}
-        </pre>
-      </div>
-    ),
+        </DocCodeBlock>
+      );
+    },
     strong: ({ children }) => (
       <strong className="font-semibold text-foreground">{children}</strong>
     ),

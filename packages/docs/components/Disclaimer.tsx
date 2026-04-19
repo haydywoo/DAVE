@@ -6,7 +6,7 @@ export function Disclaimer({ children }: { children: React.ReactNode }) {
   const [dismissed, setDismissed] = useState(false);
   if (dismissed) return null;
   return (
-    <div className="relative rounded-[3px] border border-border bg-surface px-5 py-4 pr-10 text-sm text-fg-secondary leading-relaxed mt-6 mb-8">
+    <div className="relative rounded-[3px] border border-border bg-card px-5 py-4 pr-10 text-sm text-fg-secondary leading-relaxed mt-6 mb-8 [&>p]:mb-0">
       {children}
       <button
         onClick={() => setDismissed(true)}

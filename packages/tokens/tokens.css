@@ -30,19 +30,19 @@
   --neutral-11: oklch(22.0% 0.003 80);
   --neutral-12: oklch(9.0%  0.002 80);
 
-  /* ── Accent scale (mauve, H=295°) ─────────────────────────── */
-  --accent-1:  oklch(98.5% 0.010 295);
-  --accent-2:  oklch(95.5% 0.022 295);
-  --accent-3:  oklch(90.5% 0.036 295);
-  --accent-4:  oklch(85.0% 0.054 295);
-  --accent-5:  oklch(77.0% 0.070 295);
-  --accent-6:  oklch(66.0% 0.092 295);
-  --accent-7:  oklch(57.0% 0.120 295);
-  --accent-8:  oklch(45.0% 0.155 295);
-  --accent-9:  oklch(34.0% 0.180 295);
-  --accent-10: oklch(28.0% 0.175 295);
-  --accent-11: oklch(38.0% 0.172 295);
-  --accent-12: oklch(19.0% 0.158 295);
+  /* ── Accent scale (indigo, H=265°) ─────────────────────────── */
+  --accent-1:  oklch(98.5% 0.010 265);
+  --accent-2:  oklch(95.5% 0.022 265);
+  --accent-3:  oklch(90.5% 0.036 265);
+  --accent-4:  oklch(85.0% 0.054 265);
+  --accent-5:  oklch(77.0% 0.070 265);
+  --accent-6:  oklch(66.0% 0.092 265);
+  --accent-7:  oklch(57.0% 0.120 265);
+  --accent-8:  oklch(45.0% 0.155 265);
+  --accent-9:  oklch(34.0% 0.180 265);
+  --accent-10: oklch(28.0% 0.175 265);
+  --accent-11: oklch(38.0% 0.172 265);
+  --accent-12: oklch(19.0% 0.158 265);
 
   /* ── Status: Success (muted sage, H=145°) ────────────────── */
   --green-1:  oklch(97.5% 0.012 145);
@@ -100,7 +100,7 @@
   --color-accent-subtle-border: var(--accent-3);
   --color-accent-border:        var(--accent-7);
   --color-accent-foreground:    var(--accent-11);
-  --color-on-accent:            oklch(100% 0 0);
+  --color-on-accent:            oklch(95% 0 0);
 
   /* Success */
   --color-success-subtle:     var(--green-1);
@@ -142,37 +142,37 @@
 
 /* ── Dark mode ────────────────────────────────────────────────────── */
 .dark {
-  /* Surface & layout — avoid pure black; nudge neutral hue slightly (toward blue) */
-  --color-background:       oklch(7.5%  0.004 260);
-  --color-surface:          oklch(12.5% 0.005 260);
-  --color-card:             oklch(18.5% 0.006 260);
-  --color-raised:           oklch(25.0% 0.007 260);
-  --color-surface-hovered:  oklch(29.0% 0.008 260);
-  --color-border:           oklch(26.5% 0.007 260);
-  --color-border-strong:    oklch(36.0% 0.008 260);
+  /* Surface & layout — cool blue-gray (H≈250°), not too dark */
+  --color-background:       oklch(12.0% 0.010 250);
+  --color-surface:          oklch(16.0% 0.011 250);
+  --color-card:             oklch(21.0% 0.012 250);
+  --color-raised:           oklch(27.0% 0.013 250);
+  --color-surface-hovered:  oklch(30.5% 0.013 250);
+  --color-border:           oklch(34.0% 0.012 250);
+  --color-border-strong:    oklch(46.0% 0.012 250);
 
   /* Shadows: subtle highlights rather than heavy blacks */
-  --shadow-card:   0 1px 0 0 oklch(100% 0 0 / 0.05);
-  --shadow-raised: 0 4px 12px -2px oklch(0% 0 0 / 0.45), 0 0 0 1px oklch(100% 0 0 / 0.07);
+  --shadow-card:   0 1px 0 0 oklch(100% 0 0 / 0.06);
+  --shadow-raised: 0 4px 12px -2px oklch(0% 0 0 / 0.45), 0 0 0 1px oklch(100% 0 0 / 0.08);
 
-  /* Foreground: near-white but not pure white to reduce glare */
-  --color-foreground:           oklch(96% 0.006 260);
-  --color-foreground-secondary: oklch(72% 0.010 260);
-  --color-foreground-subdued:   oklch(60% 0.010 260);
-  --color-foreground-disabled:  oklch(46% 0.010 260);
+  /* Foreground: near-white with matching cool tint */
+  --color-foreground:           oklch(96% 0.006 250);
+  --color-foreground-secondary: oklch(76% 0.010 250);
+  --color-foreground-subdued:   oklch(62% 0.010 250);
+  --color-foreground-disabled:  oklch(46% 0.010 250);
 
   /* Inverse */
-  --color-inverse:       oklch(100% 0 0);
-  --color-inverse-hover: oklch(96% 0.002 260);
+  --color-inverse:       oklch(95% 0 0);
+  --color-inverse-hover: oklch(90% 0.004 250);
 
-  /* Accent — slightly deeper, moderate saturation for dark backgrounds */
-  --color-accent:               oklch(46% 0.120 295);
-  --color-accent-hover:         oklch(52% 0.110 295);
-  --color-on-accent:            oklch(98% 0 0);
-  --color-accent-subtle:        oklch(17% 0.038 295);
-  --color-accent-subtle-border: oklch(22% 0.055 295);
-  --color-accent-border:        oklch(58% 0.130 295);
-  --color-accent-foreground:    oklch(78% 0.085 295);
+  /* Accent — vivid on dark: higher lightness + full chroma */
+  --color-accent:               oklch(52% 0.180 265);
+  --color-accent-hover:         oklch(58% 0.170 265);
+  --color-on-accent:            oklch(95% 0 0);
+  --color-accent-subtle:        oklch(25% 0.070 265);
+  --color-accent-subtle-border: oklch(31% 0.085 265);
+  --color-accent-border:        oklch(60% 0.155 265);
+  --color-accent-foreground:    oklch(80% 0.095 265);
 
   /* Status colours tuned for dark BG */
   --color-success-subtle:     oklch(14% 0.030 145);
@@ -201,11 +201,11 @@
   --color-chart-7: oklch(68% 0.195 305);
   --color-chart-8: oklch(72% 0.185 40);
 
-  /* Interactive & accessibility helpers (new tokens) */
-  --color-interactive-hover:  oklch(52% 0.080 295 / 0.12); /* translucent overlay for hover */
-  --color-interactive-active: oklch(52% 0.100 295 / 0.20); /* stronger overlay for pressed */
-  --color-selected:           oklch(34% 0.100 295 / 0.22); /* selected row/bg (higher contrast) */
-  --color-selected-border:    oklch(48% 0.110 295 / 0.22);
+  /* Interactive & accessibility helpers */
+  --color-interactive-hover:  oklch(30.5% 0.013 250);
+  --color-interactive-active: oklch(34.0% 0.012 250);
+  --color-selected:           oklch(28% 0.030 250);
+  --color-selected-border:    oklch(36% 0.025 250);
 
   /* Focus / outline */
   --color-focus:         oklch(60% 0.120 210 / 0.28);   /* glow/ring */

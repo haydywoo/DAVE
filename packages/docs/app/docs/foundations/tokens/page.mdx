@@ -4,14 +4,12 @@ export const metadata = { title: 'Tokens' }
 
 DAVE uses a two-layer token system. Primitive variables define the raw values. Semantic aliases give those values meaning. Components always reference semantics — never primitives directly.
 
-```
-Primitive          Semantic alias           Tailwind class
-──────────────────────────────────────────────────────────
---accent-9         --color-accent           bg-accent
---accent-10        --color-accent-hover     bg-accent-hover
---accent-2         --color-accent-subtle    bg-accent-subtle
---neutral-12       --color-foreground       text-foreground
-```
+| Primitive | Semantic alias | Tailwind class |
+|---|---|---|
+| `--accent-9` | `--color-accent` | `bg-accent` |
+| `--accent-10` | `--color-accent-hover` | `bg-accent-hover` |
+| `--accent-2` | `--color-accent-subtle` | `bg-accent-subtle` |
+| `--neutral-12` | `--color-foreground` | `text-foreground` |
 
 ## Installation
 
