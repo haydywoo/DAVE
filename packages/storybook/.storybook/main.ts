@@ -14,7 +14,14 @@ const config: StorybookConfig = {
       ...config.resolve.alias,
       // Resolve @dave/react directly from source — no build step needed
       '@dave/react': path.resolve(__dirname, '../../components/src/index.ts'),
+      '@dave/charts': path.resolve(__dirname, '../../charts/src/index.ts'),
+      '@dave/tokens': path.resolve(__dirname, '../../tokens'),
     };
+    config.optimizeDeps ??= {};
+    config.optimizeDeps.include = [
+      ...(config.optimizeDeps.include ?? []),
+      'date-fns',
+    ];
     return config;
   },
 };
