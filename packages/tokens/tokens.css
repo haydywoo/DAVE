@@ -132,8 +132,8 @@
   --color-chart-8: oklch(60% 0.190 40);
 
   /* Interactive & accessibility helpers */
-  --color-interactive-hover:  oklch(52% 0.080 295 / 0.08);
-  --color-interactive-active: oklch(52% 0.100 295 / 0.14);
+  --color-interactive-hover:  var(--neutral-3);
+  --color-interactive-active: var(--neutral-4);
   --color-selected:           var(--neutral-3);
   --color-selected-border:    var(--neutral-4);
   --color-focus:              oklch(50% 0.120 210 / 0.22);
