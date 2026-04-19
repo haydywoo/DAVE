@@ -115,6 +115,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.0
         version: 18.3.7(@types/react@18.3.28)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
 
   packages/docs:
     dependencies:

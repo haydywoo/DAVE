@@ -248,7 +248,7 @@ function SelectionDemo() {
   </TableCell>
   …
 </TableRow>`}>
-      <div className="flex flex-col gap-3">
+      <div className="w-full flex flex-col gap-3">
         {selected.size > 0 && (
           <p className="text-sm text-fg-secondary">
             <span className="font-medium text-foreground">{selected.size}</span> row{selected.size !== 1 ? 's' : ''} selected
@@ -310,7 +310,7 @@ const visible = rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   </span>
   <Pagination page={page} pageCount={pageCount} onPageChange={setPage} />
 </div>`}>
-      <div className="flex flex-col gap-4">
+      <div className="w-full flex flex-col gap-4">
         <Table>
           <TableHeader>
             <TableRow>

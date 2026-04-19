@@ -39,7 +39,7 @@ export function Preview({ children, code, language = 'tsx', center = true }: Pre
       {tab === 'preview' && (
         <div
           className={[
-            'p-10 bg-card flex flex-wrap gap-4 min-h-[160px]',
+            'p-4 sm:p-10 bg-card flex flex-wrap gap-4 min-h-[160px]',
             center ? 'items-center justify-center' : 'items-start',
           ].join(' ')}
         >

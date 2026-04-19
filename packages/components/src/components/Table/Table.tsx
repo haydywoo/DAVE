@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import { cn } from '../../lib/cn';
 
@@ -24,14 +26,59 @@ export interface TableProps {
 }
 
 export function Table({ children, striped = false, size = 'md', bordered = true, className }: TableProps) {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [showLeft,  setShowLeft]  = React.useState(false);
+  const [showRight, setShowRight] = React.useState(false);
+
+  function updateShadows() {
+    const el = scrollRef.current;
+    if (!el) return;
+    setShowLeft(el.scrollLeft > 0);
+    setShowRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1);
+  }
+
+  React.useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateShadows();
+    el.addEventListener('scroll', updateShadows, { passive: true });
+    const ro = new ResizeObserver(updateShadows);
+    ro.observe(el);
+    return () => {
+      el.removeEventListener('scroll', updateShadows);
+      ro.disconnect();
+    };
+  }, []);
+
   return (
     <TableContext.Provider value={{ striped, size }}>
-      <div className={cn('w-full overflow-x-auto', bordered && 'rounded-[3px] border border-border')}>
-        <table
-          className={cn('min-w-full caption-bottom border-collapse', size === 'sm' ? 'text-xs' : 'text-sm', className)}
+      <div className="relative w-full min-w-0">
+        {/* Left scroll shadow */}
+        <div className={cn(
+          'absolute left-0 top-0 bottom-0 w-10 pointer-events-none z-10 transition-opacity duration-200',
+          'bg-gradient-to-r from-black/10 to-transparent dark:from-white/10',
+          bordered && 'rounded-l-[3px]',
+          showLeft ? 'opacity-100' : 'opacity-0',
+        )} />
+
+        <div
+          ref={scrollRef}
+          className={cn('w-full overflow-x-auto', bordered && 'rounded-[3px] border border-border')}
         >
-          {children}
-        </table>
+          <table
+            className={cn('min-w-full caption-bottom border-collapse', size === 'sm' ? 'text-xs' : 'text-sm', className)}
+          >
+            {children}
+          </table>
+        </div>
+
+        {/* Right scroll shadow */}
+        <div className={cn(
+          'absolute right-0 top-0 bottom-0 w-10 pointer-events-none z-10 transition-opacity duration-200',
+          'bg-gradient-to-l from-black/10 to-transparent dark:from-white/10',
+          bordered && 'rounded-r-[3px]',
+          showRight ? 'opacity-100' : 'opacity-0',
+        )} />
       </div>
     </TableContext.Provider>
   );
