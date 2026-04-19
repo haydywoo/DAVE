@@ -25,7 +25,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           onClose={() => setSidebarOpen(false)}
         />
 
-        <main className="flex-1 min-w-0 px-6 lg:px-12 py-10">
+        <main className="flex-1 min-w-0 px-6 lg:px-12 pt-10 pb-16 [&>*:last-child]:mb-0">
           {/* Mobile menu button */}
           <button
             onClick={() => setSidebarOpen(true)}

@@ -2,30 +2,19 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        backgroundImage: 'radial-gradient(circle, color-mix(in srgb, currentColor 8%, transparent) 1px, transparent 1px)',
-        backgroundSize: '24px 24px',
-      }}
-    >
     <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
 
       {/* Intro */}
       <div className="mb-16">
         <h1 className="font-display font-extrabold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
-          DAVE is a personal and experimental design system.
+          DAVE is my personal design system.
         </h1>
-
-        <h2 className="text-lg font-semibold text-fg-secondary mb-3">DAVE was created so I can experiment rapidly building outputs for mixed-methods research, AGUI and software for various projects.</h2>
         <div className="space-y-4 text-fg-secondary leading-relaxed">
-         
           <p>
-            It's built on the shoulders of a lot of amazing open source work, but it's ultimately for me — a sandbox to learn, iterate, and build things I actually want to use in my projects. If it happens to be useful to you too, that's a wonderful bonus.
+            I got tired of rebuilding the same components every time I started something new. So I built this — a single place with all the UI I actually reach for.
           </p>
-
           <p>
-            DAVE stands for DesignAdVancedEngineering. But really it's named after my best mate who is a no nonsense carpenter.
+            It's not trying to be Radix or shadcn. It's just mine. Opinionated, consistent, and good enough that I can start a new project without thinking about buttons for the fifth time.
           </p>
         </div>
       </div>
@@ -48,54 +37,16 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Technologies */}
-      <div className="mb-16">
-        <h2 className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-4">Built on the shoulders of</h2>
-        <div className="space-y-3">
-          {[
-            { name: 'Radix UI',      note: 'Every interactive component is built on Radix primitives. Accessibility and behaviour, done right at the base layer.' },
-            { name: 'Tailwind CSS',  note: 'All styling. No CSS files, no modules, no fighting specificity — just utility classes that compose cleanly.' },
-            { name: 'TypeScript',    note: 'Everything is typed. Props, variants, context values. If it compiles, it works.' },
-            { name: 'React',         note: 'Obviously. But worth saying — this is a React-first system, not framework-agnostic by accident.' },
-            { name: 'Recharts',      note: 'The chart layer. Wrapped tightly enough that you don\'t need to know it\'s there.' },
-            { name: 'Next.js',       note: 'Powers this docs site. The components themselves are framework-agnostic.' },
-          ].map(({ name, note }) => (
-            <div key={name} className="flex gap-4 py-3 border-b border-border last:border-0">
-              <span className="text-sm font-semibold text-foreground w-28 shrink-0">{name}</span>
-              <span className="text-sm text-fg-secondary">{note}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Honesty section */}
       <div className="mb-16 rounded-[3px] border border-border bg-surface p-6">
         <h2 className="text-sm font-semibold text-foreground mb-3">A few honest things</h2>
         <ul className="space-y-2 text-sm text-fg-secondary">
-          <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There is a <a href="/roadmap" className="underline underline-offset-2 hover:text-foreground transition-colors">roadmap</a>. I just don't promise to follow it.</span></li>
+          <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There's no roadmap. I add things when I need them.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There's no versioning promise. This is for me first.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>It's MIT licensed. Take whatever's useful.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>Accessibility matters to me, so that part is done properly.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>Built with Claude. We have a good working relationship.</span></li>
         </ul>
-      </div>
-
-      {/* About */}
-      <div className="mb-16">
-        <h2 className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-4">Conceptualised by</h2>
-        <div className="flex items-center gap-3">
-          <div>
-            <a
-              href="https://www.linkedin.com/in/hphillips/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-foreground hover:text-accent transition-colors"
-            >
-              Haydyn Phillips
-            </a>
-            <p className="text-sm text-fg-secondary">0 to 1 product leader, psychologist and researcher.</p>
-          </div>
-        </div>
       </div>
 
       {/* CTAs */}
@@ -125,7 +76,6 @@ export default function HomePage() {
         </a>
       </div>
 
-    </div>
     </div>
   );
 }

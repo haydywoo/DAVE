@@ -8,6 +8,7 @@ interface PreviewProps {
   code?: string;
   language?: string;
   center?: boolean;
+  bleed?: boolean;
 }
 
 function GridIcon() {
@@ -26,62 +27,59 @@ function GridIcon() {
   );
 }
 
-export function Preview({ children, code, language = 'tsx', center = true }: PreviewProps) {
+export function Preview({ children, code, language = 'tsx', center = true, bleed = false }: PreviewProps) {
   const [tab, setTab]         = useState<'preview' | 'code'>('preview');
   const [dotGrid, setDotGrid] = useState(false);
 
   return (
     <div className="rounded-lg border border-border overflow-hidden mb-8 bg-card">
 
-      {/* Tab bar — only when there's code to show */}
-      {code && (
-        <div className="flex items-center border-b border-border px-4 bg-surface">
-          {(['preview', 'code'] as const).map((t) => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={[
-                'px-1 py-3 mr-4 text-sm font-medium capitalize transition-colors border-b-2 -mb-px',
-                tab === t
-                  ? 'border-foreground text-foreground'
-                  : 'border-transparent text-fg-secondary hover:text-foreground',
-              ].join(' ')}
-            >
-              {t}
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Tab bar — always rendered so dot-grid toggle is never floating over content */}
+      <div className="flex items-center border-b border-border px-4 bg-surface">
+        {code && (['preview', 'code'] as const).map((t) => (
+          <button
+            key={t}
+            onClick={() => setTab(t)}
+            className={[
+              'px-1 py-3 mr-4 text-sm font-medium capitalize transition-colors border-b-2 -mb-px',
+              tab === t
+                ? 'border-foreground text-foreground'
+                : 'border-transparent text-fg-secondary hover:text-foreground',
+            ].join(' ')}
+          >
+            {t}
+          </button>
+        ))}
+        <button
+          onClick={() => setDotGrid((v) => !v)}
+          title="Toggle background"
+          className={[
+            'ml-auto p-1.5 rounded transition-colors',
+            dotGrid
+              ? 'text-foreground bg-black/8 dark:bg-white/10'
+              : 'text-fg-secondary hover:text-foreground hover:bg-black/5 dark:hover:bg-white/8',
+          ].join(' ')}
+        >
+          <GridIcon />
+        </button>
+      </div>
 
       {/* Preview pane */}
       {tab === 'preview' && (
-        <div className="relative">
-          {/* Dot-grid toggle */}
-          <button
-            onClick={() => setDotGrid((v) => !v)}
-            title="Toggle background"
-            className={[
-              'absolute top-3 right-3 z-10 p-1.5 rounded transition-colors',
-              dotGrid
-                ? 'text-foreground bg-black/8 dark:bg-white/10'
-                : 'text-fg-secondary hover:text-foreground hover:bg-black/5 dark:hover:bg-white/8',
-            ].join(' ')}
-          >
-            <GridIcon />
-          </button>
-
-          <div
-            className={[
-              'p-4 sm:p-10 flex flex-wrap gap-4 min-h-[160px]',
-              center ? 'items-center justify-center' : 'items-start',
-            ].join(' ')}
-            style={dotGrid ? {
-              backgroundImage: 'radial-gradient(circle, color-mix(in srgb, currentColor 10%, transparent) 1px, transparent 1px)',
-              backgroundSize: '20px 20px',
-            } : { background: 'var(--color-card)' }}
-          >
-            {children}
-          </div>
+        <div
+          className={bleed
+            ? 'overflow-hidden'
+            : [
+                'p-4 sm:p-10 flex flex-wrap gap-4 min-h-[160px]',
+                center ? 'items-center justify-center' : 'items-start',
+              ].join(' ')
+          }
+          style={dotGrid ? {
+            backgroundImage: 'radial-gradient(circle, color-mix(in srgb, currentColor 10%, transparent) 1px, transparent 1px)',
+            backgroundSize: '20px 20px',
+          } : { background: 'var(--color-card)' }}
+        >
+          {children}
         </div>
       )}
 

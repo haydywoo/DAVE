@@ -1,3 +1,5 @@
+'use client';
+
 export { cn } from './lib/cn';
 
 export { SegmentedControl } from './components/SegmentedControl/SegmentedControl';
@@ -69,6 +71,9 @@ export type { TimelineProps, TimelineItemProps } from './components/Timeline/Tim
 
 export { DataTable } from './components/DataTable/DataTable';
 export type { DataTableProps, ColumnDef, SortDir } from './components/DataTable/DataTable';
+
+export { DataList, DataListItem, DataListLabel, DataListValue } from './components/DataList/DataList';
+export type { DataListProps, DataListItemProps, DataListLabelProps, DataListValueProps, DataListOrientation, DataListSize } from './components/DataList/DataList';
 
 export { Slider } from './components/Slider/Slider';
 export type { SliderProps, SliderSize } from './components/Slider/Slider';
