@@ -61,9 +61,9 @@ export interface NavSectionProps {
 export function NavSection({ children, title, className }: NavSectionProps) {
   const { collapsed } = React.useContext(NavContext);
   return (
-    <div className={cn('flex flex-col gap-0.5 mt-5 first:mt-0', className)}>
+    <div className={cn('flex flex-col gap-0.5 mt-4 first:mt-0', className)}>
       {title && !collapsed && (
-        <p className="mb-1 px-3 text-xs font-semibold uppercase tracking-wider text-fg-secondary select-none">
+        <p className="mb-0.5 pl-[14px] pr-3 text-[11px] font-semibold uppercase tracking-wider text-fg-secondary select-none">
           {title}
         </p>
       )}
@@ -120,7 +120,7 @@ export function NavItem({
         'group flex items-center rounded-[3px] transition-colors text-left',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         active
-          ? 'bg-surface text-foreground font-semibold'
+          ? 'bg-surface text-foreground font-medium'
           : 'text-fg-secondary hover:text-foreground hover:bg-surface',
         disabled && 'pointer-events-none opacity-40',
         isIconOnly

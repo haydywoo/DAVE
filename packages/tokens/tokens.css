@@ -134,58 +134,56 @@
 
 /* ── Dark mode ────────────────────────────────────────────────────── */
 .dark {
-  /* Surface & layout — 4 distinct elevation levels */
-  --color-background:       oklch(7.5%  0.004 80);  /* page bg — slightly deeper */
-  --color-surface:          oklch(12.5% 0.005 80);  /* sidebars/panels */
-  --color-card:             oklch(18.5% 0.006 80);  /* card bg — wider step from surface */
-  --color-raised:           oklch(25.0% 0.007 80);  /* popovers/dropdowns */
-  --color-surface-hovered:  oklch(29.0% 0.008 80);  /* hover state above raised */
-  --color-border:           oklch(26.5% 0.007 80);  /* distinct from raised */
-  --color-border-strong:    oklch(36.0% 0.008 80);  /* clearly visible borders */
+  /* Surface & layout — avoid pure black; nudge neutral hue slightly (toward blue) */
+  --color-background:       oklch(7.5%  0.004 260);
+  --color-surface:          oklch(12.5% 0.005 260);
+  --color-card:             oklch(18.5% 0.006 260);
+  --color-raised:           oklch(25.0% 0.007 260);
+  --color-surface-hovered:  oklch(29.0% 0.008 260);
+  --color-border:           oklch(26.5% 0.007 260);
+  --color-border-strong:    oklch(36.0% 0.008 260);
 
-  /* Card elevation — in dark mode shadows are near-invisible, rely on bg diff */
-  --shadow-card:  0 1px 0 0 oklch(100% 0 0 / 0.06);   /* hairline top highlight */
-  --shadow-raised: 0 4px 16px -2px oklch(0% 0 0 / 0.5), 0 0 0 1px oklch(100% 0 0 / 0.08);
+  /* Shadows: subtle highlights rather than heavy blacks */
+  --shadow-card:   0 1px 0 0 oklch(100% 0 0 / 0.05);
+  --shadow-raised: 0 4px 12px -2px oklch(0% 0 0 / 0.45), 0 0 0 1px oklch(100% 0 0 / 0.07);
 
-  /* Foreground */
-  --color-foreground:           var(--neutral-1);
-  --color-foreground-secondary: var(--neutral-7);
-  --color-foreground-subdued:   var(--neutral-8);
-  --color-foreground-disabled:  var(--neutral-9);
+  /* Foreground: near-white but not pure white to reduce glare */
+  --color-foreground:           oklch(96% 0.006 260);
+  --color-foreground-secondary: oklch(72% 0.010 260);
+  --color-foreground-subdued:   oklch(60% 0.010 260);
+  --color-foreground-disabled:  oklch(46% 0.010 260);
 
   /* Inverse */
-  --color-inverse:       var(--neutral-1);
-  --color-inverse-hover: var(--neutral-2);
+  --color-inverse:       oklch(100% 0 0);
+  --color-inverse-hover: oklch(96% 0.002 260);
 
-  /* Accent — deeper in dark mode so white on-accent text passes contrast */
-  --color-accent:               oklch(46% 0.160 295);
-  --color-accent-hover:         oklch(52% 0.155 295);
-  --color-on-accent:            oklch(100% 0 0);
+  /* Accent — slightly deeper, moderate saturation for dark backgrounds */
+  --color-accent:               oklch(46% 0.120 295);
+  --color-accent-hover:         oklch(52% 0.110 295);
+  --color-on-accent:            oklch(98% 0 0);
   --color-accent-subtle:        oklch(17% 0.038 295);
   --color-accent-subtle-border: oklch(22% 0.055 295);
   --color-accent-border:        oklch(58% 0.130 295);
   --color-accent-foreground:    oklch(78% 0.085 295);
 
-  /* Success — brighter solid in dark mode to compensate for dark bg desaturation */
+  /* Status colours tuned for dark BG */
   --color-success-subtle:     oklch(14% 0.030 145);
   --color-success-border:     oklch(22% 0.055 145);
   --color-success:            oklch(62% 0.140 145);
   --color-success-foreground: oklch(78% 0.105 145);
 
-  /* Warning */
   --color-warning-subtle:     oklch(14% 0.028 72);
   --color-warning-border:     oklch(22% 0.055 72);
   --color-warning:            oklch(70% 0.138 72);
   --color-warning-foreground: oklch(84% 0.105 72);
 
-  /* Error */
   --color-error-subtle:     oklch(14% 0.035 22);
   --color-error-border:     oklch(22% 0.065 22);
   --color-error:            oklch(62% 0.170 22);
   --color-error-hover:      oklch(68% 0.160 22);
   --color-error-foreground: oklch(78% 0.115 22);
 
-  /* Chart palette — more vivid for dark backgrounds */
+  /* Chart palette — slightly more vivid for dark */
   --color-chart-1: oklch(65% 0.165 270);
   --color-chart-2: oklch(70% 0.150 185);
   --color-chart-3: oklch(78% 0.150 60);
@@ -194,4 +192,14 @@
   --color-chart-6: oklch(68% 0.165 225);
   --color-chart-7: oklch(68% 0.195 305);
   --color-chart-8: oklch(72% 0.185 40);
+
+  /* Interactive & accessibility helpers (new tokens) */
+  --color-interactive-hover:  oklch(52% 0.080 295 / 0.12); /* translucent overlay for hover */
+  --color-interactive-active: oklch(52% 0.100 295 / 0.20); /* stronger overlay for pressed */
+  --color-selected:           oklch(34% 0.100 295 / 0.22); /* selected row/bg (higher contrast) */
+  --color-selected-border:    oklch(48% 0.110 295 / 0.22);
+
+  /* Focus / outline */
+  --color-focus:         oklch(60% 0.120 210 / 0.28);   /* glow/ring */
+  --color-focus-outline: oklch(72% 0.090 210);         /* solid fallback for outline */
 }
