@@ -4,11 +4,13 @@ import * as React from 'react';
 import { cn } from '../../lib/cn';
 
 export type TextareaResize = 'none' | 'y' | 'x' | 'both';
+export type TextareaSize = 'sm' | 'md' | 'lg';
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
   hint?: string;
   error?: boolean;
+  size?: TextareaSize;
   /** Displays a character count below the textarea. Shows "n / max" when maxLength is set. */
   showCount?: boolean;
   /** Controls resize handle. Defaults to 'y' (vertical only). */
@@ -22,8 +24,14 @@ const resizeClasses: Record<TextareaResize, string> = {
   both: 'resize',
 };
 
+const sizeClasses: Record<TextareaSize, string> = {
+  sm: 'px-2.5 py-1.5 text-xs min-h-[60px]',
+  md: 'px-3 py-2 text-sm min-h-[80px]',
+  lg: 'px-4 py-2.5 text-base min-h-[100px]',
+};
+
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
-  { label, hint, error, showCount = false, resize = 'y', className, id, value, defaultValue, onChange, maxLength, ...props },
+  { label, hint, error, size = 'md', showCount = false, resize = 'y', className, id, value, defaultValue, onChange, maxLength, ...props },
   ref,
 ) {
   const textareaId = id ?? label?.toLowerCase().replace(/\s+/g, '-');
@@ -51,8 +59,9 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(fun
         onChange={handleChange}
         maxLength={maxLength}
         className={cn(
-          'w-full min-h-[80px] rounded-[3px] border bg-card text-foreground text-sm',
-          'px-3 py-2 font-[family-name:var(--font-body)] transition-colors',
+          'w-full rounded-[3px] border bg-card text-foreground',
+          sizeClasses[size],
+          'font-[family-name:var(--font-body)] transition-colors',
           resizeClasses[resize],
           'placeholder:text-fg-secondary',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',

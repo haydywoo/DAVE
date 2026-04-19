@@ -3,26 +3,30 @@ import { cn } from '../../lib/cn';
 
 // ─── Context ──────────────────────────────────────────────────────────────────
 
+export type TableSize = 'sm' | 'md';
+
 interface TableContextValue {
   striped: boolean;
+  size: TableSize;
 }
 
-const TableContext = React.createContext<TableContextValue>({ striped: false });
+const TableContext = React.createContext<TableContextValue>({ striped: false, size: 'md' });
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
 
 export interface TableProps {
   children: React.ReactNode;
   striped?: boolean;
+  size?: TableSize;
   className?: string;
 }
 
-export function Table({ children, striped = false, className }: TableProps) {
+export function Table({ children, striped = false, size = 'md', className }: TableProps) {
   return (
-    <TableContext.Provider value={{ striped }}>
+    <TableContext.Provider value={{ striped, size }}>
       <div className="w-full overflow-x-auto rounded-[3px] border border-border">
         <table
-          className={cn('min-w-full caption-bottom text-sm border-collapse', className)}
+          className={cn('min-w-full caption-bottom border-collapse', size === 'sm' ? 'text-xs' : 'text-sm', className)}
         >
           {children}
         </table>
@@ -114,6 +118,7 @@ const alignClasses: Record<string, string> = {
 };
 
 export function TableHead({ children, className, align = 'left', sortable, sortDirection, onSort }: TableHeadProps) {
+  const { size } = React.useContext(TableContext);
   return (
     <th
       onClick={sortable ? onSort : undefined}
@@ -121,7 +126,8 @@ export function TableHead({ children, className, align = 'left', sortable, sortD
       tabIndex={sortable ? 0 : undefined}
       aria-sort={sortDirection === 'asc' ? 'ascending' : sortDirection === 'desc' ? 'descending' : undefined}
       className={cn(
-        'px-4 py-3 text-xs font-semibold text-fg-secondary uppercase tracking-wider whitespace-nowrap',
+        'text-xs font-semibold text-fg-secondary uppercase tracking-wider whitespace-nowrap',
+        size === 'sm' ? 'px-4 py-2' : 'px-4 py-3',
         alignClasses[align],
         sortable && 'cursor-pointer select-none hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent',
         className,
@@ -172,10 +178,11 @@ export interface TableCellProps {
 }
 
 export function TableCell({ children, className, align = 'left', colSpan }: TableCellProps) {
+  const { size } = React.useContext(TableContext);
   return (
     <td
       colSpan={colSpan}
-      className={cn('px-4 py-3 text-sm text-foreground', alignClasses[align], className)}
+      className={cn('text-foreground', size === 'sm' ? 'px-4 py-2 text-xs' : 'px-4 py-3 text-sm', alignClasses[align], className)}
     >
       {children}
     </td>

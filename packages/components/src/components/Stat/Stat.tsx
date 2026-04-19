@@ -9,10 +9,12 @@ export interface StatProps {
   /** Context for the change, e.g. "vs last month" */
   changeLabel?: string;
   icon?: React.ReactNode;
+  /** Rendered in the bottom-right corner — pass a <Sparkline /> */
+  sparkline?: React.ReactNode;
   className?: string;
 }
 
-export function Stat({ label, value, change, changeLabel, icon, className }: StatProps) {
+export function Stat({ label, value, change, changeLabel, icon, sparkline, className }: StatProps) {
   const isPositive = change !== undefined && change >= 0;
   const isNegative = change !== undefined && change < 0;
 
@@ -27,27 +29,32 @@ export function Stat({ label, value, change, changeLabel, icon, className }: Sta
 
       <p className="mt-2 text-2xl font-bold text-foreground tabular-nums">{value}</p>
 
-      {change !== undefined && (
-        <div className="mt-2 flex items-center gap-1.5">
-          <span className={cn(
-            'inline-flex items-center gap-0.5 text-xs font-semibold',
-            isPositive && 'text-success',
-            isNegative && 'text-error',
-          )}>
-            {isPositive ? (
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            ) : (
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            )}
-            {Math.abs(change)}%
-          </span>
-          {changeLabel && (
-            <span className="text-xs text-fg-secondary">{changeLabel}</span>
-          )}
+      {(change !== undefined || sparkline) && (
+        <div className="mt-3 flex items-end justify-between gap-3">
+          {change !== undefined ? (
+            <div className="flex items-center gap-1.5">
+              <span className={cn(
+                'inline-flex items-center gap-0.5 text-xs font-semibold',
+                isPositive && 'text-success',
+                isNegative && 'text-error',
+              )}>
+                {isPositive ? (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                ) : (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                )}
+                {Math.abs(change)}%
+              </span>
+              {changeLabel && (
+                <span className="text-xs text-fg-secondary">{changeLabel}</span>
+              )}
+            </div>
+          ) : <div />}
+          {sparkline && <div className="shrink-0">{sparkline}</div>}
         </div>
       )}
     </div>
