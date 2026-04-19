@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "clean": "rm -rf storybook-static"
+    "clean": "rm -rf storybook-static",
+    "lint": "eslint src .storybook --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:fix": "prettier --write ."
   },
   "dependencies": {
     "@dave/charts": "workspace:*",
@@ -31,7 +35,7 @@
     "storybook": "^8.4.0",
     "tailwindcss": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.0.0",
+    "typescript": "5.3.3",
     "vite": "^5.4.0"
   }
 }

@@ -1,0 +1,13 @@
+node_modules
+packages/**/dist
+packages/**/node_modules
+dist
+.next
+out
+storybook-static
+turbo
+*.log
+.DS_Store
+pnpm-lock.yaml
+package-lock.json
+yarn.lock

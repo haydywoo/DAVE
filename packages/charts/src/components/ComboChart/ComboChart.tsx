@@ -13,7 +13,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { useChartColors } from '../../lib/useChartColors';
-import { ChartTooltip } from '../ChartTooltip/ChartTooltip';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -273,7 +272,7 @@ function ComboTooltip({
       {[
         ...bars.map((key) => payload.find((p) => p.name === key)).filter(Boolean),
         ...lines.map((key) => payload.find((p) => p.name === key)).filter(Boolean),
-      ].map((entry, i) => {
+      ].map((entry) => {
         if (!entry) return null;
         const isLine = lines.includes(entry.name);
         const idx = isLine
