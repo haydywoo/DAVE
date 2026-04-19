@@ -15,13 +15,13 @@ import {
   Input,
   SegmentedControl,
   DateRangePicker,
-  DataTable,
-} from '@dave/react';
-import type { DateRange, ColumnDef } from '@dave/react';
-import { AreaChart, BarChart, DonutChart, Sparkline } from '@dave/charts';
-
-// ─── Mock data ────────────────────────────────────────────────────────────────
-
+              <DataTable
+                data={filteredTransactions}
+                columns={columns}
+                emptyTitle="No transactions found"
+                size="sm"
+                bordered={false}
+              />
 const revenueWeekly = [
   { date: 'Mon', Revenue: 12400, Target: 11000 },
   { date: 'Tue', Revenue: 15800, Target: 13000 },
@@ -381,7 +381,7 @@ export default function DashboardPage() {
               <DataTable
                 data={filteredTransactions}
                 columns={columns}
-                emptyMessage="No transactions found"
+                emptyTitle="No transactions found"
                 size="sm"
                 bordered={false}
               />
