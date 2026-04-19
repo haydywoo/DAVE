@@ -5,7 +5,6 @@ import * as RadixPopover from '@radix-ui/react-popover';
 import { Button } from '../Button/Button';
 import {
   startOfMonth,
-  endOfMonth,
   startOfWeek,
   endOfWeek,
   eachDayOfInterval,
@@ -19,7 +18,6 @@ import {
   addWeeks,
   subMonths,
   format,
-  isValid,
   startOfDay,
 } from 'date-fns';
 import { cn } from '../../lib/cn';

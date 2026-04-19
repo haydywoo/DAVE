@@ -39,7 +39,8 @@ export function Switch({
   description,
   id,
 }: SwitchProps) {
-  const switchId = id ?? React.useId();
+  const generatedId = React.useId();
+  const switchId = id ?? generatedId;
 
   const root = (
     <RadixSwitch.Root

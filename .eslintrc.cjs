@@ -55,6 +55,14 @@ module.exports = {
         'import/no-duplicates': 'off',
       },
     },
+    {
+      files: ['packages/docs/app/**/*.tsx'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'react-hooks/rules-of-hooks': 'off',
+        'react/no-unescaped-entities': 'off',
+      },
+    },
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',

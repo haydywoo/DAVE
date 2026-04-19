@@ -6,7 +6,7 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "clean": "rm -rf storybook-static",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "eslint src .storybook --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:fix": "prettier --write ."

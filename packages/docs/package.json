@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf .next out",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "eslint app components --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:fix": "prettier --write ."
