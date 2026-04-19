@@ -18,13 +18,15 @@ export interface TableProps {
   children: React.ReactNode;
   striped?: boolean;
   size?: TableSize;
+  /** Remove outer border and rounded corners — use when embedding inside a Card */
+  bordered?: boolean;
   className?: string;
 }
 
-export function Table({ children, striped = false, size = 'md', className }: TableProps) {
+export function Table({ children, striped = false, size = 'md', bordered = true, className }: TableProps) {
   return (
     <TableContext.Provider value={{ striped, size }}>
-      <div className="w-full overflow-x-auto rounded-[3px] border border-border">
+      <div className={cn('w-full overflow-x-auto', bordered && 'rounded-[3px] border border-border')}>
         <table
           className={cn('min-w-full caption-bottom border-collapse', size === 'sm' ? 'text-xs' : 'text-sm', className)}
         >

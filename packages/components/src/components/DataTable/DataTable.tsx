@@ -58,6 +58,8 @@ export interface DataTableProps<TData extends Record<string, unknown>> {
   loadingRows?: number;
 
   size?: TableSize;
+  /** Remove outer border and rounded corners — use when embedding inside a Card */
+  bordered?: boolean;
   className?: string;
 }
 
@@ -89,6 +91,7 @@ export function DataTable<TData extends Record<string, unknown>>({
   isLoading = false,
   loadingRows,
   size,
+  bordered = true,
   className,
 }: DataTableProps<TData>) {
   // ── Sort state ──────────────────────────────────────────────────────────
@@ -177,7 +180,7 @@ export function DataTable<TData extends Record<string, unknown>>({
   // ── Render ──────────────────────────────────────────────────────────────
   return (
     <div className={cn('flex flex-col gap-3', className)}>
-      <Table striped={striped} size={size}>
+      <Table striped={striped} size={size} bordered={bordered}>
         <TableHeader>
           <tr>
             {selectable && (

@@ -64,7 +64,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
   return (
     <Comp
       ref={ref}
-      className={cn(base, variants[variant], isIconOnly ? iconSizes[size] : sizes[size], className)}
+      className={cn(base, variants[variant], variant !== 'link' && (isIconOnly ? iconSizes[size] : sizes[size]), className)}
       disabled={!asChild ? (disabled || isLoading) : undefined}
       aria-busy={isLoading || undefined}
       {...props}

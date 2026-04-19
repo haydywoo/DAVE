@@ -7,6 +7,33 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+#### Components
+- **Table** — `bordered` prop (default `true`). Set `bordered={false}` to remove the outer border and rounded corners when embedding inside a `Card`.
+- **Table / DataTable** — `size` prop (`'sm' | 'md'`). Controls cell padding (`py-2` vs `py-3`) and text size (`text-xs` vs `text-sm`) via context — one prop coordinates the whole table.
+- **DataTable** — `bordered` prop threaded through to `Table`.
+- **Stat** — `sparkline` prop (`React.ReactNode` slot). Renders in the bottom-right corner alongside the change indicator — pass a `<Sparkline />` from `@dave/charts`.
+- **Textarea** — `size` prop (`'sm' | 'md' | 'lg'`). Maps padding, text size, and `min-height` consistently with the form-control scale. Defaults to `'md'` (no breaking change).
+- **RangeCalendar** — `footer` prop (`React.ReactNode`). Replaces the default hint text — pass `null` to hide entirely. Used by `DateRangePicker` to inject the Apply / Cancel bar.
+- **RangeCalendar** — `initialMonth` prop. Controls which month is shown on the left when the calendar first renders. `DateRangePicker` uses this to open near the `to` date rather than the `from` date.
+
+### Changed
+
+#### Components
+- **Button (link variant)** — size classes (`h-*`, `px-*`) are no longer applied to `variant="link"`. The link variant now renders as true inline text with no imposed height or padding.
+- **Button (link variant)** — `hover:no-underline` removed. Underline now persists on hover; only the colour shifts to `accent-hover`.
+- **SegmentedControl** — `sm / md / lg` trigger heights corrected to `h-7 / h-9 / h-11` (previously `h-6 / h-8 / h-10`). Now sits flush with `Button`, `Input`, and `Select` at every size.
+- **Nav** — `depth` added to `NavContext`. `border-l-2` active indicator is scoped to depth-0 items only, preventing double borders on nested items. `NavGroup` gains an `active` prop and matching border logic. Item and group spacing tightened to `gap-0.5`.
+- **Tabs** — hover states added to both `line` variant (`hover:bg-surface`) and `pill` variant (`data-[state=inactive]:hover:bg-card`).
+- **DateRangePicker** — reworked to use a draft state pattern. The calendar now operates on an internal draft while the popover is open; changes are only committed on **Apply**. **Cancel** discards and closes. A **Clear** button resets the draft. Footer shows a live summary of the selected range as you pick.
+- **DateRangePicker** — opens showing the months around `to` (the end of the range) rather than `from`, so the selection endpoint is immediately visible.
+- **DateRangePicker / RangeCalendar** — range fill now persists correctly after both dates are selected (previously collapsed to a single point when `selecting` reset to `'from'`).
+
+#### Visual — Colour Tokens (`tokens.css`)
+- **Dark mode contrast** — wider surface elevation steps: background `8.5%→7.5%`, card `17.5%→18.5%`, raised `22%→25%`. `--color-border` was identical to `--color-raised` (both `oklch(22%)`); now `oklch(26.5%)` so borders are visible on all surfaces. `--color-border-strong` lifted from `28%` to `36%`.
+- **Dark mode foreground** — secondary text lifted from `neutral-8` (65%) to `neutral-7` (74%); subdued from `neutral-9` (48%) to `neutral-8` (65%); disabled from `neutral-10` (34%) to `neutral-9` (48%).
+
 ### Changed
 
 #### Visual — Colour Tokens (`tokens.css`)
