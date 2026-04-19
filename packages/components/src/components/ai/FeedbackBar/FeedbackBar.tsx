@@ -102,6 +102,7 @@ export function FeedbackBar({
         <CopyButton
           value={copyValue ?? ''}
           className="[&_button]:h-7 [&_button]:w-7 [&_button]:rounded-[3px] [&_button]:text-fg-secondary [&_button:hover]:text-foreground [&_button:hover]:bg-surface"
+          onCopy={onCopy}
         />
       )}
       {!hideFeedback && (

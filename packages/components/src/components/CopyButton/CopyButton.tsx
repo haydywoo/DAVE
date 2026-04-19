@@ -14,6 +14,7 @@ export interface CopyButtonProps {
   resetDelay?: number;
   label?: string;
   className?: string;
+  onCopy?: () => void;
 }
 
 const sizes: Record<CopyButtonSize, string> = {
@@ -65,6 +66,7 @@ export function CopyButton({
     try {
       await navigator.clipboard.writeText(value);
       setCopied(true);
+      onCopy?.();
       setTimeout(() => setCopied(false), resetDelay);
     } catch {
       // Clipboard API unavailable — silent fail

@@ -89,6 +89,7 @@ export const Chip = React.forwardRef<HTMLButtonElement | HTMLSpanElement, ChipPr
         disabled && 'opacity-40 pointer-events-none',
         className,
       )}
+      {...props}
     >
       {icon && <span className="shrink-0 -ml-0.5">{icon}</span>}
       {children}
