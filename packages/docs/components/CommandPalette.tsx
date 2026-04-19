@@ -131,7 +131,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
                 onMouseEnter={() => setActiveIndex(i)}
                 onClick={() => navigate(item.href)}
                 className={`flex items-center justify-between gap-3 rounded-[3px] px-3 py-2.5 cursor-pointer transition-colors ${
-                  i === activeIndex ? 'bg-accent-subtle text-accent-foreground' : 'text-foreground hover:bg-surface'
+                  i === activeIndex ? 'bg-[var(--color-selected)] text-foreground' : 'text-foreground hover:bg-surface'
                 }`}
               >
                 <span className="text-sm font-medium">{item.title}</span>
