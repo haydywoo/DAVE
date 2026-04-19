@@ -44,7 +44,7 @@ export function AccordionDemos() {
     <>
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Single</h3>
       <Preview center={false} code={singleCode}>
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-lg rounded-[3px] border border-border bg-card px-4">
           <Accordion type="single" collapsible>
             <AccordionItem value="a">
               <AccordionTrigger>What is DAVE?</AccordionTrigger>
@@ -70,7 +70,7 @@ export function AccordionDemos() {
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Multiple</h3>
       <Preview center={false} code={multipleCode}>
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-lg rounded-[3px] border border-border bg-card px-4">
           <Accordion type="multiple" defaultValue={['a', 'b']}>
             <AccordionItem value="a">
               <AccordionTrigger>First section</AccordionTrigger>
