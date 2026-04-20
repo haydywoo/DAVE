@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ScatterPlot } from '@dave/charts';
 
 const meta: Meta<typeof ScatterPlot> = {

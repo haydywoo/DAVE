@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent, Divider } from '@dave/react';
 
 const meta: Meta<typeof Collapsible> = {
