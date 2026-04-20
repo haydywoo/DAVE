@@ -54,7 +54,7 @@ pnpm lint            # lint docs app and components
 pnpm lint:all        # lint entire monorepo via Turbo
 ```
 
-**Node 25 caveat:** `eslint-plugin-jsx-a11y` has a compatibility issue with Node 25 and is conditionally skipped. The `isNode25` guard in `.eslintrc.cjs` handles this. Accessibility rules still run on Node < 25 (CI uses Node 22).
+**Node 25 caveat:** `eslint-plugin-jsx-a11y` has a compatibility issue with Node 25 and is conditionally skipped. The `isNode25` guard in `.eslintrc.cjs` handles this. Accessibility rules still run on Node 18–24. CI tests against Node 20 and Node 24, so the full rule set runs in CI. The project engine range is `>=18 <25`.
 
 ### What linting does NOT cover
 - Tailwind class ordering or which utility patterns to use
