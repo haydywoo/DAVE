@@ -1,6 +1,6 @@
 {
   "name": "@dave/charts",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "DAVE chart components — built on Recharts with DAVE design tokens",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
