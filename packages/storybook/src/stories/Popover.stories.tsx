@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Popover, PopoverTrigger, PopoverContent, PopoverClose, Button, Input } from '@dave/react';
 
 const meta: Meta = {

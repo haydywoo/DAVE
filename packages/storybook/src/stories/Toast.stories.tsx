@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ToastProviderWithHook, useToast, ToastAction, Button } from '@dave/react';
 
 const meta: Meta = {

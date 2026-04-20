@@ -141,57 +141,66 @@
 }
 
 /* ── Dark mode ────────────────────────────────────────────────────── */
+/*
+ * Only primitives and genuine exceptions are overridden here.
+ * All semantic aliases defined in :root cascade automatically.
+ */
 .dark {
-  /* Surface & layout — cool blue-gray (H≈250°), not too dark */
-  --color-background:       oklch(12.0% 0.010 250);
-  --color-surface:          oklch(16.0% 0.011 250);
-  --color-card:             oklch(21.0% 0.012 250);
-  --color-raised:           oklch(27.0% 0.013 250);
-  --color-surface-hovered:  oklch(30.5% 0.013 250);
-  --color-border:           oklch(34.0% 0.012 250);
-  --color-border-strong:    oklch(46.0% 0.012 250);
+  /* ── Neutral scale — cool blue-gray (H≈250°) replaces warm gray ── */
+  --neutral-1:  oklch(12.0% 0.010 250);
+  --neutral-2:  oklch(16.0% 0.011 250);
+  --neutral-3:  oklch(30.5% 0.013 250);
+  --neutral-4:  oklch(34.0% 0.012 250);
+  --neutral-6:  oklch(46.0% 0.012 250);
+  --neutral-9:  oklch(76.0% 0.010 250);
+  --neutral-10: oklch(62.0% 0.010 250);
+  --neutral-11: oklch(90.0% 0.004 250);
+  --neutral-12: oklch(96.0% 0.006 250);
 
-  /* Shadows: subtle highlights rather than heavy blacks */
+  /* ── Accent scale — brighter on dark backgrounds ── */
+  --accent-2:  oklch(25% 0.070 265);
+  --accent-3:  oklch(31% 0.085 265);
+  --accent-7:  oklch(60% 0.155 265);
+  --accent-8:  oklch(58% 0.170 265);
+  --accent-9:  oklch(52% 0.180 265);
+  --accent-11: oklch(80% 0.095 265);
+
+  /* ── Green scale ── */
+  --green-1:  oklch(14% 0.030 145);
+  --green-3:  oklch(42% 0.105 145);
+  --green-9:  oklch(62% 0.140 145);
+  --green-11: oklch(78% 0.105 145);
+
+  /* ── Amber scale ── */
+  --amber-1:  oklch(14% 0.028 72);
+  --amber-3:  oklch(35% 0.090 72);
+  --amber-9:  oklch(70% 0.138 72);
+  --amber-11: oklch(84% 0.105 72);
+
+  /* ── Red scale ── */
+  --red-1:  oklch(14% 0.035 22);
+  --red-3:  oklch(43% 0.120 22);
+  --red-9:  oklch(62% 0.170 22);
+  --red-10: oklch(68% 0.160 22);
+  --red-11: oklch(78% 0.115 22);
+
+  /* ── Elevations — mid-tones with no neutral step equivalent ── */
+  --color-card:   oklch(21.0% 0.012 250);
+  --color-raised: oklch(27.0% 0.013 250);
+
+  /* ── Pure white — intentionally no cool tint ── */
+  --color-on-accent: oklch(95% 0 0);
+  --color-inverse:   oklch(95% 0 0);
+
+  /* ── Selected — slightly more chromatic than bare neutral steps ── */
+  --color-selected:        oklch(36% 0.025 250);
+  --color-selected-border: oklch(42% 0.020 250);
+
+  /* ── Shadows ── */
   --shadow-card:   0 1px 0 0 oklch(100% 0 0 / 0.06);
   --shadow-raised: 0 4px 12px -2px oklch(0% 0 0 / 0.45), 0 0 0 1px oklch(100% 0 0 / 0.08);
 
-  /* Foreground: near-white with matching cool tint */
-  --color-foreground:           oklch(96% 0.006 250);
-  --color-foreground-secondary: oklch(76% 0.010 250);
-  --color-foreground-subdued:   oklch(62% 0.010 250);
-  --color-foreground-disabled:  oklch(46% 0.010 250);
-
-  /* Inverse */
-  --color-inverse:       oklch(95% 0 0);
-  --color-inverse-hover: oklch(90% 0.004 250);
-
-  /* Accent — vivid on dark: higher lightness + full chroma */
-  --color-accent:               oklch(52% 0.180 265);
-  --color-accent-hover:         oklch(58% 0.170 265);
-  --color-on-accent:            oklch(95% 0 0);
-  --color-accent-subtle:        oklch(25% 0.070 265);
-  --color-accent-subtle-border: oklch(31% 0.085 265);
-  --color-accent-border:        oklch(60% 0.155 265);
-  --color-accent-foreground:    oklch(80% 0.095 265);
-
-  /* Status colours tuned for dark BG */
-  --color-success-subtle:     oklch(14% 0.030 145);
-  --color-success-border:     oklch(40% 0.100 145);
-  --color-success:            oklch(62% 0.140 145);
-  --color-success-foreground: oklch(78% 0.105 145);
-
-  --color-warning-subtle:     oklch(14% 0.028 72);
-  --color-warning-border:     oklch(42% 0.095 72);
-  --color-warning:            oklch(70% 0.138 72);
-  --color-warning-foreground: oklch(84% 0.105 72);
-
-  --color-error-subtle:     oklch(14% 0.035 22);
-  --color-error-border:     oklch(40% 0.115 22);
-  --color-error:            oklch(62% 0.170 22);
-  --color-error-hover:      oklch(68% 0.160 22);
-  --color-error-foreground: oklch(78% 0.115 22);
-
-  /* Chart palette — slightly more vivid for dark */
+  /* ── Chart palette — more vivid on dark backgrounds ── */
   --color-chart-1: oklch(65% 0.165 270);
   --color-chart-2: oklch(70% 0.150 185);
   --color-chart-3: oklch(78% 0.150 60);
@@ -201,13 +210,7 @@
   --color-chart-7: oklch(68% 0.195 305);
   --color-chart-8: oklch(72% 0.185 40);
 
-  /* Interactive & accessibility helpers */
-  --color-interactive-hover:  oklch(30.5% 0.013 250);
-  --color-interactive-active: oklch(34.0% 0.012 250);
-  --color-selected:           oklch(36% 0.025 250);
-  --color-selected-border:    oklch(42% 0.020 250);
-
-  /* Focus / outline */
+  /* ── Focus ── */
   --color-focus:         oklch(60% 0.120 265 / 0.28);
   --color-focus-outline: oklch(72% 0.090 265);
 }

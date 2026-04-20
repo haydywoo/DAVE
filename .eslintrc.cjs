@@ -34,7 +34,7 @@ module.exports = {
   },
   ignorePatterns: ['dist/**', '.next/**', 'storybook-static/**', 'node_modules/**'],
   plugins,
-  extends: extendsConfig,
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript', 'prettier', 'plugin:storybook/recommended'],
   settings: {
     react: {
       version: 'detect',

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Select, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectField } from '@dave/react';
 
 const meta: Meta = {
