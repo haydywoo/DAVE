@@ -195,7 +195,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
         'bg-background border-r border-border',
         'transition-transform duration-200 ease-in-out',
         open ? 'translate-x-0' : '-translate-x-[calc(100%+1px)]',
-        'lg:sticky lg:translate-x-0 lg:w-56 xl:w-64',
+        'lg:sticky lg:translate-x-0 lg:w-64 xl:w-72',
         'lg:shrink-0 lg:self-start',
         'lg:h-[calc(100vh-3.5rem)]',
       ].join(' ')}
