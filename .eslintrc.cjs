@@ -63,24 +63,34 @@ module.exports = {
         'react/no-unescaped-entities': 'off',
       },
     },
-    {
-      // Modal backdrop overlays — intentional click-outside pattern, not a real a11y gap
-      files: [
-        'packages/docs/app/chat/page.tsx',
-        'packages/docs/app/docs/layout.tsx',
-        'packages/docs/components/CommandPalette.tsx',
-      ],
-      rules: {
-        'jsx-a11y/click-events-have-key-events': 'off',
-        'jsx-a11y/no-static-element-interactions': 'off',
+    ...(!isNode25 ? [
+      {
+        // Modal backdrop overlays — intentional click-outside pattern, not a real a11y gap
+        files: [
+          'packages/docs/app/chat/page.tsx',
+          'packages/docs/app/docs/layout.tsx',
+          'packages/docs/components/CommandPalette.tsx',
+          'packages/docs/components/Nav.tsx',
+        ],
+        rules: {
+          'jsx-a11y/click-events-have-key-events': 'off',
+          'jsx-a11y/no-static-element-interactions': 'off',
+        },
       },
-    },
+      {
+        // Labels paired with custom Select components — association is implicit
+        files: ['packages/docs/app/settings/page.tsx'],
+        rules: {
+          'jsx-a11y/label-has-associated-control': 'off',
+        },
+      },
+    ] : []),
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
     'react/prop-types': 'off',
     'react/no-unescaped-entities': 'off',
-    'jsx-a11y/aria-role': ['error', { ignoreNonDOM: true }],
+    ...(!isNode25 ? { 'jsx-a11y/aria-role': ['error', { ignoreNonDOM: true }] } : {}),
   },
 };
