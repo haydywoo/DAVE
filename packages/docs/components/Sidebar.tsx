@@ -117,10 +117,10 @@ const chartsNavigation = [
   {
     title: 'Chart Types',
     items: [
-      { title: 'Bar Chart',   href: '/docs/charts/bar-chart' },
-      { title: 'Line Chart',  href: '/docs/charts/line-chart' },
-      { title: 'Area Chart',  href: '/docs/charts/area-chart' },
-      { title: 'Donut Chart',   href: '/docs/charts/donut-chart' },
+      { title: 'Bar Chart',    href: '/docs/charts/bar-chart' },
+      { title: 'Line Chart',   href: '/docs/charts/line-chart' },
+      { title: 'Area Chart',   href: '/docs/charts/area-chart' },
+      { title: 'Donut Chart',  href: '/docs/charts/donut-chart' },
       { title: 'Sparkline',    href: '/docs/charts/sparkline' },
       { title: 'Scatter Plot', href: '/docs/charts/scatter-plot' },
       { title: 'Combo Chart',  href: '/docs/charts/combo-chart' },
@@ -140,18 +140,18 @@ const aiNavigation = [
   {
     title: 'Chat & Messaging',
     items: [
-      { title: 'Chat Container',     href: '/docs/ai/chat-container' },
-      { title: 'Message',            href: '/docs/ai/message' },
-      { title: 'Message Input',      href: '/docs/ai/message-input' },
-      { title: 'Conversation List',  href: '/docs/ai/conversation-list' },
+      { title: 'Chat Container',    href: '/docs/ai/chat-container' },
+      { title: 'Message',           href: '/docs/ai/message' },
+      { title: 'Message Input',     href: '/docs/ai/message-input' },
+      { title: 'Conversation List', href: '/docs/ai/conversation-list' },
     ],
   },
   {
     title: 'Streaming & Generation',
     items: [
-      { title: 'Code Block',      href: '/docs/ai/code-block' },
-      { title: 'Streaming Text',  href: '/docs/ai/streaming-text' },
-      { title: 'Thinking Block',  href: '/docs/ai/thinking-block' },
+      { title: 'Code Block',     href: '/docs/ai/code-block' },
+      { title: 'Streaming Text', href: '/docs/ai/streaming-text' },
+      { title: 'Thinking Block', href: '/docs/ai/thinking-block' },
     ],
   },
   {
@@ -173,11 +173,12 @@ const aiNavigation = [
   },
 ];
 
-interface SidebarInnerProps {
+interface SidebarProps {
+  open?: boolean;
   onClose?: () => void;
 }
 
-export function SidebarInner({ onClose }: SidebarInnerProps) {
+export function Sidebar({ open = false, onClose }: SidebarProps) {
   const rawPathname = usePathname();
   const pathname = rawPathname.replace(/\/$/, '');
   const router = useRouter();
@@ -188,13 +189,38 @@ export function SidebarInner({ onClose }: SidebarInnerProps) {
   const navigation = section === 'standard' ? standardNavigation : section === 'charts' ? chartsNavigation : aiNavigation;
 
   return (
-    <div className="flex flex-col flex-1 min-h-0">
-      <div className="px-3 pt-5 pb-4">
+    <aside
+      className={[
+        'fixed top-14 left-0 z-30 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex flex-col',
+        'bg-background border-r border-border',
+        'transition-transform duration-200 ease-in-out',
+        open ? 'translate-x-0' : '-translate-x-[calc(100%+1px)]',
+        'lg:sticky lg:translate-x-0 lg:w-56 xl:w-64',
+        'lg:shrink-0 lg:self-start',
+        'lg:h-[calc(100vh-3.5rem)]',
+      ].join(' ')}
+    >
+      {/* Mobile close button */}
+      <div className="flex items-center justify-between px-4 py-4 border-b border-border lg:hidden shrink-0">
+        <span className="text-sm font-semibold text-foreground">Navigation</span>
+        <button
+          onClick={onClose}
+          className="p-1 rounded-[3px] text-fg-secondary hover:text-foreground hover:bg-surface transition-colors"
+          aria-label="Close menu"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Section switcher */}
+      <div className="px-3 pt-5 pb-4 shrink-0">
         <div className="flex rounded-[4px] bg-surface border border-border p-0.5 gap-0.5">
           {([
             { key: 'standard', label: 'Components', href: '/docs/components' },
             { key: 'charts',   label: 'Charts',     href: '/docs/charts/overview' },
-            { key: 'ai',       label: 'AI',          href: '/docs/ai/overview' },
+            { key: 'ai',       label: 'AI',         href: '/docs/ai/overview' },
           ] as const).map(({ key, label, href }) => (
             <button
               key={key}
@@ -245,14 +271,6 @@ export function SidebarInner({ onClose }: SidebarInnerProps) {
           Terms &amp; EULA
         </Link>
       </div>
-    </div>
-  );
-}
-
-export function Sidebar() {
-  return (
-    <aside className="hidden lg:flex flex-col sticky top-14 h-[calc(100vh-3.5rem)] w-56 xl:w-64 shrink-0 overflow-hidden bg-background border-r border-border">
-      <SidebarInner />
     </aside>
   );
 }
