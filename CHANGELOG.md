@@ -5,7 +5,52 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased]
+## [0.1.0] — 2026-04-20
+
+First public release.
+
+### Added
+- **`DocCodeBlock`** — new client component for MDX pages. Matches the component demo `CodeBlock` exactly: `bg-[#161b22]` header bar with language label and copy button, `text-sm font-mono`, github-dark theme.
+- **`CONTRIBUTING.md`** — contribution guidelines and local dev instructions.
+
+### Changed
+
+#### Tokens — dark mode overhaul
+- **Surface hue** — all dark mode surfaces shifted from warm grays (H=80°) to indigo-blue (H=250°) to match industry-standard dark UI (GitHub, Linear). New scale: background `12%`, surface `16%`, card `21%`, raised `27%`, border `34%`.
+- **Accent hue** — shifted from mauve (H=295°) to true indigo (H=265°), coherent with the H=250° surface family. Updated throughout both light and dark scales.
+- **Selected / interactive states** — `--color-selected` now uses H=250° surface-matched values in dark mode (`oklch(36% 0.025 250)`); light mode uses neutral `var(--neutral-3/4)` — no more purple tint on hover.
+- **Focus rings** — H=265° (indigo, matching accent) throughout light and dark.
+- **`--color-accent-subtle` dark** — lifted to `oklch(25% 0.070 265)` so the soft button variant sits visibly above the card surface.
+- **`--color-on-accent` / `--color-inverse`** — changed from pure white (100%) to off-white (95%) for A11Y best practice.
+
+#### Code blocks
+- **MDX code blocks** — now rendered via `DocCodeBlock` instead of a plain `<pre>`. Full syntax highlighting, header bar, copy button, and `text-sm font-mono` — visually identical to the component demo `CodeBlock`.
+- **CodeBlock header** — explicit `bg-[#161b22]` (GitHub toolbar colour) applied to both `CodeBlock` and `DocCodeBlock` to distinguish header from code body.
+
+#### Docs
+- **MDX typography** — paragraph `mb-3` restored; `Disclaimer` upgraded from `bg-surface` to `bg-card` for sufficient contrast in dark mode; `[&>p]:mb-0` scoped to prevent paragraph margin inside disclaimer.
+- **Tokens page** — introductory ASCII table replaced with a proper MDX table.
+- **Accordion demos** — added bordered card wrapper so the transparent component has visible context.
+- **CommandPalette active item** — changed from `bg-accent-subtle` to `bg-[var(--color-selected)]` for a neutral highlight consistent with nav selected states.
+- **Preview alignment** — breadcrumb, textarea, file-input, and progress demos corrected to `center={false}`.
+
+### Fixed
+- **Focus ring hue** — linter had drifted `--color-focus` from H=265° to H=210°; restored.
+- **Light mode nav hover/selected** — interactive tokens were only defined in `.dark`, causing accent colour to bleed into light mode hover states.
+- **Roadmap link** — `<a href="/roadmap">` → Next.js `<Link>` so the `/DAVE` basePath prefix is applied in the GitHub Pages build.
+
+### Accessibility
+- Resolved all `jsx-a11y` errors breaking CI: invalid ARIA roles on `<Message>` (`ignoreNonDOM: true`), missing keyboard handlers on CommandPalette result items, unassociated labels in popover and settings forms, invalid `href="#"` on button demos.
+
+### Repository
+- Removed draft homepage variants and chat demo page before going public.
+- All packages bumped `0.0.1` → `0.1.0`.
+- README updated: correct token import path, OKLCH theming example, accurate colour description, Node version range.
+- GitHub repo description and topics set.
+
+---
+
+## [Unreleased — pre-release history]
 
 ### Added
 
