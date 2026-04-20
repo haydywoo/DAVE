@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = { title: 'Terms & EULA' };
 
 export default function LegalPage() {
-  const updated = 'April 15, 2026';
+  const updated = 'April 20, 2026';
 
   return (
     <div className="max-w-2xl">
@@ -49,12 +49,36 @@ export default function LegalPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="font-semibold text-foreground mb-3">5. Third-Party Dependencies</h2>
-        <p className="text-sm text-fg-secondary leading-relaxed">
-          DAVE builds on third-party open-source libraries including Radix UI, Tailwind CSS, and Recharts.
-          Each is subject to its own licence. We are not responsible for issues, vulnerabilities, or breaking
-          changes introduced by upstream dependencies.
+        <h2 className="font-semibold text-foreground mb-3">5. Third-Party Dependencies &amp; Ownership</h2>
+        <p className="text-sm text-fg-secondary leading-relaxed mb-4">
+          DAVE is built on top of open-source libraries, each owned and maintained by their respective authors.
+          DAVE claims no ownership over these works. Each is subject to its own licence — links are provided below.
+          We are not responsible for issues, vulnerabilities, or breaking changes introduced by upstream dependencies.
         </p>
+        <div className="space-y-3">
+          {[
+            { name: 'React', owner: 'Meta Platforms, Inc.', licence: 'MIT', url: 'https://github.com/facebook/react/blob/main/LICENSE' },
+            { name: 'Next.js', owner: 'Vercel, Inc.', licence: 'MIT', url: 'https://github.com/vercel/next.js/blob/canary/license.md' },
+            { name: 'Radix UI', owner: 'WorkOS, Inc.', licence: 'MIT', url: 'https://github.com/radix-ui/primitives/blob/main/LICENSE' },
+            { name: 'Tailwind CSS', owner: 'Tailwind Labs, Inc.', licence: 'MIT', url: 'https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE' },
+            { name: 'Recharts', owner: 'Recharts Group', licence: 'MIT', url: 'https://github.com/recharts/recharts/blob/master/LICENSE' },
+            { name: 'Radix Icons', owner: 'WorkOS, Inc.', licence: 'MIT', url: 'https://github.com/radix-ui/icons/blob/master/LICENSE' },
+            { name: 'TypeScript', owner: 'Microsoft Corporation', licence: 'Apache 2.0', url: 'https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt' },
+            { name: 'Vite', owner: 'Evan You and Vite contributors', licence: 'MIT', url: 'https://github.com/vitejs/vite/blob/main/LICENSE' },
+            { name: 'date-fns', owner: 'date-fns contributors', licence: 'MIT', url: 'https://github.com/date-fns/date-fns/blob/main/LICENSE.md' },
+            { name: 'Storybook', owner: 'Chromatic (Dominic Nguyen, Tom Coleman, Zoltan Olah)', licence: 'MIT', url: 'https://github.com/storybookjs/storybook/blob/next/LICENSE' },
+          ].map(({ name, owner, licence, url }) => (
+            <div key={name} className="flex items-baseline justify-between gap-4 text-sm border-b border-border pb-3 last:border-0 last:pb-0">
+              <div>
+                <span className="font-medium text-foreground">{name}</span>
+                <span className="text-fg-secondary ml-2">— {owner}</span>
+              </div>
+              <a href={url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-xs text-accent hover:underline">
+                {licence}
+              </a>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mb-8">
