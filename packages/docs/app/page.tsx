@@ -72,7 +72,7 @@ export default function HomePage() {
       <div className="mb-16 rounded-[3px] border border-border bg-surface p-6">
         <h2 className="text-sm font-semibold text-foreground mb-3">A few honest things</h2>
         <ul className="space-y-2 text-sm text-fg-secondary">
-          <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There is a <a href="/roadmap" className="underline underline-offset-2 hover:text-foreground transition-colors">roadmap</a>. I just don't promise to follow it.</span></li>
+          <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There is a <Link href="/roadmap" className="underline underline-offset-2 hover:text-foreground transition-colors">roadmap</Link>. I just don't promise to follow it.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There's no versioning promise. This is for me first.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>It's MIT licensed. Take whatever's useful.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>Accessibility matters to me, so that part is done properly.</span></li>
