@@ -176,17 +176,17 @@
 
   /* Status colours tuned for dark BG */
   --color-success-subtle:     oklch(14% 0.030 145);
-  --color-success-border:     oklch(22% 0.055 145);
+  --color-success-border:     oklch(40% 0.100 145);
   --color-success:            oklch(62% 0.140 145);
   --color-success-foreground: oklch(78% 0.105 145);
 
   --color-warning-subtle:     oklch(14% 0.028 72);
-  --color-warning-border:     oklch(22% 0.055 72);
+  --color-warning-border:     oklch(42% 0.095 72);
   --color-warning:            oklch(70% 0.138 72);
   --color-warning-foreground: oklch(84% 0.105 72);
 
   --color-error-subtle:     oklch(14% 0.035 22);
-  --color-error-border:     oklch(22% 0.065 22);
+  --color-error-border:     oklch(40% 0.115 22);
   --color-error:            oklch(62% 0.170 22);
   --color-error-hover:      oklch(68% 0.160 22);
   --color-error-foreground: oklch(78% 0.115 22);
