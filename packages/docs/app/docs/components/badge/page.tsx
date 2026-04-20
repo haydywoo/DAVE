@@ -5,9 +5,11 @@ import { BadgeDemos } from './demos';
 export const metadata: Metadata = { title: 'Badge' };
 
 const props = [
-  { name: 'variant', type: "'neutral' | 'primary' | 'success' | 'warning' | 'error'", default: "'neutral'", description: 'Colour style of the badge.' },
-  { name: 'size', type: "'xs' | 'sm' | 'md' | 'lg'", default: "'md'", description: 'Controls text size and padding.' },
-  { name: 'children', type: 'ReactNode', required: true, description: 'Badge label content.' },
+  { name: 'variant',    type: "'neutral' | 'primary' | 'success' | 'warning' | 'error'", default: "'neutral'",  description: 'Semantic colour of the badge.' },
+  { name: 'appearance', type: "'solid' | 'outline' | 'dashed'",                          default: "'solid'",    description: 'Visual style. Solid has a filled background; outline and dashed are transparent with a border.' },
+  { name: 'size',       type: "'xs' | 'sm' | 'md' | 'lg'",                               default: "'md'",       description: 'Controls text size and padding.' },
+  { name: 'dot',        type: 'boolean',                                                  default: 'false',      description: 'Renders a small coloured dot before the label. Colour matches the variant.' },
+  { name: 'children',   type: 'ReactNode',                                                required: true,        description: 'Badge label content.' },
 ];
 
 export default function BadgePage() {
