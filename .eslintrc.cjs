@@ -69,5 +69,6 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/prop-types': 'off',
     'react/no-unescaped-entities': 'off',
+    'jsx-a11y/aria-role': ['error', { ignoreNonDOM: true }],
   },
 };

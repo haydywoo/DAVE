@@ -103,10 +103,10 @@ export function ButtonDemos() {
 </Button>`}
       >
         <Button asChild variant="primary">
-          <a href="#">Get started</a>
+          <a href="/docs/getting-started">Get started</a>
         </Button>
         <Button asChild variant="secondary">
-          <a href="#">Documentation</a>
+          <a href="/docs/components/button">Documentation</a>
         </Button>
       </Preview>
     </>

@@ -192,6 +192,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-3">
                 <Input placeholder="you@example.com" label="Email" />
                 <div className="flex flex-col gap-1.5">
+                  {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                   <label className="text-sm font-semibold text-foreground">Role</label>
                   <Select placeholder="Select a role…">
                     <SelectItem value="admin">Admin</SelectItem>
