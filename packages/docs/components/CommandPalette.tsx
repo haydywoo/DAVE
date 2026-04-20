@@ -72,6 +72,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   if (!open) return null;
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]"
       onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
@@ -130,6 +131,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
                 aria-selected={i === activeIndex}
                 onMouseEnter={() => setActiveIndex(i)}
                 onClick={() => navigate(item.href)}
+                onKeyDown={(e) => { if (e.key === 'Enter') navigate(item.href); }}
                 className={`flex items-center justify-between gap-3 rounded-[3px] px-3 py-2.5 cursor-pointer transition-colors ${
                   i === activeIndex ? 'bg-[var(--color-selected)] text-foreground' : 'text-foreground hover:bg-surface'
                 }`}

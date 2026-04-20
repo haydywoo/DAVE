@@ -288,6 +288,7 @@ export default function ChatPage() {
 
       {/* Mobile sidebar backdrop */}
       {sidebarOpen && (
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
         <div
           className="fixed inset-0 z-20 bg-background/80 backdrop-blur-sm lg:hidden"
           onClick={() => setSidebarOpen(false)}

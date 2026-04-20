@@ -55,12 +55,12 @@ export function PopoverDemos() {
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold text-foreground">Dimensions</p>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs text-fg-secondary">Width</label>
-                <Input size="sm" placeholder="e.g. 100%" defaultValue="100%" />
+                <label htmlFor="popover-width" className="text-xs text-fg-secondary">Width</label>
+                <Input id="popover-width" size="sm" placeholder="e.g. 100%" defaultValue="100%" />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs text-fg-secondary">Height</label>
-                <Input size="sm" placeholder="e.g. auto" defaultValue="auto" />
+                <label htmlFor="popover-height" className="text-xs text-fg-secondary">Height</label>
+                <Input id="popover-height" size="sm" placeholder="e.g. auto" defaultValue="auto" />
               </div>
               <div className="flex justify-end gap-2 pt-1">
                 <PopoverClose asChild>
