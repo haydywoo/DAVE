@@ -72,7 +72,7 @@ npm install react react-dom
 **1. Import the token CSS**
 
 ```css
-@import '@dave/tokens/tokens.css';
+@import '@dave/tokens/dist/tokens.css';
 ```
 
 **2. Configure Tailwind**
@@ -122,22 +122,32 @@ export function Example() {
 
 ### Theming
 
-Override the accent scale in your own CSS — every component updates automatically, no rebuild required:
+Override the accent scale in your own CSS — every component updates automatically, no rebuild required. Tokens use OKLCH for perceptual uniformity:
 
 ```css
 :root {
-  --accent-1:  #f0f4ff;
-  --accent-9:  #2563eb;   /* solid button colour */
-  --accent-10: #1d4ed8;   /* hover */
-  --accent-11: #1e40af;   /* text on tinted backgrounds */
+  --accent-1:  oklch(98.5% 0.010 265);
+  --accent-2:  oklch(95.5% 0.022 265);
+  --accent-3:  oklch(90.5% 0.036 265);
+  --accent-4:  oklch(85.0% 0.054 265);
+  --accent-5:  oklch(77.0% 0.070 265);
+  --accent-6:  oklch(66.0% 0.092 265);
+  --accent-7:  oklch(57.0% 0.120 265);
+  --accent-8:  oklch(45.0% 0.155 265);
+  --accent-9:  oklch(34.0% 0.180 265);   /* solid — buttons, focus rings */
+  --accent-10: oklch(28.0% 0.175 265);   /* hover */
+  --accent-11: oklch(38.0% 0.172 265);   /* text on tinted backgrounds */
+  --accent-12: oklch(19.0% 0.158 265);   /* high-contrast text */
 }
 ```
+
+You only need to override `--accent-9` through `--accent-11` for most use cases. Hex works too — see the [Tokens docs](https://haydywoo.github.io/DAVE/docs/foundations/tokens/) for the full reference.
 
 ---
 
 ## Local Development
 
-Requires [pnpm](https://pnpm.io/) and Node.js 20+.
+Requires [pnpm](https://pnpm.io/) and Node.js 18–24.
 
 ```bash
 git clone https://github.com/haydywoo/DAVE.git
@@ -183,7 +193,7 @@ Built with Next.js 14, MDX, and DAVE itself. Auto-deploys to GitHub Pages on eve
 ## Design Language
 
 - **Typography** — Syne (display) · Instrument Sans (body) · JetBrains Mono (code)
-- **Colour** — Warm neutrals (`#F7F5F0` light / `#0F0E0C` dark) with a purple-indigo accent (`#2D24AE`)
+- **Colour** — Warm neutral surfaces in light mode, indigo-tinted darks at night, with a true indigo accent (H=265° OKLCH). All primitives authored in OKLCH for perceptually-uniform steps.
 - **Radius** — Sharp and intentional: `3px` for controls, `6px` for surfaces
 - **Tokens** — CSS custom properties throughout; swap the accent scale to retheme everything
 
