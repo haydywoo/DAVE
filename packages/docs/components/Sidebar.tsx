@@ -82,7 +82,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
       <div className="px-3 pt-5 pb-4 shrink-0">
         <div className="flex rounded-[4px] bg-surface border border-border p-0.5 gap-0.5">
           {([
-            { key: 'standard', label: 'Components', href: '/docs/components' },
+            { key: 'standard', label: 'Components', href: '/docs/getting-started' },
             { key: 'charts',   label: 'Charts',     href: '/docs/charts/overview' },
             { key: 'ai',       label: 'AI',         href: '/docs/ai/overview' },
           ] as const).map(({ key, label, href }) => (
