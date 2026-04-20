@@ -69,7 +69,7 @@ export function Nav() {
       <div className="mx-auto max-w-screen-xl px-6 h-14 flex items-center gap-4">
 
         {/* Logo */}
-        <div className="shrink-0 lg:w-56 xl:w-64">
+        <div className="shrink-0 lg:w-64 xl:w-72">
           <Link
             href="/"
             className="font-display font-extrabold text-lg text-foreground tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 rounded-[2px]"
