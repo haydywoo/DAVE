@@ -55,17 +55,25 @@ export function Nav({ children, size = 'md', collapsed = false, className }: Nav
 export interface NavSectionProps {
   children: React.ReactNode;
   title?: string;
+  icon?: React.ReactNode;
   className?: string;
 }
 
-export function NavSection({ children, title, className }: NavSectionProps) {
+export function NavSection({ children, title, icon, className }: NavSectionProps) {
   const { collapsed } = React.useContext(NavContext);
   return (
     <div className={cn('flex flex-col gap-0.5 mt-4 first:mt-0', className)}>
       {title && !collapsed && (
-        <p className="mb-0.5 pl-[14px] pr-3 text-[11px] font-semibold uppercase tracking-wider text-fg-secondary select-none">
-          {title}
-        </p>
+        <div className="mb-0.5 pl-[11px] pr-3 flex items-center gap-1.5">
+          {icon && (
+            <span className="shrink-0 text-fg-secondary" aria-hidden="true">
+              {icon}
+            </span>
+          )}
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-fg-secondary select-none">
+            {title}
+          </p>
+        </div>
       )}
       {children}
     </div>
