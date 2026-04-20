@@ -8,6 +8,9 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
+  typescript: {
+    reactDocgen: false,
+  },
   viteFinal: async (config) => {
     config.resolve ??= {};
     config.resolve.alias = {

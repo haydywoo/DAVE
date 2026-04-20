@@ -10,10 +10,15 @@ const meta: Meta<typeof Badge> = {
       control: 'select',
       options: ['neutral', 'primary', 'success', 'warning', 'error'],
     },
+    appearance: {
+      control: 'select',
+      options: ['solid', 'outline', 'dashed'],
+    },
     size: {
       control: 'select',
       options: ['xs', 'sm', 'md', 'lg'],
     },
+    dot: { control: 'boolean' },
     children: { control: 'text' },
   },
 };
@@ -33,6 +38,42 @@ export const AllVariants: Story = {
       <Badge variant="success">Success</Badge>
       <Badge variant="warning">Warning</Badge>
       <Badge variant="error">Error</Badge>
+    </div>
+  ),
+};
+
+export const Outline: Story = {
+  render: () => (
+    <div className="flex items-center gap-2">
+      <Badge appearance="outline" variant="neutral">Neutral</Badge>
+      <Badge appearance="outline" variant="primary">Primary</Badge>
+      <Badge appearance="outline" variant="success">Success</Badge>
+      <Badge appearance="outline" variant="warning">Warning</Badge>
+      <Badge appearance="outline" variant="error">Error</Badge>
+    </div>
+  ),
+};
+
+export const Dashed: Story = {
+  render: () => (
+    <div className="flex items-center gap-2">
+      <Badge appearance="dashed" variant="neutral">Draft</Badge>
+      <Badge appearance="dashed" variant="primary">In review</Badge>
+      <Badge appearance="dashed" variant="success">Provisional</Badge>
+      <Badge appearance="dashed" variant="warning">Pending</Badge>
+      <Badge appearance="dashed" variant="error">Blocked</Badge>
+    </div>
+  ),
+};
+
+export const WithDot: Story = {
+  render: () => (
+    <div className="flex items-center gap-2">
+      <Badge dot variant="neutral">Offline</Badge>
+      <Badge dot variant="primary">Syncing</Badge>
+      <Badge dot variant="success">Active</Badge>
+      <Badge dot variant="warning">Degraded</Badge>
+      <Badge dot variant="error">Incident</Badge>
     </div>
   ),
 };
@@ -60,8 +101,12 @@ export const InContext: Story = {
         <Badge variant="error">Failed</Badge>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-sm font-semibold text-foreground">Review pending</span>
-        <Badge variant="warning">Pending</Badge>
+        <span className="text-sm font-semibold text-foreground">Draft feature</span>
+        <Badge appearance="dashed" variant="neutral">Draft</Badge>
+      </div>
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-semibold text-foreground">Service status</span>
+        <Badge dot variant="success">Operational</Badge>
       </div>
     </div>
   ),
