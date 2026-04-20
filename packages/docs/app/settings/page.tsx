@@ -562,8 +562,7 @@ function NotificationsSection() {
           {quietHours && (
             <div className="grid grid-cols-2 gap-4 pt-1">
               <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className="block text-xs font-medium text-foreground mb-1.5">From</label>
+<label className="block text-xs font-medium text-foreground mb-1.5">From</label>
                 <Select defaultValue="22">
                   {Array.from({ length: 24 }, (_, i) => (
                     <SelectItem key={i} value={String(i)}>
@@ -573,8 +572,7 @@ function NotificationsSection() {
                 </Select>
               </div>
               <div>
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <label className="block text-xs font-medium text-foreground mb-1.5">To</label>
+<label className="block text-xs font-medium text-foreground mb-1.5">To</label>
                 <Select defaultValue="8">
                   {Array.from({ length: 24 }, (_, i) => (
                     <SelectItem key={i} value={String(i)}>
@@ -979,7 +977,6 @@ function AppearanceSection() {
         <CardHeader><CardTitle>Code &amp; syntax</CardTitle></CardHeader>
         <CardContent className="space-y-4">
           <div>
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className="block text-xs font-medium text-foreground mb-1.5">Syntax highlight theme</label>
             <Select value={syntaxTheme} onValueChange={setSyntaxTheme} className="max-w-xs">
               {SYNTAX_THEMES.map(t => (
@@ -1156,7 +1153,6 @@ function TeamSection() {
               />
             </div>
             <div className="w-36 shrink-0">
-              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label className="block text-xs font-medium text-foreground mb-1.5">Role</label>
               <Select value={inviteRole} onValueChange={v => setInviteRole(v as Role)}>
                 {ROLE_OPTIONS.filter(r => r.value !== 'owner').map(r => (

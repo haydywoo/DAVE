@@ -72,7 +72,6 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   if (!open) return null;
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]"
       onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
