@@ -72,8 +72,14 @@ export function Nav() {
         <div className="shrink-0 lg:w-64 xl:w-72">
           <Link
             href="/"
-            className="font-display font-extrabold text-lg text-foreground tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 rounded-[2px]"
+            className="flex items-center gap-2 font-display font-extrabold text-lg text-foreground tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 rounded-[2px]"
           >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+              <rect width="32" height="32" rx="7" fill="#4338ca"/>
+              <rect x="5" y="5" width="10" height="10" rx="2" fill="white"/>
+              <rect x="17" y="5" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+              <rect x="5" y="17" width="10" height="10" rx="2" fill="white" opacity="0.3"/>
+            </svg>
             DAVE
           </Link>
         </div>
