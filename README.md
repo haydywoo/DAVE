@@ -1,8 +1,13 @@
 # DAVE Design System
 
-**Design · Advanced · Value · Engineering**
+**Design · AdVanced · Engineering**
 
-An open-source design system built for teams who care about craft. DAVE provides a complete set of React components, design tokens, chart primitives, and AI-ready UI components — all built on Radix UI and Tailwind CSS, and styled with a warm, opinionated visual language.
+DAVE was created so I can experiment rapidly building outputs for mixed-methods research, AGUI and software for various projects.
+It's built on the shoulders of a lot of amazing open source work, but it's ultimately for me — a sandbox to learn, iterate, and build things I actually want to use in my projects. If it happens to be useful to you too, that's a wonderful bonus.
+
+DAVE stands for DesignAdVancedEngineering. But really it's named after my best mate who is a no nonsense carpenter.
+
+
 
 > Named after one of my best friends.
 
