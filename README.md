@@ -12,7 +12,7 @@ An open-source design system built for teams who care about craft. DAVE provides
 
 | Package | Description |
 |---|---|
-| `@dave/react` | 54 production-ready React components |
+| `@dave/react` | React component library (UI + AI components) |
 | `@dave/charts` | 10 chart components built on Recharts |
 | `@dave/tokens` | Design tokens as CSS custom properties |
 | `@dave/docs` | Documentation site (Next.js + MDX) |
