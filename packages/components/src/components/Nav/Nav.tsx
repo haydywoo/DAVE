@@ -64,7 +64,7 @@ export function NavSection({ children, title, icon, className }: NavSectionProps
   return (
     <div className={cn('flex flex-col gap-0.5 mt-4 first:mt-0', className)}>
       {title && !collapsed && (
-        <div className="mb-0.5 pl-[11px] pr-3 flex items-center gap-1.5">
+        <div className="mb-0.5 pl-3 pr-3 flex items-center gap-1.5">
           {icon && (
             <span className="shrink-0 text-fg-secondary" aria-hidden="true">
               {icon}
