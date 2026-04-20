@@ -63,6 +63,18 @@ module.exports = {
         'react/no-unescaped-entities': 'off',
       },
     },
+    {
+      // Modal backdrop overlays — intentional click-outside pattern, not a real a11y gap
+      files: [
+        'packages/docs/app/chat/page.tsx',
+        'packages/docs/app/docs/layout.tsx',
+        'packages/docs/components/CommandPalette.tsx',
+      ],
+      rules: {
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+      },
+    },
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
