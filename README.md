@@ -1,6 +1,6 @@
 # DAVE Design System
 
-**Design · Accessibility · Value · Engineering**
+**Design · Advanced · Value · Engineering**
 
 An open-source design system built for teams who care about craft. DAVE provides a complete set of React components, design tokens, chart primitives, and AI-ready UI components — all built on Radix UI and Tailwind CSS, and styled with a warm, opinionated visual language.
 
