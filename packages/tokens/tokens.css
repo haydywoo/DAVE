@@ -136,8 +136,8 @@
   --color-interactive-active: var(--neutral-4);
   --color-selected:           var(--neutral-3);
   --color-selected-border:    var(--neutral-4);
-  --color-focus:              oklch(50% 0.120 210 / 0.22);
-  --color-focus-outline:      oklch(48% 0.090 210);
+  --color-focus:              oklch(50% 0.120 265 / 0.22);
+  --color-focus-outline:      oklch(48% 0.090 265);
 }
 
 /* ── Dark mode ────────────────────────────────────────────────────── */
@@ -204,10 +204,10 @@
   /* Interactive & accessibility helpers */
   --color-interactive-hover:  oklch(30.5% 0.013 250);
   --color-interactive-active: oklch(34.0% 0.012 250);
-  --color-selected:           oklch(28% 0.030 250);
-  --color-selected-border:    oklch(36% 0.025 250);
+  --color-selected:           oklch(36% 0.025 250);
+  --color-selected-border:    oklch(42% 0.020 250);
 
   /* Focus / outline */
-  --color-focus:         oklch(60% 0.120 210 / 0.28);   /* glow/ring */
-  --color-focus-outline: oklch(72% 0.090 210);         /* solid fallback for outline */
+  --color-focus:         oklch(60% 0.120 265 / 0.28);
+  --color-focus-outline: oklch(72% 0.090 265);
 }
