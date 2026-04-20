@@ -24,7 +24,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
   return (
     <aside
       className={[
-        'fixed top-14 left-0 z-30 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex flex-col',
+        'fixed top-14 left-0 z-30 h-[calc(100vh-3.5rem)] w-64 overflow-hidden flex flex-col',
         'bg-background border-r border-border',
         'transition-transform duration-200 ease-in-out',
         open ? 'translate-x-0' : '-translate-x-[calc(100%+1px)]',
@@ -71,7 +71,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
         </div>
       </div>
 
-      <div className="px-3 pt-2 pb-4 flex-1 overflow-y-auto">
+      <div className="px-3 pt-2 pb-4 flex-1 overflow-y-auto scrollbar-subtle">
         <Nav>
           {navigation.map((s) => (
             <NavSection key={s.title} title={s.title}>
