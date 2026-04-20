@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Sidebar } from '@/components/Sidebar';
+import { PrevNext } from '@/components/PrevNext';
 import { CommandPalette } from '@/components/CommandPalette';
 import { useCommandPalette } from '@/hooks/useCommandPalette';
 
@@ -32,6 +33,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
         <main className="flex-1 min-w-0 px-6 lg:px-12 pt-10 pb-16 [&>*:last-child]:mb-0">
           {children}
+          <PrevNext />
         </main>
       </div>
 
