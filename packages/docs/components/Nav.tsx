@@ -67,7 +67,7 @@ export function Nav() {
 
   return (
     <header className="sticky z-40 border-b border-border bg-background/90 backdrop-blur-sm" style={{ top: 'var(--banner-height, 0px)' }}>
-      <div className="mx-auto max-w-screen-xl px-6 h-14 flex items-center gap-4">
+      <div className="mx-auto max-w-screen-xl px-6 h-14 flex items-center gap-6">
 
         {/* Logo */}
         <div className="shrink-0 lg:w-64 xl:w-72">
