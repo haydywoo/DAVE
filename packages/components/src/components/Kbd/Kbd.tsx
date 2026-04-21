@@ -25,7 +25,7 @@ export const Kbd = React.forwardRef<HTMLElement, KbdProps>(function Kbd(
       className={cn(
         'inline-flex items-center justify-center rounded-[3px]',
         'border border-border bg-surface text-fg-secondary',
-        'font-sans font-medium leading-none',
+        'font-code font-medium leading-none',
         sizes[size],
         className,
       )}

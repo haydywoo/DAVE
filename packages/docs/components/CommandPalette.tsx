@@ -103,7 +103,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
             aria-activedescendant={results[activeIndex] ? `result-${activeIndex}` : undefined}
             className="flex-1 h-12 bg-transparent text-sm text-foreground placeholder:text-fg-secondary focus:outline-none"
           />
-          <kbd className="hidden sm:inline-flex items-center rounded border border-border bg-surface px-1.5 text-[10px] text-fg-secondary font-sans">
+          <kbd className="hidden sm:inline-flex items-center rounded-[3px] border border-border bg-surface px-1.5 text-[10px] text-fg-secondary font-code">
             Esc
           </kbd>
         </div>
@@ -145,11 +145,11 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
         {/* Footer */}
         <div className="flex items-center gap-3 px-4 py-2.5 border-t border-border">
           <span className="flex items-center gap-1 text-[11px] text-fg-secondary">
-            <kbd className="inline-flex items-center rounded border border-border bg-surface px-1 text-[10px] font-sans">↑↓</kbd>
+            <kbd className="inline-flex items-center rounded-[3px] border border-border bg-surface px-1 text-[10px] font-code">↑↓</kbd>
             navigate
           </span>
           <span className="flex items-center gap-1 text-[11px] text-fg-secondary">
-            <kbd className="inline-flex items-center rounded border border-border bg-surface px-1 text-[10px] font-sans">↵</kbd>
+            <kbd className="inline-flex items-center rounded-[3px] border border-border bg-surface px-1 text-[10px] font-code">↵</kbd>
             open
           </span>
         </div>

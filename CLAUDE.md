@@ -3,6 +3,9 @@
 ## Stack
 Next.js 14 App Router · TypeScript · Tailwind CSS · Radix UI · `@dave/react` component library · `@dave/tokens` CSS custom properties · pnpm monorepo
 
+## Dogfooding rule
+ALWAYS use `@dave/react` components when one fits the use case. If it's not clear whether one exists, check `packages/components/src/components/` and read the component before deciding. Never hand-roll a badge, button, chip, or other primitive that already exists in the library. If no component fits, flag it and agree on an approach before building.
+
 ## Radii
 - Controls (buttons, inputs, badges, tags): `rounded-[3px]`
 - Surfaces (cards, popovers, modals, panels): `rounded-[6px]`

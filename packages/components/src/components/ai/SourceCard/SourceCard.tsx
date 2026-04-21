@@ -51,7 +51,7 @@ export function SourceCard({ title, url, favicon, snippet, index, className }: S
         {/* Favicon */}
         <span className="shrink-0 mt-0.5 flex h-4 w-4 items-center justify-center text-fg-secondary">
           {favicon ? (
-            <img src={favicon} alt="" className="h-4 w-4 rounded-sm object-contain" aria-hidden="true" />
+            <img src={favicon} alt="" className="h-4 w-4 rounded-[3px] object-contain" aria-hidden="true" />
           ) : (
             <GlobeIcon />
           )}
