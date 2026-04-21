@@ -9,15 +9,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 - **`Banner`** — fixed top-of-viewport notification strip for outages, maintenance windows, and global announcements. Four variants (`info`, `success`, `warning`, `error`). Optional action link and dismiss button. Mounts a `--banner-height` CSS custom property so the sticky nav offsets automatically. Controlled — caller owns visibility and can persist dismissal via `localStorage`.
-- **Docs sidebar badges** — `new` (accent fill) and `updated` (neutral outline) badges on nav items to surface recently shipped work. Currently applied to `Banner` and `Badge`.
+- **Docs sidebar badges** — `new` (primary solid) and `updated` (success solid) badges on nav items to surface recently shipped work. Currently applied to `Banner` and `Badge`.
+- **Observable Plot — Experimental section** — four example pages added under Charts › Experimental: Bar, Line, Scatter, and Calendar Heatmap. Uses a shared `PlotPage` wrapper for consistent layout. `@observablehq/plot` installed in docs. All examples use DAVE token CSS variables directly — no hex values.
+  - **Calendar Heatmap** — GitHub-style 365-day contribution grid using `Plot.cell`. 5-step discrete accent colour scale via `color-mix()`. `Plot.tip` + `Plot.pointer` for instant hover tooltips. Month and day-of-week labels.
 
 ### Changed
 - **`Badge`** — `appearance` prop (`solid` | `outline` | `dashed`). `dot` boolean prop renders a small status dot before the label. Neutral border token applied for better light/dark contrast.
-- **Docs nav** — `v1.1` version badge added next to the DAVE wordmark. Uses `font-body` to stay in Instrument Sans rather than inheriting the display font.
+- **Docs nav** — `v1.1` version badge added next to the DAVE wordmark. Uses `font-body` to stay in Instrument Sans rather than inheriting the display font. GitHub icon is now icon-only (`w-8 h-8`, matching ThemeToggle). Tooltips added to GitHub and theme toggle icons via `@dave/react` `Tooltip`. `ThemeToggle` refactored to `forwardRef` to support Radix trigger wiring.
 - **AI overview** — amber "Under development" badge added inline with the `AI Components` page heading.
 - **Docs favicon** — indigo geometric mark added; displayed next to the DAVE wordmark in the nav.
-- **Docs sidebar** — section icons added using `@radix-ui/react-icons`; icon alignment corrected to match item left edge.
+- **Docs sidebar** — section icons added using `@radix-ui/react-icons`; icon alignment corrected to match item left edge. Experimental charts section moved below Chart Types.
 - **Token cascade** — dark mode refactored to a primitive-driven cascade. Status border contrast lifted.
+
+### Fixed
+- **Heading + badge mobile wrapping** — `flex-wrap` added to all heading/badge flex containers (AI overview, Observable Plot overview, Plot example pages) so badges drop to the next line on small screens rather than squishing against the heading.
 
 ---
 

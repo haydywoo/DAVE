@@ -133,6 +133,16 @@ export const chartsNavigation: NavSection[] = [
       { title: 'Funnel Chart', href: '/docs/charts/funnel-chart' },
     ],
   },
+  {
+    title: 'Experimental',
+    items: [
+      { title: 'Observable Plot',  href: '/docs/charts/observable-plot',         badge: 'new' },
+      { title: 'Plot — Bar',       href: '/docs/charts/observable-plot/bar',      badge: 'new' },
+      { title: 'Plot — Line',      href: '/docs/charts/observable-plot/line',     badge: 'new' },
+      { title: 'Plot — Scatter',   href: '/docs/charts/observable-plot/scatter',  badge: 'new' },
+      { title: 'Plot — Heatmap',   href: '/docs/charts/observable-plot/heatmap',  badge: 'new' },
+    ],
+  },
 ];
 
 export const aiNavigation: NavSection[] = [

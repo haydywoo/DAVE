@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: 'AI Components — Overview' };
 export default function AIOverviewPage() {
   return (
     <div>
-      <div className="flex items-center gap-3 mb-2">
+      <div className="flex flex-wrap items-center gap-3 mb-2">
         <h1 className="font-display font-extrabold text-3xl text-foreground">AI Components</h1>
         <Badge variant="warning" appearance="solid" size="sm">Under development</Badge>
       </div>
