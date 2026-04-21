@@ -1,6 +1,7 @@
 export interface NavItem {
   title: string;
   href: string;
+  badge?: 'new' | 'updated';
 }
 
 export interface NavSection {
@@ -88,7 +89,7 @@ export const standardNavigation: NavSection[] = [
     title: 'Feedback',
     items: [
       { title: 'Alert',    href: '/docs/components/alert' },
-      { title: 'Banner',   href: '/docs/components/banner' },
+      { title: 'Banner',   href: '/docs/components/banner',  badge: 'new' },
       { title: 'Progress', href: '/docs/components/progress' },
       { title: 'Skeleton', href: '/docs/components/skeleton' },
       { title: 'Spinner',  href: '/docs/components/spinner' },
@@ -99,7 +100,7 @@ export const standardNavigation: NavSection[] = [
     title: 'Data Display',
     items: [
       { title: 'Avatar',      href: '/docs/components/avatar' },
-      { title: 'Badge',       href: '/docs/components/badge' },
+      { title: 'Badge',       href: '/docs/components/badge',   badge: 'updated' },
       { title: 'DataList',    href: '/docs/components/data-list' },
       { title: 'DataTable',   href: '/docs/components/data-table' },
       { title: 'Empty State', href: '/docs/components/empty-state' },
