@@ -120,10 +120,10 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                     <span className="flex items-center gap-2">
                       {item.title}
                       {item.badge === 'new' && (
-                        <Badge variant="primary" appearance="solid" size="sm">New</Badge>
+                        <Badge variant="primary" appearance="solid" size="xs">New</Badge>
                       )}
                       {item.badge === 'updated' && (
-                        <Badge variant="neutral" appearance="outline" size="sm">Updated</Badge>
+                        <Badge variant="success" appearance="solid" size="xs">Updated</Badge>
                       )}
                     </span>
                   </NavItem>
