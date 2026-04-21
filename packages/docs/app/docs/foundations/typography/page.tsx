@@ -35,7 +35,7 @@ export default function TypographyPage() {
 
       <div className="flex flex-col gap-6 mb-12">
         {/* Display */}
-        <div className="rounded-lg border border-border bg-card p-6">
+        <div className="rounded-[6px] border border-border bg-card p-6">
           <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-1">Display — Syne 800</p>
           <p className="text-xs font-code text-fg-secondary mb-4">font-display · var(--font-display) · Headings only</p>
           <p className="font-display font-extrabold text-4xl text-foreground leading-tight">
@@ -44,7 +44,7 @@ export default function TypographyPage() {
         </div>
 
         {/* Body */}
-        <div className="rounded-lg border border-border bg-card p-6">
+        <div className="rounded-[6px] border border-border bg-card p-6">
           <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-1">Body — Instrument Sans 400 / 500 / 600</p>
           <p className="text-xs font-code text-fg-secondary mb-4">font-body · var(--font-body) · All UI copy</p>
           <p className="text-2xl text-foreground leading-relaxed">
@@ -53,7 +53,7 @@ export default function TypographyPage() {
         </div>
 
         {/* Code */}
-        <div className="rounded-lg border border-border bg-card p-6">
+        <div className="rounded-[6px] border border-border bg-card p-6">
           <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-1">Code — JetBrains Mono 400 / 500</p>
           <p className="text-xs font-code text-fg-secondary mb-4">font-code · var(--font-code) · Code blocks and token names</p>
           <p className="font-code text-base text-foreground leading-relaxed">
@@ -66,7 +66,7 @@ export default function TypographyPage() {
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Scale</h2>
       <p className="text-sm text-fg-secondary mb-6">Standard Tailwind text sizes — no custom scale needed.</p>
 
-      <div className="rounded-lg border border-border overflow-hidden mb-12">
+      <div className="rounded-[6px] border border-border overflow-hidden mb-12">
         <table className="w-full">
           <thead>
             <tr className="bg-surface border-b border-border">
@@ -92,7 +92,7 @@ export default function TypographyPage() {
       {/* Weights */}
       <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Weight</h2>
 
-      <div className="rounded-lg border border-border overflow-hidden">
+      <div className="rounded-[6px] border border-border overflow-hidden">
         <table className="w-full">
           <thead>
             <tr className="bg-surface border-b border-border">

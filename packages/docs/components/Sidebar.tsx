@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Nav, NavSection, NavItem } from '@dave/react';
+import { Nav, NavSection, NavItem, Badge } from '@dave/react';
 import { standardNavigation, chartsNavigation, aiNavigation } from '@/lib/navigation';
 import {
   RocketIcon,
@@ -120,14 +120,10 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                     <span className="flex items-center gap-2">
                       {item.title}
                       {item.badge === 'new' && (
-                        <span className="inline-flex items-center rounded-[3px] bg-accent px-1.5 py-px text-[10px] font-medium text-accent-foreground leading-none">
-                          New
-                        </span>
+                        <Badge variant="primary" appearance="solid" size="sm">New</Badge>
                       )}
                       {item.badge === 'updated' && (
-                        <span className="inline-flex items-center rounded-[3px] border border-border bg-surface px-1.5 py-px text-[10px] font-medium text-fg-secondary leading-none">
-                          Updated
-                        </span>
+                        <Badge variant="neutral" appearance="outline" size="sm">Updated</Badge>
                       )}
                     </span>
                   </NavItem>

@@ -32,7 +32,7 @@ export function Preview({ children, code, language = 'tsx', center = true, bleed
   const [dotGrid, setDotGrid] = useState(false);
 
   return (
-    <div className="rounded-lg border border-border overflow-hidden mb-8 bg-card">
+    <div className="rounded-[6px] border border-border overflow-hidden mb-8 bg-card">
 
       {/* Tab bar — always rendered so dot-grid toggle is never floating over content */}
       <div className="flex items-center border-b border-border px-4 bg-surface">

@@ -53,6 +53,7 @@ export const searchIndex: SearchItem[] = [
 
   // Feedback
   { title: 'Alert',        href: '/docs/components/alert',        group: 'Feedback',     keywords: 'alert banner message info warning error success notification' },
+  { title: 'Banner',       href: '/docs/components/banner',       group: 'Feedback',     keywords: 'banner announcement notification outage maintenance warning system status dismissable fixed top' },
   { title: 'Progress',     href: '/docs/components/progress',     group: 'Feedback',     keywords: 'progress bar loading percent complete track' },
   { title: 'Skeleton',     href: '/docs/components/skeleton',     group: 'Feedback',     keywords: 'skeleton loading placeholder shimmer pulse ghost' },
   { title: 'Spinner',      href: '/docs/components/spinner',      group: 'Feedback',     keywords: 'spinner loading indicator busy wait' },
@@ -67,4 +68,35 @@ export const searchIndex: SearchItem[] = [
   { title: 'Stat',         href: '/docs/components/stat',         group: 'Data Display', keywords: 'stat metric kpi number trend change dashboard analytics card' },
   { title: 'Table',        href: '/docs/components/table',        group: 'Data Display', keywords: 'table data grid rows columns sort zebra select pagination' },
   { title: 'Timeline',     href: '/docs/components/timeline',     group: 'Data Display', keywords: 'timeline activity feed audit log events history chronological track' },
+  { title: 'DataList',    href: '/docs/components/data-list',    group: 'Data Display', keywords: 'datalist data list label value pairs key metadata description' },
+  { title: 'File Input',  href: '/docs/components/file-input',   group: 'Forms',        keywords: 'file input upload browse attachment select document image' },
+  { title: 'OTP Input',   href: '/docs/components/otp-input',    group: 'Forms',        keywords: 'otp one-time password pin code verification input 2fa auth' },
+  { title: 'Rating',      href: '/docs/components/rating',       group: 'Forms',        keywords: 'rating stars score review feedback vote' },
+
+  // Charts
+  { title: 'Bar Chart',    href: '/docs/charts/bar-chart',    group: 'Charts', keywords: 'bar chart column grouped stacked horizontal vertical comparison' },
+  { title: 'Line Chart',   href: '/docs/charts/line-chart',   group: 'Charts', keywords: 'line chart trend over time series continuous data' },
+  { title: 'Area Chart',   href: '/docs/charts/area-chart',   group: 'Charts', keywords: 'area chart filled line cumulative stacked trend' },
+  { title: 'Donut Chart',  href: '/docs/charts/donut-chart',  group: 'Charts', keywords: 'donut chart pie ring proportion percentage distribution' },
+  { title: 'Sparkline',    href: '/docs/charts/sparkline',    group: 'Charts', keywords: 'sparkline mini chart inline trend small compact' },
+  { title: 'Scatter Plot', href: '/docs/charts/scatter-plot', group: 'Charts', keywords: 'scatter plot correlation data points xy bubble distribution' },
+  { title: 'Combo Chart',  href: '/docs/charts/combo-chart',  group: 'Charts', keywords: 'combo chart combined bar line dual axis mixed' },
+  { title: 'Radar Chart',  href: '/docs/charts/radar-chart',  group: 'Charts', keywords: 'radar spider web chart comparison multi-axis polygon' },
+  { title: 'Funnel Chart', href: '/docs/charts/funnel-chart', group: 'Charts', keywords: 'funnel chart conversion pipeline stages drop-off' },
+
+  // AI
+  { title: 'Chat Container',    href: '/docs/ai/chat-container',    group: 'AI', keywords: 'chat container scroll messages list auto-scroll jump bottom' },
+  { title: 'Message',           href: '/docs/ai/message',           group: 'AI', keywords: 'message chat bubble user assistant system role markdown avatar' },
+  { title: 'Message Input',     href: '/docs/ai/message-input',     group: 'AI', keywords: 'message input chat send textarea auto-grow stop attachments toolbar' },
+  { title: 'Conversation List', href: '/docs/ai/conversation-list', group: 'AI', keywords: 'conversation list sidebar history past chats grouped delete unread' },
+  { title: 'Code Block',        href: '/docs/ai/code-block',        group: 'AI', keywords: 'code block syntax highlight copy language label ai output' },
+  { title: 'Streaming Text',    href: '/docs/ai/streaming-text',    group: 'AI', keywords: 'streaming text cursor blinking animation typewriter generation' },
+  { title: 'Thinking Block',    href: '/docs/ai/thinking-block',    group: 'AI', keywords: 'thinking block reasoning collapsible model chain of thought' },
+  { title: 'Approval Gate',     href: '/docs/ai/approval-gate',     group: 'AI', keywords: 'approval gate human in the loop confirm tool call agent action' },
+  { title: 'File Attachment',   href: '/docs/ai/file-attachment',   group: 'AI', keywords: 'file attachment chip thumbnail remove upload ai message' },
+  { title: 'Source Card',       href: '/docs/ai/source-card',       group: 'AI', keywords: 'source card citation reference link favicon domain snippet rag' },
+  { title: 'Tool Call',         href: '/docs/ai/tool-call',         group: 'AI', keywords: 'tool call function result collapsible agent action status' },
+  { title: 'Feedback Bar',      href: '/docs/ai/feedback-bar',      group: 'AI', keywords: 'feedback bar thumbs up down copy regenerate assistant message actions' },
+  { title: 'Model Selector',    href: '/docs/ai/model-selector',    group: 'AI', keywords: 'model selector dropdown ai switch gpt claude gemini llm badge group' },
+  { title: 'Suggestion Chips',  href: '/docs/ai/suggestion-chips',  group: 'AI', keywords: 'suggestion chips prompts quick actions pill input starters' },
 ];

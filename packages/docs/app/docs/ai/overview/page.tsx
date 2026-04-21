@@ -1,17 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Badge } from '@dave/react';
 
 export const metadata: Metadata = { title: 'AI Components — Overview' };
 
 export default function AIOverviewPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2 flex items-center gap-3">
-        AI Components
-        <span className="font-body inline-flex items-center rounded-[3px] border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-600 dark:text-amber-400 leading-none">
-          Under development
-        </span>
-      </h1>
+      <div className="flex items-center gap-3 mb-2">
+        <h1 className="font-display font-extrabold text-3xl text-foreground">AI Components</h1>
+        <Badge variant="warning" appearance="solid" size="sm">Under development</Badge>
+      </div>
       <p className="text-sm text-fg-secondary leading-relaxed mb-8 max-w-xl">
         A suite of production-ready components for building AI-powered chat interfaces, agent UIs, and generative experiences. All components dogfood DAVE primitives and follow the same design language.
       </p>
