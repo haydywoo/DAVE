@@ -88,6 +88,7 @@ export const standardNavigation: NavSection[] = [
     title: 'Feedback',
     items: [
       { title: 'Alert',    href: '/docs/components/alert' },
+      { title: 'Banner',   href: '/docs/components/banner' },
       { title: 'Progress', href: '/docs/components/progress' },
       { title: 'Skeleton', href: '/docs/components/skeleton' },
       { title: 'Spinner',  href: '/docs/components/spinner' },
