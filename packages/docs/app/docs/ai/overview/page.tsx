@@ -8,7 +8,7 @@ export default function AIOverviewPage() {
     <div>
       <h1 className="font-display font-extrabold text-3xl text-foreground mb-2 flex items-center gap-3">
         AI Components
-        <span className="inline-flex items-center rounded-[3px] border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-600 dark:text-amber-400 leading-none">
+        <span className="font-body inline-flex items-center rounded-[3px] border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-600 dark:text-amber-400 leading-none">
           Under development
         </span>
       </h1>
