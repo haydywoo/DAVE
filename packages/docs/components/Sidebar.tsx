@@ -117,7 +117,19 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                     onClick={onClose}
                     className={isActive ? 'selected' : undefined}
                   >
-                    {item.title}
+                    <span className="flex items-center gap-2">
+                      {item.title}
+                      {item.badge === 'new' && (
+                        <span className="inline-flex items-center rounded-[3px] bg-accent px-1.5 py-px text-[10px] font-medium text-accent-foreground leading-none">
+                          New
+                        </span>
+                      )}
+                      {item.badge === 'updated' && (
+                        <span className="inline-flex items-center rounded-[3px] border border-border bg-surface px-1.5 py-px text-[10px] font-medium text-fg-secondary leading-none">
+                          Updated
+                        </span>
+                      )}
+                    </span>
                   </NavItem>
                 );
               })}

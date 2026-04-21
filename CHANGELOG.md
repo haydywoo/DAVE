@@ -5,6 +5,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-04-21
+
+### Added
+- **`Banner`** — fixed top-of-viewport notification strip for outages, maintenance windows, and global announcements. Four variants (`info`, `success`, `warning`, `error`). Optional action link and dismiss button. Mounts a `--banner-height` CSS custom property so the sticky nav offsets automatically. Controlled — caller owns visibility and can persist dismissal via `localStorage`.
+- **Docs sidebar badges** — `new` (accent fill) and `updated` (neutral outline) badges on nav items to surface recently shipped work. Currently applied to `Banner` and `Badge`.
+
+### Changed
+- **`Badge`** — `appearance` prop (`solid` | `outline` | `dashed`). `dot` boolean prop renders a small status dot before the label. Neutral border token applied for better light/dark contrast.
+- **Docs nav** — `v1.1` version badge added next to the DAVE wordmark. Uses `font-body` to stay in Instrument Sans rather than inheriting the display font.
+- **AI overview** — amber "Under development" badge added inline with the `AI Components` page heading.
+- **Docs favicon** — indigo geometric mark added; displayed next to the DAVE wordmark in the nav.
+- **Docs sidebar** — section icons added using `@radix-ui/react-icons`; icon alignment corrected to match item left edge.
+- **Token cascade** — dark mode refactored to a primitive-driven cascade. Status border contrast lifted.
+
+---
+
 ## [0.1.0] — 2026-04-20
 
 First public release.
