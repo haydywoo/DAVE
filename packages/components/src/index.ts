@@ -206,6 +206,9 @@ export type {
 export { Alert } from './components/Alert/Alert';
 export type { AlertProps, AlertVariant } from './components/Alert/Alert';
 
+export { Banner } from './components/Banner/Banner';
+export type { BannerProps, BannerVariant, BannerAction } from './components/Banner/Banner';
+
 export {
   AlertDialog,
   AlertDialogTrigger,
