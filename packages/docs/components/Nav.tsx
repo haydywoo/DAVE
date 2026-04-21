@@ -81,7 +81,7 @@ export function Nav() {
               <rect x="5" y="17" width="10" height="10" rx="2" fill="white" opacity="0.3"/>
             </svg>
             DAVE
-            <span className="inline-flex items-center rounded-[3px] border border-border bg-surface px-1.5 py-px text-[10px] font-medium text-fg-subdued leading-none">
+            <span className="font-body inline-flex items-center rounded-[3px] border border-border bg-surface px-1.5 py-px text-[10px] font-medium text-fg-subdued leading-none">
               v1.1
             </span>
           </Link>
