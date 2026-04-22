@@ -24,7 +24,7 @@ const itemProps = [
 export default function RadioPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Radio</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Radio</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Single-selection input. Use <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">RadioGroup</code> as the container and add <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">RadioItem</code> for each option.
       </p>
@@ -34,13 +34,13 @@ export default function RadioPage() {
   <RadioItem value="member" label="Member" />
 </RadioGroup>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <RadioDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">RadioGroup props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">RadioGroup props</h2>
       <PropsTable props={groupProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">RadioItem props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">RadioItem props</h2>
       <PropsTable props={itemProps} />
     </div>
   );

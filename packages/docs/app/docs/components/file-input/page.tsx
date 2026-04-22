@@ -20,15 +20,15 @@ const props = [
 export default function FileInputPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">File Input</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">File Input</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A styled file picker that wraps the native <code className="font-code text-xs bg-surface px-1 py-0.5 rounded-[3px] border border-border">input[type=file]</code>. Shows the selected filename and triggers the OS file dialog on click. For drag-and-drop uploads, use <Link href="/docs/components/dropzone" className="prose-link">Dropzone</Link> instead.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <FileInputDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

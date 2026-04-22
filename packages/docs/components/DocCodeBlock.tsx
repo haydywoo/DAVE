@@ -27,7 +27,7 @@ export function DocCodeBlock({ children, language, code, ...preProps }: DocCodeB
   const label = language ? (LANG_LABELS[language.toLowerCase()] ?? language) : null;
 
   return (
-    <div className="group relative rounded-[4px] overflow-hidden bg-[#0d1117] mb-6">
+    <div className="group relative rounded-[6px] overflow-hidden bg-[#0d1117] mb-6">
       <div className="flex items-center justify-between px-4 py-2 bg-[#161b22] border-b border-white/10">
         <span className="text-xs text-white/40 font-mono select-none">{label ?? ''}</span>
         <CopyButton

@@ -36,7 +36,7 @@ export function SparklineDemos() {
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">In a stat card</h3>
       <Preview
-        code={`<div className="flex items-center gap-4 rounded-[4px] border border-border bg-card px-4 py-3">
+        code={`<div className="flex items-center gap-4 rounded-[6px] border border-border bg-card px-4 py-3">
   <div className="flex-1">
     <p className="text-xs text-fg-secondary mb-1">Revenue</p>
     <p className="text-xl font-bold text-foreground">$38.2k</p>
@@ -45,7 +45,7 @@ export function SparklineDemos() {
   <Sparkline data={data} color="var(--color-chart-1)" height={40} width={80} />
 </div>`}
       >
-        <div className="flex items-center gap-4 rounded-[4px] border border-border bg-card px-4 py-3 max-w-sm">
+        <div className="flex items-center gap-4 rounded-[6px] border border-border bg-card px-4 py-3 max-w-sm">
           <div className="flex-1">
             <p className="text-xs text-fg-secondary mb-1">Revenue</p>
             <p className="text-xl font-bold text-foreground">$38.2k</p>

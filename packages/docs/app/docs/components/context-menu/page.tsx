@@ -41,7 +41,7 @@ const radioItemProps = [
 export default function ContextMenuPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Context Menu</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Context Menu</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Menu triggered by right-clicking a target area. Shares the same item API as Dropdown — use Context Menu for surface-level actions, Dropdown for button-triggered menus.
       </p>
@@ -65,10 +65,10 @@ export default function ContextMenuPage() {
   </ContextMenuContent>
 </ContextMenu>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <ContextMenuDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="text-sm font-medium text-foreground mb-3">ContextMenu</h3>
       <PropsTable props={props} />
 

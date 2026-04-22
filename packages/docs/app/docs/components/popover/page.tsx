@@ -16,7 +16,7 @@ const popoverContentProps = [
 export default function PopoverPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Popover</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Popover</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A floating panel anchored to a trigger. Use for forms, filters, or any inline UI that needs to be contextual but non-blocking.
       </p>
@@ -30,10 +30,10 @@ export default function PopoverPage() {
   </PopoverContent>
 </Popover>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <PopoverDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">PopoverContent props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">PopoverContent props</h2>
       <PropsTable props={popoverContentProps} />
     </div>
   );

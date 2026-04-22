@@ -23,7 +23,7 @@ const imageProps = [
 export default function CardPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Card</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Card</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Surface container with white background and subtle border. Compose with sub-components or use as a bare wrapper.
       </p>
@@ -39,16 +39,16 @@ export default function CardPage() {
   <CardFooter />
 </Card>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <CardDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Card props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Card props</h2>
       <PropsTable props={cardProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">CardTitle props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">CardTitle props</h2>
       <PropsTable props={titleProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">CardImage props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">CardImage props</h2>
       <PropsTable props={imageProps} />
     </div>
   );

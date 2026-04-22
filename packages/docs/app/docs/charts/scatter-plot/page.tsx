@@ -26,18 +26,18 @@ const seriesProps = [
 export default function ScatterPlotPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Scatter Plot</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Scatter Plot</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Two-dimensional correlation chart. Each point has an x and y value, with an optional per-point label shown in the tooltip.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <ScatterPlotDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-8 mb-4">ScatterSeries</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-8 mb-4">ScatterSeries</h2>
       <PropsTable props={seriesProps} />
     </div>
   );

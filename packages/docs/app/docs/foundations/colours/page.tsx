@@ -117,20 +117,20 @@ const tokenGroups = [
 export default function ColoursPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Colours</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Colours</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         DAVE uses a 12-step primitive scale for each colour family, with semantic aliases
         that map to specific stops. Override the primitives to theme the entire system.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mb-4">Primitive scales</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mb-4">Primitive scales</h2>
       <ColourScale name="Neutral" swatches={neutral} />
       <ColourScale name="Accent (Indigo)" swatches={accent} />
       <ColourScale name="Success (Green)" swatches={green} />
       <ColourScale name="Warning (Amber)" swatches={amber} />
       <ColourScale name="Error (Red)" swatches={red} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-2 pt-8 border-t border-border">Semantic tokens</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-2 pt-8 border-t border-border">Semantic tokens</h2>
       <p className="text-sm text-fg-secondary leading-relaxed mb-6 max-w-xl">
         Components use these tokens, not the primitive scale directly.
         Override primitives and semantics update automatically.

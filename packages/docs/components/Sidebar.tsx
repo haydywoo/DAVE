@@ -80,7 +80,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
 
       {/* Section switcher */}
       <div className="px-3 pt-5 pb-4 shrink-0">
-        <div className="flex rounded-[4px] bg-surface border border-border p-0.5 gap-0.5">
+        <div className="flex rounded-[3px] bg-surface border border-border p-0.5 gap-0.5">
           {([
             { key: 'standard', label: 'Components', href: '/docs/getting-started' },
             { key: 'charts',   label: 'Charts',     href: '/docs/charts/overview' },
@@ -92,7 +92,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
               className={[
                 'flex-1 rounded-[3px] px-2 py-1 text-xs font-medium transition-all duration-150',
                 section === key
-                  ? 'bg-card text-foreground shadow-sm'
+                  ? 'bg-card text-foreground'
                   : 'text-fg-secondary hover:text-foreground',
               ].join(' ')}
             >

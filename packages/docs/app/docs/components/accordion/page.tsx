@@ -21,7 +21,7 @@ const itemProps = [
 export default function AccordionPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Accordion</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Accordion</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Expandable sections with animated height transition. Supports single and multiple open modes, full keyboard navigation, and ARIA.
       </p>
@@ -33,13 +33,13 @@ export default function AccordionPage() {
   </AccordionItem>
 </Accordion>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <AccordionDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Accordion props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Accordion props</h2>
       <PropsTable props={rootProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">AccordionItem props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">AccordionItem props</h2>
       <PropsTable props={itemProps} />
     </div>
   );

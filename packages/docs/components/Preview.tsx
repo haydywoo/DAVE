@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CodeBlock } from '@dave/react';
+import { Card, CodeBlock } from '@dave/react';
 
 interface PreviewProps {
   children: React.ReactNode;
@@ -32,7 +32,7 @@ export function Preview({ children, code, language = 'tsx', center = true, bleed
   const [dotGrid, setDotGrid] = useState(false);
 
   return (
-    <div className="rounded-[6px] border border-border overflow-hidden mb-8 bg-card">
+    <Card noPadding className="overflow-hidden mb-8">
 
       {/* Tab bar — always rendered so dot-grid toggle is never floating over content */}
       <div className="flex items-center border-b border-border px-4 bg-surface">
@@ -88,6 +88,6 @@ export function Preview({ children, code, language = 'tsx', center = true, bleed
         <CodeBlock code={code} language={language} className="rounded-none" />
       )}
 
-    </div>
+    </Card>
   );
 }

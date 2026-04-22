@@ -23,18 +23,18 @@ const pageSizeProps = [
 export default function PaginationPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Pagination</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Pagination</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Page navigation with smart ellipsis collapse. Combine with <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">PageSizeSelect</code> for full data table controls. Renders nothing when <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">pageCount</code> is 1 or less.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <PaginationDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Pagination props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Pagination props</h2>
       <PropsTable props={paginationProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">PageSizeSelect props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">PageSizeSelect props</h2>
       <PropsTable props={pageSizeProps} />
     </div>
   );

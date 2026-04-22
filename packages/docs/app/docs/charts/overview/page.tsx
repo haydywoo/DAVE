@@ -18,7 +18,7 @@ const charts = [
 export default function ChartsOverviewPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Charts</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Charts</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Data visualisation components built on Recharts. All charts use DAVE design tokens — colours, borders, and typography adapt automatically to light and dark themes.
       </p>
@@ -28,7 +28,7 @@ export default function ChartsOverviewPage() {
           <Link
             key={item.name}
             href={item.href}
-            className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors"
+            className="rounded-[6px] border border-border bg-card p-4 shadow-card hover:bg-surface hover:border-border-strong transition-colors"
           >
             <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
             <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>
@@ -37,13 +37,13 @@ export default function ChartsOverviewPage() {
       </div>
 
       <div className="mt-12 pt-8 border-t border-border">
-        <h2 className="font-display font-extrabold text-xl text-foreground mb-3">Installation</h2>
+        <h2 className="font-display font-semibold text-2xl text-foreground mb-3">Installation</h2>
         <p className="text-sm text-fg-secondary mb-4">Charts live in a separate package so you only pay the bundle cost if you use them.</p>
-        <pre className="rounded-[4px] bg-surface border border-border px-4 py-3 text-xs font-code text-foreground overflow-x-auto">
+        <pre className="rounded-[6px] bg-surface border border-border px-4 py-3 text-xs font-code text-foreground overflow-x-auto">
           {`pnpm add @dave/charts`}
         </pre>
 
-        <h2 className="font-display font-extrabold text-xl text-foreground mt-10 mb-3">Colour palette</h2>
+        <h2 className="font-display font-semibold text-2xl text-foreground mt-10 mb-3">Colour palette</h2>
         <p className="text-sm text-fg-secondary mb-4 max-w-xl">
           Charts use a dedicated 8-colour categorical palette defined as CSS variables. Colours automatically switch between light and dark values when the theme changes.
         </p>

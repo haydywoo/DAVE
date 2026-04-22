@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@dave/react';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent, Card } from '@dave/react';
 import { Preview } from '@/components/Preview';
 
 const singleCode = `<Accordion type="single" collapsible>
@@ -44,7 +44,7 @@ export function AccordionDemos() {
     <>
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Single</h3>
       <Preview center={false} code={singleCode}>
-        <div className="w-full max-w-lg rounded-[3px] border border-border bg-card px-4">
+        <Card noPadding className="w-full max-w-lg px-4">
           <Accordion type="single" collapsible>
             <AccordionItem value="a">
               <AccordionTrigger>What is DAVE?</AccordionTrigger>
@@ -65,12 +65,12 @@ export function AccordionDemos() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
+        </Card>
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Multiple</h3>
       <Preview center={false} code={multipleCode}>
-        <div className="w-full max-w-lg rounded-[3px] border border-border bg-card px-4">
+        <Card noPadding className="w-full max-w-lg px-4">
           <Accordion type="multiple" defaultValue={['a', 'b']}>
             <AccordionItem value="a">
               <AccordionTrigger>First section</AccordionTrigger>
@@ -85,7 +85,7 @@ export function AccordionDemos() {
               <AccordionContent>Closed by default.</AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
+        </Card>
       </Preview>
     </>
   );

@@ -38,7 +38,7 @@ export function CommandDemos() {
   </CommandList>
 </Command>`}
       >
-        <div className="w-[420px] border border-border rounded-[4px] bg-card shadow-xl">
+        <div className="w-[420px] border border-border rounded-[6px] bg-card shadow-raised">
           <Command>
             <CommandInput placeholder="Type a command or search…" />
             <CommandList>

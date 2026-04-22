@@ -28,7 +28,7 @@ const contentProps = [
 export default function CollapsiblePage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Collapsible</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Collapsible</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Simple show/hide toggle for a single section. Use for FAQ items, filter panels, and inline detail sections. For grouped sections use Accordion instead.
       </p>
@@ -38,10 +38,10 @@ export default function CollapsiblePage() {
   <CollapsibleContent /> {/* revealed content */}
 </Collapsible>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <CollapsibleDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="text-sm font-medium text-foreground mb-3">Collapsible</h3>
       <PropsTable props={rootProps} />
       <h3 className="text-sm font-medium text-foreground mt-6 mb-3">CollapsibleTrigger</h3>

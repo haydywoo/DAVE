@@ -21,15 +21,15 @@ const props = [
 export default function DropzonePage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Dropzone</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Dropzone</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         File upload area that accepts drag-and-drop or click-to-browse. Supports file type filtering, size limits, and multiple files. The drop area highlights on drag-over.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DropzoneDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

@@ -20,15 +20,15 @@ const props = [
 export default function ComboboxPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Combobox</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Combobox</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Searchable select with keyboard navigation. Supports flat and grouped options. Use when the option list is long enough that filtering adds value.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <ComboboxDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

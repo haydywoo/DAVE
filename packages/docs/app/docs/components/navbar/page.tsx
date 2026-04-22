@@ -52,7 +52,7 @@ const mobileMenuProps = [
 export default function NavbarPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Navbar</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Navbar</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Horizontal navigation bar with brand, nav links, and actions. Supports icons, badges, search, colour variants, and a built-in mobile menu pattern.
       </p>
@@ -73,10 +73,10 @@ export default function NavbarPage() {
   <NavbarMobileLink href="…" active icon={…} />
 </NavbarMobileMenu>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <NavbarDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">Navbar</h3>
       <PropsTable props={navbarProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">NavbarContent</h3>

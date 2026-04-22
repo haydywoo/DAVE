@@ -31,7 +31,7 @@ const sectionProps = [
 export default function FormFieldPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">FormField</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">FormField</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Composable wrapper that wires label, control, and hint together with consistent spacing, accessibility attributes, and error state — without imposing a specific form library.
       </p>
@@ -49,10 +49,10 @@ export default function FormFieldPage() {
   <FormField>…</FormField>
 </FormSection>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <FormFieldDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">FormField</h3>
       <PropsTable props={fieldProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">FormLabel</h3>

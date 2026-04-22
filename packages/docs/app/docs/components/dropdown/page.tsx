@@ -35,7 +35,7 @@ const radioItemProps = [
 export default function DropdownPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Dropdown</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Dropdown</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A menu that opens from a trigger, showing a list of actions or navigation items. Built on Radix UI with full keyboard and accessibility support.
       </p>
@@ -51,10 +51,10 @@ export default function DropdownPage() {
   </DropdownContent>
 </Dropdown>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DropdownDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">DropdownContent</h3>
       <PropsTable props={contentProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">DropdownItem</h3>

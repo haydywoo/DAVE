@@ -16,10 +16,10 @@ function getTextContent(node: ReactNode): string {
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }) => (
-      <h1 className="font-display font-extrabold text-3xl text-foreground mt-0 mb-3">{children}</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mt-0 mb-3">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border first:mt-0 first:pt-0 first:border-0">{children}</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border first:mt-0 first:pt-0 first:border-0">{children}</h2>
     ),
     h3: ({ children }) => (
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">{children}</h3>

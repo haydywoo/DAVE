@@ -33,7 +33,7 @@ const groupProps = [
 export default function CommandPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Command</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Command</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Spotlight-style command palette with real-time search filtering, grouped results, keyboard navigation, and optional ⌘K dialog wrapper.
       </p>
@@ -52,10 +52,10 @@ export default function CommandPage() {
   </CommandList>
 </CommandDialog>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <CommandDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">CommandDialog</h3>
       <PropsTable props={dialogProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">CommandInput</h3>

@@ -7,7 +7,7 @@ export default function LegalPage() {
 
   return (
     <div className="max-w-2xl">
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Terms &amp; EULA</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Terms &amp; EULA</h1>
       <p className="text-sm text-fg-secondary mb-10">Last updated {updated}</p>
 
       <section className="mb-8">
@@ -97,7 +97,7 @@ export default function LegalPage() {
         </p>
       </section>
 
-      <div className="mt-10 rounded-[4px] border border-border bg-surface p-5">
+      <div className="mt-10 rounded-[6px] border border-border bg-surface p-5">
         <p className="text-xs text-fg-secondary leading-relaxed">
           <strong className="text-foreground">TL;DR —</strong> DAVE is free and open source under the MIT licence.
           Use it however you like. We're not liable for anything that goes wrong. No warranties, no guarantees, no support obligation.

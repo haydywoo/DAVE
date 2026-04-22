@@ -214,7 +214,7 @@ export function CardDemos() {
     <CardHeader>
       <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider">Starter</p>
       <div className="flex items-end gap-1 mt-1">
-        <span className="text-3xl font-display font-extrabold text-foreground">£0</span>
+        <span className="text-3xl font-display font-semibold text-foreground">£0</span>
         <span className="text-sm text-fg-secondary mb-1">/ month</span>
       </div>
     </CardHeader>
@@ -241,7 +241,7 @@ export function CardDemos() {
             <CardHeader>
               <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider">Starter</p>
               <div className="flex items-end gap-1 mt-1">
-                <span className="text-3xl font-display font-extrabold text-foreground">£0</span>
+                <span className="text-3xl font-display font-semibold text-foreground">£0</span>
                 <span className="text-sm text-fg-secondary mb-1">/ month</span>
               </div>
               <CardDescription>For individuals and small projects.</CardDescription>
@@ -264,7 +264,7 @@ export function CardDemos() {
                 <Badge variant="primary">Popular</Badge>
               </div>
               <div className="flex items-end gap-1 mt-1">
-                <span className="text-3xl font-display font-extrabold text-foreground">£29</span>
+                <span className="text-3xl font-display font-semibold text-foreground">£29</span>
                 <span className="text-sm text-fg-secondary mb-1">/ month</span>
               </div>
               <CardDescription>For growing teams who need more power.</CardDescription>
