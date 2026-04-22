@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import { PrevNext } from '@/components/PrevNext';
 import { CommandPalette } from '@/components/CommandPalette';
+import { FeedbackWidget } from '@/components/FeedbackWidget';
 import { useCommandPalette } from '@/hooks/useCommandPalette';
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
@@ -38,6 +39,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
       </div>
 
       <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
+      <FeedbackWidget />
     </div>
   );
 }
