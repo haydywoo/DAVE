@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Chip } from '@dave/react';
+import { Chip } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Chip> = {
   title: 'Components/Chip',

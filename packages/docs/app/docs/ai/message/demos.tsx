@@ -1,6 +1,6 @@
 'use client';
 
-import { Message } from '@dave/react';
+import { Message } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function MessageDemos() {

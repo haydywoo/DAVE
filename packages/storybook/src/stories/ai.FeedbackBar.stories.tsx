@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { FeedbackBar } from '@dave/react';
+import { FeedbackBar } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof FeedbackBar> = {
   title: 'AI/FeedbackBar',

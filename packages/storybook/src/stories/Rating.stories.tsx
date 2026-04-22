@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Rating } from '@dave/react';
+import { Rating } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Rating> = {
   title: 'Forms/Rating',

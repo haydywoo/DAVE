@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Pagination, PageSizeSelect } from '@dave/react';
+import { Pagination, PageSizeSelect } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function PaginationDemos() {

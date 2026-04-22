@@ -5,7 +5,7 @@ import {
   NavbarLink, NavbarDivider, NavbarSearch, NavbarMenuButton,
   NavbarMobileMenu, NavbarMobileLink,
   Button, Avatar, Badge,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Navigation/Navbar',

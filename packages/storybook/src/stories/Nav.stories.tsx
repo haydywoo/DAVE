@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import * as React from 'react';
-import { Nav, NavSection, NavItem, NavGroup, NavSeparator } from '@dave/react';
+import { Nav, NavSection, NavItem, NavGroup, NavSeparator } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Nav> = {
   title: 'Navigation/Nav',

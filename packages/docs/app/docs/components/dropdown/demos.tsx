@@ -15,7 +15,7 @@ import {
   DropdownSubTrigger,
   DropdownSubContent,
   Button,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 function EditIcon() {

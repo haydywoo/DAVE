@@ -4,8 +4,8 @@ import {
   Table, TableHeader, TableBody, TableFooter,
   TableRow, TableHead, TableCell,
   Badge, Avatar, Checkbox, Pagination,
-} from '@dave/react';
-import type { SortDirection } from '@dave/react';
+} from '@haydywoo/dave-react';
+import type { SortDirection } from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Table',

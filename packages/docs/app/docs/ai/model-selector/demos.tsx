@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ModelSelector } from '@dave/react';
+import { ModelSelector } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const FLAT_MODELS = [

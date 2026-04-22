@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Dropzone } from '@dave/react';
+import { Dropzone } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Dropzone> = {
   title: 'Forms/Dropzone',

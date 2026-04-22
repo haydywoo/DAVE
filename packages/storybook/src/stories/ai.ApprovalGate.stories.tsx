@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ApprovalGate } from '@dave/react';
+import { ApprovalGate } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof ApprovalGate> = {
   title: 'AI/ApprovalGate',

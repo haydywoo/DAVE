@@ -1,6 +1,6 @@
 'use client';
 
-import { FunnelChart } from '@dave/charts';
+import { FunnelChart } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const pipeline = [

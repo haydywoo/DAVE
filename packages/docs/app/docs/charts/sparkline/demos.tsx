@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkline } from '@dave/charts';
+import { Sparkline } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const trend = [12, 18, 14, 22, 19, 28, 24, 31, 27, 35, 30, 38];

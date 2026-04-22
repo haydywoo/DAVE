@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Card } from '@dave/react';
+import { Card } from '@haydywoo/dave-react';
 
 export const metadata: Metadata = { title: 'Typography' };
 

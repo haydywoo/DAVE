@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { NumberInput } from '@dave/react';
+import { NumberInput } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function NumberInputDemos() {

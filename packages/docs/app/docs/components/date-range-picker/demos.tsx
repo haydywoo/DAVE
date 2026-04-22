@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { DateRangePicker, RangeCalendar } from '@dave/react';
-import type { DateRange } from '@dave/react';
+import { DateRangePicker, RangeCalendar } from '@haydywoo/dave-react';
+import type { DateRange } from '@haydywoo/dave-react';
 import { addDays, format } from 'date-fns';
 import { Preview } from '@/components/Preview';
 

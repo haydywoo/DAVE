@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Badge } from '@dave/react';
+import { Badge } from '@haydywoo/dave-react';
 
 export const metadata: Metadata = { title: 'AI Components — Overview' };
 

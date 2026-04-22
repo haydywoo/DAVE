@@ -1,6 +1,6 @@
 'use client';
 
-import { ToastProviderWithHook, useToast, ToastAction, Button } from '@dave/react';
+import { ToastProviderWithHook, useToast, ToastAction, Button } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 function ToastButtons() {

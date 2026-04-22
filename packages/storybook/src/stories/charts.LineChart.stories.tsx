@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { LineChart } from '@dave/charts';
+import { LineChart } from '@haydywoo/dave-charts';
 
 const meta: Meta<typeof LineChart> = {
   title: 'Charts/LineChart',

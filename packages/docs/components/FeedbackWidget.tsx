@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Popover, PopoverTrigger, PopoverContent, Button, Textarea } from '@dave/react';
+import { Popover, PopoverTrigger, PopoverContent, Button, Textarea } from '@haydywoo/dave-react';
 
 type Rating = 'up' | 'down';
 type View = 'ask' | 'comment' | 'thanks';

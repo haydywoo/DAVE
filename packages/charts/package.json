@@ -1,7 +1,7 @@
 {
-  "name": "@dave/charts",
+  "name": "@haydywoo/dave-charts",
   "version": "0.1.0",
-  "description": "DAVE chart components — built on Recharts with DAVE design tokens",
+  "description": "DAVE chart components — built on Recharts with DAVE design tokens.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -12,6 +12,32 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:fix": "prettier --write ."
+  },
+  "keywords": [
+    "react",
+    "charts",
+    "recharts",
+    "data-visualization",
+    "design-system"
+  ],
+  "author": "Haydyn Phillips",
+  "license": "MIT",
+  "homepage": "https://haydywoo.github.io/DAVE/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haydywoo/DAVE.git",
+    "directory": "packages/charts"
+  },
+  "bugs": {
+    "url": "https://github.com/haydywoo/DAVE/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "react": "^18.0.0",

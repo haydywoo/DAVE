@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { TagInput } from '@dave/react';
+import { TagInput } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof TagInput> = {
   title: 'Forms/TagInput',

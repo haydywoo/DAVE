@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ToastProviderWithHook, useToast, ToastAction, Button } from '@dave/react';
+import { ToastProviderWithHook, useToast, ToastAction, Button } from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Toast',

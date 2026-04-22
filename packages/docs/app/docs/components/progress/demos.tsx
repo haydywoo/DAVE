@@ -1,6 +1,6 @@
 'use client';
 
-import { Progress } from '@dave/react';
+import { Progress } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function ProgressDemos() {

@@ -16,9 +16,9 @@ import {
   SegmentedControl,
   DateRangePicker,
   DataTable,
-} from '@dave/react';
-import type { ColumnDef, DateRange } from '@dave/react';
-import { AreaChart, BarChart, DonutChart, Sparkline } from '@dave/charts';
+} from '@haydywoo/dave-react';
+import type { ColumnDef, DateRange } from '@haydywoo/dave-react';
+import { AreaChart, BarChart, DonutChart, Sparkline } from '@haydywoo/dave-charts';
 const revenueWeekly = [
   { date: 'Mon', Revenue: 12400, Target: 11000 },
   { date: 'Tue', Revenue: 15800, Target: 13000 },

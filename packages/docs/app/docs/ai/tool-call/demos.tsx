@@ -1,6 +1,6 @@
 'use client';
 
-import { ToolCall, ToolResult } from '@dave/react';
+import { ToolCall, ToolResult } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function ToolCallDemos() {

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {
   Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle,
   DrawerDescription, DrawerBody, DrawerFooter, DrawerClose, Button,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function DrawerDemos() {

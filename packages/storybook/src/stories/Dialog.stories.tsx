@@ -3,7 +3,7 @@ import {
   Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle,
   DialogDescription, DialogBody, DialogFooter, DialogClose,
   Button, Input, Alert,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Dialog',

@@ -1,6 +1,6 @@
 'use client';
 
-import { Spinner, Button, Card } from '@dave/react';
+import { Spinner, Button, Card } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function SpinnerDemos() {

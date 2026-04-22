@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { TagInput } from '@dave/react';
+import { TagInput } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function TagInputDemos() {

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { DataTable } from '@dave/react';
-import type { ColumnDef } from '@dave/react';
-import { Badge } from '@dave/react';
+import { DataTable } from '@haydywoo/dave-react';
+import type { ColumnDef } from '@haydywoo/dave-react';
+import { Badge } from '@haydywoo/dave-react';
 
 // ─── Sample data ──────────────────────────────────────────────────────────────
 

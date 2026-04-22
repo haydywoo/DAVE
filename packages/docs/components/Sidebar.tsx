@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Nav, NavSection, NavItem, Badge } from '@dave/react';
+import { Nav, NavSection, NavItem, Badge } from '@haydywoo/dave-react';
 import { standardNavigation, chartsNavigation, aiNavigation } from '@/lib/navigation';
 import {
   RocketIcon,

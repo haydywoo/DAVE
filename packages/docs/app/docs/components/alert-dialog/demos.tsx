@@ -11,7 +11,7 @@ import {
   AlertDialogCancel,
   AlertDialogAction,
   Button,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const defaultCode = `<AlertDialog>

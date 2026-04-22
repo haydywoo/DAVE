@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Avatar, Button, Callout } from '@dave/react';
+import { Avatar, Button, Callout } from '@haydywoo/dave-react';
 import { DotField } from '@/components/DotField';
 
 export default function HomePage() {

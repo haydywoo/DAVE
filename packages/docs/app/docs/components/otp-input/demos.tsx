@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { OTPInput } from '@dave/react';
+import { OTPInput } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function OTPInputDemos() {

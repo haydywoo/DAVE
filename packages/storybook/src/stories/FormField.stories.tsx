@@ -12,7 +12,7 @@ import {
   SelectField,
   Checkbox,
   Switch,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/FormField',

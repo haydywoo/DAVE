@@ -1,6 +1,6 @@
 'use client';
 
-import { DataList, DataListItem, DataListLabel, DataListValue, Badge, Avatar } from '@dave/react';
+import { DataList, DataListItem, DataListLabel, DataListValue, Badge, Avatar } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function DataListDemos() {

@@ -1,6 +1,6 @@
 'use client';
 
-import { Textarea } from '@dave/react';
+import { Textarea } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function TextareaDemos() {

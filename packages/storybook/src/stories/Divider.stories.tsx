@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Divider } from '@dave/react';
+import { Divider } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Divider> = {
   title: 'Layout/Divider',

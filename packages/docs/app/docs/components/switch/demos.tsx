@@ -1,6 +1,6 @@
 'use client';
 
-import { Switch } from '@dave/react';
+import { Switch } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function SwitchDemos() {

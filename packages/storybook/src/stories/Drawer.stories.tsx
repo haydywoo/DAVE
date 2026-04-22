@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
   Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle,
   DrawerDescription, DrawerBody, DrawerFooter, DrawerClose,
-} from '@dave/react';
-import { Button } from '@dave/react';
+} from '@haydywoo/dave-react';
+import { Button } from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Drawer',

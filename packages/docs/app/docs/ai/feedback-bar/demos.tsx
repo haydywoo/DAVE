@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FeedbackBar } from '@dave/react';
+import { FeedbackBar } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function FeedbackBarDemos() {

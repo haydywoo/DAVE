@@ -1,6 +1,6 @@
 'use client';
 
-import { Select, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectField } from '@dave/react';
+import { Select, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectField } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 // ─── Demo icons ───────────────────────────────────────────────────────────────

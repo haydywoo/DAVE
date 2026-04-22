@@ -1,6 +1,6 @@
 'use client';
 
-import { SuggestionChips } from '@dave/react';
+import { SuggestionChips } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const CHIPS = [

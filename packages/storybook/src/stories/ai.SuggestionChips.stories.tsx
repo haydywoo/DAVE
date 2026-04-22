@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { SuggestionChips } from '@dave/react';
+import { SuggestionChips } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof SuggestionChips> = {
   title: 'AI/SuggestionChips',

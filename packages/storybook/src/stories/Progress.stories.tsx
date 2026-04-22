@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Progress } from '@dave/react';
+import { Progress } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Progress> = {
   title: 'Components/Progress',

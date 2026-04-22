@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Stepper, Button } from '@dave/react';
+import { Stepper, Button } from '@haydywoo/dave-react';
 
 const steps = [
   { title: 'Account',  description: 'Your details'   },

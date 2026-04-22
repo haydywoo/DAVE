@@ -13,7 +13,7 @@ import {
   ContextMenuSub,
   ContextMenuSubTrigger,
   ContextMenuSubContent,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Overlays/ContextMenu',

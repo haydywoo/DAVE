@@ -1,6 +1,6 @@
 'use client';
 
-import { CodeBlock } from '@dave/react';
+import { CodeBlock } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const TS_EXAMPLE = `function greet(name: string): string {

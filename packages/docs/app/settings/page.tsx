@@ -22,7 +22,7 @@ import {
   Checkbox,
   RadioGroup, RadioItem,
   Table, TableHeader, TableBody, TableRow, TableHead, TableCell,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

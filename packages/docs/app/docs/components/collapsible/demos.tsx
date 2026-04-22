@@ -1,6 +1,6 @@
 'use client';
 
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@dave/react';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const faqs = [

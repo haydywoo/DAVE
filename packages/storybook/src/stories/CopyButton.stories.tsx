@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { CopyButton } from '@dave/react';
+import { CopyButton } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof CopyButton> = {
   title: 'Components/CopyButton',
@@ -11,11 +11,11 @@ export default meta;
 type Story = StoryObj<typeof CopyButton>;
 
 export const Default: Story = {
-  args: { value: 'npm install @dave/react' },
+  args: { value: 'npm install @haydywoo/dave-react' },
 };
 
 export const WithLabel: Story = {
-  args: { value: 'npm install @dave/react', label: 'Copy' },
+  args: { value: 'npm install @haydywoo/dave-react', label: 'Copy' },
 };
 
 export const Variants: Story = {
@@ -41,8 +41,8 @@ export const Sizes: Story = {
 export const InCodeBlock: Story = {
   render: () => (
     <div className="flex items-center justify-between gap-4 rounded-[3px] border border-border bg-surface px-4 py-3 font-mono text-sm w-72">
-      <code className="text-foreground">npm install @dave/react</code>
-      <CopyButton value="npm install @dave/react" variant="ghost" size="sm" />
+      <code className="text-foreground">npm install @haydywoo/dave-react</code>
+      <CopyButton value="npm install @haydywoo/dave-react" variant="ghost" size="sm" />
     </div>
   ),
 };

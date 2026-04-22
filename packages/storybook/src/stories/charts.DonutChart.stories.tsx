@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { DonutChart } from '@dave/charts';
+import { DonutChart } from '@haydywoo/dave-charts';
 
 const meta: Meta<typeof DonutChart> = {
   title: 'Charts/DonutChart',

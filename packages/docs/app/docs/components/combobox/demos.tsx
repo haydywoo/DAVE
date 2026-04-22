@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Combobox } from '@dave/react';
+import { Combobox } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const frameworks = [

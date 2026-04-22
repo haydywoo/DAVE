@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { OTPInput } from '@dave/react';
+import { OTPInput } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof OTPInput> = {
   title: 'Forms/OTPInput',

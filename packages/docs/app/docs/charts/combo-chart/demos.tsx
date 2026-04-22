@@ -1,6 +1,6 @@
 'use client';
 
-import { ComboChart } from '@dave/charts';
+import { ComboChart } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const monthly = [

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { NumberInput } from '@dave/react';
+import { NumberInput } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof NumberInput> = {
   title: 'Forms/NumberInput',

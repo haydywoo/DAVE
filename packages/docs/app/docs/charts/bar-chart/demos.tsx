@@ -1,6 +1,6 @@
 'use client';
 
-import { BarChart } from '@dave/charts';
+import { BarChart } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const monthly = [

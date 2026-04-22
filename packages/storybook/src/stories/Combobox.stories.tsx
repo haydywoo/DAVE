@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Combobox } from '@dave/react';
+import { Combobox } from '@haydywoo/dave-react';
 
 const frameworks = [
   { value: 'next',    label: 'Next.js' },

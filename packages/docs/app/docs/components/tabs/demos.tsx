@@ -1,6 +1,6 @@
 'use client';
 
-import { Tabs, TabsList, TabsTrigger, TabsContent, Card, Badge } from '@dave/react';
+import { Tabs, TabsList, TabsTrigger, TabsContent, Card, Badge } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function TabsDemos() {

@@ -1,4 +1,4 @@
-import { Badge } from '@dave/react';
+import { Badge } from '@haydywoo/dave-react';
 
 export const plotStyle = {
   background: 'transparent',

@@ -1,6 +1,6 @@
 'use client';
 
-import { ThinkingBlock } from '@dave/react';
+import { ThinkingBlock } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const CONTENT = "The user is asking about recursion. I should explain the base case and recursive case clearly, and use factorial as the canonical example.";

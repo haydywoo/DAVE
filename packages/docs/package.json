@@ -13,9 +13,9 @@
     "format:fix": "prettier --write ."
   },
   "dependencies": {
-    "@dave/charts": "workspace:*",
-    "@dave/react": "workspace:*",
-    "@dave/tokens": "workspace:*",
+    "@haydywoo/dave-charts": "workspace:*",
+    "@haydywoo/dave-react": "workspace:*",
+    "@haydywoo/dave-tokens": "workspace:*",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^14.2.35",

@@ -1,6 +1,6 @@
 'use client';
 
-import { EmptyState, Button } from '@dave/react';
+import { EmptyState, Button } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const InboxIcon = () => (

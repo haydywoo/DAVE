@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Calendar } from '@dave/react';
+import { Calendar } from '@haydywoo/dave-react';
 import { addDays } from 'date-fns';
 
 const meta: Meta<typeof Calendar> = {

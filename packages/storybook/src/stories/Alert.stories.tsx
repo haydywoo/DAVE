@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Alert } from '@dave/react';
+import { Alert } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',

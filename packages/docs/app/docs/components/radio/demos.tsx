@@ -1,6 +1,6 @@
 'use client';
 
-import { RadioGroup, RadioItem } from '@dave/react';
+import { RadioGroup, RadioItem } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function RadioDemos() {

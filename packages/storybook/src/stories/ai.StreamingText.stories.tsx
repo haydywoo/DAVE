@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { StreamingText } from '@dave/react';
+import { StreamingText } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof StreamingText> = {
   title: 'AI/StreamingText',

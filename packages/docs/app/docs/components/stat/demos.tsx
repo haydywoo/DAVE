@@ -1,6 +1,6 @@
 'use client';
 
-import { Stat } from '@dave/react';
+import { Stat } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const UsersIcon = () => (

@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert } from '@dave/react';
+import { Alert } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 import { useState } from 'react';
 

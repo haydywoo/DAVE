@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ThinkingBlock } from '@dave/react';
+import { ThinkingBlock } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof ThinkingBlock> = {
   title: 'AI/ThinkingBlock',
