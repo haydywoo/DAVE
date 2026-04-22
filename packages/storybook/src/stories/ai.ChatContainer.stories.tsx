@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ChatContainer, Message, MessageInput } from '@dave/react';
+import { ChatContainer, Message, MessageInput } from '@haydywoo/dave-react';
 
 const MESSAGES = [
   { role: 'user' as const,      content: 'What is the capital of France?' },

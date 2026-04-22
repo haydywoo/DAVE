@@ -1,6 +1,6 @@
 'use client';
 
-import { AreaChart } from '@dave/charts';
+import { AreaChart } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const monthly = [

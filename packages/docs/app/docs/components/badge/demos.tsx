@@ -1,6 +1,6 @@
 'use client';
 
-import { Badge } from '@dave/react';
+import { Badge } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function BadgeDemos() {

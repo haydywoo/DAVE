@@ -1,6 +1,6 @@
 'use client';
 
-import { StreamingText } from '@dave/react';
+import { StreamingText } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function StreamingTextDemos() {

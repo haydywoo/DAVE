@@ -40,7 +40,7 @@ export default function ChartsOverviewPage() {
         <h2 className="font-display font-semibold text-2xl text-foreground mb-3">Installation</h2>
         <p className="text-sm text-fg-secondary mb-4">Charts live in a separate package so you only pay the bundle cost if you use them.</p>
         <pre className="rounded-[6px] bg-surface border border-border px-4 py-3 text-xs font-code text-foreground overflow-x-auto">
-          {`pnpm add @dave/charts`}
+          {`pnpm add @haydywoo/dave-charts`}
         </pre>
 
         <h2 className="font-display font-semibold text-2xl text-foreground mt-10 mb-3">Colour palette</h2>

@@ -1,6 +1,6 @@
 'use client';
 
-import { DonutChart } from '@dave/charts';
+import { DonutChart } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const traffic = [

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Slider } from '@dave/react';
+import { Slider } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function SliderDemos() {

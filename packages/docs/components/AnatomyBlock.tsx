@@ -1,4 +1,4 @@
-import { CodeBlock } from '@dave/react';
+import { CodeBlock } from '@haydywoo/dave-react';
 
 interface AnatomyBlockProps {
   children: string;

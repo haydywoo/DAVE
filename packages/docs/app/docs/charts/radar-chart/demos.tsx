@@ -1,6 +1,6 @@
 'use client';
 
-import { RadarChart } from '@dave/charts';
+import { RadarChart } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const skills = [

@@ -1,6 +1,6 @@
 'use client';
 
-import { Checkbox } from '@dave/react';
+import { Checkbox } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function CheckboxDemos() {

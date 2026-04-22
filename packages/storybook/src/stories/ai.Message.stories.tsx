@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Message } from '@dave/react';
+import { Message } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Message> = {
   title: 'AI/Message',

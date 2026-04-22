@@ -1,7 +1,7 @@
 'use client';
 
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
-import { CopyButton } from '@dave/react';
+import { CopyButton } from '@haydywoo/dave-react';
 
 const LANG_LABELS: Record<string, string> = {
   js: 'JavaScript', javascript: 'JavaScript',

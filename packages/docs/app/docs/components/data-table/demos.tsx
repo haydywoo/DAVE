@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { DataTable, Badge } from '@dave/react';
-import type { ColumnDef } from '@dave/react';
+import { DataTable, Badge } from '@haydywoo/dave-react';
+import type { ColumnDef } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 // ─── Sample data ──────────────────────────────────────────────────────────────

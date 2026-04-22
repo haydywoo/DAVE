@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { SourceCard } from '@dave/react';
+import { SourceCard } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof SourceCard> = {
   title: 'AI/SourceCard',

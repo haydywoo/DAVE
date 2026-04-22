@@ -20,10 +20,10 @@ const config: StorybookConfig = {
     config.resolve ??= {};
     config.resolve.alias = {
       ...config.resolve.alias,
-      // Resolve @dave/react directly from source — no build step needed
-      '@dave/react': path.resolve(__dirname, '../../components/src/index.ts'),
-      '@dave/charts': path.resolve(__dirname, '../../charts/src/index.ts'),
-      '@dave/tokens': path.resolve(__dirname, '../../tokens'),
+      // Resolve @haydywoo/dave-react directly from source — no build step needed
+      '@haydywoo/dave-react': path.resolve(__dirname, '../../components/src/index.ts'),
+      '@haydywoo/dave-charts': path.resolve(__dirname, '../../charts/src/index.ts'),
+      '@haydywoo/dave-tokens': path.resolve(__dirname, '../../tokens'),
     };
     config.optimizeDeps ??= {};
     config.optimizeDeps.include = [

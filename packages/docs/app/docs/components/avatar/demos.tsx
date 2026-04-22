@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, AvatarGroup } from '@dave/react';
+import { Avatar, AvatarGroup } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const IMG = '/avatar.jpg';

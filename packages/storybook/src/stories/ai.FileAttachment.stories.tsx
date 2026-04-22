@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { FileAttachment } from '@dave/react';
+import { FileAttachment } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof FileAttachment> = {
   title: 'AI/FileAttachment',

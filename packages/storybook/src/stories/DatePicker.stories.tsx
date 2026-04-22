@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { DatePicker } from '@dave/react';
+import { DatePicker } from '@haydywoo/dave-react';
 import { addDays } from 'date-fns';
 
 const meta: Meta<typeof DatePicker> = {

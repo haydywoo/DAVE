@@ -1,6 +1,6 @@
 'use client';
 
-import { Popover, PopoverTrigger, PopoverContent, PopoverClose, Button, Input, Select, SelectItem } from '@dave/react';
+import { Popover, PopoverTrigger, PopoverContent, PopoverClose, Button, Input, Select, SelectItem } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function PopoverDemos() {

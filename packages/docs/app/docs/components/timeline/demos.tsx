@@ -1,6 +1,6 @@
 'use client';
 
-import { Timeline, TimelineItem } from '@dave/react';
+import { Timeline, TimelineItem } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const CheckIcon = () => (

@@ -1,6 +1,6 @@
 'use client';
 
-import { Input } from '@dave/react';
+import { Input } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const SearchIcon = () => (

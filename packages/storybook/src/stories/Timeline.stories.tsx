@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Timeline, TimelineItem } from '@dave/react';
+import { Timeline, TimelineItem } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Timeline> = {
   title: 'Data Display/Timeline',

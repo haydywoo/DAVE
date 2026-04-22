@@ -3,7 +3,7 @@
 import {
   Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDivider, CardImage,
   Button, Badge, Avatar,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const IMG_LANDSCAPE = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80&auto=format&fit=crop';

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CodeBlock } from '@dave/react';
+import { Card, CodeBlock } from '@haydywoo/dave-react';
 
 interface PreviewProps {
   children: React.ReactNode;

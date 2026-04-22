@@ -1,6 +1,6 @@
 'use client';
 
-import { ScatterPlot } from '@dave/charts';
+import { ScatterPlot } from '@haydywoo/dave-charts';
 import { Preview } from '@/components/Preview';
 
 const marketing = [

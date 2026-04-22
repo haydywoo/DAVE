@@ -10,7 +10,7 @@ import {
   ContextMenuSub,
   ContextMenuSubTrigger,
   ContextMenuSubContent,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const EditIcon = () => (

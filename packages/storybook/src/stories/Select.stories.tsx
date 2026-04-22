@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Select, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectField } from '@dave/react';
+import { Select, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectField } from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Select',

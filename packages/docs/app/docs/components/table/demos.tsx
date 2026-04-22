@@ -5,8 +5,8 @@ import {
   Table, TableHeader, TableBody, TableFooter,
   TableRow, TableHead, TableCell,
   Badge, Avatar, Checkbox, Pagination,
-} from '@dave/react';
-import type { SortDirection } from '@dave/react';
+} from '@haydywoo/dave-react';
+import type { SortDirection } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const members = [

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
   Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDivider, CardImage,
   Button, Badge, Avatar,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Card',

@@ -1,11 +1,37 @@
 {
-  "name": "@dave/tokens",
+  "name": "@haydywoo/dave-tokens",
   "version": "0.1.0",
-  "description": "DAVE design tokens — platform-agnostic DTCG source of truth",
-  "main": "dist/index.js",
+  "description": "DAVE design tokens — colours, shadows, radii as CSS custom properties. Source of truth for the DAVE design system.",
+  "main": "./dist/tokens.css",
+  "style": "./dist/tokens.css",
   "scripts": {
     "build": "style-dictionary build --config style-dictionary.config.json",
     "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "css-variables",
+    "dtcg"
+  ],
+  "author": "Haydyn Phillips",
+  "license": "MIT",
+  "homepage": "https://haydywoo.github.io/DAVE/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haydywoo/DAVE.git",
+    "directory": "packages/tokens"
+  },
+  "bugs": {
+    "url": "https://github.com/haydywoo/DAVE/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "style-dictionary": "^4.0.0"

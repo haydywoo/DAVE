@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@dave/react';
+import { Button } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const PlusIcon = () => (

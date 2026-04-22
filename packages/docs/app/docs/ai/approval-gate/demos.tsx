@@ -1,6 +1,6 @@
 'use client';
 
-import { ApprovalGate } from '@dave/react';
+import { ApprovalGate } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function ApprovalGateDemos() {

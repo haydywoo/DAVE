@@ -1,6 +1,6 @@
 'use client';
 
-import { SourceCard } from '@dave/react';
+import { SourceCard } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function SourceCardDemos() {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Calendar } from '@dave/react';
+import { Calendar } from '@haydywoo/dave-react';
 import { addDays, format } from 'date-fns';
 import { Preview } from '@/components/Preview';
 

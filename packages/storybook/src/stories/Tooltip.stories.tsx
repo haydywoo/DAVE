@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Tooltip, Button, Badge } from '@dave/react';
+import { Tooltip, Button, Badge } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof Tooltip> = {
   title: 'Components/Tooltip',

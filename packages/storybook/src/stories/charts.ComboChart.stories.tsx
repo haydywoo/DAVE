@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ComboChart } from '@dave/charts';
+import { ComboChart } from '@haydywoo/dave-charts';
 
 const meta: Meta<typeof ComboChart> = {
   title: 'Charts/ComboChart',

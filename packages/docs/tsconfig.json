@@ -16,8 +16,8 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"],
-      "@dave/react": ["../components/src/index.ts"],
-      "@dave/charts": ["../charts/src/index.ts"]
+      "@haydywoo/dave-react": ["../components/src/index.ts"],
+      "@haydywoo/dave-charts": ["../charts/src/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

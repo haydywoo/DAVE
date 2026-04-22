@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Stepper, Button } from '@dave/react';
+import { Stepper, Button } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const steps = [

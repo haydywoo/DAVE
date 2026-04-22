@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent, Card } from '@dave/react';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent, Card } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const singleCode = `<Accordion type="single" collapsible>

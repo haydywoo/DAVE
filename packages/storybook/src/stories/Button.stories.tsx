@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Button } from '@dave/react';
+import { Button } from '@haydywoo/dave-react';
 
 const PlusIcon = () => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { FileInput } from '@dave/react';
+import { FileInput } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof FileInput> = {
   title: 'Forms/FileInput',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { CodeBlock } from '@dave/react';
+import { CodeBlock } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof CodeBlock> = {
   title: 'AI/CodeBlock',

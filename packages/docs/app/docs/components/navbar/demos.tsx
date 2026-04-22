@@ -6,7 +6,7 @@ import {
   NavbarLink, NavbarDivider, NavbarSearch, NavbarMenuButton,
   NavbarMobileMenu, NavbarMobileLink,
   Button, Avatar,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const Logo = () => (

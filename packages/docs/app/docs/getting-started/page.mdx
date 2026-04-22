@@ -32,7 +32,7 @@ pnpm add -D typescript@^5.4.0
 Install the component library, token package, and optionally the chart package:
 
 ```bash
-pnpm add @dave/react @dave/tokens @dave/charts
+pnpm add @haydywoo/dave-react @haydywoo/dave-tokens @haydywoo/dave-charts
 ```
 
 > **Not published yet.** See [Consuming from source](#consuming-from-source) below for a temporary workaround.
@@ -43,7 +43,7 @@ Import the token CSS file into your global stylesheet. This sets up all the CSS 
 
 ```css
 /* globals.css */
-@import '@dave/tokens/dist/tokens.css';
+@import '@haydywoo/dave-tokens/dist/tokens.css';
 
 @tailwind base;
 @tailwind components;
@@ -58,7 +58,7 @@ Add `transpilePackages` so Next transpiles DAVE's ESM/CJS output consistently:
 // next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['@dave/react', '@dave/charts', 'recharts'],
+  transpilePackages: ['@haydywoo/dave-react', '@haydywoo/dave-charts', 'recharts'],
 };
 
 export default nextConfig;
@@ -73,8 +73,8 @@ Add the complete semantic colour map, font families, and shadow tokens to your `
 module.exports = {
   content: [
     './app/**/*.{ts,tsx}',
-    './node_modules/@dave/react/dist/**/*.js',
-    './node_modules/@dave/charts/dist/**/*.js',
+    './node_modules/@haydywoo/dave-react/dist/**/*.js',
+    './node_modules/@haydywoo/dave-charts/dist/**/*.js',
   ],
   theme: {
     extend: {
@@ -143,7 +143,7 @@ module.exports = {
 ## Use a component
 
 ```tsx
-import { Button, Card, CardHeader, CardTitle, CardContent } from '@dave/react';
+import { Button, Card, CardHeader, CardTitle, CardContent } from '@haydywoo/dave-react';
 
 export default function Page() {
   return (
@@ -164,7 +164,7 @@ export default function Page() {
 Charts use `index` (the key for the x-axis category) and `categories` (an array of keys to plot as series):
 
 ```tsx
-import { BarChart } from '@dave/charts';
+import { BarChart } from '@haydywoo/dave-charts';
 
 const data = [
   { month: 'Jan', sales: 42, refunds: 6 },
@@ -194,13 +194,13 @@ cd ../components       && pnpm pack --pack-destination /tmp/dave-tarballs
 cd ../charts           && pnpm pack --pack-destination /tmp/dave-tarballs
 ```
 
-In your consumer app, add a `pnpm.overrides` entry so `@dave/react` resolves `@dave/tokens` to the local tarball rather than trying the registry:
+In your consumer app, add a `pnpm.overrides` entry so `@haydywoo/dave-react` resolves `@haydywoo/dave-tokens` to the local tarball rather than trying the registry:
 
 ```json
 {
   "pnpm": {
     "overrides": {
-      "@dave/tokens": "file:/tmp/dave-tarballs/dave-tokens-0.1.0.tgz"
+      "@haydywoo/dave-tokens": "file:/tmp/dave-tarballs/dave-tokens-0.1.0.tgz"
     }
   }
 }

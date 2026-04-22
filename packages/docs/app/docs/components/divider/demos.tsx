@@ -1,6 +1,6 @@
 'use client';
 
-import { Divider } from '@dave/react';
+import { Divider } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function DividerDemos() {

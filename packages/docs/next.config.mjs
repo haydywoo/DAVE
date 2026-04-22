@@ -37,8 +37,8 @@ const nextConfig = {
   transpilePackages: ['recharts', 'victory-vendor', 'd3-scale', 'd3-format', 'd3-shape', 'd3-path'],
   experimental: {},
   webpack: (config) => {
-    config.resolve.alias['@dave/react'] = daveDist;
-    config.resolve.alias['@dave/charts'] = chartsDist;
+    config.resolve.alias['@haydywoo/dave-react'] = daveDist;
+    config.resolve.alias['@haydywoo/dave-charts'] = chartsDist;
     return config;
   },
 };

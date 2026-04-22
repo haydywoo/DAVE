@@ -1,6 +1,6 @@
 'use client';
 
-import { Kbd } from '@dave/react';
+import { Kbd } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function KbdDemos() {

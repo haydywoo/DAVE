@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ToolCall, ToolResult } from '@dave/react';
+import { ToolCall, ToolResult } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof ToolCall> = {
   title: 'AI/ToolCall',

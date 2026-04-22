@@ -1,6 +1,6 @@
 'use client';
 
-import { Tooltip, Button, Badge, Avatar } from '@dave/react';
+import { Tooltip, Button, Badge, Avatar } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function TooltipDemos() {

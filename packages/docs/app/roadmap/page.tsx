@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Callout } from '@dave/react';
+import { Callout } from '@haydywoo/dave-react';
 import { DotField } from '@/components/DotField';
 
 export const metadata: Metadata = {

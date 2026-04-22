@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Chip } from '@dave/react';
+import { Chip } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function ChipDemos() {

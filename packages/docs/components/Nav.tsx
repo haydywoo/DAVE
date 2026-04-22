@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { ThemeToggle } from './ThemeToggle';
-import { Tooltip } from '@dave/react';
+import { Tooltip } from '@haydywoo/dave-react';
 
 function openSearch() {
   window.dispatchEvent(new Event('dave:open-search'));

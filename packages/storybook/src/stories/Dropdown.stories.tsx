@@ -14,7 +14,7 @@ import {
   DropdownSubTrigger,
   DropdownSubContent,
   Button,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Dropdown',

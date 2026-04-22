@@ -1,6 +1,6 @@
 'use client';
 
-import { Skeleton, Card } from '@dave/react';
+import { Skeleton, Card } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function SkeletonDemos() {

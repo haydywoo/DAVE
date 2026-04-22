@@ -1,6 +1,6 @@
 'use client';
 
-import { FileAttachment } from '@dave/react';
+import { FileAttachment } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 export function FileAttachmentDemos() {

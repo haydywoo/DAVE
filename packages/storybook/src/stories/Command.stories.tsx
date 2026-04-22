@@ -11,7 +11,7 @@ import {
   CommandSeparator,
   CommandDialog,
   Button,
-} from '@dave/react';
+} from '@haydywoo/dave-react';
 
 const meta: Meta = {
   title: 'Components/Command',

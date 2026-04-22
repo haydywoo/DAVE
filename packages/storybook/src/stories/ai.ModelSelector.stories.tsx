@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ModelSelector } from '@dave/react';
+import { ModelSelector } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof ModelSelector> = {
   title: 'AI/ModelSelector',

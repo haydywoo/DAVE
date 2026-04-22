@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ConversationList } from '@dave/react';
+import { ConversationList } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const FLAT = [

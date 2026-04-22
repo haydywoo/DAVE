@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Badge, Callout } from '@dave/react';
+import { Badge, Callout } from '@haydywoo/dave-react';
 
 export const metadata: Metadata = { title: 'Observable Plot — Experimental' };
 
@@ -12,7 +12,7 @@ export default function ObservablePlotPage() {
         <Badge variant="warning" size="xs">Experimental</Badge>
       </div>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
-        Exploratory prototypes using <a href="https://observablehq.com/plot/" target="_blank" rel="noopener noreferrer" className="text-accent-foreground underline underline-offset-2 hover:text-accent transition-colors">Observable Plot</a> — a grammar-of-graphics library from the Observable team. These sit alongside the existing Recharts-based <code className="font-code text-xs bg-surface px-1 py-0.5 rounded-[3px] border border-border">@dave/charts</code> to evaluate whether Plot is worth building out as a second charting layer.
+        Exploratory prototypes using <a href="https://observablehq.com/plot/" target="_blank" rel="noopener noreferrer" className="text-accent-foreground underline underline-offset-2 hover:text-accent transition-colors">Observable Plot</a> — a grammar-of-graphics library from the Observable team. These sit alongside the existing Recharts-based <code className="font-code text-xs bg-surface px-1 py-0.5 rounded-[3px] border border-border">@haydywoo/dave-charts</code> to evaluate whether Plot is worth building out as a second charting layer.
       </p>
 
       <Callout title="What we're testing" className="mb-10">

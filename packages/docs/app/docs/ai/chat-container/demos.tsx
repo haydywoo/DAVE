@@ -1,6 +1,6 @@
 'use client';
 
-import { ChatContainer, Message, MessageInput } from '@dave/react';
+import { ChatContainer, Message, MessageInput } from '@haydywoo/dave-react';
 import { Preview } from '@/components/Preview';
 
 const MESSAGES = [

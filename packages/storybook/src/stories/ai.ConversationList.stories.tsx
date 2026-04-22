@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ConversationList } from '@dave/react';
+import { ConversationList } from '@haydywoo/dave-react';
 
 const meta: Meta<typeof ConversationList> = {
   title: 'AI/ConversationList',

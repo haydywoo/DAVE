@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { BarChart } from '@dave/charts';
+import { BarChart } from '@haydywoo/dave-charts';
 
 const meta: Meta<typeof BarChart> = {
   title: 'Charts/BarChart',

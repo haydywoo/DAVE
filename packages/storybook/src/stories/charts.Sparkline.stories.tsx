@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Sparkline } from '@dave/charts';
+import { Sparkline } from '@haydywoo/dave-charts';
 
 const meta: Meta<typeof Sparkline> = {
   title: 'Charts/Sparkline',
