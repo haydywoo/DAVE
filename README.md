@@ -2,6 +2,11 @@
 
 **Design · AdVanced · Engineering**
 
+[![npm — dave-react](https://img.shields.io/npm/v/@haydywoo/dave-react?label=%40haydywoo%2Fdave-react)](https://www.npmjs.com/package/@haydywoo/dave-react)
+[![npm — dave-charts](https://img.shields.io/npm/v/@haydywoo/dave-charts?label=%40haydywoo%2Fdave-charts)](https://www.npmjs.com/package/@haydywoo/dave-charts)
+[![npm — dave-tokens](https://img.shields.io/npm/v/@haydywoo/dave-tokens?label=%40haydywoo%2Fdave-tokens)](https://www.npmjs.com/package/@haydywoo/dave-tokens)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational)](./LICENSE)
+
 DAVE was created so I can experiment rapidly building outputs for mixed-methods research, AGUI and software for various projects.
 It's built on the shoulders of a lot of amazing open source work, but it's ultimately for me — a sandbox to learn, iterate, and build things I actually want to use in my projects. If it happens to be useful to you too, that's a wonderful bonus.
 
@@ -66,11 +71,13 @@ Bar Chart · Line Chart · Area Chart · Donut Chart · Sparkline · Scatter Plo
 ### Installation
 
 ```bash
-npm install @haydywoo/dave-react @haydywoo/dave-tokens
+pnpm add @haydywoo/dave-react @haydywoo/dave-tokens
 
 # Peer dependencies
-npm install react react-dom
+pnpm add react react-dom
 ```
+
+Full setup (Tailwind config, Next.js `transpilePackages`, theming) at [haydywoo.github.io/DAVE/docs/getting-started](https://haydywoo.github.io/DAVE/docs/getting-started/).
 
 ### Setup
 
