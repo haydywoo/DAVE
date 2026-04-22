@@ -40,7 +40,7 @@ export function SourceCard({ title, url, favicon, snippet, index, className }: S
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'group flex flex-col gap-1.5 rounded-[4px] border border-border bg-card p-3',
+        'group flex flex-col gap-1.5 rounded-[6px] border border-border bg-card p-3',
         'transition-colors hover:bg-surface hover:border-border-strong',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         className,

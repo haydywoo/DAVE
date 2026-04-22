@@ -58,7 +58,7 @@ export function Switch({
       )}
     >
       <RadixSwitch.Thumb
-        className={cn(thumbSizes[size], 'block rounded-full bg-white shadow-sm transition-transform', 'data-[state=unchecked]:translate-x-0')}
+        className={cn(thumbSizes[size], 'block rounded-full bg-white transition-transform', 'data-[state=unchecked]:translate-x-0')}
       />
     </RadixSwitch.Root>
   );

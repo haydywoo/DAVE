@@ -28,7 +28,7 @@ const SearchIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="n
 
 export const Inline: StoryObj = {
   render: () => (
-    <div className="w-[420px] border border-border rounded-[4px] bg-card shadow-xl">
+    <div className="w-[420px] border border-border rounded-[6px] bg-card shadow-raised">
       <Command>
         <CommandInput placeholder="Search commands…" />
         <CommandList>
@@ -93,7 +93,7 @@ export const Dialog: StoryObj = {
 
 export const WithDisabledItems: StoryObj = {
   render: () => (
-    <div className="w-[420px] border border-border rounded-[4px] bg-card shadow-xl">
+    <div className="w-[420px] border border-border rounded-[6px] bg-card shadow-raised">
       <Command>
         <CommandInput placeholder="Search…" />
         <CommandList>

@@ -24,7 +24,7 @@ export function ThinkingBlock({
 }: ThinkingBlockProps) {
   return (
     <Collapsible defaultOpen={isStreaming || defaultOpen} disabled={isStreaming}>
-      <div className={cn('rounded-[4px] border border-border bg-surface', className)}>
+      <div className={cn('rounded-[6px] border border-border bg-surface', className)}>
         {/* Header */}
         <CollapsibleTrigger showChevron={false} className="flex w-full items-center gap-2 px-3 py-2 text-left">
           {isStreaming ? (

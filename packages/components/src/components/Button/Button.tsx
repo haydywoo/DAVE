@@ -18,15 +18,15 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 visited:text-current active:opacity-80';
+  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 active:opacity-80';
 
 const variants: Record<ButtonVariant, string> = {
-  primary:   'bg-accent text-accent-on hover:bg-accent-hover',
-  secondary: 'bg-background text-foreground border border-border hover:bg-surface hover:border-border-strong',
-  ghost:     'bg-transparent text-foreground hover:bg-surface',
-  soft:      'bg-accent-subtle text-accent-foreground hover:bg-accent-subtle-border',
-  link:      'bg-transparent text-accent underline underline-offset-4 hover:text-accent-hover',
-  destructive: 'bg-error text-error-foreground hover:bg-error-hover',
+  primary:   'bg-accent text-accent-on visited:text-accent-on hover:bg-accent-hover',
+  secondary: 'bg-background text-foreground visited:text-foreground border border-border hover:bg-surface hover:border-border-strong',
+  ghost:     'bg-transparent text-foreground visited:text-foreground hover:bg-surface',
+  soft:      'bg-accent-subtle text-accent-foreground visited:text-accent-foreground hover:bg-accent-subtle-border',
+  link:      'bg-transparent text-accent visited:text-accent underline underline-offset-4 hover:text-accent-hover',
+  destructive: 'bg-error text-error-foreground visited:text-error-foreground hover:bg-error-hover',
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -74,8 +74,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
         <><Spinner size={size} />{!isIconOnly && children}</>
       ) : isIconOnly ? (
         icon
-      ) : (
+      ) : leftIcon || rightIcon ? (
         <>{leftIcon}{children}{rightIcon}</>
+      ) : (
+        children
       )}
     </Comp>
   );

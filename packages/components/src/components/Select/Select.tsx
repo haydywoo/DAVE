@@ -52,12 +52,12 @@ const triggerVariants: Record<SelectVariant, string> = {
     'border-border bg-card text-foreground ' +
     'hover:bg-surface data-[state=open]:bg-surface ' +
     'data-[placeholder]:text-fg-secondary ' +
-    'disabled:cursor-not-allowed disabled:opacity-50',
+    'disabled:cursor-not-allowed disabled:opacity-40',
   ghost:
     'border-transparent bg-transparent text-foreground ' +
     'hover:bg-surface data-[state=open]:bg-surface ' +
     'data-[placeholder]:text-fg-secondary ' +
-    'disabled:cursor-not-allowed disabled:opacity-50',
+    'disabled:cursor-not-allowed disabled:opacity-40',
 };
 
 export function Select({
@@ -87,7 +87,7 @@ export function Select({
         id={id}
         className={cn(
           'inline-flex items-center rounded-[3px] border transition-colors',
-          'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
           iconOnly ? 'justify-center' : 'justify-between gap-2',
           triggerVariants[variant],
           error && 'border-error',

@@ -122,7 +122,7 @@ export function Dropzone({
             : error
             ? 'border-error bg-error-subtle'
             : 'border-border bg-card hover:border-border-strong hover:bg-surface',
-          disabled && 'pointer-events-none opacity-50 cursor-not-allowed',
+          disabled && 'pointer-events-none opacity-40 cursor-not-allowed',
         )}
       >
         <input

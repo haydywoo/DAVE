@@ -25,7 +25,7 @@ const GROUPED = [
 
 export const Flat: Story = {
   render: () => (
-    <div className="w-56 border border-border rounded-[4px] p-2">
+    <div className="w-56 border border-border rounded-[6px] p-2">
       <ConversationList
         conversations={FLAT}
         activeId="1"
@@ -39,7 +39,7 @@ export const Flat: Story = {
 
 export const Grouped: Story = {
   render: () => (
-    <div className="w-56 border border-border rounded-[4px] p-2">
+    <div className="w-56 border border-border rounded-[6px] p-2">
       <ConversationList
         conversations={GROUPED}
         activeId="2"

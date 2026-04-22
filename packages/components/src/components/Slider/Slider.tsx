@@ -106,7 +106,7 @@ export function Slider({
             aria-label={displayValue.length > 1 ? `Value ${i + 1}` : (label ?? 'Value')}
             className={cn(
               thumbSize[size],
-              'block rounded-full border-2 border-accent bg-card shadow-sm',
+              'block rounded-full border-2 border-accent bg-card',
               'transition-colors',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
               'disabled:pointer-events-none disabled:opacity-40',
