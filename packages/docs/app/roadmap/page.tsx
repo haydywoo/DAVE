@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { Callout } from '@dave/react';
+import { DotField } from '@/components/DotField';
 
 export const metadata: Metadata = {
   title: 'Roadmap',
@@ -72,19 +74,14 @@ const statusConfig: Record<string, { label: string; color: string; dot: string }
 
 export default function RoadmapPage() {
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        backgroundImage: 'radial-gradient(circle, color-mix(in srgb, currentColor 8%, transparent) 1px, transparent 1px)',
-        backgroundSize: '24px 24px',
-      }}
-    >
-      <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
+    <div className="min-h-screen relative">
+      <DotField />
+      <div className="mx-auto max-w-2xl px-6 py-16 md:py-24 relative">
 
         {/* Header */}
         <div className="mb-16">
           <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-4">Roadmap</p>
-          <h1 className="font-display font-extrabold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
+          <h1 className="font-display font-semibold text-5xl md:text-6xl text-foreground mb-6 leading-tight">
             What I want to build next.
           </h1>
           <p className="text-fg-secondary leading-relaxed">
@@ -104,7 +101,7 @@ export default function RoadmapPage() {
                 <div className="flex items-start gap-6">
 
                   {/* Number */}
-                  <span className="font-display font-extrabold text-4xl text-fg-disabled leading-none select-none shrink-0 w-12 text-right">
+                  <span className="font-display font-semibold text-4xl text-fg-disabled leading-none select-none shrink-0 w-12 text-right">
                     {item.id}
                   </span>
 
@@ -120,7 +117,7 @@ export default function RoadmapPage() {
                     </div>
 
                     {/* Title */}
-                    <h2 className="font-display font-extrabold text-xl text-foreground mb-3 leading-snug">
+                    <h2 className="font-display font-semibold text-2xl text-foreground mb-3 leading-snug">
                       {item.title}
                     </h2>
 
@@ -146,11 +143,9 @@ export default function RoadmapPage() {
         </div>
 
         {/* Footer note */}
-        <div className="mt-16 rounded-[3px] border border-border bg-surface p-6">
-          <p className="text-sm text-fg-secondary leading-relaxed">
-            This list changes. Something might jump the queue because I need it for a project. Something might disappear because it turned out to be a bad idea. That's fine — it's mine.
-          </p>
-        </div>
+        <Callout className="mt-16 p-6">
+          This list changes. Something might jump the queue because I need it for a project. Something might disappear because it turned out to be a bad idea. That's fine — it's mine.
+        </Callout>
 
       </div>
     </div>
