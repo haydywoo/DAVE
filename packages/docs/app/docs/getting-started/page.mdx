@@ -8,8 +8,6 @@ DAVE is a React component library built on Tailwind CSS. Components are unstyled
 
 <Disclaimer>
   <strong className="text-foreground font-semibold">Fair warning</strong> — DAVE is a personal design system, built for my own projects first. It's MIT licensed and free to use, but there's no stability guarantee, no versioning promise, and no support line. Things change when I need them to. Use it, fork it, adapt it — just go in with eyes open.
-
-  DAVE isn't published to npm yet. If you want to try it today, see [Consuming from source](#consuming-from-source) below.
 </Disclaimer>
 
 ## Prerequisites
@@ -34,8 +32,6 @@ Install the component library, token package, and optionally the chart package:
 ```bash
 pnpm add @haydywoo/dave-react @haydywoo/dave-tokens @haydywoo/dave-charts
 ```
-
-> **Not published yet.** See [Consuming from source](#consuming-from-source) below for a temporary workaround.
 
 ## Set up tokens
 
@@ -179,42 +175,6 @@ const data = [
   height={240}
 />
 ```
-
-## Consuming from source
-
-Until DAVE is published to npm, you can consume it directly from this repo via `pnpm pack`. This produces tarballs that resolve `workspace:*` dependencies to real versions.
-
-From the DAVE checkout:
-
-```bash
-# Pack all three packages
-mkdir -p /tmp/dave-tarballs
-cd packages/tokens     && pnpm pack --pack-destination /tmp/dave-tarballs
-cd ../components       && pnpm pack --pack-destination /tmp/dave-tarballs
-cd ../charts           && pnpm pack --pack-destination /tmp/dave-tarballs
-```
-
-In your consumer app, add a `pnpm.overrides` entry so `@haydywoo/dave-react` resolves `@haydywoo/dave-tokens` to the local tarball rather than trying the registry:
-
-```json
-{
-  "pnpm": {
-    "overrides": {
-      "@haydywoo/dave-tokens": "file:/tmp/dave-tarballs/dave-tokens-0.1.0.tgz"
-    }
-  }
-}
-```
-
-Then install from the tarballs:
-
-```bash
-pnpm add /tmp/dave-tarballs/dave-tokens-0.1.0.tgz \
-        /tmp/dave-tarballs/dave-react-0.1.0.tgz \
-        /tmp/dave-tarballs/dave-charts-0.1.0.tgz
-```
-
-> This is a temporary workaround. Publishing to npm is on the roadmap.
 
 ## TypeScript: CSS side-effect imports
 
