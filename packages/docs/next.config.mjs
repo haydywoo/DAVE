@@ -30,6 +30,9 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   basePath: isProd ? '/DAVE' : '',
   assetPrefix: isProd ? '/DAVE/' : '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? '/DAVE' : '',
+  },
   images: { unoptimized: true },
   transpilePackages: ['recharts', 'victory-vendor', 'd3-scale', 'd3-format', 'd3-shape', 'd3-path'],
   experimental: {},

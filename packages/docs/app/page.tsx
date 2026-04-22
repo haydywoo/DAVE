@@ -80,7 +80,7 @@ export default function HomePage() {
       <div className="mb-16">
         <h2 className="text-xs font-semibold text-fg-secondary uppercase tracking-wider mb-4"><span className="text-fg-disabled">03 · </span>Conceptualised by</h2>
         <div className="flex items-center gap-3">
-          <Avatar src="/haydyn.jpg" alt="Haydyn Phillips" initials="HP" size="md" />
+          <Avatar src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/haydyn.jpg`} alt="Haydyn Phillips" initials="HP" size="md" />
           <div>
             <a
               href="https://www.linkedin.com/in/hphillips/"
