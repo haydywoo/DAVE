@@ -76,3 +76,29 @@ Always `opacity-40`. Never `opacity-50` or `opacity-60`.
 - `packages/tokens` → `@dave/tokens` (tokens.css)
 - `packages/docs` → Next.js docs site
 - `packages/storybook` → Storybook
+
+## Workspace dev loop
+The docs app aliases `@dave/react` → `packages/components/dist/index.js` via webpack (see `packages/docs/next.config.mjs`). The dev server does **not** hot-reload this dist. So when editing `packages/components/src/`:
+
+1. `pnpm -F @dave/react build` to update dist
+2. Restart `pnpm -F @dave/docs dev` (Ctrl+C then re-run)
+
+Symptom if you skip this: your component edits don't appear, even after save and browser refresh.
+
+## Static export + basePath
+Docs deploy via `output: 'export'` to GitHub Pages under `/DAVE`. Next's `basePath` auto-prefixes `<Link>` href and bundled assets, but **not** raw `<img src>`, inline `background-image` URLs, or `<a href>` outside `next/link`. For these, prepend the base path manually:
+
+```tsx
+<img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/my-asset.jpg`} />
+```
+
+`NEXT_PUBLIC_BASE_PATH` is wired in `next.config.mjs` (empty in dev, `/DAVE` in prod).
+
+## How to work here
+
+Behavioural rules, adapted from common LLM-coding failure modes. For trivial tasks use judgement — these bias toward caution over speed.
+
+- **Think before coding.** State assumptions up front. If a task has more than one reasonable interpretation, present them — don't pick silently. If a simpler approach exists, say so and push back when warranted.
+- **Verify the rendered output, not just the source.** Typecheck and build success are necessary but not sufficient. When a fix passes through Tailwind / `twMerge` / webpack / static export, grep the actually-produced HTML or CSS before declaring a change done. Pattern: a `cn()` class that looks correct in source can still be dropped by `twMerge` as a conflict-loser.
+- **Surgical edits.** Every changed line must trace to the user's request. Don't "improve" adjacent code, comments, formatting, or unrelated dead code you notice in passing — flag it instead. Match existing style even if you'd write it differently.
+- **Minimum viable change.** No speculative features, no configurability that wasn't asked for, no error handling for cases that can't happen. If a diff balloons past what feels right, ask: could this be half the code?
