@@ -8,15 +8,34 @@ DAVE is a React component library built on Tailwind CSS. Components are unstyled
 
 <Disclaimer>
   <strong className="text-foreground font-semibold">Fair warning</strong> — DAVE is a personal design system, built for my own projects first. It's MIT licensed and free to use, but there's no stability guarantee, no versioning promise, and no support line. Things change when I need them to. Use it, fork it, adapt it — just go in with eyes open.
+
+  DAVE isn't published to npm yet. If you want to try it today, see [Consuming from source](#consuming-from-source) below.
 </Disclaimer>
+
+## Prerequisites
+
+DAVE targets **Next.js 14 App Router** (other React frameworks work but aren't tested). Start from a fresh `create-next-app` scaffold with TypeScript and Tailwind enabled:
+
+```bash
+pnpm create next-app@14 my-app --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"
+cd my-app
+```
+
+Pin TypeScript to 5.x — TypeScript 6 deprecates `baseUrl`, which the Next scaffold still uses:
+
+```bash
+pnpm add -D typescript@^5.4.0
+```
 
 ## Installation
 
-Install the component library and token package:
+Install the component library, token package, and optionally the chart package:
 
 ```bash
-pnpm add @dave/react @dave/tokens
+pnpm add @dave/react @dave/tokens @dave/charts
 ```
+
+> **Not published yet.** See [Consuming from source](#consuming-from-source) below for a temporary workaround.
 
 ## Set up tokens
 
@@ -31,9 +50,23 @@ Import the token CSS file into your global stylesheet. This sets up all the CSS 
 @tailwind utilities;
 ```
 
+## Configure Next.js
+
+Add `transpilePackages` so Next transpiles DAVE's ESM/CJS output consistently:
+
+```js
+// next.config.mjs
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['@dave/react', '@dave/charts', 'recharts'],
+};
+
+export default nextConfig;
+```
+
 ## Configure Tailwind
 
-Add the semantic colour map to your `tailwind.config.js` so component class names resolve correctly:
+Add the complete semantic colour map, font families, and shadow tokens to your `tailwind.config.js`. The `content` array must include DAVE's compiled output so Tailwind's JIT generates the classes used inside the library:
 
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -41,27 +74,66 @@ module.exports = {
   content: [
     './app/**/*.{ts,tsx}',
     './node_modules/@dave/react/dist/**/*.js',
+    './node_modules/@dave/charts/dist/**/*.js',
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['var(--font-display)', 'sans-serif'],
+        body:    ['var(--font-body)',    'sans-serif'],
+        code:    ['var(--font-code)',    'monospace'],
+      },
       colors: {
         background:     'var(--color-background)',
         surface:        'var(--color-surface)',
         card:           'var(--color-card)',
+        raised:         'var(--color-raised)',
         foreground:     'var(--color-foreground)',
         'fg-secondary': 'var(--color-foreground-secondary)',
+        'fg-subdued':   'var(--color-foreground-subdued)',
+        'fg-disabled':  'var(--color-foreground-disabled)',
         border: {
           DEFAULT: 'var(--color-border)',
           strong:  'var(--color-border-strong)',
         },
         accent: {
-          DEFAULT:    'var(--color-accent)',
-          hover:      'var(--color-accent-hover)',
-          subtle:     'var(--color-accent-subtle)',
-          border:     'var(--color-accent-border)',
-          foreground: 'var(--color-accent-foreground)',
+          DEFAULT:         'var(--color-accent)',
+          hover:           'var(--color-accent-hover)',
+          subtle:          'var(--color-accent-subtle)',
+          'subtle-border': 'var(--color-accent-subtle-border)',
+          border:          'var(--color-accent-border)',
+          foreground:      'var(--color-accent-foreground)',
+          on:              'var(--color-on-accent)',
         },
-        // ... success, warning, error
+        success: {
+          subtle:     'var(--color-success-subtle)',
+          border:     'var(--color-success-border)',
+          DEFAULT:    'var(--color-success)',
+          foreground: 'var(--color-success-foreground)',
+        },
+        warning: {
+          subtle:     'var(--color-warning-subtle)',
+          border:     'var(--color-warning-border)',
+          DEFAULT:    'var(--color-warning)',
+          foreground: 'var(--color-warning-foreground)',
+        },
+        error: {
+          subtle:     'var(--color-error-subtle)',
+          border:     'var(--color-error-border)',
+          DEFAULT:    'var(--color-error)',
+          hover:      'var(--color-error-hover)',
+          foreground: 'var(--color-error-foreground)',
+        },
+        chart: {
+          1: 'var(--color-chart-1)', 2: 'var(--color-chart-2)',
+          3: 'var(--color-chart-3)', 4: 'var(--color-chart-4)',
+          5: 'var(--color-chart-5)', 6: 'var(--color-chart-6)',
+          7: 'var(--color-chart-7)', 8: 'var(--color-chart-8)',
+        },
+      },
+      boxShadow: {
+        card:   'var(--shadow-card)',
+        raised: 'var(--shadow-raised)',
       },
     },
   },
@@ -71,15 +143,96 @@ module.exports = {
 ## Use a component
 
 ```tsx
-import { Button } from '@dave/react';
+import { Button, Card, CardHeader, CardTitle, CardContent } from '@dave/react';
 
 export default function Page() {
-  return <Button variant="primary">Get started</Button>;
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Hello</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Button variant="primary">Get started</Button>
+      </CardContent>
+    </Card>
+  );
 }
+```
+
+## Use a chart
+
+Charts use `index` (the key for the x-axis category) and `categories` (an array of keys to plot as series):
+
+```tsx
+import { BarChart } from '@dave/charts';
+
+const data = [
+  { month: 'Jan', sales: 42, refunds: 6 },
+  { month: 'Feb', sales: 51, refunds: 4 },
+  { month: 'Mar', sales: 48, refunds: 9 },
+];
+
+<BarChart
+  data={data}
+  index="month"
+  categories={['sales', 'refunds']}
+  height={240}
+/>
+```
+
+## Consuming from source
+
+Until DAVE is published to npm, you can consume it directly from this repo via `pnpm pack`. This produces tarballs that resolve `workspace:*` dependencies to real versions.
+
+From the DAVE checkout:
+
+```bash
+# Pack all three packages
+mkdir -p /tmp/dave-tarballs
+cd packages/tokens     && pnpm pack --pack-destination /tmp/dave-tarballs
+cd ../components       && pnpm pack --pack-destination /tmp/dave-tarballs
+cd ../charts           && pnpm pack --pack-destination /tmp/dave-tarballs
+```
+
+In your consumer app, add a `pnpm.overrides` entry so `@dave/react` resolves `@dave/tokens` to the local tarball rather than trying the registry:
+
+```json
+{
+  "pnpm": {
+    "overrides": {
+      "@dave/tokens": "file:/tmp/dave-tarballs/dave-tokens-0.1.0.tgz"
+    }
+  }
+}
+```
+
+Then install from the tarballs:
+
+```bash
+pnpm add /tmp/dave-tarballs/dave-tokens-0.1.0.tgz \
+        /tmp/dave-tarballs/dave-react-0.1.0.tgz \
+        /tmp/dave-tarballs/dave-charts-0.1.0.tgz
+```
+
+> This is a temporary workaround. Publishing to npm is on the roadmap.
+
+## TypeScript: CSS side-effect imports
+
+If your `pnpm build` complains about a side-effect import for `globals.css`:
+
+```
+Type error: Cannot find module or type declarations for side-effect import of './globals.css'.
+```
+
+Add a `global.d.ts` at the project root (not `next-env.d.ts` — Next regenerates that file on every build and strips additions):
+
+```ts
+// global.d.ts
+declare module '*.css';
 ```
 
 ## What's next
 
 - [Theming](/docs/getting-started/theming) — swap the accent colour for your brand
 - [Colours](/docs/foundations/colours) — the full token scale
-- [Components](/docs/components/button) — browse the component library
+- [Components](/docs/components) — browse the component library
