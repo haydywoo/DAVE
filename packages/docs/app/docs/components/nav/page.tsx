@@ -41,7 +41,7 @@ const groupProps = [
 export default function NavPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Nav</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Nav</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Vertical navigation menu for sidebars and dashboards. Supports sections, collapsible groups, icons, badges, active and disabled states, and router link integration via <code className="font-code text-xs">asChild</code>.
       </p>
@@ -58,10 +58,10 @@ export default function NavPage() {
   <NavItem href="…">Settings</NavItem>
 </Nav>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <NavDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">Nav</h3>
       <PropsTable props={navProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">NavSection</h3>

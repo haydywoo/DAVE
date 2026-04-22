@@ -31,7 +31,7 @@ export function ConversationListDemos() {
   onNewChat={() => console.log('new chat')}
 />`}
       >
-        <div className="w-64 border border-border rounded-[4px] p-2">
+        <div className="w-64 border border-border rounded-[6px] p-2">
           <ConversationList
             conversations={FLAT}
             activeId={active}
@@ -50,7 +50,7 @@ export function ConversationListDemos() {
   onSelect={(c) => setActiveId(c.id)}
 />`}
       >
-        <div className="w-64 border border-border rounded-[4px] p-2">
+        <div className="w-64 border border-border rounded-[6px] p-2">
           <ConversationList
             conversations={GROUPED}
             activeId={active}

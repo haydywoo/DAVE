@@ -28,7 +28,7 @@ const itemProps = [
 export default function SelectPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Select</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Select</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Accessible single-value select with three trigger styles: form input, bordered button, and ghost. Supports leading icons, item icons, groups, labels, sizes, and error state. Built on Radix UI.
       </p>
@@ -50,13 +50,13 @@ export default function SelectPage() {
   </SelectField>
 </Select>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <SelectDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Select props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Select props</h2>
       <PropsTable props={selectProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">SelectItem props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">SelectItem props</h2>
       <PropsTable props={itemProps} />
     </div>
   );

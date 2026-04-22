@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@dave/react';
 import {
+  cn,
   Button,
   Input,
   Textarea,
@@ -627,7 +627,7 @@ function BillingSection() {
                 ].map(plan => (
                   <div
                     key={plan.name}
-                    className={`rounded-[3px] border p-4 space-y-4 ${plan.current ? 'border-accent bg-accent-subtle' : 'border-border bg-card'}`}
+                    className={`rounded-[6px] border p-4 space-y-4 shadow-card ${plan.current ? 'border-accent bg-accent-subtle' : 'border-border bg-card'}`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
@@ -666,7 +666,7 @@ function BillingSection() {
                   { name: 'Pro',        price: '$39',  features: ['Unlimited projects', '10 GB storage', 'Priority support'],   current: false },
                   { name: 'Enterprise', price: '$159', features: ['Unlimited everything', '100 GB storage', 'Dedicated support'], current: false },
                 ].map(plan => (
-                  <div key={plan.name} className="rounded-[3px] border border-border bg-card p-4 space-y-4">
+                  <div key={plan.name} className="rounded-[6px] border border-border bg-card p-4 space-y-4 shadow-card">
                     <div>
                       <p className="text-sm font-semibold text-foreground">{plan.name}</p>
                       <p className="text-xl font-bold text-foreground mt-0.5">{plan.price}<span className="text-xs font-normal text-fg-secondary">/mo</span></p>
@@ -1550,7 +1550,7 @@ export default function SettingsPage() {
     <div className="min-h-screen bg-background">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
         <div className="mb-8">
-          <h1 className="text-2xl font-extrabold font-display text-foreground">Settings</h1>
+          <h1 className="text-3xl font-semibold font-display text-foreground">Settings</h1>
           <p className="text-sm text-fg-secondary mt-1">Manage your account preferences and security.</p>
         </div>
 

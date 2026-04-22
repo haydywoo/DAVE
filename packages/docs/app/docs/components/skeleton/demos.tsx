@@ -1,6 +1,6 @@
 'use client';
 
-import { Skeleton } from '@dave/react';
+import { Skeleton, Card } from '@dave/react';
 import { Preview } from '@/components/Preview';
 
 export function SkeletonDemos() {
@@ -24,7 +24,7 @@ export function SkeletonDemos() {
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Card</h3>
-      <Preview code={`<div className="w-72 rounded-[3px] border border-border bg-card p-4 flex flex-col gap-4">
+      <Preview code={`<Card noPadding className="w-72 p-4 flex flex-col gap-4">
   <Skeleton height={160} className="w-full" />
   <div className="flex gap-3 items-center">
     <Skeleton width={36} height={36} rounded="full" />
@@ -37,8 +37,8 @@ export function SkeletonDemos() {
     <Skeleton height={12} className="w-full" />
     <Skeleton height={12} className="w-4/5" />
   </div>
-</div>`}>
-        <div className="w-72 rounded-[3px] border border-border bg-card p-4 flex flex-col gap-4">
+</Card>`}>
+        <Card noPadding className="w-72 p-4 flex flex-col gap-4">
           <Skeleton height={160} className="w-full" />
           <div className="flex gap-3 items-center">
             <Skeleton width={36} height={36} rounded="full" />
@@ -52,7 +52,7 @@ export function SkeletonDemos() {
             <Skeleton height={12} className="w-4/5" />
             <Skeleton height={12} className="w-3/5" />
           </div>
-        </div>
+        </Card>
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">List rows</h3>

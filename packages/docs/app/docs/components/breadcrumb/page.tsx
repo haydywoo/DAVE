@@ -31,7 +31,7 @@ const separatorProps = [
 export default function BreadcrumbPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Breadcrumb</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Breadcrumb</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Composable navigation trail showing the user's location within a hierarchy. Fully accessible with a nav landmark and aria-current on the current page.
       </p>
@@ -48,10 +48,10 @@ export default function BreadcrumbPage() {
   </BreadcrumbItem>
 </Breadcrumb>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <BreadcrumbDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">Breadcrumb</h3>
       <PropsTable props={breadcrumbProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">BreadcrumbItem</h3>

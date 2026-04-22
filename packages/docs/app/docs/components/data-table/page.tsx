@@ -34,7 +34,7 @@ const columnProps = [
 export default function DataTablePage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">DataTable</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">DataTable</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Feature-rich data grid with client-side sorting, pagination, and row selection. Built on top of the Table primitive — use Table directly when you only need static markup.
       </p>
@@ -47,13 +47,13 @@ export default function DataTablePage() {
   pageSize={10}       {/* enables pagination footer */}
 />`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DataTableDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">ColumnDef</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">ColumnDef</h2>
       <PropsTable props={columnProps} />
     </div>
   );

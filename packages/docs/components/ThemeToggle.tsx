@@ -1,8 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState, forwardRef } from 'react';
-import React from 'react';
+import React, { useEffect, useState, forwardRef } from 'react';
 
 export const ThemeToggle = forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(function ThemeToggle(props, ref) {
   const { resolvedTheme, setTheme } = useTheme();
@@ -19,7 +18,7 @@ export const ThemeToggle = forwardRef<HTMLButtonElement, React.ButtonHTMLAttribu
       ref={ref}
       {...props}
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="flex items-center justify-center w-8 h-8 rounded-[3px] text-fg-secondary hover:text-foreground hover:bg-surface transition-colors"
+      className="flex items-center justify-center w-8 h-8 rounded-[3px] text-fg-secondary hover:text-foreground interactive focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {isDark ? (

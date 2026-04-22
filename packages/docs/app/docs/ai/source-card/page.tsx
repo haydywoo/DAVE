@@ -15,14 +15,14 @@ const props = [
 export default function SourceCardPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">SourceCard</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">SourceCard</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A clickable citation card linking to a web source. Typically rendered in a grid below an assistant message to surface the references used by the model. Each card shows a favicon, domain, title, and optional snippet.
       </p>
 
       <SourceCardDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

@@ -19,14 +19,14 @@ const props = [
 export default function ButtonPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Button</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Button</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Triggers an action or event. Supports five visual variants and four sizes, with built-in loading, icon, and as-link states.
       </p>
 
       <ButtonDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

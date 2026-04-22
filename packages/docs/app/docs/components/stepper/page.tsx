@@ -19,18 +19,18 @@ const stepProps = [
 export default function StepperPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Stepper</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Stepper</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Progress indicator for multi-step flows. Shows completed, active, and upcoming steps. Supports horizontal and vertical orientations.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <StepperDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Step</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Step</h2>
       <PropsTable props={stepProps} />
     </div>
   );

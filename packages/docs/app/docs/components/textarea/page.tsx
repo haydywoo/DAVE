@@ -15,15 +15,15 @@ const props = [
 export default function TextareaPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Textarea</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Textarea</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Multi-line text input. Vertically resizable by default. Matches Input in API and visual style.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <TextareaDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

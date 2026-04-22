@@ -23,7 +23,7 @@ const itemProps = [
 export default function TimelinePage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Timeline</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Timeline</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Vertical list of chronological events. Use for activity feeds, audit logs, order tracking, and step history. Each item supports a coloured dot or custom icon.
       </p>
@@ -39,10 +39,10 @@ export default function TimelinePage() {
   <TimelineItem … last />  {/* last hides the connector */}
 </Timeline>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <TimelineDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="text-sm font-medium text-foreground mb-3">Timeline</h3>
       <PropsTable props={timelineProps} />
 

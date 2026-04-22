@@ -15,7 +15,7 @@ const toastProps = [
 export default function ToastPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Toast</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Toast</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Temporary notification that appears in the corner. Dismisses automatically. Use the <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">useToast</code> hook to trigger from anywhere in the tree.
       </p>
@@ -30,10 +30,10 @@ export default function ToastPage() {
 const { toast } = useToast();
 toast({ title: 'Done', variant: 'success' });`}</pre>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <ToastDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <h3 className="font-semibold text-sm text-foreground mb-3">Toast</h3>
       <PropsTable props={toastProps} />
       <h3 className="font-semibold text-sm text-foreground mt-8 mb-3">ToastAction</h3>

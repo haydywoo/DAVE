@@ -14,14 +14,14 @@ const props = [
 export default function ModelSelectorPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">ModelSelector</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">ModelSelector</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A dropdown for switching between AI models. Supports flat lists and provider-grouped layouts. Each model can have a badge (e.g. "Fast", "New") and a disabled state. The selected model&apos;s name and badge are shown in the trigger button.
       </p>
 
       <ModelSelectorDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

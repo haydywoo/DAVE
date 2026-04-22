@@ -19,7 +19,7 @@ const labelProps = [
 export default function DataListPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">DataList</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">DataList</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A key-value pair list for displaying metadata, settings, and detail views. Renders semantic <code className="font-code text-xs bg-surface px-1 py-0.5 rounded">dl</code>/<code className="font-code text-xs bg-surface px-1 py-0.5 rounded">dt</code>/<code className="font-code text-xs bg-surface px-1 py-0.5 rounded">dd</code> HTML. Supports horizontal and vertical orientations, three sizes, and any ReactNode as a value.
       </p>
@@ -31,13 +31,13 @@ export default function DataListPage() {
   </DataListItem>
 </DataList>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DataListDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">DataList props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">DataList props</h2>
       <PropsTable props={rootProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">DataListLabel props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">DataListLabel props</h2>
       <PropsTable props={labelProps} />
     </div>
   );

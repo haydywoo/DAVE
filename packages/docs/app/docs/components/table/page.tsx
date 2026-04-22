@@ -37,7 +37,7 @@ const cellProps = [
 export default function TablePage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Table</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Table</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A structured data table with header, body, and optional footer. Supports zebra striping, row selection, sortable columns, and pagination.
       </p>
@@ -58,19 +58,19 @@ export default function TablePage() {
   </TableFooter>
 </Table>`}</AnatomyBlock>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <TableDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Table props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Table props</h2>
       <PropsTable props={tableProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">TableRow props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">TableRow props</h2>
       <PropsTable props={rowProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">TableHead props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">TableHead props</h2>
       <PropsTable props={headProps} />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">TableCell props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">TableCell props</h2>
       <PropsTable props={cellProps} />
     </div>
   );

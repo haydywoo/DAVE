@@ -46,9 +46,16 @@ Always `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accen
 Standard size: `w-8 h-8`, `rounded-[3px]`, icon `15×15`. Use `aria-label`, no visible text.
 
 ## Typography
-- Display / headings: `font-display font-extrabold`
+- Display / headings: `font-display font-semibold` (Syne 600)
 - Body: default (Instrument Sans via `font-body` on `<body>`)
 - Code: `font-code` or `font-mono`
+
+### Heading scale
+- Marketing hero: `text-5xl md:text-6xl font-semibold`
+- Page title (h1): `text-4xl font-semibold`
+- Dashboard / sidebar h1: `text-3xl font-semibold`
+- Section header (h2): `text-2xl font-semibold`
+- Brand / wordmark: `text-lg font-extrabold` (only place Syne 800 is used)
 
 ## Breakpoints in the docs site
 - Desktop nav and sidebar visible from `lg` (1024 px)

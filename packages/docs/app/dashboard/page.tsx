@@ -222,7 +222,7 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-8">
           <div>
-            <h1 className="font-display font-extrabold text-2xl text-foreground">Overview</h1>
+            <h1 className="font-display font-semibold text-3xl text-foreground">Overview</h1>
             <p className="text-sm text-fg-secondary mt-0.5">All figures in USD</p>
           </div>
           <div className="flex flex-wrap items-center gap-2">

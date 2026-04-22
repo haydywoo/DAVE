@@ -23,15 +23,15 @@ const props = [
 export default function DatePickerPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">DatePicker</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">DatePicker</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Text input with a calendar popover for date selection. Supports manual typing with automatic parsing, or click-to-pick from the calendar. Uses date-fns for formatting and parsing.
       </p>
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Examples</h2>
       <DatePickerDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

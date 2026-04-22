@@ -18,14 +18,14 @@ const props = [
 export default function FeedbackBarPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">FeedbackBar</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">FeedbackBar</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A row of action buttons shown below assistant messages — copy, thumbs up/down, and regenerate. The active thumb icon fills when feedback is submitted. Used automatically inside Message but can be composed standalone.
       </p>
 
       <FeedbackBarDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );

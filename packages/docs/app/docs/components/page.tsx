@@ -88,20 +88,20 @@ const sections = [
 export default function ComponentsPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">Components</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Components</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         Over 50 production-ready components built on Radix UI primitives and Tailwind CSS. All components use semantic design tokens so they adapt automatically to any theme.
       </p>
 
       {sections.map(section => (
         <div key={section.title} className="mt-10 pt-8 border-t border-border first:mt-0 first:pt-0 first:border-0">
-          <h2 className="font-display font-extrabold text-xl text-foreground mb-4">{section.title}</h2>
+          <h2 className="font-display font-semibold text-2xl text-foreground mb-4">{section.title}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {section.items.map(item => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="rounded-[4px] border border-border bg-card p-4 hover:bg-surface hover:border-border-strong transition-colors"
+                className="rounded-[6px] border border-border bg-card p-4 shadow-card hover:bg-surface hover:border-border-strong transition-colors"
               >
                 <p className="text-sm font-semibold text-foreground mb-1">{item.name}</p>
                 <p className="text-xs text-fg-secondary leading-relaxed">{item.desc}</p>

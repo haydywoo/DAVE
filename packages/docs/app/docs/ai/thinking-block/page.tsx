@@ -15,14 +15,14 @@ const props = [
 export default function ThinkingBlockPage() {
   return (
     <div>
-      <h1 className="font-display font-extrabold text-3xl text-foreground mb-2">ThinkingBlock</h1>
+      <h1 className="font-display font-semibold text-4xl text-foreground mb-2">ThinkingBlock</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
         A collapsible card that exposes the model&apos;s internal reasoning. While streaming, it shows a spinner and is non-interactive. Once complete, the user can expand it to read the full chain-of-thought.
       </p>
 
       <ThinkingBlockDemos />
 
-      <h2 className="font-display font-extrabold text-xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
+      <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Props</h2>
       <PropsTable props={props} />
     </div>
   );
