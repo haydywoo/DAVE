@@ -162,7 +162,7 @@ export function PageSizeSelect({
       <select
         value={pageSize}
         onChange={(e) => onPageSizeChange(Number(e.target.value))}
-        className="h-8 rounded-[3px] border border-border bg-card px-2 text-sm text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0"
+        className="h-8 rounded-[3px] border border-border bg-card px-2 text-sm text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
       >
         {pageSizeOptions.map((s) => (
           <option key={s} value={s}>{s}</option>

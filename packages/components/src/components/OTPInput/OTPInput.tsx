@@ -114,7 +114,7 @@ export function OTPInput({
 
   const slotBase = cn(
     'rounded-[3px] border bg-card text-center font-[family-name:var(--font-body)] font-semibold tabular-nums',
-    'transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
+    'transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
     'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
     slotSizes[size],
     error ? 'border-error bg-error-subtle text-error-foreground' : 'border-border text-foreground',

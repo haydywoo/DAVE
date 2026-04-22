@@ -38,7 +38,7 @@ export function ApprovalGate({
 }: ApprovalGateProps) {
   return (
     <div className={cn(
-      'rounded-[4px] bg-card border border-border border-l-[3px] border-l-warning',
+      'rounded-[6px] bg-card border border-border border-l-[3px] border-l-warning',
       className,
     )}>
       {/* Header */}

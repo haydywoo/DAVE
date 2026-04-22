@@ -34,7 +34,7 @@ export function Tooltip({
             align={align}
             sideOffset={sideOffset}
             className={cn(
-              'z-50 max-w-xs rounded-[3px] bg-foreground px-2.5 py-1.5 text-xs text-background shadow-sm',
+              'z-50 max-w-xs rounded-[3px] bg-foreground px-2.5 py-1.5 text-xs text-background shadow-raised',
               'animate-in fade-in-0 zoom-in-95',
               'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95',
               'data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2',

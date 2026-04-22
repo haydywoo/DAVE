@@ -121,9 +121,9 @@ export function MessageInput({
 
   return (
     <div className={cn(
-      'rounded-[4px] border border-border bg-card transition-colors',
+      'rounded-[3px] border border-border bg-card transition-colors',
       'focus-within:border-accent focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-0',
-      (disabled && !isStreaming) && 'opacity-60 cursor-not-allowed',
+      (disabled && !isStreaming) && 'opacity-40 cursor-not-allowed',
       className,
     )}>
       {/* Attachment chips */}

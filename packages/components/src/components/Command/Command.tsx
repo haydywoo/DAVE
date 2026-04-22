@@ -351,7 +351,7 @@ export function CommandDialog({ open, onOpenChange, children, title = 'Command p
         <RadixDialog.Content
           className={cn(
             'fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2',
-            'rounded-[4px] border border-border bg-raised shadow-raised',
+            'rounded-[6px] border border-border bg-raised shadow-raised',
             'data-[state=open]:animate-in data-[state=closed]:animate-out',
             'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
             'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',

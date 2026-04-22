@@ -190,6 +190,9 @@ export type {
   CardImageProps,
 } from './components/Card/Card';
 
+export { Callout } from './components/Callout/Callout';
+export type { CalloutProps } from './components/Callout/Callout';
+
 export {
   Accordion,
   AccordionItem,

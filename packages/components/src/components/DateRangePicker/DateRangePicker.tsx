@@ -156,7 +156,7 @@ function MonthGrid({
                 className={cn(
                   'flex h-8 w-8 items-center justify-center rounded-full text-xs transition-colors z-10',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
-                  'disabled:pointer-events-none disabled:opacity-30',
+                  'disabled:pointer-events-none disabled:opacity-40',
                   isEndpoints
                     ? 'bg-accent text-accent-on font-semibold'
                     : isCurrent && inMonth
@@ -439,9 +439,9 @@ export function DateRangePicker({
             aria-expanded={open}
             className={cn(
               'relative flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-left transition-colors',
-              'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
+              'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
               'disabled:cursor-not-allowed disabled:bg-surface disabled:opacity-40',
-              error ? 'border-error bg-error-subtle focus:ring-error' : 'border-border',
+              error ? 'border-error bg-error-subtle focus-visible:ring-error' : 'border-border',
               triggerSizes[size],
             )}
           >

@@ -76,7 +76,7 @@ export function Toast({ open, onOpenChange, title, description, action, variant 
       onOpenChange={onOpenChange}
       duration={duration}
       className={cn(
-        'pointer-events-auto flex w-full items-start gap-3 rounded-[3px] border p-4 shadow-lg',
+        'pointer-events-auto flex w-full items-start gap-3 rounded-[3px] border p-4 shadow-raised',
         'data-[state=open]:animate-in data-[state=closed]:animate-out',
         'data-[state=closed]:fade-out-80 data-[state=open]:fade-in-0',
         'data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-bottom-full',

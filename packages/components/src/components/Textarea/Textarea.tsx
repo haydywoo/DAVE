@@ -64,9 +64,9 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(fun
           'font-[family-name:var(--font-body)] transition-colors',
           resizeClasses[resize],
           'placeholder:text-fg-secondary',
-          'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
           'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
-          error ? 'border-error bg-error-subtle focus:ring-error focus:border-error' : 'border-border',
+          error ? 'border-error bg-error-subtle focus-visible:ring-error focus-visible:border-error' : 'border-border',
           className,
         )}
         {...props}

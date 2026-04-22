@@ -154,7 +154,7 @@ export function FileAttachment({
   if (compact) {
     return (
       <div className={cn(
-        'inline-flex items-center gap-1.5 rounded-[4px] border border-border bg-surface px-2 py-1 text-xs transition-colors',
+        'inline-flex items-center gap-1.5 rounded-[3px] border border-border bg-surface px-2 py-1 text-xs transition-colors',
         className,
       )}>
         <span className="shrink-0 text-fg-secondary">
@@ -179,7 +179,7 @@ export function FileAttachment({
 
   return (
     <div className={cn(
-      'group relative inline-flex items-center gap-2 rounded-[4px] border border-border bg-surface pr-2 text-sm transition-colors',
+      'group relative inline-flex items-center gap-2 rounded-[3px] border border-border bg-surface pr-2 text-sm transition-colors',
       isImage ? 'pl-1 py-1' : 'pl-2.5 py-1.5',
       className,
     )}>

@@ -146,7 +146,7 @@ export function Combobox({
           aria-expanded={open}
           className={cn(
             'inline-flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-foreground transition-colors',
-            'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus:border-accent',
+            'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
             'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
             error ? 'border-error' : 'border-border',
             triggerSizes[size],

@@ -48,7 +48,7 @@ export function SegmentedControl({
       <RadixTabs.List
         aria-label="Segmented control"
         className={cn(
-          'inline-flex items-center rounded-[4px] bg-surface border border-border',
+          'inline-flex items-center rounded-[3px] bg-surface border border-border',
           root,
           fullWidth && 'w-full',
           disabled && 'pointer-events-none opacity-40',
@@ -65,7 +65,7 @@ export function SegmentedControl({
               'transition-all duration-150',
               'text-fg-secondary',
               'hover:text-foreground',
-              'data-[state=active]:bg-card data-[state=active]:text-foreground data-[state=active]:shadow-sm',
+              'data-[state=active]:bg-card data-[state=active]:text-foreground',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
               'disabled:pointer-events-none disabled:opacity-40',
               trigger,

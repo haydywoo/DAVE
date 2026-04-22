@@ -144,7 +144,7 @@ export function Message({
         <div className={cn(
           'text-sm leading-relaxed',
           isUser
-            ? 'rounded-[4px] rounded-tr-[2px] bg-accent text-accent-on px-3.5 py-2.5 max-w-[85%]'
+            ? 'rounded-[3px] rounded-tr-[2px] bg-accent text-accent-on px-3.5 py-2.5 max-w-[85%]'
             : isSystem
             ? 'text-xs text-fg-secondary italic'
             : 'max-w-full text-foreground',

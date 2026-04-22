@@ -11,7 +11,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 export function Card({ noPadding = false, className, children, ...props }: CardProps) {
   return (
     <div
-      className={cn('rounded-[3px] border border-border bg-card shadow-card', !noPadding && 'p-6', className)}
+      className={cn('rounded-[6px] border border-border bg-card shadow-card', !noPadding && 'p-6', className)}
       {...props}
     >
       {children}

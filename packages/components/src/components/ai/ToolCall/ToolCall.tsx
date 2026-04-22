@@ -46,7 +46,7 @@ export function ToolCall({ name, input, status = 'running', defaultOpen = false,
 
   return (
     <Collapsible defaultOpen={defaultOpen} disabled={!hasInput}>
-      <div className={cn('rounded-[4px] border border-border bg-surface overflow-hidden', className)}>
+      <div className={cn('rounded-[6px] border border-border bg-surface overflow-hidden', className)}>
         <CollapsibleTrigger showChevron={false} className={cn('flex w-full items-center gap-2 px-3 py-2.5 text-left', !hasInput && 'cursor-default')}>
           {/* Tool icon */}
           <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[3px] bg-accent-subtle text-accent">
@@ -107,7 +107,7 @@ export function ToolResult({ toolName, output, isError = false, defaultOpen = fa
   return (
     <Collapsible defaultOpen={defaultOpen} disabled={!hasContent}>
       <div className={cn(
-        'rounded-[4px] border bg-surface overflow-hidden',
+        'rounded-[6px] border bg-surface overflow-hidden',
         isError ? 'border-error-border' : 'border-border',
         className,
       )}>

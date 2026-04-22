@@ -123,7 +123,7 @@ export function NumberInput({
   const btnClass = cn(
     'flex items-center justify-center shrink-0 border-border bg-surface transition-colors',
     'hover:bg-border hover:text-foreground',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-0 focus-visible:z-10',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:z-10',
     'disabled:pointer-events-none disabled:opacity-40',
     s.btn,
   );

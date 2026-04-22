@@ -182,7 +182,7 @@ export function Calendar({
   return (
     <div
       className={cn(
-        'inline-flex flex-col gap-3 rounded-[3px] border border-border bg-card p-4 shadow-sm select-none min-w-[17rem]',
+        'inline-flex flex-col gap-3 rounded-[3px] border border-border bg-card p-4 shadow-card select-none min-w-[17rem]',
         className,
       )}
       role="group"
@@ -282,7 +282,7 @@ export function Calendar({
                 className={cn(
                   'flex h-8 w-8 mx-auto items-center justify-center rounded-full text-xs transition-colors',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
-                  'disabled:pointer-events-none disabled:opacity-30',
+                  'disabled:pointer-events-none disabled:opacity-40',
                   isSelected
                     ? 'bg-accent text-accent-on font-semibold'
                     : isCurrentDay && inMonth
@@ -320,7 +320,7 @@ export function Calendar({
                 className={cn(
                   'w-full h-full rounded-[3px] text-xs font-medium transition-colors',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
-                  'disabled:pointer-events-none disabled:opacity-30',
+                  'disabled:pointer-events-none disabled:opacity-40',
                   isSelected
                     ? 'bg-accent text-accent-on font-semibold'
                     : isCurrent

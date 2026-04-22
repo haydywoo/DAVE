@@ -31,7 +31,7 @@ const statusColorMap: Record<AvatarStatus, string> = {
 
 const shapeMap: Record<AvatarShape, string> = {
   circle: 'rounded-full',
-  square: 'rounded-[4px]',
+  square: 'rounded-[3px]',
 };
 
 function PersonIcon() {
