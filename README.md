@@ -17,17 +17,17 @@ DAVE stands for DesignAdVancedEngineering. But really it's named after my best m
 
 | Package | Description |
 |---|---|
-| `@dave/react` | React component library (UI + AI components) |
-| `@dave/charts` | 10 chart components built on Recharts |
-| `@dave/tokens` | Design tokens as CSS custom properties |
-| `@dave/docs` | Documentation site (Next.js + MDX) |
-| `@dave/storybook` | Storybook for component development |
+| `@haydywoo/dave-react` | React component library (UI + AI components) |
+| `@haydywoo/dave-charts` | 10 chart components built on Recharts |
+| `@haydywoo/dave-tokens` | Design tokens as CSS custom properties |
+| `packages/docs` | Documentation site (Next.js + MDX) |
+| `packages/storybook` | Storybook for component development |
 
 ---
 
 ## Components
 
-### UI (`@dave/react`)
+### UI (`@haydywoo/dave-react`)
 
 **Layout**
 Accordion · Card · Collapsible · Divider · Tabs
@@ -47,11 +47,11 @@ Alert · Progress · Skeleton · Spinner · Toast
 **Data Display**
 Avatar · Badge · Data Table · Empty State · Kbd · Stat · Table · Timeline
 
-### AI (`@dave/react`)
+### AI (`@haydywoo/dave-react`)
 
 Chat Container · Message · Message Input · Conversation List · Code Block · Streaming Text · Thinking Block · Approval Gate · File Attachment · Source Card · Tool Call · Feedback Bar · Model Selector · Suggestion Chips
 
-### Charts (`@dave/charts`)
+### Charts (`@haydywoo/dave-charts`)
 
 Bar Chart · Line Chart · Area Chart · Donut Chart · Sparkline · Scatter Plot · Combo Chart · Radar Chart · Funnel Chart
 
@@ -66,7 +66,7 @@ Bar Chart · Line Chart · Area Chart · Donut Chart · Sparkline · Scatter Plo
 ### Installation
 
 ```bash
-npm install @dave/react @dave/tokens
+npm install @haydywoo/dave-react @haydywoo/dave-tokens
 
 # Peer dependencies
 npm install react react-dom
@@ -77,7 +77,7 @@ npm install react react-dom
 **1. Import the token CSS**
 
 ```css
-@import '@dave/tokens/dist/tokens.css';
+@import '@haydywoo/dave-tokens/dist/tokens.css';
 ```
 
 **2. Configure Tailwind**
@@ -112,7 +112,7 @@ module.exports = {
 **3. Use components**
 
 ```tsx
-import { Button, Badge, Input } from '@dave/react';
+import { Button, Badge, Input } from '@haydywoo/dave-react';
 
 export function Example() {
   return (
@@ -160,8 +160,8 @@ cd DAVE
 pnpm install
 
 # Build packages first (required before running docs)
-pnpm --filter @dave/react build
-pnpm --filter @dave/charts build
+pnpm --filter @haydywoo/dave-react build
+pnpm --filter @haydywoo/dave-charts build
 
 # Docs site
 cd packages/docs && pnpm dev
@@ -175,9 +175,9 @@ cd packages/storybook && pnpm dev
 ```
 DAVE/
 ├── packages/
-│   ├── components/     # @dave/react
-│   ├── charts/         # @dave/charts
-│   ├── tokens/         # @dave/tokens — tokens.css
+│   ├── components/     # @haydywoo/dave-react
+│   ├── charts/         # @haydywoo/dave-charts
+│   ├── tokens/         # @haydywoo/dave-tokens — tokens.css
 │   ├── docs/           # Next.js 14 docs site
 │   └── storybook/      # Storybook 8
 └── .github/
