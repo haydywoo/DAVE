@@ -78,6 +78,7 @@ const sections = [
       { name: 'DataTable',    href: '/docs/components/data-table',   desc: 'Sortable, filterable table with pagination and row selection.' },
       { name: 'Empty State',  href: '/docs/components/empty-state',  desc: 'Zero-content placeholder with icon, message, and action.' },
       { name: 'Kbd',          href: '/docs/components/kbd',          desc: 'Keyboard shortcut label.' },
+      { name: 'List',         href: '/docs/components/list',         desc: 'Stacked rows — settings, activity, inbox, files.' },
       { name: 'Stat',         href: '/docs/components/stat',         desc: 'KPI card with value, label, and trend indicator.' },
       { name: 'Table',        href: '/docs/components/table',        desc: 'Semantic HTML table with sort and zebra-stripe support.' },
       { name: 'Timeline',     href: '/docs/components/timeline',     desc: 'Chronological activity feed or audit log.' },
