@@ -7,6 +7,8 @@ import { Popover, PopoverTrigger, PopoverContent, Button, Textarea } from '@hayd
 type Rating = 'up' | 'down';
 type View = 'ask' | 'comment' | 'thanks';
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xdayygno';
+
 export function FeedbackWidget() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -31,18 +33,24 @@ export function FeedbackWidget() {
   function handleThumb(r: Rating) {
     setRating(r);
     setView('comment');
-    // TODO: fire Clarity event here
-    console.log('[feedback] rating', { page: pathname, rating: r });
   }
 
-  function handleSend() {
-    // TODO: POST to Formspree (or similar) here
-    console.log('[feedback] submit', { page: pathname, rating, comment });
+  async function handleSend() {
     setView('thanks');
     setTimeout(() => {
       setOpen(false);
       reset();
     }, 1400);
+
+    try {
+      await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ page: pathname, rating, comment }),
+      });
+    } catch {
+      // swallow — the user has already been thanked; a failed POST shouldn't nag them
+    }
   }
 
   function handleSkip() {
