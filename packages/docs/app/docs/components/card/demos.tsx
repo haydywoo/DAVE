@@ -209,74 +209,97 @@ export function CardDemos() {
 
       {/* Pricing */}
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Pricing</h3>
-      <Preview center={false} code={`<div className="flex gap-4">
+      <Preview center={false} code={`<div className="flex gap-5 items-stretch">
+  {/* Starter */}
   <Card className="w-72 flex flex-col">
     <CardHeader>
-      <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider">Starter</p>
-      <div className="flex items-end gap-1 mt-1">
-        <span className="text-3xl font-display font-semibold text-foreground">£0</span>
-        <span className="text-sm text-fg-secondary mb-1">/ month</span>
+      <p className="text-[11px] font-semibold text-fg-secondary uppercase tracking-[0.14em]">Starter</p>
+      <div className="flex items-baseline gap-1.5 mt-4">
+        <span className="text-4xl font-display font-semibold text-foreground leading-none">£0</span>
+        <span className="text-xs text-fg-secondary">/month</span>
       </div>
+      <CardDescription className="mt-3">For individuals and small projects.</CardDescription>
     </CardHeader>
-    <CardDivider />
-    <CardContent className="flex flex-col gap-2.5 flex-1">...</CardContent>
+    <CardContent className="flex flex-col gap-2 flex-1 pt-2">
+      <p className="text-sm text-foreground">5 projects</p>
+      <p className="text-sm text-foreground">1 workspace</p>
+      <p className="text-sm text-foreground">2GB storage</p>
+      <p className="text-sm text-foreground">Community support</p>
+    </CardContent>
     <CardFooter className="mt-6">
-      <Button variant="secondary" className="w-full">Get started</Button>
+      <Button variant="secondary" className="w-full">Start free</Button>
     </CardFooter>
   </Card>
 
-  <Card className="w-72 flex flex-col border-accent bg-accent-subtle">
+  {/* Pro — accent top rail + primary CTA */}
+  <Card className="w-72 flex flex-col border-t-[3px] border-t-accent shadow-raised">
     <CardHeader>
       <div className="flex items-center justify-between">
-        <p className="text-xs font-semibold text-accent-foreground uppercase tracking-wider">Pro</p>
-        <Badge variant="primary">Popular</Badge>
+        <p className="text-[11px] font-semibold text-accent-foreground uppercase tracking-[0.14em]">Pro</p>
+        <span className="text-[10px] font-semibold text-accent-foreground uppercase tracking-[0.14em]">Popular</span>
       </div>
-      ...
+      <div className="flex items-baseline gap-1.5 mt-4">
+        <span className="text-5xl font-display font-semibold text-foreground leading-none">£29</span>
+        <span className="text-xs text-fg-secondary">/month</span>
+      </div>
+      <CardDescription className="mt-3">For growing teams who need more power.</CardDescription>
     </CardHeader>
-    ...
+    <CardContent className="flex flex-col gap-2 flex-1 pt-2">
+      <p className="text-sm text-foreground">Unlimited projects</p>
+      <p className="text-sm text-foreground">5 workspaces</p>
+      <p className="text-sm text-foreground">50GB storage</p>
+      <p className="text-sm text-foreground">Priority support</p>
+      <p className="text-sm text-foreground">Advanced analytics</p>
+    </CardContent>
+    <CardFooter className="mt-6">
+      <Button className="w-full">Get Pro</Button>
+    </CardFooter>
   </Card>
 </div>`}>
-        <div className="w-full flex gap-4 flex-wrap items-start">
+        <div className="w-full flex gap-5 flex-wrap items-stretch">
+          {/* Starter */}
           <Card className="w-72 flex flex-col">
             <CardHeader>
-              <p className="text-xs font-semibold text-fg-secondary uppercase tracking-wider">Starter</p>
-              <div className="flex items-end gap-1 mt-1">
-                <span className="text-3xl font-display font-semibold text-foreground">£0</span>
-                <span className="text-sm text-fg-secondary mb-1">/ month</span>
+              <p className="text-[11px] font-semibold text-fg-secondary uppercase tracking-[0.14em]">Starter</p>
+              <div className="flex items-baseline gap-1.5 mt-4">
+                <span className="text-4xl font-display font-semibold text-foreground leading-none">£0</span>
+                <span className="text-xs text-fg-secondary">/month</span>
               </div>
-              <CardDescription>For individuals and small projects.</CardDescription>
+              <CardDescription className="mt-3">For individuals and small projects.</CardDescription>
             </CardHeader>
-            <CardDivider />
-            <CardContent className="flex flex-col gap-2.5 flex-1">
-              {['5 projects', '1 workspace', '2GB storage', 'Community support'].map(f => (
-                <div key={f} className="flex items-center gap-2 text-sm text-foreground"><Check />{f}</div>
-              ))}
+            <CardContent className="flex flex-col gap-2 flex-1 pt-2">
+              <p className="text-sm text-foreground">5 projects</p>
+              <p className="text-sm text-foreground">1 workspace</p>
+              <p className="text-sm text-foreground">2GB storage</p>
+              <p className="text-sm text-foreground">Community support</p>
             </CardContent>
             <CardFooter className="mt-6">
-              <Button variant="secondary" className="w-full">Get started</Button>
+              <Button variant="secondary" className="w-full">Start free</Button>
             </CardFooter>
           </Card>
 
-          <Card className="w-72 flex flex-col border-accent bg-accent-subtle">
+          {/* Pro — accent top rail + primary CTA */}
+          <Card className="w-72 flex flex-col border-t-[3px] border-t-accent shadow-raised">
             <CardHeader>
               <div className="flex items-center justify-between">
-                <p className="text-xs font-semibold text-accent-foreground uppercase tracking-wider">Pro</p>
-                <Badge variant="primary">Popular</Badge>
+                <p className="text-[11px] font-semibold text-accent-foreground uppercase tracking-[0.14em]">Pro</p>
+                <span className="text-[10px] font-semibold text-accent-foreground uppercase tracking-[0.14em]">Popular</span>
               </div>
-              <div className="flex items-end gap-1 mt-1">
-                <span className="text-3xl font-display font-semibold text-foreground">£29</span>
-                <span className="text-sm text-fg-secondary mb-1">/ month</span>
+              <div className="flex items-baseline gap-1.5 mt-4">
+                <span className="text-5xl font-display font-semibold text-foreground leading-none">£29</span>
+                <span className="text-xs text-fg-secondary">/month</span>
               </div>
-              <CardDescription>For growing teams who need more power.</CardDescription>
+              <CardDescription className="mt-3">For growing teams who need more power.</CardDescription>
             </CardHeader>
-            <CardDivider />
-            <CardContent className="flex flex-col gap-2.5 flex-1">
-              {['Unlimited projects', '5 workspaces', '50GB storage', 'Priority support', 'Advanced analytics'].map(f => (
-                <div key={f} className="flex items-center gap-2 text-sm text-foreground"><Check />{f}</div>
-              ))}
+            <CardContent className="flex flex-col gap-2 flex-1 pt-2">
+              <p className="text-sm text-foreground">Unlimited projects</p>
+              <p className="text-sm text-foreground">5 workspaces</p>
+              <p className="text-sm text-foreground">50GB storage</p>
+              <p className="text-sm text-foreground">Priority support</p>
+              <p className="text-sm text-foreground">Advanced analytics</p>
             </CardContent>
             <CardFooter className="mt-6">
-              <Button className="w-full">Get started</Button>
+              <Button className="w-full">Get Pro</Button>
             </CardFooter>
           </Card>
         </div>
