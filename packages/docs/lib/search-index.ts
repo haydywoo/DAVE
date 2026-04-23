@@ -69,6 +69,7 @@ export const searchIndex: SearchItem[] = [
   { title: 'Table',        href: '/docs/components/table',        group: 'Data Display', keywords: 'table data grid rows columns sort zebra select pagination' },
   { title: 'Timeline',     href: '/docs/components/timeline',     group: 'Data Display', keywords: 'timeline activity feed audit log events history chronological track' },
   { title: 'DataList',    href: '/docs/components/data-list',    group: 'Data Display', keywords: 'datalist data list label value pairs key metadata description' },
+  { title: 'List',        href: '/docs/components/list',         group: 'Data Display', keywords: 'list items rows unordered ordered bulleted divided settings activity feed inbox' },
   { title: 'File Input',  href: '/docs/components/file-input',   group: 'Forms',        keywords: 'file input upload browse attachment select document image' },
   { title: 'OTP Input',   href: '/docs/components/otp-input',    group: 'Forms',        keywords: 'otp one-time password pin code verification input 2fa auth' },
   { title: 'Rating',      href: '/docs/components/rating',       group: 'Forms',        keywords: 'rating stars score review feedback vote' },

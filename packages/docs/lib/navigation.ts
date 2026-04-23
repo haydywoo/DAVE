@@ -105,6 +105,7 @@ export const standardNavigation: NavSection[] = [
       { title: 'DataTable',   href: '/docs/components/data-table' },
       { title: 'Empty State', href: '/docs/components/empty-state' },
       { title: 'Kbd',         href: '/docs/components/kbd' },
+      { title: 'List',        href: '/docs/components/list',    badge: 'new' },
       { title: 'Stat',        href: '/docs/components/stat' },
       { title: 'Table',       href: '/docs/components/table' },
       { title: 'Timeline',    href: '/docs/components/timeline' },
