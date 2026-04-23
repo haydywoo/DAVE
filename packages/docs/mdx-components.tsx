@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { MDXComponents } from 'mdx/types';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { Table } from '@haydywoo/dave-react';
 import { DocCodeBlock } from '@/components/DocCodeBlock';
 
 function getTextContent(node: ReactNode): string {
@@ -47,7 +48,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         return <code className={className} {...rest}>{children}</code>;
       }
       return (
-        <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border">
+        <code className="font-code text-[13px] bg-surface text-accent-foreground px-1.5 py-0.5 rounded-[3px] border border-border whitespace-nowrap">
           {children}
         </code>
       );
@@ -84,8 +85,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     hr: () => <hr className="border-t border-border my-10" />,
     table: ({ children }) => (
-      <div className="rounded-[6px] border border-border overflow-hidden mb-6">
-        <table className="w-full text-sm">{children}</table>
+      <div className="mb-6">
+        <Table>{children}</Table>
       </div>
     ),
     thead: ({ children }) => (

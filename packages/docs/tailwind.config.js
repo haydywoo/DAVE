@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './app/**/*.{ts,tsx,mdx}',
     './components/**/*.{ts,tsx}',
+    './mdx-components.tsx',
     '../../packages/components/src/**/*.{ts,tsx}',
   ],
   theme: {
