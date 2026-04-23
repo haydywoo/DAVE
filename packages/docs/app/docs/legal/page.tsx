@@ -73,7 +73,7 @@ export default function LegalPage() {
                 <span className="font-medium text-foreground">{name}</span>
                 <span className="text-fg-secondary ml-2">— {owner}</span>
               </div>
-              <a href={url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-xs text-accent hover:underline">
+              <a href={url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-xs prose-link">
                 {licence}
               </a>
             </div>
@@ -94,10 +94,10 @@ export default function LegalPage() {
         <p className="text-sm text-fg-secondary leading-relaxed mb-4">
           When you submit feedback via the in-page widget, we record your rating (thumbs up or down), any optional
           comment you provide, and the URL of the page you submitted from. Submissions are processed by{' '}
-          <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Formspree</a>{' '}
+          <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="prose-link">Formspree</a>{' '}
           — a third-party form backend — and forwarded to the maintainer by email. Formspree's handling of your data
           is governed by their{' '}
-          <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">privacy policy</a>.
+          <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="prose-link">privacy policy</a>.
         </p>
         <p className="text-sm text-fg-secondary leading-relaxed">
           The feedback widget sets no cookies and stores no identifiers on your device. You are not required to
@@ -109,7 +109,7 @@ export default function LegalPage() {
         <h2 className="font-semibold text-foreground mb-3">8. Analytics</h2>
         <p className="text-sm text-fg-secondary leading-relaxed mb-4">
           This site uses{' '}
-          <a href="https://clarity.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Microsoft Clarity</a>{' '}
+          <a href="https://clarity.microsoft.com" target="_blank" rel="noopener noreferrer" className="prose-link">Microsoft Clarity</a>{' '}
           to understand how people use the docs. Clarity provides aggregate metrics, heatmaps, and anonymised
           session replay. To do this, it sets cookies on your browser and collects your IP address, device and
           browser information, and your interactions with the page (clicks, scrolls, and similar). Input field
@@ -117,7 +117,7 @@ export default function LegalPage() {
         </p>
         <p className="text-sm text-fg-secondary leading-relaxed">
           Data is processed by Microsoft and governed by the{' '}
-          <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Microsoft Privacy Statement</a>.
+          <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" className="prose-link">Microsoft Privacy Statement</a>.
           Clarity only loads after you accept the consent prompt shown on your first visit; your choice is remembered
           in your browser's local storage. Clarity also honours the <strong className="text-foreground">Do Not Track</strong>{' '}
           browser signal.
