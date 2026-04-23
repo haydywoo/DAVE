@@ -41,7 +41,7 @@ export function ConsentGate() {
         >
           <p className="text-xs text-fg-secondary flex-1">
             Allow Microsoft Clarity analytics?{' '}
-            <Link href="/docs/legal" className="text-accent hover:underline">Details</Link>
+            <Link href="/docs/legal" className="prose-link">Details</Link>
           </p>
           <div className="flex gap-1 shrink-0">
             <Button variant="ghost" size="sm" onClick={() => choose('rejected')}>

@@ -68,7 +68,7 @@ export default function HomePage() {
       {/* Honesty section */}
       <Callout title="A few honest things" as="h2" className="mb-16 p-6">
         <ul className="space-y-2">
-          <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There is a <Link href="/roadmap" className="underline underline-offset-2 hover:text-foreground transition-colors">roadmap</Link>. I just don't promise to follow it.</span></li>
+          <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There is a <Link href="/roadmap" className="prose-link">roadmap</Link>. I just don't promise to follow it.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>There's no versioning promise. This is for me first.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>It's MIT licensed. Take whatever's useful.</span></li>
           <li className="flex gap-2"><span className="text-fg-disabled mt-0.5">—</span><span>Accessibility matters to me, so that part is done properly.</span></li>

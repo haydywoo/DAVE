@@ -38,16 +38,14 @@
 
 @layer utilities {
   .prose-link {
-    color: var(--color-foreground);
+    color: var(--color-accent-foreground);
     text-decoration-line: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--color-border-strong);
-    transition: text-decoration-color 150ms ease;
+    text-underline-offset: 4px;
+    transition: color 150ms ease;
     border-radius: 2px;
   }
   .prose-link:hover {
-    text-decoration-line: underline;
-    text-decoration-color: var(--color-foreground);
+    color: var(--color-accent);
   }
   .prose-link:focus-visible {
     @apply outline-none ring-2 ring-accent ring-offset-1;
