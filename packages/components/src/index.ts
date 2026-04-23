@@ -323,6 +323,9 @@ export type {
 export { Skeleton } from './components/Skeleton/Skeleton';
 export type { SkeletonProps } from './components/Skeleton/Skeleton';
 
+export { List, ListItem } from './components/List/List';
+export type { ListProps, ListItemProps, ListSize } from './components/List/List';
+
 export { Pagination, PageSizeSelect } from './components/Pagination/Pagination';
 export type { PaginationProps, PageSizeSelectProps } from './components/Pagination/Pagination';
 
