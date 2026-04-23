@@ -90,7 +90,42 @@ export default function LegalPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="font-semibold text-foreground mb-3">7. Changes to These Terms</h2>
+        <h2 className="font-semibold text-foreground mb-3">7. Feedback &amp; Privacy</h2>
+        <p className="text-sm text-fg-secondary leading-relaxed mb-4">
+          When you submit feedback via the in-page widget, we record your rating (thumbs up or down), any optional
+          comment you provide, and the URL of the page you submitted from. Submissions are processed by{' '}
+          <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Formspree</a>{' '}
+          — a third-party form backend — and forwarded to the maintainer by email. Formspree's handling of your data
+          is governed by their{' '}
+          <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">privacy policy</a>.
+        </p>
+        <p className="text-sm text-fg-secondary leading-relaxed">
+          The feedback widget sets no cookies and stores no identifiers on your device. You are not required to
+          submit feedback; simply don't use the widget if you'd prefer not to share this data.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="font-semibold text-foreground mb-3">8. Analytics</h2>
+        <p className="text-sm text-fg-secondary leading-relaxed mb-4">
+          This site uses{' '}
+          <a href="https://clarity.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Microsoft Clarity</a>{' '}
+          to understand how people use the docs. Clarity provides aggregate metrics, heatmaps, and anonymised
+          session replay. To do this, it sets cookies on your browser and collects your IP address, device and
+          browser information, and your interactions with the page (clicks, scrolls, and similar). Input field
+          values are masked by default and are not recorded.
+        </p>
+        <p className="text-sm text-fg-secondary leading-relaxed">
+          Data is processed by Microsoft and governed by the{' '}
+          <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Microsoft Privacy Statement</a>.
+          Clarity only loads after you accept the consent prompt shown on your first visit; your choice is remembered
+          in your browser's local storage. Clarity also honours the <strong className="text-foreground">Do Not Track</strong>{' '}
+          browser signal.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="font-semibold text-foreground mb-3">9. Changes to These Terms</h2>
         <p className="text-sm text-fg-secondary leading-relaxed">
           These terms may be updated at any time without notice. Continued use of DAVE constitutes acceptance
           of the current terms.
