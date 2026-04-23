@@ -1,0 +1,1001 @@
+User ID,Age,Gender,Country,Device,Subscription Tier,User Segment,Tenure (Months),Onboarding Completed,Session Freq (per week),Feature Adoption Count,Support Tickets,Errors Encountered,Task Completion (%),Avg Time on Task (sec),Days Since Last Login,NPS Score (0–10),NPS Category,Sentiment Label,SUS Q1 (I think I would like to use this product frequently),SUS Q2 (I found the product unnecessarily complex),SUS Q3 (I thought the product was easy to use),SUS Q4 (I think I would need support to use this product),SUS Q5 (I found the various functions well integrated),SUS Q6 (I thought there was too much inconsistency),SUS Q7 (Most people would learn to use this product quickly),SUS Q8 (I found the product very cumbersome to use),SUS Q9 (I felt very confident using the product),SUS Q10 (I needed to learn a lot before using this product),SUS Score (0–100),SUS Grade,UMUX-Lite Q1 – Capability (1–7),UMUX-Lite Q2 – Ease (1–7),UMUX-Lite Score (0–100),CSAT (1–5),"Churn Risk (0=No, 1=Yes)",Renewal Intent
+U0001,39,Male,UK,Mobile,Free,Returning,8,Yes,7.5,15,0,0,97.1,256,7,8,Passive,Neutral,5,2,5,2,5,2,5,3,3,3,77.5,B,3,5,50.0,3,1,Unsure
+U0002,33,Male,UK,Desktop,Free,Returning,2,Yes,5.8,17,0,1,92.3,173,11,7,Passive,Neutral,4,1,5,3,3,3,5,3,3,2,70.0,B,4,4,50.0,4,0,Unsure
+U0003,40,Female,UK,Desktop,Basic,Returning,23,Yes,4.9,15,4,0,59.6,218,33,6,Detractor,Negative,4,2,4,2,3,3,3,2,4,3,65.0,C,7,5,83.3,5,0,Unsure
+U0004,49,Female,USA,Mobile,Basic,New,7,Yes,4.2,15,1,2,63.7,259,1,5,Detractor,Negative,4,2,5,1,4,1,5,1,4,1,90.0,A+,6,7,91.7,5,1,Unsure
+U0005,32,Male,Canada,Desktop,Free,Power User,27,Yes,5.1,13,0,2,63.4,298,8,7,Passive,Neutral,4,4,3,1,4,2,5,2,4,3,70.0,B,5,3,50.0,2,0,Unsure
+U0006,32,Non-binary,Germany,Tablet,Enterprise,New,11,Yes,2.1,19,1,1,97.6,166,22,10,Promoter,Positive,2,1,3,1,4,3,5,2,4,1,75.0,B,4,6,66.7,3,1,Unsure
+U0007,50,Male,Germany,Mobile,Pro,Power User,12,Yes,5.2,14,1,1,58.1,326,16,1,Detractor,Negative,5,2,5,2,5,2,3,3,3,1,77.5,B,2,5,41.7,3,0,Unsure
+U0008,42,Female,USA,Desktop,Basic,Power User,27,No,5.7,14,0,4,81.0,240,6,8,Passive,Neutral,4,2,3,1,4,2,3,2,3,3,67.5,C,1,4,25.0,3,1,Unsure
+U0009,29,Female,Spain,Desktop,Pro,Returning,9,Yes,8.6,12,0,5,86.0,143,27,8,Passive,Neutral,4,2,5,1,4,2,4,1,5,4,80.0,A,6,5,75.0,3,0,Unsure
+U0010,39,Female,USA,Desktop,Free,Returning,11,No,4.5,5,0,1,76.1,288,18,5,Detractor,Negative,4,4,5,2,3,1,4,2,3,2,70.0,B,3,4,41.7,3,1,Unsure
+U0011,29,Female,UK,Desktop,Basic,Returning,8,No,7.4,8,0,1,69.7,222,16,10,Promoter,Positive,5,1,5,2,2,2,4,3,4,2,75.0,B,3,6,58.3,4,1,Unsure
+U0012,29,Female,France,Desktop,Pro,Returning,8,Yes,10.2,12,1,1,59.5,239,60,10,Promoter,Positive,4,2,3,4,4,2,4,1,3,3,65.0,C,5,5,66.7,4,0,Unsure
+U0013,36,Male,UK,Desktop,Pro,Power User,13,No,10.0,14,0,0,70.1,196,38,1,Detractor,Negative,4,2,3,3,5,1,4,2,4,4,70.0,B,4,7,75.0,4,0,Unsure
+U0014,18,Female,USA,Desktop,Pro,Power User,30,Yes,8.4,19,1,1,65.3,208,6,10,Promoter,Positive,4,2,3,3,3,1,4,1,5,2,75.0,B,6,7,91.7,4,1,Unsure
+U0015,18,Male,Germany,Mobile,Free,Returning,8,No,5.3,10,7,2,57.9,196,4,7,Passive,Neutral,4,2,3,3,4,2,4,4,4,2,65.0,C,3,1,16.7,3,1,Unlikely
+U0016,28,Female,Netherlands,Mobile,Enterprise,Returning,13,Yes,4.3,16,0,1,75.4,274,6,9,Promoter,Positive,3,1,4,4,4,3,4,3,4,2,65.0,C,5,2,41.7,4,0,Unsure
+U0017,24,Female,USA,Mobile,Free,Power User,20,Yes,8.8,11,1,1,63.8,139,0,7,Passive,Neutral,4,1,4,4,5,3,5,2,4,2,75.0,B,4,5,58.3,4,0,Unsure
+U0018,37,Female,India,Desktop,Pro,Power User,6,Yes,11.8,13,1,1,100.0,126,0,4,Detractor,Negative,3,3,5,2,3,2,4,2,4,2,70.0,B,7,6,91.7,4,1,Unsure
+U0019,25,Male,Brazil,Desktop,Enterprise,Returning,6,Yes,8.0,9,1,5,63.1,226,7,9,Promoter,Positive,4,2,4,2,3,2,3,1,4,2,72.5,B,5,5,66.7,4,1,Unsure
+U0020,20,Female,UK,Mobile,Free,Returning,49,No,12.0,11,1,0,100.0,300,40,10,Promoter,Positive,4,1,4,4,4,1,4,2,3,3,70.0,B,3,5,50.0,3,0,Unsure
+U0021,49,Female,USA,Desktop,Pro,Returning,23,Yes,3.4,15,0,1,98.9,181,28,1,Detractor,Negative,4,2,4,2,4,3,4,2,4,2,72.5,B,5,4,58.3,5,0,Likely
+U0022,32,Female,USA,Desktop,Free,Power User,15,Yes,3.4,12,1,0,86.4,268,13,9,Promoter,Positive,4,3,4,2,5,3,2,3,4,2,65.0,C,2,3,25.0,3,1,Unsure
+U0023,35,Male,USA,Mobile,Basic,New,19,Yes,8.4,14,1,0,64.1,291,16,3,Detractor,Negative,4,2,4,2,3,2,4,3,4,3,67.5,C,4,3,41.7,4,0,Unsure
+U0024,20,Male,USA,Mobile,Basic,Returning,1,No,6.2,11,4,2,72.5,293,0,9,Promoter,Positive,3,3,4,3,3,3,2,2,3,2,55.0,D,2,3,25.0,2,1,Unsure
+U0025,29,Male,Netherlands,Mobile,Basic,Returning,17,Yes,9.9,11,0,0,58.8,199,4,5,Detractor,Negative,4,2,3,3,3,2,4,2,3,2,65.0,C,5,4,58.3,4,1,Unsure
+U0026,35,Male,India,Desktop,Enterprise,Returning,13,Yes,7.9,20,1,0,100.0,119,0,10,Promoter,Positive,5,2,3,1,4,2,4,3,4,3,72.5,B,5,6,75.0,4,0,Likely
+U0027,22,Female,France,Mobile,Pro,Returning,14,Yes,5.2,13,0,0,82.4,66,18,7,Passive,Neutral,4,2,4,3,5,1,5,3,3,2,75.0,B,5,4,58.3,4,0,Likely
+U0028,38,Male,USA,Mobile,Basic,Power User,8,Yes,7.3,18,3,1,81.8,171,2,7,Passive,Neutral,4,2,4,2,4,2,5,1,4,1,82.5,A,7,6,91.7,5,1,Unsure
+U0029,28,Prefer not to say,Australia,Mobile,Pro,New,2,Yes,2.5,11,1,2,57.5,295,37,9,Promoter,Positive,3,1,4,3,3,2,2,3,2,3,55.0,D,4,2,33.3,3,1,Unsure
+U0030,31,Male,Spain,Mobile,Enterprise,Returning,4,Yes,5.2,17,0,0,54.0,116,10,10,Promoter,Positive,4,2,4,1,5,1,4,1,5,3,85.0,A,5,7,83.3,5,0,Likely
+U0031,28,Male,Australia,Mobile,Free,New,54,Yes,8.5,14,1,2,58.0,272,5,9,Promoter,Positive,3,4,3,3,4,2,4,1,4,2,65.0,C,2,3,25.0,4,1,Unsure
+U0032,53,Female,UK,Mobile,Enterprise,New,9,Yes,10.1,15,0,0,100.0,129,2,3,Detractor,Negative,5,1,3,2,5,1,4,4,4,3,75.0,B,6,6,83.3,4,0,Likely
+U0033,34,Female,France,Desktop,Free,Returning,11,Yes,7.2,5,0,2,68.4,232,18,8,Passive,Neutral,4,2,3,2,4,2,5,2,4,4,70.0,B,2,4,33.3,4,0,Unlikely
+U0034,23,Female,UK,Mobile,Pro,Returning,1,Yes,2.9,13,0,1,79.4,246,33,7,Passive,Neutral,2,2,4,3,3,2,3,1,2,3,57.5,D,3,5,50.0,4,0,Unsure
+U0035,42,Female,USA,Mobile,Free,Returning,1,Yes,6.1,17,0,2,89.7,168,19,8,Passive,Neutral,5,2,4,3,5,2,5,3,4,2,77.5,B,4,4,50.0,4,0,Unsure
+U0036,22,Female,UK,Mobile,Free,Returning,23,No,3.2,13,0,10,99.1,237,8,10,Promoter,Positive,4,2,3,3,2,3,4,2,2,3,55.0,D,5,3,50.0,5,1,Unsure
+U0037,36,Male,France,Desktop,Basic,New,14,No,9.5,13,1,5,94.8,194,15,4,Detractor,Negative,4,2,4,3,5,3,4,2,4,3,70.0,B,5,5,66.7,4,0,Unsure
+U0038,18,Prefer not to say,India,Desktop,Pro,Returning,13,Yes,6.3,9,1,0,73.0,232,4,9,Promoter,Positive,4,1,5,1,5,2,5,4,4,2,82.5,A,7,4,75.0,4,1,Likely
+U0039,21,Prefer not to say,UK,Tablet,Basic,Power User,5,Yes,4.1,10,0,3,51.7,226,90,10,Promoter,Positive,4,3,3,1,3,2,3,1,2,1,67.5,C,6,4,66.7,4,0,Unsure
+U0040,36,Female,USA,Mobile,Free,Power User,25,Yes,6.0,12,2,0,100.0,237,28,5,Detractor,Negative,5,2,4,3,3,4,3,1,3,2,65.0,C,3,2,25.0,4,1,Unsure
+U0041,41,Male,USA,Tablet,Basic,Returning,3,Yes,6.3,15,1,3,100.0,281,10,10,Promoter,Positive,4,1,5,3,4,3,5,3,4,3,72.5,B,6,5,75.0,4,0,Unsure
+U0042,36,Female,USA,Mobile,Enterprise,Returning,4,Yes,10.6,16,3,1,81.6,251,9,10,Promoter,Positive,4,2,5,2,4,4,4,2,4,2,72.5,B,5,7,83.3,3,1,Unsure
+U0043,33,Male,UK,Mobile,Basic,Power User,11,Yes,5.3,13,1,1,63.3,164,14,10,Promoter,Positive,4,2,5,2,3,2,3,2,3,2,70.0,B,6,6,83.3,4,1,Unsure
+U0044,31,Male,USA,Mobile,Free,New,6,Yes,3.2,14,0,0,91.4,209,7,6,Detractor,Negative,3,3,4,2,5,2,4,2,4,2,72.5,B,3,5,50.0,4,1,Unsure
+U0045,19,Male,Canada,Tablet,Basic,Power User,5,No,1.2,12,1,0,74.8,214,1,10,Promoter,Positive,3,3,4,2,4,1,4,2,3,4,65.0,C,3,4,41.7,3,0,Unsure
+U0046,27,Female,UK,Mobile,Free,Power User,19,Yes,6.0,8,1,3,71.0,235,10,3,Detractor,Negative,3,3,3,3,3,3,3,2,3,2,55.0,D,6,3,58.3,4,1,Unsure
+U0047,29,Female,UK,Mobile,Pro,New,19,Yes,5.5,6,0,4,91.9,362,41,8,Passive,Neutral,3,4,4,3,5,3,4,4,4,3,57.5,D,6,6,83.3,4,1,Unsure
+U0048,45,Female,USA,Desktop,Pro,New,31,Yes,2.1,12,0,2,73.5,263,21,10,Promoter,Positive,2,2,4,2,2,2,4,2,2,3,57.5,D,4,1,25.0,3,0,Unsure
+U0049,37,Female,Spain,Desktop,Basic,Power User,10,Yes,9.8,13,0,2,62.0,90,1,9,Promoter,Positive,3,1,4,1,3,3,4,3,4,2,70.0,B,5,4,58.3,4,0,Unsure
+U0050,18,Male,India,Mobile,Basic,Returning,1,Yes,8.2,10,0,2,72.0,186,37,4,Detractor,Negative,3,1,4,2,4,2,4,2,2,3,67.5,C,5,2,41.7,3,0,Unsure
+U0051,37,Male,India,Desktop,Pro,New,6,Yes,6.4,7,1,1,84.9,105,6,10,Promoter,Positive,4,3,3,2,5,2,5,3,3,4,65.0,C,4,4,50.0,3,0,Unsure
+U0052,30,Male,USA,Desktop,Basic,Returning,70,Yes,9.2,13,1,0,77.3,217,6,9,Promoter,Positive,4,2,4,2,3,1,4,3,5,3,72.5,B,1,2,8.3,3,0,Unsure
+U0053,27,Prefer not to say,France,Desktop,Pro,Returning,16,Yes,9.6,14,0,0,92.1,65,4,4,Detractor,Negative,4,2,5,2,4,3,4,1,4,2,77.5,B,4,5,58.3,4,0,Likely
+U0054,40,Male,UK,Desktop,Pro,Returning,22,No,5.0,15,1,1,93.8,154,13,10,Promoter,Positive,4,3,4,2,5,2,4,2,4,2,75.0,B,5,5,66.7,3,1,Unsure
+U0055,44,Female,France,Desktop,Pro,Power User,0,No,5.4,20,0,0,83.3,93,8,10,Promoter,Positive,4,1,4,2,4,2,4,2,4,1,80.0,A,6,5,75.0,4,0,Likely
+U0056,43,Female,Netherlands,Desktop,Basic,Power User,13,Yes,8.9,6,0,0,81.5,235,11,10,Promoter,Positive,3,2,4,2,4,1,4,3,4,2,72.5,B,6,4,66.7,4,1,Unsure
+U0057,26,Male,France,Tablet,Basic,Returning,1,Yes,6.8,9,0,0,23.3,236,26,5,Detractor,Negative,4,2,4,3,3,4,3,3,5,2,62.5,C,3,4,41.7,4,0,Unlikely
+U0058,31,Female,Netherlands,Mobile,Enterprise,Returning,15,Yes,7.9,13,0,0,77.7,215,5,5,Detractor,Negative,4,1,3,1,5,3,4,2,4,2,77.5,B,4,5,58.3,4,0,Unsure
+U0059,37,Female,India,Desktop,Basic,Returning,46,Yes,4.5,17,0,4,87.6,211,26,10,Promoter,Positive,3,2,3,2,5,3,4,3,4,3,65.0,C,5,3,50.0,3,1,Unlikely
+U0060,44,Female,UK,Desktop,Basic,Returning,62,No,7.5,6,0,0,66.6,148,4,8,Passive,Neutral,3,4,4,2,4,3,3,2,3,1,62.5,C,4,4,50.0,3,1,Unsure
+U0061,29,Female,Netherlands,Mobile,Free,New,14,No,5.1,19,0,1,73.7,239,23,2,Detractor,Negative,5,2,2,2,2,1,4,3,4,2,67.5,C,4,4,50.0,3,0,Unsure
+U0062,32,Male,UK,Desktop,Basic,Power User,11,No,6.4,13,1,2,62.3,333,19,10,Promoter,Positive,4,4,4,3,4,1,4,2,2,2,65.0,C,5,5,66.7,4,1,Likely
+U0063,23,Male,Germany,Mobile,Basic,Power User,52,Yes,9.6,11,1,2,85.7,257,23,4,Detractor,Negative,4,2,2,3,3,2,2,2,3,3,55.0,D,3,5,50.0,3,1,Unsure
+U0064,22,Female,UK,Mobile,Free,Returning,20,No,5.5,13,0,0,89.5,178,9,9,Promoter,Positive,4,3,4,1,4,2,3,2,4,2,72.5,B,6,3,58.3,2,0,Likely
+U0065,42,Female,UK,Mobile,Free,Returning,1,Yes,1.8,10,0,1,81.4,152,23,10,Promoter,Positive,3,2,1,3,3,3,5,3,4,2,57.5,D,1,5,33.3,5,1,Unlikely
+U0066,48,Male,USA,Desktop,Basic,New,11,Yes,3.3,14,1,0,47.4,178,2,10,Promoter,Positive,4,4,5,2,4,3,5,3,3,2,67.5,C,3,4,41.7,3,0,Unsure
+U0067,33,Female,USA,Mobile,Pro,Returning,5,Yes,8.2,8,2,1,67.2,266,41,10,Promoter,Positive,4,4,4,3,3,2,5,2,2,2,62.5,C,4,3,41.7,3,1,Unsure
+U0068,44,Female,USA,Desktop,Basic,Returning,11,No,8.4,15,1,0,82.3,255,1,5,Detractor,Negative,4,1,4,2,5,2,5,1,4,1,87.5,A,6,4,66.7,3,0,Likely
+U0069,38,Female,Germany,Tablet,Free,Returning,11,Yes,5.1,9,1,2,63.3,261,4,8,Passive,Neutral,5,2,4,2,3,4,4,2,2,1,67.5,C,3,3,33.3,2,1,Unlikely
+U0070,28,Male,UK,Mobile,Pro,Power User,16,Yes,6.1,11,0,2,74.9,246,11,10,Promoter,Positive,5,2,4,3,2,1,4,2,4,1,75.0,B,4,4,50.0,4,0,Unsure
+U0071,38,Female,UK,Desktop,Free,Returning,8,Yes,8.1,20,0,1,74.0,254,21,7,Passive,Neutral,3,2,5,1,4,2,4,3,4,3,72.5,B,7,4,75.0,4,0,Unsure
+U0072,49,Female,Germany,Desktop,Basic,Returning,3,Yes,4.6,14,2,1,90.0,244,1,9,Promoter,Positive,4,2,4,1,4,2,4,4,3,3,67.5,C,3,5,50.0,4,0,Unsure
+U0073,34,Male,USA,Desktop,Free,Power User,13,Yes,7.4,14,0,1,50.6,177,42,10,Promoter,Positive,3,3,4,4,3,3,4,2,5,3,60.0,C,4,3,41.7,4,0,Unsure
+U0074,50,Male,India,Mobile,Free,New,32,No,3.2,13,6,5,88.8,265,90,2,Detractor,Negative,3,3,2,4,4,3,4,2,3,3,52.5,D,3,1,16.7,2,1,Unlikely
+U0075,18,Prefer not to say,India,Desktop,Free,Returning,20,Yes,3.6,7,1,1,77.1,185,19,9,Promoter,Positive,3,2,4,3,4,2,5,1,3,3,70.0,B,5,4,58.3,2,1,Unsure
+U0076,42,Male,Australia,Mobile,Basic,Returning,7,Yes,5.1,18,1,2,76.9,217,11,0,Detractor,Negative,3,4,5,3,4,2,4,2,3,2,65.0,C,4,4,50.0,4,0,Likely
+U0077,35,Female,India,Desktop,Free,Returning,49,Yes,5.0,4,0,3,83.9,253,27,2,Detractor,Negative,3,3,4,2,2,3,3,2,4,2,60.0,C,4,4,50.0,3,0,Unsure
+U0078,31,Female,USA,Mobile,Basic,Power User,44,Yes,7.2,11,1,1,62.2,302,5,9,Promoter,Positive,4,3,4,3,3,3,5,3,4,2,65.0,C,7,6,91.7,3,0,Unsure
+U0079,35,Male,India,Mobile,Basic,Returning,4,Yes,7.5,11,1,1,70.4,131,10,10,Promoter,Positive,4,3,4,2,3,2,4,3,4,1,70.0,B,5,3,50.0,4,0,Unsure
+U0080,18,Female,USA,Mobile,Basic,Power User,1,Yes,0.5,15,0,1,82.1,227,32,7,Passive,Neutral,5,1,4,3,4,2,4,2,4,1,80.0,A,5,6,75.0,3,0,Likely
+U0081,32,Male,USA,Mobile,Basic,Returning,24,Yes,3.9,12,0,0,90.1,323,64,5,Detractor,Negative,3,2,2,2,5,3,5,4,4,2,65.0,C,2,5,41.7,4,1,Unsure
+U0082,38,Female,Canada,Desktop,Pro,Returning,32,Yes,7.5,15,1,0,91.6,219,20,8,Passive,Neutral,3,1,5,3,3,2,3,1,4,3,70.0,B,5,6,75.0,3,0,Likely
+U0083,49,Male,USA,Desktop,Free,Power User,62,Yes,11.1,13,1,0,89.5,249,4,8,Passive,Neutral,5,2,4,3,4,2,5,2,5,2,80.0,A,4,6,66.7,4,1,Unsure
+U0084,29,Female,Canada,Mobile,Basic,New,40,Yes,3.8,9,0,0,67.7,255,5,8,Passive,Neutral,5,4,2,3,3,2,5,2,3,2,62.5,C,3,2,25.0,4,1,Unsure
+U0085,26,Male,Australia,Desktop,Free,New,17,Yes,7.2,8,0,1,85.2,291,6,2,Detractor,Negative,5,2,5,1,4,2,3,3,4,1,80.0,A,6,4,66.7,3,1,Likely
+U0086,29,Male,Australia,Desktop,Free,Returning,14,Yes,11.6,16,1,2,100.0,123,6,10,Promoter,Positive,5,2,5,2,4,2,5,1,4,2,85.0,A,4,5,58.3,5,1,Likely
+U0087,43,Non-binary,Netherlands,Desktop,Basic,Returning,1,No,2.2,12,1,1,81.4,161,9,9,Promoter,Positive,4,2,3,4,2,1,4,1,4,2,67.5,C,5,2,41.7,4,1,Unlikely
+U0088,37,Male,USA,Desktop,Basic,New,5,Yes,7.1,16,1,5,71.9,228,9,7,Passive,Neutral,4,3,3,3,3,2,4,2,4,3,62.5,C,3,3,33.3,4,1,Unsure
+U0089,29,Female,USA,Desktop,Pro,Returning,11,Yes,3.4,8,1,7,76.2,117,22,4,Detractor,Negative,2,3,2,1,3,3,4,3,4,2,57.5,D,1,2,8.3,3,0,Unsure
+U0090,39,Male,France,Mobile,Basic,Returning,18,Yes,5.5,15,0,5,86.4,287,23,10,Promoter,Positive,4,2,4,1,5,2,2,2,5,3,75.0,B,3,5,50.0,4,0,Unsure
+U0091,35,Female,USA,Desktop,Enterprise,Returning,15,Yes,5.5,13,1,2,91.6,269,17,10,Promoter,Positive,5,1,5,2,3,1,5,2,4,1,87.5,A,5,7,83.3,4,0,Likely
+U0092,44,Male,France,Mobile,Free,Power User,24,No,4.9,16,0,1,93.6,188,27,10,Promoter,Positive,3,2,4,2,4,3,4,2,5,2,72.5,B,3,3,33.3,4,0,Unsure
+U0093,27,Non-binary,India,Desktop,Free,Returning,6,Yes,12.6,14,3,0,85.6,214,1,3,Detractor,Negative,1,2,4,2,2,2,3,3,2,3,50.0,D,5,4,58.3,3,0,Unsure
+U0094,31,Male,India,Mobile,Free,Power User,15,Yes,7.5,11,1,2,65.0,242,1,5,Detractor,Negative,2,3,3,3,4,1,3,2,3,4,55.0,D,3,1,16.7,2,1,Unlikely
+U0095,30,Male,USA,Desktop,Free,New,2,Yes,8.9,10,0,2,81.9,232,30,7,Passive,Neutral,5,2,4,2,4,2,5,5,5,1,77.5,B,6,3,58.3,2,1,Unlikely
+U0096,19,Male,UK,Tablet,Basic,Returning,10,Yes,8.8,17,0,2,79.3,203,9,10,Promoter,Positive,4,1,3,3,4,3,3,2,4,2,67.5,C,5,7,83.3,5,0,Unsure
+U0097,37,Male,USA,Tablet,Pro,Power User,25,No,3.0,15,1,8,67.5,241,13,7,Passive,Neutral,4,2,4,2,4,3,4,1,5,1,80.0,A,5,3,50.0,4,1,Unsure
+U0098,37,Female,UK,Desktop,Free,Returning,21,Yes,7.6,10,0,1,73.3,206,1,10,Promoter,Positive,4,2,4,3,3,1,3,2,3,2,67.5,C,4,3,41.7,3,0,Unsure
+U0099,34,Male,Netherlands,Tablet,Enterprise,Power User,84,Yes,9.5,9,0,1,77.9,268,5,0,Detractor,Negative,3,2,4,3,3,4,4,1,3,2,62.5,C,1,3,16.7,5,1,Unsure
+U0100,32,Female,USA,Tablet,Pro,Returning,6,Yes,5.0,12,1,0,58.3,231,14,7,Passive,Neutral,4,2,3,3,5,2,3,2,4,3,67.5,C,4,3,41.7,3,0,Likely
+U0101,20,Male,UK,Mobile,Free,New,12,Yes,8.2,15,0,0,82.2,200,41,10,Promoter,Positive,3,2,4,2,2,3,3,2,4,3,60.0,C,4,2,33.3,4,1,Unsure
+U0102,30,Male,UK,Mobile,Free,Returning,7,No,7.5,14,2,2,31.0,318,53,8,Passive,Neutral,4,3,4,2,4,4,4,3,5,2,67.5,C,4,2,33.3,3,0,Unlikely
+U0103,31,Female,France,Desktop,Free,Returning,10,Yes,10.4,8,0,2,100.0,156,15,9,Promoter,Positive,4,3,4,2,4,2,5,3,4,3,70.0,B,4,2,33.3,4,0,Unsure
+U0104,26,Female,France,Mobile,Free,Power User,35,Yes,5.5,9,1,3,97.5,213,14,7,Passive,Neutral,4,4,4,1,4,3,4,2,3,3,65.0,C,1,6,41.7,3,0,Unsure
+U0105,32,Male,USA,Desktop,Free,New,21,Yes,3.6,16,0,1,71.1,282,33,8,Passive,Neutral,4,3,4,1,4,2,4,3,3,3,67.5,C,3,6,58.3,3,0,Unsure
+U0106,38,Male,UK,Desktop,Basic,Power User,39,Yes,5.4,8,0,5,74.4,182,14,8,Passive,Neutral,4,2,3,1,4,1,3,2,5,2,77.5,B,4,5,58.3,3,1,Unsure
+U0107,53,Male,USA,Tablet,Free,Power User,4,Yes,9.9,13,2,2,78.9,243,13,8,Passive,Neutral,5,4,3,1,4,3,3,3,3,2,62.5,C,5,4,58.3,3,0,Unsure
+U0108,36,Female,USA,Desktop,Basic,New,37,Yes,1.9,10,1,3,67.4,254,42,0,Detractor,Negative,4,4,3,2,5,3,5,3,4,2,67.5,C,4,5,58.3,4,1,Likely
+U0109,37,Female,India,Mobile,Enterprise,Returning,1,Yes,1.2,17,0,0,77.4,172,29,10,Promoter,Positive,3,1,2,3,5,2,3,2,4,3,65.0,C,4,3,41.7,2,0,Unsure
+U0110,33,Female,France,Mobile,Pro,Power User,40,Yes,8.8,13,0,1,91.7,165,17,10,Promoter,Positive,3,2,4,1,5,3,5,1,4,2,80.0,A,7,4,75.0,4,0,Likely
+U0111,18,Female,USA,Mobile,Enterprise,Power User,7,Yes,5.9,16,1,2,79.3,197,4,8,Passive,Neutral,4,2,5,1,5,1,4,2,4,2,85.0,A,6,6,83.3,4,1,Unsure
+U0112,34,Female,UK,Tablet,Free,Returning,7,No,5.8,11,1,0,72.8,203,16,4,Detractor,Negative,3,2,4,1,4,2,3,3,3,3,65.0,C,5,5,66.7,3,0,Unlikely
+U0113,35,Female,Brazil,Desktop,Basic,Returning,13,Yes,8.4,12,5,0,53.4,370,37,9,Promoter,Positive,2,4,4,2,3,2,3,3,4,3,55.0,D,3,3,33.3,4,1,Unlikely
+U0114,59,Female,USA,Desktop,Basic,Returning,51,Yes,6.5,8,2,3,88.4,140,1,4,Detractor,Negative,5,3,5,1,4,2,4,3,5,4,75.0,B,4,7,75.0,4,1,Likely
+U0115,32,Male,India,Desktop,Free,Returning,1,Yes,1.8,5,1,0,77.8,282,28,0,Detractor,Negative,4,2,3,2,3,3,5,3,4,2,67.5,C,3,4,41.7,5,1,Unsure
+U0116,37,Male,UK,Desktop,Free,Returning,8,Yes,10.8,10,1,1,70.7,217,4,7,Passive,Neutral,3,4,2,3,4,2,3,3,4,3,52.5,D,3,1,16.7,3,1,Unlikely
+U0117,34,Male,USA,Desktop,Pro,Power User,35,Yes,5.7,15,0,0,86.8,115,15,10,Promoter,Positive,5,1,4,3,4,2,5,2,5,3,80.0,A,4,6,66.7,4,0,Unsure
+U0118,22,Male,UK,Desktop,Pro,New,9,No,4.1,9,1,2,94.4,219,15,2,Detractor,Negative,3,3,5,1,3,4,3,3,3,3,57.5,D,4,4,50.0,4,1,Unsure
+U0119,45,Female,Germany,Mobile,Basic,New,4,Yes,9.2,9,0,3,70.5,261,4,10,Promoter,Positive,4,3,4,4,3,2,4,2,4,3,62.5,C,5,4,58.3,4,0,Unsure
+U0120,42,Non-binary,Brazil,Mobile,Basic,Returning,10,Yes,5.4,13,0,1,78.1,278,12,8,Passive,Neutral,3,1,4,3,4,3,3,2,5,2,70.0,B,5,4,58.3,4,1,Unsure
+U0121,42,Male,USA,Desktop,Basic,Returning,9,Yes,5.9,13,0,1,90.8,323,22,3,Detractor,Negative,2,2,3,3,4,2,4,2,5,2,67.5,C,3,2,25.0,4,1,Unlikely
+U0122,25,Male,UK,Mobile,Free,Returning,44,Yes,7.8,12,0,7,76.1,393,17,8,Passive,Neutral,3,3,3,3,4,3,4,3,5,1,65.0,C,4,4,50.0,4,0,Unsure
+U0123,48,Male,UK,Desktop,Free,Returning,26,Yes,8.7,14,0,3,75.0,246,11,9,Promoter,Positive,4,2,4,2,5,3,4,3,5,2,75.0,B,5,3,50.0,3,0,Unsure
+U0124,20,Non-binary,USA,Desktop,Free,Returning,13,Yes,6.6,10,0,3,82.7,157,29,9,Promoter,Positive,4,1,5,2,3,3,5,2,3,3,72.5,B,5,5,66.7,4,0,Likely
+U0125,40,Male,UK,Mobile,Free,New,80,Yes,9.2,9,2,1,84.4,273,17,2,Detractor,Negative,3,4,3,3,2,3,2,4,4,3,42.5,F,2,4,33.3,4,1,Unlikely
+U0126,56,Female,UK,Mobile,Enterprise,Returning,11,Yes,2.9,20,0,0,86.9,163,6,3,Detractor,Negative,4,1,4,3,5,1,5,3,3,1,80.0,A,7,5,83.3,5,0,Likely
+U0127,24,Male,Canada,Mobile,Basic,Power User,1,Yes,8.6,13,0,1,96.0,270,1,9,Promoter,Positive,5,3,4,2,4,1,4,2,5,2,80.0,A,5,2,41.7,3,0,Unsure
+U0128,28,Male,USA,Desktop,Pro,Returning,5,Yes,4.9,13,0,2,79.1,129,38,10,Promoter,Positive,3,3,4,3,3,2,4,2,4,2,65.0,C,6,4,66.7,4,0,Likely
+U0129,35,Prefer not to say,USA,Mobile,Free,Returning,10,Yes,10.2,19,1,0,66.6,355,3,7,Passive,Neutral,3,2,4,1,5,3,4,3,3,2,70.0,B,5,2,41.7,2,0,Unsure
+U0130,29,Non-binary,Netherlands,Mobile,Basic,Returning,3,Yes,6.4,7,0,1,82.0,281,15,10,Promoter,Positive,3,3,3,2,4,3,3,3,2,3,52.5,D,2,4,33.3,4,1,Unsure
+U0131,18,Male,UK,Mobile,Free,Power User,53,Yes,5.7,16,1,0,79.3,97,21,5,Detractor,Negative,3,2,3,4,3,1,4,1,3,4,60.0,C,4,4,50.0,5,0,Unsure
+U0132,35,Non-binary,Spain,Mobile,Free,New,26,Yes,6.1,14,5,2,67.0,228,7,8,Passive,Neutral,3,3,3,2,4,2,3,3,3,2,60.0,C,3,4,41.7,2,1,Unlikely
+U0133,23,Female,USA,Mobile,Free,Returning,6,Yes,8.0,10,0,4,31.6,287,16,5,Detractor,Negative,4,3,4,3,4,3,4,2,3,2,65.0,C,4,2,33.3,3,1,Unlikely
+U0134,39,Female,Netherlands,Mobile,Pro,Power User,16,Yes,8.4,15,0,0,78.3,284,4,9,Promoter,Positive,4,2,2,3,4,3,2,2,3,3,55.0,D,6,2,50.0,4,0,Unsure
+U0135,25,Male,France,Mobile,Pro,Returning,23,Yes,3.6,9,1,2,67.0,151,27,7,Passive,Neutral,4,1,3,3,3,3,3,3,4,3,60.0,C,3,4,41.7,4,1,Unsure
+U0136,49,Female,Australia,Tablet,Basic,New,51,Yes,5.2,10,3,5,60.1,266,15,10,Promoter,Positive,4,3,4,1,4,3,3,2,3,2,67.5,C,6,5,75.0,4,1,Unlikely
+U0137,26,Female,Brazil,Mobile,Basic,Returning,38,Yes,7.0,14,1,0,72.3,92,29,10,Promoter,Positive,4,2,3,3,3,4,3,1,4,3,60.0,C,4,3,41.7,3,1,Unsure
+U0138,31,Female,USA,Desktop,Enterprise,New,13,Yes,7.4,16,2,1,76.1,191,28,10,Promoter,Positive,5,2,4,1,3,2,4,1,3,2,77.5,B,6,5,75.0,4,0,Unsure
+U0139,42,Male,Brazil,Mobile,Free,Returning,27,Yes,8.4,15,0,6,75.6,286,18,2,Detractor,Negative,3,4,4,1,3,2,4,2,5,3,67.5,C,4,2,33.3,3,1,Unsure
+U0140,22,Male,USA,Desktop,Free,Power User,15,No,1.3,16,5,6,55.1,192,24,6,Detractor,Negative,2,3,3,3,4,3,4,2,4,3,57.5,D,4,4,50.0,3,1,Unsure
+U0141,36,Male,USA,Desktop,Free,New,14,Yes,7.1,11,0,0,78.8,134,15,9,Promoter,Positive,2,3,5,1,2,2,3,3,3,3,57.5,D,2,5,41.7,4,1,Unsure
+U0142,47,Female,USA,Mobile,Pro,Power User,2,Yes,6.5,17,0,0,100.0,211,7,10,Promoter,Positive,3,1,4,2,3,2,4,2,3,2,70.0,B,6,6,83.3,4,1,Likely
+U0143,18,Male,Germany,Tablet,Enterprise,New,2,Yes,5.4,12,1,0,87.9,161,13,10,Promoter,Positive,5,2,5,1,3,3,3,4,4,2,70.0,B,5,5,66.7,5,1,Unsure
+U0144,36,Female,UK,Tablet,Free,Power User,14,Yes,5.3,16,2,2,93.3,241,33,1,Detractor,Negative,4,2,5,1,2,2,4,2,5,1,80.0,A,5,5,66.7,3,1,Likely
+U0145,37,Non-binary,Germany,Desktop,Pro,Returning,6,Yes,6.3,13,0,2,94.6,158,8,7,Passive,Neutral,5,2,3,3,3,1,4,3,5,3,70.0,B,5,6,75.0,5,0,Unsure
+U0146,42,Male,Germany,Mobile,Pro,New,0,No,0.5,12,0,2,87.8,189,8,9,Promoter,Positive,4,4,4,4,4,2,3,3,3,2,57.5,D,4,2,33.3,4,1,Unsure
+U0147,22,Female,Canada,Desktop,Free,New,23,Yes,3.9,12,0,1,95.5,118,11,4,Detractor,Negative,3,3,4,2,4,3,4,4,3,1,62.5,C,4,4,50.0,4,1,Unlikely
+U0148,21,Male,Australia,Tablet,Basic,Power User,1,Yes,4.3,7,0,0,68.7,231,10,10,Promoter,Positive,4,3,2,3,5,2,3,1,3,2,65.0,C,4,5,58.3,3,1,Unsure
+U0149,39,Female,USA,Tablet,Basic,New,16,Yes,7.5,8,0,2,63.4,218,1,7,Passive,Neutral,3,4,3,2,4,2,3,4,4,1,60.0,C,4,3,41.7,4,1,Unlikely
+U0150,37,Male,USA,Mobile,Enterprise,New,14,Yes,5.2,13,3,1,92.8,132,10,6,Detractor,Negative,5,2,5,3,5,3,5,3,4,2,77.5,B,4,6,66.7,4,1,Unsure
+U0151,37,Female,USA,Mobile,Free,Returning,62,Yes,6.4,8,1,2,89.5,222,10,2,Detractor,Negative,3,2,4,1,5,3,5,2,3,3,72.5,B,4,6,66.7,3,0,Likely
+U0152,37,Female,UK,Mobile,Pro,Returning,12,Yes,10.8,15,1,1,90.2,272,14,0,Detractor,Negative,3,2,5,3,4,2,3,1,4,1,75.0,B,6,6,83.3,4,0,Unsure
+U0153,27,Non-binary,UK,Mobile,Free,Returning,1,Yes,8.6,14,1,1,99.1,217,9,1,Detractor,Negative,3,2,5,2,4,2,5,2,5,1,82.5,A,6,3,58.3,4,1,Unlikely
+U0154,36,Female,USA,Desktop,Pro,New,14,Yes,9.1,13,1,1,78.7,229,15,9,Promoter,Positive,4,2,3,3,4,2,5,2,3,2,70.0,B,5,5,66.7,3,1,Unsure
+U0155,37,Female,USA,Desktop,Basic,Returning,33,Yes,5.1,8,1,0,81.0,239,38,6,Detractor,Negative,3,1,3,3,4,2,2,1,4,3,65.0,C,4,5,58.3,5,0,Likely
+U0156,27,Female,Brazil,Mobile,Basic,New,84,Yes,7.3,15,1,1,57.9,160,62,1,Detractor,Negative,4,3,3,2,4,1,2,2,2,2,62.5,C,1,4,25.0,5,0,Unsure
+U0157,53,Female,Germany,Mobile,Pro,New,10,Yes,5.0,17,0,0,97.9,366,19,9,Promoter,Positive,3,3,3,3,4,3,3,2,5,2,62.5,C,1,2,8.3,4,1,Unlikely
+U0158,39,Female,USA,Desktop,Pro,Returning,7,Yes,5.9,12,1,1,70.7,193,1,7,Passive,Neutral,5,3,4,3,4,3,3,3,3,3,60.0,C,5,4,58.3,4,1,Unsure
+U0159,22,Male,France,Tablet,Pro,Power User,43,No,8.8,16,0,0,82.3,229,39,8,Passive,Neutral,4,1,4,1,5,2,4,1,4,3,82.5,A,6,5,75.0,4,0,Likely
+U0160,41,Non-binary,UK,Desktop,Free,New,4,No,4.0,11,2,0,62.7,290,28,9,Promoter,Positive,2,3,3,3,4,2,2,3,3,2,52.5,D,4,3,41.7,2,1,Unlikely
+U0161,24,Female,USA,Mobile,Pro,Returning,17,Yes,10.5,14,3,2,69.6,204,7,9,Promoter,Positive,4,2,4,2,5,3,3,3,3,1,70.0,B,2,5,41.7,4,1,Unsure
+U0162,42,Female,France,Mobile,Free,Returning,9,Yes,6.2,12,0,1,66.3,255,3,5,Detractor,Negative,3,2,4,3,3,3,3,2,5,2,65.0,C,1,2,8.3,4,0,Unsure
+U0163,46,Male,USA,Mobile,Basic,Power User,1,Yes,8.7,13,1,2,74.1,219,2,7,Passive,Neutral,4,3,3,3,4,3,4,1,4,2,67.5,C,4,4,50.0,3,0,Unsure
+U0164,26,Female,USA,Mobile,Basic,Power User,8,Yes,9.9,14,0,2,55.0,140,3,9,Promoter,Positive,5,3,1,4,4,3,4,2,3,2,57.5,D,3,2,25.0,3,1,Unsure
+U0165,44,Male,Brazil,Desktop,Basic,Power User,6,Yes,10.2,20,1,1,74.1,174,1,8,Passive,Neutral,4,3,5,3,4,1,4,1,5,2,80.0,A,4,7,75.0,2,0,Likely
+U0166,38,Female,Netherlands,Desktop,Basic,New,21,Yes,3.6,9,0,5,100.0,168,33,10,Promoter,Positive,3,2,5,4,5,2,3,3,5,3,67.5,C,4,2,33.3,3,0,Unsure
+U0167,42,Male,France,Mobile,Enterprise,New,53,No,7.6,12,0,0,85.8,194,14,9,Promoter,Positive,5,2,4,1,4,1,4,2,3,3,77.5,B,3,3,33.3,4,1,Likely
+U0168,53,Female,Germany,Mobile,Free,Returning,6,Yes,7.8,7,0,3,82.2,161,26,9,Promoter,Positive,4,1,3,2,5,3,3,2,2,3,65.0,C,2,4,33.3,4,0,Unsure
+U0169,32,Prefer not to say,France,Desktop,Pro,Returning,30,Yes,10.0,19,1,4,100.0,257,19,1,Detractor,Negative,5,3,3,2,4,2,4,4,3,2,65.0,C,5,4,58.3,4,0,Unsure
+U0170,26,Male,UK,Mobile,Basic,Returning,1,Yes,3.5,10,0,4,100.0,321,29,6,Detractor,Negative,4,2,5,2,3,2,5,3,3,3,70.0,B,4,5,58.3,4,0,Unlikely
+U0171,25,Prefer not to say,USA,Desktop,Free,Power User,14,No,3.6,6,3,0,41.0,308,50,9,Promoter,Positive,3,3,4,3,3,2,3,3,3,2,57.5,D,3,1,16.7,4,0,Unlikely
+U0172,26,Male,UK,Mobile,Free,Power User,1,Yes,8.1,12,0,1,51.2,318,75,8,Passive,Neutral,3,3,2,2,4,1,3,3,4,3,60.0,C,2,3,25.0,3,1,Unsure
+U0173,33,Female,USA,Mobile,Enterprise,Power User,49,Yes,5.7,19,2,0,74.3,172,7,1,Detractor,Negative,4,2,5,1,2,3,5,1,5,2,80.0,A,5,5,66.7,5,0,Likely
+U0174,37,Female,Germany,Desktop,Pro,Returning,26,Yes,5.5,14,1,2,67.5,187,56,9,Promoter,Positive,3,3,4,3,4,1,4,2,4,3,67.5,C,3,2,25.0,3,1,Unsure
+U0175,37,Female,USA,Desktop,Enterprise,Returning,19,No,11.0,13,0,2,76.3,160,19,6,Detractor,Negative,5,3,4,2,3,3,5,1,3,4,67.5,C,7,5,83.3,5,0,Unsure
+U0176,42,Female,Brazil,Mobile,Enterprise,Returning,31,Yes,7.3,15,0,1,77.1,238,1,3,Detractor,Negative,4,1,4,1,4,2,3,1,4,1,82.5,A,6,5,75.0,3,1,Unsure
+U0177,34,Female,Netherlands,Mobile,Free,New,19,No,5.2,17,1,1,83.6,221,17,10,Promoter,Positive,3,2,3,2,5,4,3,2,3,2,62.5,C,5,5,66.7,3,0,Unsure
+U0178,49,Male,India,Mobile,Basic,Power User,62,Yes,4.8,10,1,2,80.7,203,17,4,Detractor,Negative,5,2,5,2,4,2,4,1,5,3,82.5,A,3,3,33.3,4,0,Unsure
+U0179,31,Male,Germany,Mobile,Pro,New,23,Yes,8.3,13,1,1,73.8,275,30,1,Detractor,Negative,2,1,4,2,4,2,5,2,2,2,70.0,B,6,5,75.0,4,1,Unsure
+U0180,61,Female,Australia,Mobile,Basic,Returning,47,Yes,4.3,13,0,2,55.4,216,5,4,Detractor,Negative,3,3,4,3,2,2,4,3,4,2,60.0,C,7,6,91.7,4,1,Likely
+U0181,40,Female,UK,Tablet,Basic,Returning,13,Yes,6.9,10,0,2,70.8,145,11,9,Promoter,Positive,3,2,5,2,4,1,4,2,5,3,77.5,B,4,7,75.0,4,0,Unsure
+U0182,25,Female,Canada,Mobile,Basic,Returning,2,Yes,7.5,11,4,0,69.5,176,0,3,Detractor,Negative,4,2,4,2,4,3,3,2,3,2,67.5,C,5,5,66.7,3,0,Unsure
+U0183,23,Female,UK,Desktop,Basic,Power User,14,No,9.0,14,0,2,66.4,278,9,7,Passive,Neutral,4,3,4,3,3,2,4,3,5,4,62.5,C,6,6,83.3,2,0,Unsure
+U0184,39,Male,Canada,Desktop,Basic,Returning,2,Yes,8.4,14,0,0,62.3,277,1,9,Promoter,Positive,3,1,3,2,4,3,4,2,4,3,67.5,C,5,5,66.7,3,1,Unsure
+U0185,32,Female,USA,Desktop,Free,Power User,16,Yes,5.6,15,0,1,76.6,232,10,10,Promoter,Positive,5,1,4,2,4,2,5,1,3,4,77.5,B,6,4,66.7,4,0,Unsure
+U0186,41,Male,Netherlands,Mobile,Basic,Returning,12,Yes,9.5,13,1,5,60.7,332,29,0,Detractor,Negative,5,3,3,1,4,3,4,1,5,4,72.5,B,3,5,50.0,3,1,Unsure
+U0187,39,Female,Spain,Desktop,Basic,Returning,18,Yes,7.0,16,1,2,84.9,288,3,10,Promoter,Positive,4,3,3,1,4,3,4,3,4,1,70.0,B,4,6,66.7,5,0,Unsure
+U0188,33,Male,UK,Tablet,Basic,Power User,0,No,4.2,11,0,1,67.6,228,10,3,Detractor,Negative,4,4,5,2,5,2,4,2,5,2,77.5,B,5,4,58.3,4,0,Unsure
+U0189,26,Male,USA,Mobile,Free,Returning,4,Yes,6.1,11,0,1,64.6,168,4,9,Promoter,Positive,3,1,4,3,3,1,3,1,4,2,72.5,B,4,6,66.7,4,0,Likely
+U0190,19,Male,Brazil,Mobile,Pro,Power User,12,Yes,11.6,15,0,0,70.5,105,1,7,Passive,Neutral,4,1,5,2,4,1,4,2,5,2,85.0,A,6,6,83.3,4,0,Likely
+U0191,30,Male,USA,Desktop,Free,New,54,Yes,6.8,13,1,1,73.2,199,13,3,Detractor,Negative,3,2,4,2,4,3,5,3,2,3,62.5,C,4,4,50.0,3,0,Unsure
+U0192,43,Female,Australia,Desktop,Basic,Returning,9,No,5.0,11,1,0,51.2,301,2,10,Promoter,Positive,3,3,4,3,2,1,2,4,2,3,47.5,F,2,3,25.0,2,1,Unlikely
+U0193,36,Male,France,Desktop,Pro,Returning,10,Yes,10.7,12,4,1,89.5,327,15,2,Detractor,Negative,2,1,4,2,5,2,4,4,5,3,70.0,B,3,3,33.3,3,0,Unsure
+U0194,22,Male,USA,Desktop,Basic,Power User,23,No,4.3,13,0,0,93.0,213,0,5,Detractor,Negative,5,2,4,2,3,2,4,2,5,1,80.0,A,5,6,75.0,4,0,Likely
+U0195,36,Male,USA,Desktop,Free,New,17,Yes,2.4,20,0,1,67.2,312,2,7,Passive,Neutral,3,2,3,2,3,2,4,3,5,2,67.5,C,3,3,33.3,3,0,Unlikely
+U0196,38,Male,UK,Mobile,Pro,Power User,6,Yes,3.1,16,2,0,70.1,190,11,10,Promoter,Positive,4,2,5,1,2,3,4,3,4,3,67.5,C,6,5,75.0,3,1,Unsure
+U0197,25,Male,Canada,Tablet,Basic,Returning,10,Yes,6.9,12,1,7,76.5,271,18,0,Detractor,Negative,4,4,3,2,3,3,4,4,3,2,55.0,D,3,2,25.0,3,0,Unlikely
+U0198,36,Male,USA,Tablet,Pro,Returning,4,Yes,8.4,14,0,1,98.0,234,0,5,Detractor,Negative,4,2,5,3,5,2,4,2,4,2,77.5,B,5,4,58.3,4,0,Likely
+U0199,35,Female,Germany,Mobile,Pro,Returning,61,No,12.0,13,0,0,92.1,61,8,4,Detractor,Negative,5,1,4,2,3,3,3,2,3,2,70.0,B,6,5,75.0,4,0,Likely
+U0200,23,Female,USA,Desktop,Basic,Returning,3,Yes,6.5,11,1,0,93.6,209,37,7,Passive,Neutral,3,4,4,3,4,3,5,1,3,3,62.5,C,3,3,33.3,4,0,Unsure
+U0201,38,Female,Germany,Mobile,Basic,Returning,8,Yes,5.7,13,2,1,83.8,273,21,7,Passive,Neutral,4,1,3,1,3,3,4,3,4,2,70.0,B,5,5,66.7,2,0,Unsure
+U0202,40,Female,Australia,Tablet,Free,Power User,0,No,6.0,6,1,0,84.4,249,3,4,Detractor,Negative,4,4,3,3,4,1,3,3,2,2,57.5,D,3,5,50.0,3,0,Unlikely
+U0203,45,Male,Brazil,Desktop,Free,Returning,5,Yes,6.9,7,0,1,78.7,146,15,3,Detractor,Negative,4,2,3,2,4,3,4,3,4,2,67.5,C,2,6,50.0,2,0,Unsure
+U0204,45,Female,USA,Mobile,Basic,Returning,27,Yes,2.8,11,1,3,89.8,62,17,7,Passive,Neutral,4,2,4,3,3,1,5,1,3,2,75.0,B,5,5,66.7,4,0,Unsure
+U0205,20,Female,Australia,Desktop,Basic,Returning,4,Yes,13.8,13,2,1,69.3,185,1,10,Promoter,Positive,2,1,3,2,4,2,4,1,5,3,72.5,B,4,4,50.0,4,1,Unsure
+U0206,25,Female,Canada,Mobile,Basic,New,2,No,7.7,11,0,2,69.0,217,35,10,Promoter,Positive,4,1,2,3,4,4,4,2,3,4,57.5,D,5,5,66.7,3,1,Unsure
+U0207,39,Male,Germany,Tablet,Free,New,12,Yes,8.5,19,0,1,92.9,133,24,9,Promoter,Positive,3,2,4,3,5,2,4,1,4,2,75.0,B,7,5,83.3,3,1,Likely
+U0208,39,Male,Spain,Desktop,Free,Returning,0,No,6.9,6,4,6,71.2,256,44,3,Detractor,Negative,5,3,3,3,3,2,2,3,2,2,55.0,D,2,3,25.0,2,1,Unlikely
+U0209,39,Male,UK,Tablet,Basic,Returning,2,Yes,7.1,8,0,6,73.5,278,40,9,Promoter,Positive,3,3,4,3,3,3,5,2,3,1,65.0,C,4,3,41.7,3,1,Unlikely
+U0210,65,Male,UK,Mobile,Free,New,30,No,5.5,16,1,1,86.3,275,28,6,Detractor,Negative,5,2,3,4,4,2,4,4,3,2,62.5,C,5,3,50.0,3,1,Unsure
+U0211,40,Female,Australia,Tablet,Pro,Returning,27,Yes,4.4,12,1,1,51.9,90,20,9,Promoter,Positive,3,3,4,2,5,3,2,2,3,2,62.5,C,3,4,41.7,3,0,Likely
+U0212,45,Female,USA,Desktop,Free,Returning,44,Yes,7.0,13,1,1,53.7,166,26,0,Detractor,Negative,3,3,3,1,3,2,3,4,3,2,57.5,D,4,1,25.0,3,0,Unsure
+U0213,44,Female,Australia,Mobile,Basic,Returning,35,Yes,7.0,17,0,0,75.7,212,32,8,Passive,Neutral,5,4,4,2,3,2,3,3,4,3,62.5,C,2,3,25.0,3,0,Unsure
+U0214,41,Female,Netherlands,Desktop,Enterprise,Returning,21,No,4.7,10,0,2,67.7,249,18,7,Passive,Neutral,3,3,4,2,5,1,4,1,2,3,70.0,B,7,4,75.0,4,1,Unsure
+U0215,31,Female,UK,Desktop,Free,New,1,No,8.8,10,1,2,100.0,280,9,7,Passive,Neutral,3,2,3,2,3,2,3,3,3,3,57.5,D,2,3,25.0,3,1,Unsure
+U0216,42,Female,Netherlands,Desktop,Basic,Power User,27,No,8.2,13,0,0,91.0,226,6,10,Promoter,Positive,4,2,5,2,5,3,5,2,4,2,80.0,A,6,5,75.0,3,0,Likely
+U0217,26,Non-binary,USA,Tablet,Free,Power User,34,Yes,8.3,6,0,0,74.7,198,40,9,Promoter,Positive,4,3,4,2,5,2,3,1,3,3,70.0,B,5,3,50.0,3,0,Unsure
+U0218,32,Male,Germany,Mobile,Basic,Power User,29,Yes,10.5,12,0,1,72.9,189,0,9,Promoter,Positive,4,2,4,1,4,1,2,2,3,3,70.0,B,4,6,66.7,3,1,Unsure
+U0219,29,Male,France,Mobile,Basic,New,13,Yes,7.0,15,0,3,73.1,165,18,9,Promoter,Positive,5,2,3,1,4,2,4,1,5,2,82.5,A,5,3,50.0,5,1,Unsure
+U0220,35,Male,Spain,Tablet,Basic,Power User,5,No,7.2,14,3,1,75.9,268,55,7,Passive,Neutral,3,3,3,2,4,3,4,2,3,2,62.5,C,2,3,25.0,4,1,Unsure
+U0221,57,Female,UK,Desktop,Basic,Power User,34,Yes,9.0,15,0,2,81.4,154,19,1,Detractor,Negative,4,1,4,2,3,3,3,2,4,3,67.5,C,5,5,66.7,4,0,Unsure
+U0222,18,Female,USA,Desktop,Enterprise,Power User,23,Yes,6.1,13,2,0,81.8,236,52,10,Promoter,Positive,4,2,3,1,3,3,5,4,3,1,67.5,C,5,6,75.0,5,0,Likely
+U0223,41,Male,India,Desktop,Free,New,71,No,5.1,8,0,2,59.5,269,29,9,Promoter,Positive,2,4,4,3,4,2,4,3,3,2,57.5,D,2,4,33.3,4,1,Unlikely
+U0224,18,Non-binary,India,Desktop,Free,Returning,3,Yes,5.0,13,1,2,79.2,262,1,9,Promoter,Positive,4,1,3,3,4,4,3,2,3,2,62.5,C,5,1,33.3,3,0,Unlikely
+U0225,29,Male,India,Desktop,Pro,Power User,5,Yes,5.1,12,0,1,100.0,157,22,7,Passive,Neutral,5,2,3,1,5,1,3,2,3,1,80.0,A,6,6,83.3,4,1,Unlikely
+U0226,45,Non-binary,UK,Desktop,Basic,Returning,4,Yes,12.6,13,1,0,82.3,131,5,7,Passive,Neutral,5,3,4,3,3,2,3,2,5,3,67.5,C,5,5,66.7,3,0,Unsure
+U0227,35,Male,USA,Desktop,Enterprise,Returning,28,Yes,5.1,16,1,0,75.4,129,4,10,Promoter,Positive,5,2,5,2,4,1,4,3,4,1,82.5,A,7,6,91.7,4,0,Unsure
+U0228,23,Male,USA,Desktop,Basic,Returning,4,Yes,3.4,17,0,1,84.5,198,6,2,Detractor,Negative,3,1,5,3,4,2,4,2,3,3,70.0,B,6,4,66.7,5,0,Unsure
+U0229,27,Female,Canada,Desktop,Pro,Returning,1,Yes,10.5,16,2,1,100.0,60,4,0,Detractor,Negative,3,2,4,1,4,2,4,2,3,3,70.0,B,4,7,75.0,3,0,Unsure
+U0230,41,Male,USA,Desktop,Basic,New,84,Yes,8.2,8,0,6,94.8,209,10,3,Detractor,Negative,4,2,3,2,3,3,3,3,4,4,57.5,D,4,4,50.0,4,0,Unsure
+U0231,27,Male,UK,Tablet,Pro,Returning,0,No,4.3,9,1,0,89.2,267,8,9,Promoter,Positive,5,3,3,3,5,2,5,2,5,2,77.5,B,5,4,58.3,4,0,Unsure
+U0232,36,Male,Spain,Mobile,Enterprise,New,32,Yes,9.7,16,2,0,100.0,214,9,3,Detractor,Negative,3,3,5,1,4,1,5,3,3,3,72.5,B,7,5,83.3,4,1,Likely
+U0233,34,Female,UK,Tablet,Basic,Returning,8,Yes,8.9,10,3,2,65.9,221,40,4,Detractor,Negative,4,2,3,4,4,5,3,4,3,3,47.5,F,3,1,16.7,4,1,Unsure
+U0234,27,Female,Brazil,Desktop,Free,Returning,33,Yes,6.6,11,3,3,86.1,219,6,0,Detractor,Negative,3,4,3,3,3,1,3,3,5,2,60.0,C,3,6,58.3,3,0,Unsure
+U0235,55,Male,India,Desktop,Free,Returning,15,Yes,14.0,17,0,1,76.4,158,3,8,Passive,Neutral,2,2,4,2,3,2,3,1,4,3,65.0,C,4,3,41.7,4,0,Unsure
+U0236,40,Female,Australia,Mobile,Free,New,42,Yes,2.1,12,0,2,78.9,232,20,7,Passive,Neutral,3,3,3,3,3,3,4,3,5,3,57.5,D,2,6,50.0,3,1,Unsure
+U0237,18,Female,USA,Desktop,Free,Returning,47,Yes,9.2,14,0,2,100.0,289,14,1,Detractor,Negative,2,2,4,2,5,4,5,1,3,3,67.5,C,3,4,41.7,5,1,Likely
+U0238,36,Male,UK,Desktop,Free,Power User,0,No,8.9,14,1,1,63.7,290,46,10,Promoter,Positive,2,3,3,2,4,3,4,3,3,1,60.0,C,2,3,25.0,4,1,Unsure
+U0239,27,Male,India,Desktop,Basic,New,1,No,8.4,10,2,1,61.0,260,0,10,Promoter,Positive,4,2,3,3,4,3,4,2,3,1,67.5,C,3,3,33.3,2,1,Unsure
+U0240,43,Male,Australia,Desktop,Basic,New,5,Yes,5.8,16,0,1,75.8,195,35,6,Detractor,Negative,4,1,2,1,3,1,3,3,3,1,70.0,B,6,2,50.0,4,1,Likely
+U0241,26,Male,India,Desktop,Basic,New,20,No,4.3,7,1,4,60.3,301,18,10,Promoter,Positive,3,4,5,2,3,3,4,4,3,3,55.0,D,2,3,25.0,3,1,Unlikely
+U0242,33,Female,UK,Desktop,Basic,Power User,39,Yes,7.5,14,0,0,84.1,122,18,9,Promoter,Positive,4,2,3,2,3,2,4,1,4,1,75.0,B,3,4,41.7,3,0,Unsure
+U0243,39,Male,Canada,Mobile,Free,Returning,11,Yes,7.6,15,0,1,61.9,227,2,6,Detractor,Negative,4,2,4,3,4,2,2,3,3,3,60.0,C,2,3,25.0,3,0,Unsure
+U0244,43,Female,Canada,Desktop,Free,Returning,17,Yes,8.4,8,1,2,100.0,247,9,6,Detractor,Negative,2,1,3,2,4,1,4,1,3,2,72.5,B,4,2,33.3,3,0,Likely
+U0245,22,Female,India,Desktop,Free,New,4,Yes,9.1,11,1,1,58.0,264,5,7,Passive,Neutral,3,2,3,2,3,2,4,3,3,3,60.0,C,6,6,83.3,3,0,Unsure
+U0246,31,Male,Canada,Mobile,Basic,Returning,29,Yes,4.4,16,1,1,97.0,250,5,8,Passive,Neutral,5,1,4,2,4,3,3,2,4,2,75.0,B,4,3,41.7,4,1,Likely
+U0247,29,Female,Australia,Desktop,Free,Power User,62,Yes,6.8,17,0,1,72.8,216,9,4,Detractor,Negative,3,2,4,2,4,2,3,2,3,2,67.5,C,7,7,100.0,4,0,Unsure
+U0248,27,Male,France,Desktop,Free,Power User,6,No,4.2,12,1,0,51.0,208,29,9,Promoter,Positive,5,1,3,3,4,3,3,3,3,2,65.0,C,4,4,50.0,3,0,Unsure
+U0249,52,Non-binary,UK,Mobile,Basic,Returning,12,Yes,6.4,11,0,1,86.7,231,18,8,Passive,Neutral,3,2,3,3,5,1,5,2,4,3,72.5,B,5,3,50.0,3,0,Unsure
+U0250,38,Female,USA,Desktop,Pro,New,2,Yes,9.1,15,0,1,72.8,162,15,9,Promoter,Positive,3,2,4,3,4,1,4,2,3,3,67.5,C,4,6,66.7,4,1,Unsure
+U0251,21,Female,UK,Desktop,Free,New,15,No,6.4,15,1,4,57.2,179,15,4,Detractor,Negative,4,2,2,2,5,2,5,3,4,2,72.5,B,3,2,25.0,2,1,Unsure
+U0252,43,Female,USA,Desktop,Pro,New,13,Yes,13.0,9,2,1,52.7,223,10,7,Passive,Neutral,4,2,4,4,4,3,3,3,3,3,57.5,D,5,3,50.0,4,0,Unsure
+U0253,55,Male,USA,Desktop,Pro,Returning,3,No,7.7,10,0,3,82.1,213,50,7,Passive,Neutral,5,1,4,1,3,2,4,2,4,1,82.5,A,5,3,50.0,3,0,Likely
+U0254,44,Female,UK,Mobile,Pro,New,11,Yes,6.6,13,0,2,88.9,113,15,7,Passive,Neutral,3,3,5,2,3,2,4,2,4,3,67.5,C,3,5,50.0,4,1,Unlikely
+U0255,19,Non-binary,USA,Mobile,Enterprise,Returning,7,No,8.1,16,0,0,95.3,215,3,10,Promoter,Positive,4,1,4,2,5,2,5,3,4,2,80.0,A,6,5,75.0,4,0,Likely
+U0256,29,Female,UK,Desktop,Free,Returning,13,Yes,4.0,10,0,3,69.0,289,6,10,Promoter,Positive,3,2,4,3,4,2,2,3,3,3,57.5,D,3,2,25.0,3,0,Unlikely
+U0257,47,Female,Canada,Mobile,Free,Power User,16,Yes,5.9,13,2,0,78.7,227,19,8,Passive,Neutral,5,3,4,3,3,4,3,2,4,3,60.0,C,2,5,41.7,4,1,Unsure
+U0258,27,Female,Spain,Mobile,Enterprise,Returning,0,No,10.2,11,1,8,83.3,340,10,10,Promoter,Positive,5,1,3,3,4,2,3,1,4,3,72.5,B,6,5,75.0,5,1,Unsure
+U0259,38,Male,UK,Desktop,Basic,Power User,26,Yes,7.3,7,0,3,60.5,166,0,10,Promoter,Positive,4,2,5,1,3,2,4,3,4,3,72.5,B,5,5,66.7,3,0,Unsure
+U0260,42,Male,Spain,Mobile,Basic,Power User,22,Yes,4.8,11,1,1,58.5,192,29,10,Promoter,Positive,3,2,3,2,3,3,3,2,4,3,60.0,C,5,3,50.0,4,1,Likely
+U0261,25,Female,Germany,Desktop,Pro,New,8,Yes,4.9,13,1,0,79.2,179,17,5,Detractor,Negative,3,1,2,3,3,2,4,3,4,1,65.0,C,6,5,75.0,5,0,Likely
+U0262,33,Male,USA,Desktop,Pro,Power User,1,Yes,5.6,12,0,1,75.8,210,18,9,Promoter,Positive,4,3,4,2,4,2,4,1,4,3,72.5,B,4,4,50.0,4,1,Unsure
+U0263,18,Female,UK,Desktop,Enterprise,Returning,25,Yes,7.4,10,1,1,93.8,183,1,1,Detractor,Negative,5,2,3,2,4,2,5,2,4,2,77.5,B,6,5,75.0,3,1,Unsure
+U0264,24,Female,Germany,Desktop,Enterprise,Returning,56,No,11.3,9,0,0,100.0,92,4,9,Promoter,Positive,3,2,4,1,5,1,4,2,3,1,80.0,A,5,6,75.0,4,0,Likely
+U0265,31,Male,Canada,Desktop,Pro,Returning,5,Yes,4.5,13,1,0,95.7,155,30,8,Passive,Neutral,4,1,4,1,3,1,3,2,5,2,80.0,A,7,4,75.0,4,0,Unsure
+U0266,22,Male,India,Mobile,Free,Power User,7,Yes,6.8,17,0,1,81.7,187,23,8,Passive,Neutral,4,4,5,3,5,2,3,2,3,2,67.5,C,5,7,83.3,3,1,Likely
+U0267,50,Female,UK,Desktop,Pro,Returning,4,Yes,7.0,16,2,0,57.9,290,6,4,Detractor,Negative,3,3,4,2,4,4,3,1,3,2,62.5,C,4,5,58.3,4,0,Unsure
+U0268,20,Male,UK,Desktop,Free,Returning,15,Yes,2.5,17,0,3,86.8,338,2,8,Passive,Neutral,3,2,3,1,3,3,4,2,4,1,70.0,B,6,6,83.3,4,0,Unsure
+U0269,30,Female,USA,Desktop,Free,Power User,3,Yes,3.9,9,0,3,78.8,313,12,10,Promoter,Positive,4,3,4,2,3,2,4,3,3,3,62.5,C,3,3,33.3,2,1,Unsure
+U0270,35,Male,USA,Mobile,Enterprise,New,8,No,4.7,8,2,1,41.7,176,8,3,Detractor,Negative,5,3,5,2,3,3,2,2,5,4,65.0,C,5,5,66.7,3,1,Unsure
+U0271,48,Female,USA,Mobile,Free,Returning,21,No,2.9,11,0,5,50.4,218,30,7,Passive,Neutral,3,3,5,2,4,3,5,3,3,5,60.0,C,2,2,16.7,2,1,Unlikely
+U0272,20,Male,USA,Mobile,Free,Power User,15,Yes,8.3,16,0,0,77.1,180,38,10,Promoter,Positive,4,2,5,2,4,2,4,2,4,2,77.5,B,6,7,91.7,3,0,Unsure
+U0273,46,Female,Canada,Mobile,Free,Power User,9,No,5.7,13,0,0,74.4,336,9,8,Passive,Neutral,3,3,4,3,4,2,4,4,2,1,60.0,C,5,4,58.3,2,0,Unsure
+U0274,34,Male,Spain,Mobile,Pro,Power User,10,Yes,5.8,7,0,1,70.9,192,1,8,Passive,Neutral,5,3,4,2,4,2,4,2,4,1,77.5,B,4,5,58.3,3,1,Likely
+U0275,24,Female,USA,Desktop,Basic,Power User,15,Yes,7.5,9,2,1,75.1,141,40,10,Promoter,Positive,4,3,3,2,2,3,3,2,3,3,55.0,D,4,6,66.7,4,1,Unsure
+U0276,39,Male,Netherlands,Mobile,Pro,New,0,No,11.2,12,1,1,76.1,181,1,8,Passive,Neutral,5,3,4,2,4,2,4,1,3,3,72.5,B,4,6,66.7,3,0,Unsure
+U0277,36,Female,USA,Mobile,Free,Power User,1,Yes,10.3,13,0,4,71.7,271,57,6,Detractor,Negative,3,2,5,4,4,2,3,2,3,2,65.0,C,3,3,33.3,3,1,Unlikely
+U0278,28,Female,USA,Tablet,Pro,Returning,38,Yes,1.4,14,1,7,63.6,268,21,1,Detractor,Negative,4,2,3,2,3,3,3,2,3,1,65.0,C,4,6,66.7,3,0,Unsure
+U0279,35,Male,USA,Tablet,Pro,Returning,1,Yes,8.5,13,1,2,71.4,196,42,10,Promoter,Positive,3,3,4,2,3,1,5,3,5,1,75.0,B,4,2,33.3,4,0,Likely
+U0280,30,Male,France,Desktop,Free,New,22,Yes,4.8,11,3,3,49.9,292,5,10,Promoter,Positive,3,2,3,2,4,3,4,3,4,3,62.5,C,1,3,16.7,3,1,Unlikely
+U0281,35,Male,Brazil,Desktop,Basic,Returning,45,Yes,6.6,12,0,0,78.9,90,1,6,Detractor,Negative,4,3,4,2,2,1,4,3,4,2,67.5,C,2,3,25.0,4,0,Unsure
+U0282,41,Female,France,Desktop,Free,Power User,6,Yes,4.3,12,1,0,73.7,256,16,2,Detractor,Negative,4,2,3,3,4,3,4,3,4,3,62.5,C,3,1,16.7,3,1,Unsure
+U0283,50,Female,USA,Mobile,Enterprise,Power User,8,No,7.0,13,1,2,66.9,267,10,7,Passive,Neutral,5,2,3,3,3,2,3,2,3,3,62.5,C,4,3,41.7,5,0,Unsure
+U0284,22,Female,France,Desktop,Pro,Returning,15,Yes,7.4,13,1,1,100.0,156,6,9,Promoter,Positive,4,2,4,4,5,1,4,3,5,2,75.0,B,3,4,41.7,4,0,Unsure
+U0285,55,Male,UK,Desktop,Enterprise,New,38,Yes,4.4,10,1,1,66.3,185,65,5,Detractor,Negative,4,2,3,4,4,2,3,1,4,3,65.0,C,2,4,33.3,3,1,Unsure
+U0286,18,Male,Netherlands,Mobile,Free,Returning,51,Yes,3.3,11,0,1,89.0,132,39,10,Promoter,Positive,3,4,3,3,3,3,2,3,3,2,47.5,F,4,2,33.3,3,0,Unsure
+U0287,32,Female,Germany,Desktop,Pro,Power User,24,Yes,6.3,15,1,1,74.6,294,14,3,Detractor,Negative,4,1,4,3,4,2,4,3,3,2,70.0,B,4,5,58.3,3,0,Likely
+U0288,40,Female,USA,Mobile,Pro,Power User,2,Yes,7.4,13,0,0,50.4,169,3,10,Promoter,Positive,3,1,4,2,4,2,4,3,4,2,72.5,B,3,3,33.3,4,1,Likely
+U0289,37,Prefer not to say,France,Desktop,Pro,Returning,20,Yes,9.8,16,2,1,96.4,192,12,9,Promoter,Positive,5,1,3,3,4,2,4,1,5,2,80.0,A,4,5,58.3,5,0,Likely
+U0290,28,Male,France,Desktop,Enterprise,New,10,Yes,10.3,19,0,0,93.5,216,12,9,Promoter,Positive,4,3,5,3,5,1,4,2,4,2,77.5,B,7,5,83.3,5,0,Unsure
+U0291,32,Female,UK,Desktop,Basic,Returning,11,Yes,4.8,12,1,0,72.7,322,11,7,Passive,Neutral,3,4,4,2,5,1,4,3,4,2,70.0,B,1,3,16.7,3,0,Unsure
+U0292,29,Male,India,Mobile,Free,Returning,1,Yes,7.2,10,3,1,66.6,212,46,9,Promoter,Positive,3,2,4,2,4,1,4,2,3,1,75.0,B,2,4,33.3,5,0,Unsure
+U0293,28,Male,USA,Desktop,Pro,Power User,4,Yes,10.1,17,1,0,85.7,159,2,5,Detractor,Negative,5,2,3,1,5,2,4,1,4,2,82.5,A,5,6,75.0,4,0,Likely
+U0294,42,Female,India,Desktop,Pro,Returning,28,Yes,9.6,8,2,4,70.0,227,5,6,Detractor,Negative,4,2,3,3,3,2,4,3,4,2,65.0,C,4,4,50.0,2,0,Unsure
+U0295,38,Female,Australia,Tablet,Basic,Returning,11,Yes,5.5,7,2,0,64.6,318,1,9,Promoter,Positive,2,2,2,2,5,2,3,5,4,3,55.0,D,1,3,16.7,4,0,Unlikely
+U0296,27,Prefer not to say,Canada,Desktop,Free,Returning,6,No,5.7,13,0,0,85.4,217,30,10,Promoter,Positive,3,3,2,2,5,3,3,2,4,2,62.5,C,5,6,75.0,4,1,Unlikely
+U0297,43,Male,Germany,Mobile,Basic,New,9,Yes,6.7,13,1,1,76.3,169,18,10,Promoter,Positive,5,1,3,2,4,2,4,2,4,3,75.0,B,3,4,41.7,4,1,Unsure
+U0298,37,Male,Germany,Mobile,Free,Power User,35,No,3.6,8,0,1,84.7,127,7,8,Passive,Neutral,5,3,5,2,3,4,4,3,4,3,65.0,C,5,6,75.0,3,0,Likely
+U0299,42,Female,UK,Desktop,Basic,Returning,25,Yes,6.5,12,1,0,76.7,135,3,9,Promoter,Positive,5,3,4,2,3,2,4,3,3,2,67.5,C,4,5,58.3,4,1,Unsure
+U0300,40,Female,Canada,Mobile,Pro,Returning,6,No,8.2,10,0,0,70.2,275,1,4,Detractor,Negative,3,2,4,3,2,3,3,2,2,2,55.0,D,3,4,41.7,5,1,Unsure
+U0301,26,Male,USA,Desktop,Pro,Returning,2,Yes,7.6,10,1,9,56.0,212,4,10,Promoter,Positive,3,3,4,2,5,2,5,3,4,2,72.5,B,5,2,41.7,4,1,Unsure
+U0302,28,Male,USA,Mobile,Free,Returning,5,Yes,5.6,14,1,2,69.0,189,11,10,Promoter,Positive,4,3,5,1,4,2,4,3,2,3,67.5,C,3,5,50.0,2,1,Unlikely
+U0303,41,Male,USA,Desktop,Basic,Returning,46,No,7.5,15,0,1,33.7,165,4,9,Promoter,Positive,3,1,4,3,3,2,3,3,3,1,65.0,C,5,6,75.0,1,1,Unsure
+U0304,40,Female,UK,Mobile,Free,Power User,16,Yes,3.9,11,0,1,63.3,238,6,7,Passive,Neutral,3,4,4,3,4,4,3,3,3,4,47.5,F,4,3,41.7,4,1,Unsure
+U0305,34,Male,France,Desktop,Free,Returning,14,Yes,8.7,11,5,0,78.2,196,32,9,Promoter,Positive,3,2,4,1,3,2,2,2,5,2,70.0,B,7,5,83.3,3,0,Unlikely
+U0306,35,Male,UK,Mobile,Pro,Returning,16,Yes,5.6,7,0,1,78.2,220,15,9,Promoter,Positive,3,3,5,3,3,2,5,4,4,3,62.5,C,1,3,16.7,3,1,Unsure
+U0307,47,Male,India,Desktop,Enterprise,New,8,Yes,5.9,16,0,2,73.1,298,22,9,Promoter,Positive,2,2,4,1,4,1,3,1,4,3,72.5,B,4,5,58.3,3,1,Unsure
+U0308,28,Male,USA,Desktop,Basic,Returning,30,No,5.6,14,0,4,81.2,311,1,8,Passive,Neutral,2,3,3,1,3,3,3,2,2,2,55.0,D,4,5,58.3,3,0,Unsure
+U0309,39,Male,UK,Desktop,Pro,New,13,Yes,6.1,10,3,0,43.7,128,8,10,Promoter,Positive,4,3,4,2,4,3,3,3,4,3,62.5,C,4,3,41.7,3,1,Unsure
+U0310,32,Female,Germany,Desktop,Enterprise,Returning,2,Yes,5.6,15,3,3,77.2,234,11,10,Promoter,Positive,5,3,4,4,3,3,3,1,4,2,65.0,C,4,3,41.7,3,0,Unsure
+U0311,32,Male,UK,Mobile,Pro,Power User,2,Yes,10.0,15,0,0,68.2,128,2,7,Passive,Neutral,5,2,4,1,4,1,3,2,5,2,82.5,A,6,5,75.0,5,1,Likely
+U0312,45,Female,USA,Desktop,Free,Power User,14,Yes,5.2,11,2,0,56.3,213,2,8,Passive,Neutral,4,2,4,2,3,2,3,2,3,3,65.0,C,4,3,41.7,4,1,Unsure
+U0313,42,Male,India,Tablet,Enterprise,Returning,50,Yes,12.9,17,0,0,94.1,179,11,8,Passive,Neutral,4,2,4,2,4,3,5,2,4,1,77.5,B,7,7,100.0,4,1,Likely
+U0314,42,Female,UK,Tablet,Basic,Returning,7,Yes,10.5,10,3,0,96.7,199,44,10,Promoter,Positive,4,3,3,2,5,2,5,1,4,2,77.5,B,4,2,33.3,3,0,Likely
+U0315,47,Female,Australia,Mobile,Free,New,37,Yes,4.0,11,0,5,78.9,240,2,7,Passive,Neutral,3,3,4,2,4,4,5,2,4,3,65.0,C,5,5,66.7,4,1,Unsure
+U0316,34,Female,UK,Desktop,Free,Returning,26,Yes,6.9,13,0,1,77.7,256,7,2,Detractor,Negative,4,3,3,4,4,3,2,2,3,1,57.5,D,2,3,25.0,4,0,Unsure
+U0317,41,Female,USA,Desktop,Basic,Power User,5,No,6.9,14,0,0,92.9,189,23,9,Promoter,Positive,5,2,4,2,5,2,5,1,5,1,90.0,A+,7,7,100.0,5,0,Likely
+U0318,31,Male,India,Mobile,Free,New,1,Yes,4.4,12,1,8,55.2,212,2,8,Passive,Neutral,1,2,3,3,5,3,4,4,4,2,57.5,D,2,2,16.7,2,1,Unlikely
+U0319,37,Male,USA,Desktop,Free,Returning,2,Yes,10.4,16,2,5,59.3,208,24,3,Detractor,Negative,3,2,3,1,2,3,3,1,3,3,60.0,C,2,1,8.3,4,1,Unlikely
+U0320,33,Female,UK,Desktop,Free,Power User,23,Yes,5.5,9,0,3,80.1,139,67,7,Passive,Neutral,4,4,5,1,4,3,3,2,3,2,67.5,C,6,3,58.3,2,1,Unsure
+U0321,35,Prefer not to say,USA,Mobile,Pro,Power User,4,Yes,8.2,8,3,4,62.9,151,53,10,Promoter,Positive,4,2,4,2,4,2,4,2,4,1,77.5,B,5,5,66.7,4,0,Unsure
+U0322,40,Female,USA,Mobile,Pro,New,8,Yes,6.9,4,1,1,76.3,361,14,10,Promoter,Positive,3,3,3,3,3,2,4,3,3,3,55.0,D,4,3,41.7,4,0,Unsure
+U0323,26,Female,Australia,Mobile,Free,Returning,13,No,3.8,11,0,3,69.0,177,3,7,Passive,Neutral,4,1,4,3,3,2,5,2,3,2,72.5,B,4,1,25.0,2,0,Unsure
+U0324,55,Female,USA,Desktop,Pro,New,23,Yes,5.7,12,0,1,98.8,116,2,9,Promoter,Positive,5,3,4,2,5,1,4,3,4,2,77.5,B,5,7,83.3,5,1,Likely
+U0325,24,Female,Canada,Mobile,Pro,New,2,No,3.6,13,1,3,90.6,236,37,3,Detractor,Negative,4,2,4,3,3,1,4,4,4,3,65.0,C,5,3,50.0,5,0,Unsure
+U0326,22,Male,Netherlands,Desktop,Pro,Power User,9,Yes,4.9,13,1,2,57.8,199,35,9,Promoter,Positive,2,2,4,2,4,2,4,1,3,3,67.5,C,3,5,50.0,4,0,Unsure
+U0327,46,Female,USA,Desktop,Free,Power User,12,Yes,0.5,7,1,1,66.2,213,17,3,Detractor,Negative,2,3,4,2,4,2,3,2,4,3,62.5,C,1,2,8.3,3,0,Unsure
+U0328,42,Non-binary,Netherlands,Mobile,Pro,Power User,14,Yes,9.3,9,1,2,76.0,270,15,3,Detractor,Negative,5,2,3,2,5,3,5,2,5,4,75.0,B,7,7,100.0,4,1,Unsure
+U0329,40,Male,USA,Desktop,Enterprise,New,31,Yes,11.7,13,0,1,51.3,251,23,7,Passive,Neutral,4,2,4,3,3,2,3,3,3,3,60.0,C,5,4,58.3,4,0,Unsure
+U0330,40,Female,Brazil,Desktop,Pro,Power User,3,Yes,8.8,15,0,0,77.4,143,9,8,Passive,Neutral,4,1,4,1,5,4,4,3,4,1,77.5,B,4,5,58.3,4,1,Likely
+U0331,34,Male,UK,Desktop,Free,Returning,30,No,4.1,13,3,0,100.0,168,21,8,Passive,Neutral,2,2,4,2,5,3,4,2,5,2,72.5,B,5,4,58.3,4,0,Unsure
+U0332,25,Female,India,Mobile,Basic,Returning,21,Yes,5.2,8,0,4,87.3,182,18,9,Promoter,Positive,4,2,4,3,5,2,4,2,4,1,77.5,B,4,6,66.7,4,1,Unlikely
+U0333,35,Male,USA,Mobile,Pro,Returning,15,No,5.8,14,2,1,100.0,262,12,8,Passive,Neutral,5,2,4,1,5,3,5,2,4,3,80.0,A,4,4,50.0,3,1,Unsure
+U0334,27,Male,USA,Mobile,Basic,New,22,No,4.6,17,1,1,92.6,187,4,7,Passive,Neutral,5,3,3,1,3,3,4,1,5,1,77.5,B,6,3,58.3,4,1,Likely
+U0335,44,Female,France,Mobile,Free,Power User,10,Yes,9.5,14,0,1,73.0,91,18,8,Passive,Neutral,4,2,4,2,5,3,4,2,5,3,75.0,B,4,4,50.0,3,1,Unlikely
+U0336,33,Male,India,Desktop,Free,Returning,3,Yes,7.7,8,3,7,63.5,238,14,0,Detractor,Negative,4,1,2,2,4,2,4,2,4,4,67.5,C,3,3,33.3,3,1,Unlikely
+U0337,26,Female,UK,Desktop,Pro,New,20,Yes,3.5,12,1,1,83.5,130,6,3,Detractor,Negative,4,2,4,1,4,3,4,2,1,2,67.5,C,4,3,41.7,3,1,Unsure
+U0338,31,Female,UK,Desktop,Pro,New,13,No,7.7,7,0,3,76.7,367,34,10,Promoter,Positive,2,1,3,3,4,3,5,2,4,1,70.0,B,2,4,33.3,4,0,Unlikely
+U0339,38,Non-binary,India,Desktop,Free,New,18,Yes,10.2,15,0,4,66.7,166,22,5,Detractor,Negative,4,2,3,2,4,4,4,2,5,3,67.5,C,3,5,50.0,3,1,Unsure
+U0340,28,Male,India,Desktop,Enterprise,New,7,Yes,12.1,14,0,1,62.3,189,36,10,Promoter,Positive,4,3,3,2,4,1,5,2,5,1,80.0,A,4,4,50.0,4,0,Unsure
+U0341,26,Male,Brazil,Tablet,Free,Returning,43,Yes,12.7,5,2,1,100.0,258,4,8,Passive,Neutral,3,2,3,4,4,2,2,3,3,2,55.0,D,3,3,33.3,3,0,Unlikely
+U0342,36,Male,Canada,Desktop,Pro,Power User,16,Yes,4.8,12,1,2,78.8,189,15,2,Detractor,Negative,5,2,4,3,4,1,3,1,2,2,72.5,B,6,4,66.7,3,0,Unsure
+U0343,36,Prefer not to say,Spain,Desktop,Pro,New,2,Yes,12.7,12,3,5,64.5,222,6,8,Passive,Neutral,4,1,3,3,3,3,2,4,5,2,60.0,C,4,3,41.7,4,1,Unlikely
+U0344,29,Non-binary,India,Desktop,Pro,New,11,Yes,5.2,10,0,3,74.3,255,46,4,Detractor,Negative,4,2,2,3,2,3,4,2,2,1,57.5,D,3,2,25.0,3,1,Unlikely
+U0345,29,Female,USA,Desktop,Enterprise,Returning,25,Yes,6.2,13,0,0,82.5,283,1,7,Passive,Neutral,4,2,5,3,4,1,3,1,4,4,72.5,B,6,4,66.7,5,0,Unsure
+U0346,36,Female,UK,Tablet,Free,Power User,28,Yes,7.1,8,0,4,76.1,271,20,10,Promoter,Positive,4,3,4,4,3,2,4,2,4,3,62.5,C,4,4,50.0,4,1,Likely
+U0347,20,Female,Canada,Desktop,Pro,Returning,12,Yes,5.3,14,1,1,96.0,303,26,8,Passive,Neutral,4,2,4,2,3,1,4,1,3,1,77.5,B,4,4,50.0,3,0,Unsure
+U0348,20,Female,France,Desktop,Free,Returning,41,Yes,6.4,8,7,2,64.8,184,10,2,Detractor,Negative,5,2,4,3,3,3,3,3,1,3,55.0,D,2,1,8.3,2,1,Unsure
+U0349,27,Male,UK,Mobile,Pro,Returning,6,Yes,3.7,6,1,3,63.8,227,46,9,Promoter,Positive,5,1,4,1,5,3,4,2,3,1,82.5,A,6,4,66.7,3,0,Unsure
+U0350,32,Female,USA,Desktop,Pro,Returning,10,Yes,6.3,12,0,0,77.0,220,30,5,Detractor,Negative,4,2,4,2,5,1,4,1,3,2,80.0,A,4,4,50.0,3,0,Unsure
+U0351,37,Male,Spain,Desktop,Pro,New,41,Yes,9.6,15,2,3,68.3,245,6,10,Promoter,Positive,5,3,3,3,5,3,3,3,4,3,62.5,C,5,6,75.0,3,1,Unsure
+U0352,49,Female,Germany,Desktop,Free,Power User,41,Yes,6.6,11,1,1,97.6,298,0,7,Passive,Neutral,5,3,2,1,4,2,4,1,3,3,70.0,B,4,4,50.0,4,0,Unsure
+U0353,43,Female,USA,Mobile,Pro,Returning,21,Yes,7.5,18,0,3,97.5,192,5,7,Passive,Neutral,4,1,5,3,5,2,4,1,3,1,82.5,A,3,3,33.3,4,0,Unsure
+U0354,32,Female,USA,Tablet,Free,Returning,35,Yes,7.1,12,2,0,72.3,211,7,9,Promoter,Positive,3,2,5,2,5,4,4,4,4,2,67.5,C,1,2,8.3,3,0,Unsure
+U0355,34,Male,UK,Mobile,Free,Power User,2,Yes,8.5,12,0,1,50.4,274,49,9,Promoter,Positive,3,3,3,3,3,2,4,3,2,3,52.5,D,1,4,25.0,3,1,Unsure
+U0356,24,Male,USA,Desktop,Pro,Returning,36,Yes,4.1,14,0,2,73.1,72,31,0,Detractor,Negative,5,1,3,1,4,3,4,1,2,1,77.5,B,7,6,91.7,5,1,Likely
+U0357,34,Male,USA,Mobile,Basic,New,7,Yes,7.4,11,0,0,71.3,220,1,3,Detractor,Negative,4,1,2,3,2,3,3,3,2,3,50.0,D,5,2,41.7,4,1,Unsure
+U0358,31,Male,UK,Desktop,Pro,Returning,4,No,6.1,12,1,0,83.0,206,10,9,Promoter,Positive,5,3,2,1,4,1,3,3,3,3,65.0,C,3,2,25.0,3,0,Unsure
+U0359,37,Male,Canada,Desktop,Basic,New,5,No,7.4,12,0,7,74.4,154,12,6,Detractor,Negative,4,1,3,2,4,3,4,3,4,2,70.0,B,5,4,58.3,4,1,Unsure
+U0360,26,Non-binary,USA,Desktop,Free,New,10,No,10.9,16,0,0,84.3,240,1,7,Passive,Neutral,4,3,4,3,4,1,4,1,2,2,70.0,B,6,7,91.7,5,1,Unsure
+U0361,39,Female,Australia,Desktop,Pro,Returning,5,Yes,3.1,8,0,7,63.9,167,9,10,Promoter,Positive,3,3,4,3,4,3,3,2,3,4,55.0,D,5,3,50.0,2,1,Unsure
+U0362,49,Male,Australia,Mobile,Basic,Power User,7,Yes,4.7,10,1,0,82.0,194,5,10,Promoter,Positive,3,3,4,2,2,2,3,2,5,3,62.5,C,5,4,58.3,4,0,Likely
+U0363,33,Male,UK,Mobile,Free,Power User,3,Yes,1.3,8,5,1,39.4,247,15,9,Promoter,Positive,5,1,3,3,2,2,4,3,3,2,65.0,C,6,3,58.3,3,1,Unsure
+U0364,38,Male,India,Tablet,Pro,Returning,6,Yes,5.1,18,1,2,60.8,301,19,9,Promoter,Positive,4,3,3,3,3,3,4,5,5,2,57.5,D,4,4,50.0,3,1,Likely
+U0365,41,Female,USA,Mobile,Basic,New,15,Yes,9.3,13,0,2,62.5,233,25,9,Promoter,Positive,5,2,4,3,4,2,5,3,3,4,67.5,C,5,4,58.3,4,0,Unsure
+U0366,30,Female,Netherlands,Mobile,Basic,New,10,Yes,5.3,12,0,2,85.6,297,3,9,Promoter,Positive,3,2,3,3,4,4,3,2,2,2,55.0,D,4,3,41.7,3,0,Unlikely
+U0367,36,Female,UK,Desktop,Basic,Power User,8,No,3.6,10,0,1,68.4,251,26,9,Promoter,Positive,4,2,2,3,3,3,2,2,5,1,62.5,C,4,6,66.7,5,0,Unsure
+U0368,34,Female,India,Desktop,Pro,Returning,25,Yes,4.8,13,0,4,74.9,238,22,7,Passive,Neutral,3,3,3,2,4,2,3,2,4,2,65.0,C,4,2,33.3,3,1,Unsure
+U0369,35,Prefer not to say,France,Mobile,Pro,Returning,40,Yes,3.9,14,0,0,88.9,127,26,8,Passive,Neutral,4,3,4,2,4,2,5,2,4,2,75.0,B,4,6,66.7,4,0,Likely
+U0370,26,Female,USA,Desktop,Pro,Power User,25,Yes,4.6,14,1,1,100.0,111,8,10,Promoter,Positive,4,3,3,2,3,3,4,3,5,3,62.5,C,6,7,91.7,4,1,Unsure
+U0371,34,Male,UK,Mobile,Free,Power User,7,Yes,7.9,10,1,0,97.1,217,35,10,Promoter,Positive,3,1,3,4,4,2,4,2,4,3,65.0,C,2,5,41.7,3,0,Unsure
+U0372,39,Non-binary,India,Desktop,Pro,Power User,25,Yes,4.2,13,1,1,80.3,173,29,4,Detractor,Negative,2,3,3,3,4,3,4,2,4,1,62.5,C,5,5,66.7,4,1,Likely
+U0373,49,Male,India,Desktop,Pro,New,3,No,9.1,10,0,1,67.9,279,11,8,Passive,Neutral,2,2,2,4,4,2,4,3,3,2,55.0,D,5,5,66.7,4,0,Unsure
+U0374,44,Female,USA,Desktop,Pro,Power User,3,Yes,7.2,11,0,1,74.2,243,6,9,Promoter,Positive,4,2,5,2,5,2,4,2,5,2,82.5,A,4,4,50.0,4,1,Likely
+U0375,56,Male,France,Desktop,Basic,Power User,8,No,6.4,14,1,1,70.3,215,51,10,Promoter,Positive,3,1,4,2,4,2,3,2,3,4,65.0,C,4,5,58.3,4,1,Likely
+U0376,26,Female,USA,Desktop,Pro,Returning,30,Yes,6.1,8,0,0,72.4,143,20,5,Detractor,Negative,4,2,4,2,2,1,3,1,3,3,67.5,C,5,2,41.7,3,1,Unsure
+U0377,43,Female,India,Mobile,Pro,Returning,5,No,8.2,13,0,0,82.1,255,49,10,Promoter,Positive,4,3,3,2,4,2,5,3,4,4,65.0,C,3,5,50.0,3,0,Unsure
+U0378,36,Female,UK,Desktop,Free,Returning,1,Yes,7.5,12,1,3,73.7,182,36,10,Promoter,Positive,5,1,4,2,4,3,5,1,4,2,82.5,A,2,3,25.0,4,0,Unlikely
+U0379,56,Female,Netherlands,Mobile,Basic,Power User,3,Yes,6.4,8,0,1,76.2,198,21,10,Promoter,Positive,3,2,3,2,3,1,3,3,4,2,65.0,C,4,1,25.0,2,1,Unlikely
+U0380,26,Male,USA,Desktop,Enterprise,New,35,Yes,9.4,12,0,2,100.0,126,1,10,Promoter,Positive,3,2,4,4,4,2,4,2,4,1,70.0,B,5,5,66.7,4,0,Unsure
+U0381,26,Male,USA,Desktop,Free,Returning,18,Yes,5.4,10,2,2,97.0,226,7,3,Detractor,Negative,3,3,3,2,3,2,4,3,4,4,57.5,D,4,4,50.0,3,1,Unsure
+U0382,28,Male,UK,Desktop,Enterprise,New,5,No,9.0,15,1,0,87.6,262,40,10,Promoter,Positive,4,2,5,2,4,3,5,1,3,1,80.0,A,4,5,58.3,5,0,Unsure
+U0383,18,Male,UK,Mobile,Pro,Power User,15,Yes,7.2,14,0,1,100.0,183,4,7,Passive,Neutral,4,2,5,2,3,1,3,2,4,3,72.5,B,7,4,75.0,5,0,Likely
+U0384,29,Female,Germany,Desktop,Pro,New,13,Yes,5.9,12,0,0,65.8,208,2,10,Promoter,Positive,3,2,5,2,3,3,4,2,3,3,65.0,C,3,2,25.0,3,1,Unsure
+U0385,26,Male,USA,Mobile,Free,New,19,No,4.7,16,2,3,83.4,155,28,8,Passive,Neutral,5,3,2,3,2,2,2,3,3,4,47.5,F,2,1,8.3,3,1,Unlikely
+U0386,36,Prefer not to say,Australia,Desktop,Free,Returning,5,Yes,6.7,13,0,5,100.0,221,14,4,Detractor,Negative,5,2,4,3,2,2,4,1,5,1,77.5,B,7,5,83.3,4,0,Likely
+U0387,37,Female,UK,Mobile,Enterprise,Power User,36,Yes,7.2,11,0,0,100.0,116,2,8,Passive,Neutral,4,3,5,2,4,1,5,2,5,3,80.0,A,6,7,91.7,5,0,Likely
+U0388,53,Female,USA,Desktop,Free,New,7,Yes,7.1,14,0,2,72.9,240,7,5,Detractor,Negative,4,2,3,2,3,2,3,2,5,4,65.0,C,2,2,16.7,2,1,Unsure
+U0389,44,Male,USA,Mobile,Pro,New,21,Yes,10.2,18,0,0,70.1,189,10,10,Promoter,Positive,3,2,5,2,4,2,5,2,5,1,82.5,A,6,7,91.7,4,0,Unsure
+U0390,28,Female,UK,Mobile,Basic,Power User,0,No,9.3,13,1,1,55.1,274,0,9,Promoter,Positive,5,3,4,2,3,2,2,3,2,2,60.0,C,3,5,50.0,3,1,Unlikely
+U0391,25,Non-binary,UK,Tablet,Free,Returning,8,Yes,3.4,9,1,3,75.7,210,27,10,Promoter,Positive,4,3,4,2,4,3,2,4,3,3,55.0,D,4,2,33.3,4,1,Unlikely
+U0392,39,Female,USA,Desktop,Free,Power User,8,Yes,9.4,11,0,0,94.9,224,7,9,Promoter,Positive,5,2,4,2,3,1,4,2,5,2,80.0,A,3,5,50.0,4,0,Unsure
+U0393,21,Female,USA,Desktop,Basic,New,14,Yes,4.3,6,1,1,59.8,283,47,7,Passive,Neutral,5,2,3,2,4,3,3,3,2,3,60.0,C,1,5,33.3,2,0,Unlikely
+U0394,52,Female,USA,Desktop,Enterprise,Returning,1,No,7.7,13,0,1,84.5,354,31,9,Promoter,Positive,2,1,4,3,3,4,4,3,4,2,60.0,C,3,6,58.3,3,0,Unsure
+U0395,46,Male,Germany,Mobile,Basic,New,28,Yes,4.2,8,0,2,87.6,274,19,9,Promoter,Positive,3,1,4,2,3,2,4,2,3,1,72.5,B,4,5,58.3,4,1,Unsure
+U0396,29,Female,France,Mobile,Basic,New,4,No,5.9,10,5,1,64.0,238,9,10,Promoter,Positive,4,1,3,2,3,3,5,1,4,1,77.5,B,5,5,66.7,3,1,Unlikely
+U0397,18,Male,UK,Mobile,Free,Returning,20,Yes,7.1,9,1,5,92.8,225,13,7,Passive,Neutral,4,2,4,3,4,4,4,2,4,2,67.5,C,3,3,33.3,3,0,Unlikely
+U0398,48,Male,USA,Desktop,Basic,Returning,29,Yes,2.3,12,1,0,31.2,200,12,10,Promoter,Positive,3,3,3,1,4,2,2,2,4,2,65.0,C,3,2,25.0,3,1,Unsure
+U0399,33,Male,Brazil,Desktop,Basic,Power User,15,No,8.1,11,1,1,59.2,162,7,10,Promoter,Positive,4,1,4,3,5,2,3,3,3,3,67.5,C,4,3,41.7,3,1,Unlikely
+U0400,46,Male,Germany,Desktop,Pro,Returning,24,Yes,10.9,14,1,2,72.0,162,23,3,Detractor,Negative,2,3,3,3,3,2,3,2,4,1,60.0,C,7,5,83.3,3,0,Unsure
+U0401,18,Male,India,Tablet,Basic,Returning,20,Yes,6.4,13,1,0,67.2,166,10,10,Promoter,Positive,4,2,4,3,4,2,4,3,2,2,65.0,C,2,6,50.0,4,0,Unsure
+U0402,28,Male,USA,Mobile,Basic,Returning,8,Yes,10.0,9,0,2,81.3,258,31,9,Promoter,Positive,4,2,3,1,3,2,4,3,4,4,65.0,C,4,4,50.0,4,0,Unsure
+U0403,34,Non-binary,Canada,Tablet,Free,Power User,30,Yes,6.9,15,0,0,87.2,135,1,8,Passive,Neutral,4,2,3,1,5,2,4,3,5,2,77.5,B,6,6,83.3,4,0,Likely
+U0404,34,Female,Canada,Desktop,Enterprise,Returning,6,Yes,9.6,13,1,0,89.9,276,2,10,Promoter,Positive,3,1,3,3,3,1,4,4,5,3,65.0,C,4,5,58.3,3,0,Likely
+U0405,29,Non-binary,Germany,Mobile,Free,Returning,15,No,1.7,10,0,0,90.6,247,52,9,Promoter,Positive,4,2,3,1,4,2,4,2,3,2,72.5,B,4,3,41.7,4,0,Unsure
+U0406,40,Male,Brazil,Mobile,Free,Returning,25,No,12.1,18,4,5,59.1,231,17,10,Promoter,Positive,5,3,3,3,4,3,4,3,4,2,65.0,C,4,4,50.0,4,0,Unsure
+U0407,23,Male,UK,Desktop,Pro,Returning,9,Yes,10.4,14,1,1,60.0,217,12,8,Passive,Neutral,4,2,3,2,4,2,4,2,4,3,70.0,B,5,6,75.0,2,0,Unsure
+U0408,33,Female,UK,Mobile,Basic,Returning,6,Yes,5.0,10,3,3,74.9,205,16,9,Promoter,Positive,3,3,4,4,4,2,3,3,4,3,57.5,D,4,4,50.0,3,1,Unlikely
+U0409,35,Male,Canada,Tablet,Basic,Power User,11,Yes,1.8,17,0,1,69.1,231,4,8,Passive,Neutral,3,2,3,1,4,2,3,3,2,3,60.0,C,2,4,33.3,3,1,Unsure
+U0410,39,Male,Canada,Tablet,Basic,Returning,31,Yes,8.0,19,1,1,61.0,265,17,3,Detractor,Negative,5,1,3,1,4,3,3,1,3,3,72.5,B,6,4,66.7,4,1,Unsure
+U0411,41,Female,UK,Mobile,Pro,Power User,48,Yes,4.7,14,0,1,100.0,134,1,9,Promoter,Positive,5,2,5,2,3,1,3,3,4,3,72.5,B,6,7,91.7,4,0,Likely
+U0412,23,Male,USA,Desktop,Free,New,14,No,7.8,13,4,5,97.1,124,14,9,Promoter,Positive,4,3,4,2,3,2,3,2,4,2,67.5,C,5,5,66.7,4,1,Unsure
+U0413,19,Female,UK,Desktop,Pro,Returning,19,Yes,6.9,8,0,3,92.2,278,18,10,Promoter,Positive,4,2,2,2,3,2,4,2,3,3,62.5,C,4,3,41.7,3,1,Unsure
+U0414,47,Female,USA,Tablet,Pro,Power User,42,No,5.8,14,0,1,92.5,200,23,3,Detractor,Negative,2,1,5,2,4,2,5,1,3,1,80.0,A,4,7,75.0,5,0,Likely
+U0415,37,Male,Canada,Desktop,Basic,New,2,Yes,7.8,9,2,0,72.5,188,19,5,Detractor,Negative,4,3,3,4,4,3,3,4,3,4,47.5,F,3,1,16.7,3,1,Unlikely
+U0416,27,Male,Germany,Mobile,Basic,Power User,5,Yes,9.5,14,0,1,100.0,152,2,10,Promoter,Positive,3,3,5,3,3,2,4,2,4,2,67.5,C,7,6,91.7,4,0,Unsure
+U0417,50,Female,USA,Mobile,Free,Returning,22,Yes,8.6,12,1,1,63.8,178,17,5,Detractor,Negative,4,3,4,2,5,1,5,2,3,4,72.5,B,2,3,25.0,3,1,Unlikely
+U0418,35,Male,USA,Mobile,Pro,Power User,31,Yes,7.9,16,2,3,100.0,143,1,9,Promoter,Positive,3,1,5,2,5,3,4,1,5,3,80.0,A,5,5,66.7,3,0,Unsure
+U0419,46,Male,UK,Tablet,Basic,Returning,35,Yes,2.3,12,1,1,74.6,216,5,10,Promoter,Positive,2,4,3,3,5,3,4,2,3,2,57.5,D,4,2,33.3,4,1,Unsure
+U0420,35,Prefer not to say,USA,Desktop,Free,Returning,10,No,9.5,9,1,0,93.2,191,0,10,Promoter,Positive,4,3,4,3,3,1,4,2,4,1,72.5,B,6,6,83.3,5,0,Unsure
+U0421,55,Male,France,Desktop,Basic,New,2,Yes,4.6,7,0,1,68.3,210,17,2,Detractor,Negative,4,3,4,2,3,2,3,1,3,4,62.5,C,3,3,33.3,4,0,Unlikely
+U0422,52,Female,Brazil,Desktop,Enterprise,Returning,10,No,3.3,11,2,0,96.7,167,1,10,Promoter,Positive,4,3,4,2,5,1,3,3,2,2,67.5,C,5,4,58.3,4,1,Unsure
+U0423,32,Prefer not to say,Australia,Desktop,Basic,New,5,Yes,9.0,10,1,0,72.0,227,14,9,Promoter,Positive,3,3,3,2,2,3,3,1,3,2,57.5,D,2,4,33.3,3,0,Unlikely
+U0424,44,Male,UK,Desktop,Enterprise,New,6,No,11.1,14,1,4,49.5,246,56,8,Passive,Neutral,4,2,3,2,4,3,2,3,4,3,60.0,C,4,2,33.3,4,0,Unsure
+U0425,40,Male,Netherlands,Desktop,Free,New,27,Yes,6.1,8,0,2,93.8,208,24,7,Passive,Neutral,5,4,5,3,3,2,4,3,3,1,67.5,C,3,3,33.3,4,1,Unsure
+U0426,48,Male,Canada,Mobile,Free,Returning,1,No,12.6,12,1,3,69.0,272,1,7,Passive,Neutral,4,2,3,2,3,1,5,1,5,1,82.5,A,7,5,83.3,5,1,Likely
+U0427,24,Male,Canada,Tablet,Free,Power User,32,Yes,8.7,18,0,1,100.0,202,2,3,Detractor,Negative,4,1,5,1,5,2,3,2,4,2,82.5,A,7,7,100.0,4,0,Likely
+U0428,41,Male,USA,Desktop,Basic,New,10,Yes,5.5,11,0,1,74.0,127,20,10,Promoter,Positive,5,3,4,3,3,2,4,2,5,2,72.5,B,2,5,41.7,4,0,Likely
+U0429,45,Female,USA,Desktop,Free,New,16,No,5.2,14,1,1,95.0,244,36,9,Promoter,Positive,3,1,3,1,5,1,5,2,5,1,87.5,A,4,7,75.0,4,0,Unsure
+U0430,18,Male,USA,Tablet,Free,Returning,2,Yes,10.4,11,0,0,90.1,262,1,9,Promoter,Positive,3,3,5,3,4,2,3,2,3,2,65.0,C,3,5,50.0,3,0,Unsure
+U0431,22,Female,UK,Desktop,Enterprise,New,7,Yes,5.3,14,0,3,88.6,175,23,10,Promoter,Positive,3,2,4,3,4,1,3,1,4,2,72.5,B,2,4,33.3,5,0,Likely
+U0432,18,Prefer not to say,USA,Desktop,Pro,New,2,Yes,8.2,11,1,1,81.6,135,15,10,Promoter,Positive,3,2,3,1,3,3,3,2,5,1,70.0,B,3,1,16.7,4,1,Unsure
+U0433,31,Female,USA,Desktop,Pro,New,59,No,5.6,15,0,1,86.0,209,12,1,Detractor,Negative,4,2,5,3,2,2,3,3,2,3,57.5,D,5,5,66.7,3,1,Unsure
+U0434,41,Female,USA,Mobile,Free,Power User,30,Yes,6.0,8,0,1,53.1,204,45,10,Promoter,Positive,5,2,5,2,4,2,4,3,3,2,75.0,B,4,5,58.3,4,0,Likely
+U0435,49,Male,India,Desktop,Free,Power User,11,Yes,8.9,11,0,1,76.1,157,25,9,Promoter,Positive,3,3,3,3,4,2,3,2,3,2,60.0,C,5,1,33.3,3,0,Unsure
+U0436,35,Female,USA,Tablet,Free,Returning,5,Yes,5.2,12,1,1,57.5,141,36,10,Promoter,Positive,3,3,3,4,4,3,4,3,4,2,57.5,D,2,3,25.0,3,1,Unlikely
+U0437,50,Female,UK,Desktop,Pro,Returning,49,Yes,6.0,14,1,1,82.9,202,6,10,Promoter,Positive,3,3,4,2,3,2,4,2,4,1,70.0,B,5,5,66.7,4,1,Unsure
+U0438,20,Male,Spain,Mobile,Enterprise,Returning,8,No,10.6,18,1,2,70.4,176,9,10,Promoter,Positive,4,1,4,1,4,1,4,2,3,3,77.5,B,7,6,91.7,5,0,Likely
+U0439,18,Male,Spain,Desktop,Basic,Returning,3,Yes,9.8,10,0,4,53.6,212,20,10,Promoter,Positive,4,3,3,4,3,2,4,2,4,2,62.5,C,4,1,25.0,3,1,Unsure
+U0440,33,Female,Canada,Desktop,Free,Returning,15,Yes,7.9,16,0,1,96.6,220,7,9,Promoter,Positive,2,2,4,1,4,3,4,2,5,2,72.5,B,4,3,41.7,3,1,Unsure
+U0441,38,Male,Brazil,Mobile,Basic,Returning,52,No,6.4,12,0,1,100.0,118,8,4,Detractor,Negative,4,1,5,2,3,1,4,1,5,2,85.0,A,7,6,91.7,5,1,Unsure
+U0442,34,Male,Germany,Mobile,Free,Returning,0,No,5.5,16,0,3,78.1,188,4,9,Promoter,Positive,5,1,3,3,4,2,3,2,5,2,75.0,B,4,5,58.3,4,1,Unsure
+U0443,18,Male,Brazil,Mobile,Basic,New,5,Yes,7.4,15,2,0,84.1,236,2,10,Promoter,Positive,4,2,4,2,4,1,4,2,4,1,80.0,A,5,4,58.3,3,1,Unsure
+U0444,33,Male,UK,Mobile,Basic,Returning,50,Yes,7.6,10,0,4,74.8,192,8,8,Passive,Neutral,4,2,3,3,4,2,4,2,3,1,70.0,B,4,4,50.0,4,0,Unsure
+U0445,21,Female,USA,Tablet,Pro,Power User,3,Yes,4.9,14,0,0,91.6,98,17,2,Detractor,Negative,5,3,5,2,4,2,5,2,2,3,72.5,B,7,5,83.3,4,1,Unsure
+U0446,41,Female,USA,Mobile,Free,Returning,2,Yes,8.6,12,0,2,68.9,185,40,9,Promoter,Positive,3,1,5,3,4,2,4,3,4,2,72.5,B,5,4,58.3,4,0,Unsure
+U0447,38,Female,UK,Mobile,Free,Power User,15,Yes,7.9,16,1,1,100.0,127,7,7,Passive,Neutral,4,3,5,2,5,2,4,2,3,3,72.5,B,6,7,91.7,4,1,Likely
+U0448,25,Male,UK,Desktop,Enterprise,Power User,36,Yes,2.2,11,1,1,72.6,236,18,8,Passive,Neutral,3,3,4,3,3,3,3,2,3,2,57.5,D,4,4,50.0,4,0,Unsure
+U0449,29,Male,France,Desktop,Free,New,12,Yes,2.9,9,1,5,59.3,270,3,10,Promoter,Positive,4,3,4,3,1,3,3,2,3,3,52.5,D,1,2,8.3,3,1,Unsure
+U0450,23,Female,Canada,Desktop,Free,Returning,84,Yes,6.1,17,1,0,83.3,100,31,10,Promoter,Positive,5,1,3,2,5,2,5,2,4,3,80.0,A,5,4,58.3,4,0,Unsure
+U0451,33,Male,Germany,Mobile,Free,Returning,20,Yes,6.0,11,1,1,64.9,274,16,9,Promoter,Positive,3,3,4,2,3,2,3,4,4,3,57.5,D,5,3,50.0,4,1,Unlikely
+U0452,44,Male,UK,Desktop,Free,Power User,1,Yes,10.8,14,0,2,76.9,164,30,7,Passive,Neutral,4,2,2,3,5,3,4,3,3,2,62.5,C,4,4,50.0,3,1,Unsure
+U0453,24,Female,Australia,Desktop,Basic,Power User,84,Yes,7.0,11,0,3,67.7,316,28,7,Passive,Neutral,3,3,5,3,4,3,4,2,3,3,62.5,C,4,6,66.7,4,0,Unsure
+U0454,39,Male,France,Tablet,Pro,Returning,9,Yes,4.4,17,1,0,83.0,216,5,0,Detractor,Negative,5,3,5,1,3,2,2,2,4,2,72.5,B,1,4,25.0,3,1,Unsure
+U0455,29,Female,USA,Tablet,Free,New,6,Yes,5.6,8,1,4,81.2,179,19,8,Passive,Neutral,3,2,4,4,3,3,3,4,4,3,52.5,D,1,1,0.0,3,1,Unlikely
+U0456,26,Male,India,Tablet,Basic,Power User,15,Yes,7.5,13,0,0,81.7,107,26,2,Detractor,Negative,4,1,4,1,4,2,4,2,4,2,80.0,A,5,6,75.0,3,0,Likely
+U0457,33,Male,USA,Desktop,Pro,New,7,Yes,7.4,17,1,0,75.2,238,2,9,Promoter,Positive,3,2,3,1,5,4,3,3,4,2,65.0,C,3,5,50.0,3,1,Unlikely
+U0458,24,Male,USA,Mobile,Basic,Power User,2,Yes,8.3,11,1,2,85.1,189,18,10,Promoter,Positive,4,2,3,2,5,3,3,4,3,2,62.5,C,4,4,50.0,4,1,Unsure
+U0459,28,Prefer not to say,Netherlands,Desktop,Pro,Power User,0,No,10.5,18,1,0,77.7,192,42,3,Detractor,Negative,4,2,4,3,3,3,5,2,5,2,72.5,B,5,5,66.7,5,0,Likely
+U0460,22,Female,USA,Desktop,Pro,Returning,11,Yes,7.5,16,1,1,91.2,292,4,8,Passive,Neutral,5,2,3,2,5,2,4,2,5,2,80.0,A,5,4,58.3,3,0,Unsure
+U0461,54,Non-binary,USA,Desktop,Free,Returning,33,Yes,11.1,12,1,0,88.0,166,30,7,Passive,Neutral,5,3,2,3,3,3,3,2,3,3,55.0,D,6,4,66.7,4,1,Unsure
+U0462,34,Female,Netherlands,Desktop,Pro,Returning,15,No,9.9,8,0,1,100.0,196,32,7,Passive,Neutral,3,1,5,4,3,3,4,3,4,1,67.5,C,5,6,75.0,5,0,Likely
+U0463,27,Male,India,Desktop,Basic,Returning,84,No,4.6,12,1,2,66.8,307,25,3,Detractor,Negative,4,2,4,2,4,1,3,3,5,4,70.0,B,4,3,41.7,3,1,Unsure
+U0464,36,Female,UK,Mobile,Enterprise,Returning,6,Yes,12.5,13,2,1,67.0,224,4,9,Promoter,Positive,3,1,4,3,5,3,3,2,3,1,70.0,B,6,5,75.0,3,0,Unsure
+U0465,33,Male,UK,Desktop,Basic,Power User,6,Yes,8.3,17,0,1,79.6,101,5,3,Detractor,Negative,4,2,3,2,3,2,4,2,4,1,72.5,B,5,5,66.7,4,1,Unsure
+U0466,32,Female,UK,Mobile,Enterprise,Power User,3,Yes,5.1,18,1,1,68.2,234,1,1,Detractor,Negative,4,2,3,3,3,1,4,2,3,1,70.0,B,4,5,58.3,3,0,Unsure
+U0467,40,Male,France,Mobile,Pro,Power User,3,Yes,11.3,11,1,0,89.8,133,25,4,Detractor,Negative,5,1,3,3,3,3,5,2,4,2,72.5,B,3,5,50.0,3,0,Unsure
+U0468,42,Female,USA,Desktop,Free,New,6,Yes,11.4,14,0,1,57.6,311,36,9,Promoter,Positive,3,2,3,2,2,1,3,3,5,3,62.5,C,5,5,66.7,4,1,Unlikely
+U0469,29,Male,UK,Desktop,Basic,Power User,28,Yes,7.5,16,1,4,100.0,144,12,1,Detractor,Negative,5,2,3,2,4,2,5,3,4,2,75.0,B,5,7,83.3,5,0,Likely
+U0470,28,Male,Spain,Desktop,Enterprise,Power User,43,Yes,5.4,15,0,3,95.4,395,7,0,Detractor,Negative,3,2,3,3,5,4,4,3,4,3,60.0,C,6,4,66.7,3,1,Unsure
+U0471,31,Female,Germany,Mobile,Pro,Returning,66,Yes,7.1,15,2,0,85.1,282,1,7,Passive,Neutral,4,3,4,2,4,1,4,1,5,2,80.0,A,6,3,58.3,4,0,Likely
+U0472,18,Female,USA,Desktop,Free,New,5,Yes,7.6,5,2,0,82.4,189,29,9,Promoter,Positive,4,2,3,2,5,3,3,2,3,1,70.0,B,2,3,25.0,3,0,Unlikely
+U0473,19,Male,Germany,Desktop,Pro,Returning,38,Yes,10.7,13,0,3,61.5,197,16,2,Detractor,Negative,5,2,3,4,3,3,3,3,4,2,60.0,C,4,7,75.0,4,1,Likely
+U0474,48,Male,India,Desktop,Free,Power User,7,Yes,8.6,10,0,1,100.0,250,35,7,Passive,Neutral,3,3,4,1,4,1,4,1,4,2,77.5,B,5,6,75.0,5,0,Unsure
+U0475,50,Male,UK,Mobile,Free,Returning,2,Yes,7.4,12,1,1,73.3,251,19,8,Passive,Neutral,3,2,4,2,5,2,3,3,3,3,65.0,C,5,4,58.3,4,0,Unsure
+U0476,32,Female,USA,Tablet,Basic,Power User,37,Yes,11.7,17,0,2,86.9,211,18,3,Detractor,Negative,5,2,4,1,4,2,4,1,4,2,82.5,A,5,6,75.0,4,0,Unsure
+U0477,40,Female,Canada,Desktop,Free,Returning,18,Yes,6.4,14,0,1,55.9,278,19,8,Passive,Neutral,3,2,4,1,4,2,3,2,5,2,75.0,B,4,6,66.7,5,0,Unsure
+U0478,37,Non-binary,USA,Mobile,Pro,Power User,3,Yes,10.7,18,0,1,96.5,174,9,3,Detractor,Negative,4,1,3,1,3,2,4,3,4,2,72.5,B,7,6,91.7,5,0,Unsure
+U0479,65,Female,Germany,Mobile,Free,New,10,Yes,5.5,13,0,7,58.2,205,11,6,Detractor,Negative,5,2,4,2,4,2,3,3,4,3,70.0,B,1,6,41.7,4,1,Unsure
+U0480,45,Male,USA,Tablet,Pro,Returning,6,Yes,8.0,9,0,2,80.7,190,36,8,Passive,Neutral,4,1,4,3,4,2,4,2,3,2,72.5,B,4,7,75.0,3,1,Unsure
+U0481,33,Female,UK,Mobile,Free,Returning,24,Yes,6.6,5,1,0,71.9,261,16,6,Detractor,Negative,4,2,4,2,3,3,4,2,4,1,72.5,B,5,4,58.3,3,1,Unsure
+U0482,24,Male,UK,Mobile,Free,New,11,No,6.4,12,2,0,61.0,242,9,1,Detractor,Negative,5,2,3,1,4,1,4,4,5,1,80.0,A,5,2,41.7,3,0,Unsure
+U0483,18,Male,USA,Mobile,Free,Power User,82,No,5.8,12,1,0,66.4,233,1,8,Passive,Neutral,4,2,3,4,3,3,4,3,3,3,55.0,D,5,7,83.3,4,1,Unsure
+U0484,36,Female,UK,Tablet,Free,New,1,Yes,9.5,8,2,3,75.9,277,7,9,Promoter,Positive,4,3,3,2,4,2,4,2,3,1,70.0,B,1,3,16.7,4,0,Unlikely
+U0485,26,Male,UK,Desktop,Free,Returning,8,Yes,4.4,6,0,1,55.8,103,15,10,Promoter,Positive,2,1,3,2,5,1,3,2,4,4,67.5,C,4,5,58.3,3,0,Unsure
+U0486,20,Female,Australia,Desktop,Free,Returning,12,Yes,3.9,9,0,0,59.2,257,7,9,Promoter,Positive,4,2,5,2,3,1,5,2,5,3,80.0,A,6,4,66.7,3,1,Unsure
+U0487,28,Female,Brazil,Desktop,Basic,Returning,13,No,12.7,13,0,4,93.2,210,3,9,Promoter,Positive,5,2,3,2,4,3,3,2,4,2,70.0,B,7,5,83.3,4,0,Likely
+U0488,23,Female,Canada,Mobile,Free,New,7,Yes,8.5,13,1,0,100.0,331,15,9,Promoter,Positive,4,3,3,2,2,2,3,3,3,2,57.5,D,4,4,50.0,2,0,Unlikely
+U0489,51,Female,Australia,Mobile,Basic,New,24,No,1.8,15,2,0,93.2,98,2,10,Promoter,Positive,5,3,5,2,5,2,4,1,4,2,82.5,A,7,5,83.3,4,1,Likely
+U0490,43,Female,USA,Desktop,Basic,Power User,37,Yes,4.7,16,1,1,59.7,323,32,9,Promoter,Positive,5,3,3,3,3,3,2,3,5,4,55.0,D,4,2,33.3,4,1,Unsure
+U0491,34,Female,Brazil,Mobile,Pro,Returning,50,Yes,2.2,9,2,0,72.7,219,11,7,Passive,Neutral,3,2,4,1,5,2,5,1,2,1,80.0,A,4,4,50.0,3,0,Unsure
+U0492,49,Female,UK,Desktop,Enterprise,Power User,29,No,5.4,17,1,1,87.1,219,10,4,Detractor,Negative,5,3,5,1,4,2,4,2,4,1,82.5,A,6,5,75.0,4,0,Likely
+U0493,35,Male,Spain,Desktop,Basic,Power User,34,Yes,0.5,14,0,3,82.4,288,2,9,Promoter,Positive,5,1,4,1,5,1,4,2,5,3,87.5,A,7,5,83.3,3,0,Likely
+U0494,25,Female,Brazil,Tablet,Free,New,14,Yes,6.0,14,1,4,87.2,258,7,10,Promoter,Positive,5,3,2,2,4,2,1,2,4,2,62.5,C,2,2,16.7,3,1,Unsure
+U0495,49,Male,India,Desktop,Free,Returning,31,Yes,3.7,11,0,1,79.8,242,9,8,Passive,Neutral,4,1,4,1,4,3,4,2,3,3,72.5,B,5,3,50.0,3,0,Unsure
+U0496,39,Female,Brazil,Desktop,Enterprise,Returning,7,Yes,6.6,15,0,1,88.5,235,29,9,Promoter,Positive,5,4,3,4,3,3,4,3,4,2,57.5,D,4,4,50.0,3,1,Unsure
+U0497,24,Female,Germany,Mobile,Free,Power User,9,Yes,1.9,12,1,2,66.8,205,30,7,Passive,Neutral,4,2,3,2,3,1,5,2,4,3,72.5,B,4,3,41.7,4,0,Unsure
+U0498,32,Female,USA,Mobile,Free,Power User,7,Yes,7.1,11,0,0,97.5,210,4,7,Passive,Neutral,3,1,4,2,4,3,3,1,3,2,70.0,B,7,7,100.0,4,1,Likely
+U0499,25,Male,USA,Desktop,Free,Returning,11,Yes,4.4,10,1,0,64.5,203,22,8,Passive,Neutral,4,2,3,1,5,3,3,2,3,2,70.0,B,2,2,16.7,2,1,Unlikely
+U0500,20,Male,France,Mobile,Free,Power User,6,Yes,10.0,11,1,5,60.6,222,5,8,Passive,Neutral,4,3,5,3,3,2,3,2,5,2,70.0,B,7,2,58.3,3,1,Unsure
+U0501,43,Female,UK,Mobile,Free,New,59,No,10.1,14,0,0,100.0,79,77,8,Passive,Neutral,3,3,2,2,3,2,5,3,4,2,62.5,C,4,4,50.0,4,1,Unsure
+U0502,53,Male,France,Desktop,Pro,Power User,7,Yes,8.6,9,1,0,51.7,242,51,9,Promoter,Positive,5,2,3,2,5,3,5,2,4,3,75.0,B,4,2,33.3,2,0,Unsure
+U0503,20,Male,Brazil,Desktop,Free,Power User,2,Yes,6.7,14,0,1,74.6,187,10,10,Promoter,Positive,5,3,3,1,3,3,4,3,4,2,67.5,C,6,4,66.7,3,0,Unsure
+U0504,40,Male,UK,Mobile,Pro,New,13,Yes,12.4,15,0,1,75.5,176,15,10,Promoter,Positive,4,2,3,1,4,2,4,3,5,2,75.0,B,7,3,66.7,5,0,Likely
+U0505,27,Non-binary,Canada,Desktop,Free,Returning,1,Yes,1.2,10,2,0,99.2,267,40,4,Detractor,Negative,4,1,4,3,2,1,3,4,3,3,60.0,C,2,1,8.3,2,1,Unsure
+U0506,29,Female,Netherlands,Tablet,Free,New,2,Yes,1.8,14,1,0,91.2,163,30,10,Promoter,Positive,4,2,3,3,3,3,3,4,3,3,52.5,D,1,2,8.3,4,1,Unlikely
+U0507,28,Male,Spain,Mobile,Enterprise,Returning,4,No,5.5,13,1,1,90.1,355,26,8,Passive,Neutral,4,2,2,2,3,3,3,3,3,3,55.0,D,2,5,41.7,2,1,Unlikely
+U0508,25,Male,Brazil,Tablet,Free,Power User,11,Yes,11.8,11,2,2,68.7,221,61,7,Passive,Neutral,2,2,4,3,4,2,5,2,2,1,67.5,C,4,5,58.3,4,1,Unlikely
+U0509,34,Male,Germany,Desktop,Pro,Returning,10,Yes,6.9,14,1,0,100.0,190,12,10,Promoter,Positive,3,2,3,3,4,2,5,1,3,2,70.0,B,5,6,75.0,4,0,Unsure
+U0510,26,Female,Brazil,Tablet,Basic,New,29,Yes,5.7,12,2,1,78.6,169,19,7,Passive,Neutral,4,4,3,2,3,4,4,3,4,2,57.5,D,3,3,33.3,3,0,Unlikely
+U0511,37,Female,Canada,Desktop,Free,Returning,24,Yes,3.1,13,0,1,91.0,218,32,3,Detractor,Negative,4,2,3,3,4,3,2,2,3,2,60.0,C,2,5,41.7,5,0,Unsure
+U0512,33,Male,UK,Desktop,Enterprise,Power User,10,No,9.0,7,0,4,79.9,299,19,8,Passive,Neutral,5,2,3,3,4,3,3,3,4,3,62.5,C,5,5,66.7,3,1,Unsure
+U0513,32,Male,USA,Desktop,Free,Returning,7,Yes,9.1,11,0,1,77.4,276,21,10,Promoter,Positive,4,3,5,2,3,2,5,3,4,3,70.0,B,5,7,83.3,4,0,Unsure
+U0514,25,Male,India,Desktop,Pro,Returning,7,Yes,8.5,8,0,0,72.7,271,5,8,Passive,Neutral,4,2,3,2,5,2,5,3,4,2,75.0,B,4,5,58.3,4,0,Unsure
+U0515,28,Female,USA,Mobile,Free,New,27,Yes,4.6,15,2,1,70.1,261,9,10,Promoter,Positive,3,4,4,3,4,1,3,1,3,2,65.0,C,3,2,25.0,5,1,Unsure
+U0516,42,Female,France,Desktop,Pro,Power User,1,Yes,5.3,13,1,2,89.3,185,2,10,Promoter,Positive,4,3,4,3,5,2,3,4,4,3,62.5,C,6,5,75.0,3,0,Unsure
+U0517,39,Male,India,Desktop,Free,Power User,0,No,2.4,10,0,0,73.6,155,15,10,Promoter,Positive,4,2,3,1,3,2,3,2,4,3,67.5,C,4,3,41.7,3,1,Unsure
+U0518,24,Male,UK,Mobile,Basic,Returning,29,Yes,6.2,14,0,1,71.1,221,12,9,Promoter,Positive,4,3,3,1,3,1,4,3,5,2,72.5,B,2,5,41.7,4,0,Unlikely
+U0519,35,Male,Germany,Desktop,Pro,New,12,Yes,4.6,15,0,0,100.0,186,79,8,Passive,Neutral,4,1,3,3,4,2,4,3,4,1,72.5,B,4,6,66.7,4,0,Unsure
+U0520,42,Non-binary,Canada,Mobile,Enterprise,New,3,Yes,4.2,10,1,0,39.8,268,14,6,Detractor,Negative,5,1,5,2,2,2,3,2,4,3,72.5,B,6,4,66.7,4,1,Likely
+U0521,18,Male,USA,Desktop,Enterprise,New,5,Yes,6.5,14,1,1,92.4,212,19,7,Passive,Neutral,3,1,2,3,5,1,5,3,5,2,75.0,B,7,6,91.7,5,0,Unsure
+U0522,39,Female,UK,Mobile,Pro,Returning,49,No,6.1,12,1,0,92.7,298,6,7,Passive,Neutral,3,3,5,4,3,2,4,3,4,2,62.5,C,6,4,66.7,4,0,Unsure
+U0523,27,Female,UK,Mobile,Enterprise,Power User,35,No,6.5,9,2,2,100.0,259,19,9,Promoter,Positive,3,2,4,1,5,2,4,2,5,1,82.5,A,6,4,66.7,4,1,Likely
+U0524,40,Male,USA,Desktop,Free,Returning,22,Yes,6.4,8,0,2,64.6,223,23,4,Detractor,Negative,3,3,4,4,3,2,3,3,4,3,55.0,D,5,1,33.3,4,0,Unlikely
+U0525,26,Male,Spain,Desktop,Free,Power User,12,Yes,6.7,11,0,1,79.1,112,21,7,Passive,Neutral,4,3,3,3,4,1,5,4,4,3,65.0,C,4,3,41.7,4,0,Unlikely
+U0526,18,Male,USA,Desktop,Free,Returning,13,Yes,5.6,11,0,1,88.0,308,6,10,Promoter,Positive,4,2,2,2,4,2,4,2,5,1,75.0,B,5,6,75.0,3,0,Unlikely
+U0527,18,Female,France,Mobile,Basic,Power User,67,Yes,8.9,11,0,1,100.0,255,6,9,Promoter,Positive,5,2,5,3,4,1,4,2,3,2,77.5,B,7,7,100.0,4,0,Likely
+U0528,34,Female,USA,Desktop,Basic,Power User,61,Yes,5.1,17,2,0,81.2,111,12,10,Promoter,Positive,5,1,4,1,4,3,4,2,3,2,77.5,B,4,4,50.0,3,0,Likely
+U0529,37,Female,USA,Desktop,Basic,New,4,Yes,7.5,13,1,3,86.1,292,12,9,Promoter,Positive,3,2,4,3,5,2,4,1,3,2,72.5,B,4,5,58.3,4,0,Likely
+U0530,25,Female,Australia,Desktop,Free,Returning,30,No,7.1,13,1,10,100.0,236,40,10,Promoter,Positive,4,2,4,3,5,1,3,2,3,2,72.5,B,3,3,33.3,3,1,Unsure
+U0531,40,Male,India,Desktop,Pro,Returning,4,No,2.6,13,1,0,45.2,233,41,10,Promoter,Positive,4,1,4,1,4,1,5,2,3,2,82.5,A,5,2,41.7,3,1,Unsure
+U0532,18,Non-binary,UK,Desktop,Free,New,4,Yes,8.5,9,0,0,62.3,328,70,7,Passive,Neutral,4,3,4,2,3,2,3,3,3,3,60.0,C,2,3,25.0,2,1,Unsure
+U0533,33,Female,USA,Mobile,Free,Returning,20,Yes,4.3,13,0,0,96.5,301,19,9,Promoter,Positive,2,3,4,3,3,2,3,2,4,3,57.5,D,4,5,58.3,4,0,Unsure
+U0534,22,Male,UK,Desktop,Basic,Returning,9,Yes,6.2,10,1,2,87.0,271,72,9,Promoter,Positive,3,2,5,3,4,4,3,2,3,2,62.5,C,2,3,25.0,3,1,Unsure
+U0535,27,Prefer not to say,USA,Desktop,Pro,Power User,48,Yes,10.1,10,1,1,89.4,231,25,4,Detractor,Negative,3,2,4,2,5,1,4,2,3,2,75.0,B,6,6,83.3,3,0,Unsure
+U0536,34,Female,India,Mobile,Pro,Returning,2,Yes,9.0,14,0,3,70.9,254,5,0,Detractor,Negative,4,2,5,2,4,3,2,2,3,2,67.5,C,6,5,75.0,3,0,Unsure
+U0537,25,Female,UK,Mobile,Pro,Power User,13,Yes,8.5,19,1,1,79.4,151,5,10,Promoter,Positive,4,2,4,2,4,3,5,1,4,3,75.0,B,6,7,91.7,4,1,Likely
+U0538,30,Female,USA,Desktop,Free,Returning,45,No,4.2,12,2,1,55.9,250,7,10,Promoter,Positive,2,2,3,3,4,5,4,4,2,2,47.5,F,2,2,16.7,3,1,Unlikely
+U0539,44,Female,USA,Desktop,Basic,Power User,42,Yes,10.3,17,0,1,100.0,132,0,1,Detractor,Negative,2,2,4,1,4,3,4,3,3,2,65.0,C,4,7,75.0,4,1,Unsure
+U0540,28,Female,Netherlands,Desktop,Free,Returning,3,Yes,7.3,9,2,3,59.4,222,5,0,Detractor,Negative,4,3,3,3,3,3,5,3,4,3,60.0,C,3,4,41.7,3,1,Unlikely
+U0541,42,Male,Brazil,Tablet,Basic,Power User,8,Yes,4.5,7,1,1,74.0,208,0,9,Promoter,Positive,4,2,4,1,4,2,3,2,3,2,72.5,B,1,3,16.7,2,1,Unsure
+U0542,23,Male,UK,Desktop,Basic,Returning,17,Yes,5.4,18,1,1,73.0,160,17,10,Promoter,Positive,5,2,4,2,4,2,4,3,5,3,75.0,B,4,7,75.0,3,0,Unsure
+U0543,39,Non-binary,Canada,Tablet,Free,Returning,3,Yes,1.5,18,1,2,88.9,225,9,6,Detractor,Negative,4,3,5,2,4,3,4,2,5,2,75.0,B,5,4,58.3,4,1,Unsure
+U0544,48,Male,USA,Mobile,Free,Returning,62,No,7.7,18,3,1,74.9,182,5,7,Passive,Neutral,5,2,4,3,4,1,4,2,3,1,77.5,B,4,5,58.3,5,0,Likely
+U0545,18,Male,USA,Mobile,Enterprise,Returning,44,Yes,7.7,13,0,1,86.4,217,15,9,Promoter,Positive,5,2,5,2,4,3,5,1,5,2,85.0,A,5,6,75.0,5,0,Likely
+U0546,26,Male,Canada,Desktop,Enterprise,New,3,Yes,11.0,11,0,1,66.7,82,16,7,Passive,Neutral,4,2,4,1,5,1,5,2,4,2,85.0,A,5,7,83.3,5,0,Likely
+U0547,40,Male,Netherlands,Desktop,Basic,New,2,Yes,7.5,9,0,2,54.0,211,63,9,Promoter,Positive,4,2,3,2,4,1,5,3,4,1,77.5,B,6,5,75.0,4,0,Unsure
+U0548,32,Female,Spain,Desktop,Free,New,2,Yes,9.1,6,0,2,70.2,245,22,5,Detractor,Negative,3,2,3,3,3,3,3,2,4,2,60.0,C,1,4,25.0,3,0,Unlikely
+U0549,38,Non-binary,Germany,Desktop,Free,Power User,43,No,5.3,13,1,1,62.0,188,9,4,Detractor,Negative,3,2,4,3,3,2,3,2,5,2,67.5,C,5,6,75.0,4,0,Unsure
+U0550,28,Male,USA,Mobile,Basic,New,4,Yes,9.9,18,2,2,100.0,196,5,1,Detractor,Negative,4,3,3,4,4,3,4,3,3,3,55.0,D,5,5,66.7,3,1,Unsure
+U0551,35,Male,Canada,Tablet,Enterprise,New,10,No,5.2,12,0,1,47.1,125,4,0,Detractor,Negative,5,2,4,2,3,3,4,1,4,1,77.5,B,4,2,33.3,3,0,Unsure
+U0552,32,Male,USA,Mobile,Free,Power User,11,Yes,8.2,13,0,1,62.8,247,4,5,Detractor,Negative,3,2,4,3,3,2,4,2,5,3,67.5,C,3,4,41.7,4,0,Unsure
+U0553,46,Female,Germany,Mobile,Pro,Returning,16,Yes,3.1,17,0,0,78.5,253,9,6,Detractor,Negative,4,3,3,2,3,2,5,2,3,1,70.0,B,6,4,66.7,4,1,Unsure
+U0554,37,Female,USA,Desktop,Free,Returning,1,Yes,5.3,8,1,2,56.1,292,90,10,Promoter,Positive,2,3,3,2,3,3,4,2,2,4,50.0,D,2,1,8.3,3,1,Unlikely
+U0555,37,Male,India,Desktop,Enterprise,New,5,Yes,2.1,19,0,1,64.9,270,0,4,Detractor,Negative,3,2,4,3,2,2,5,2,4,2,67.5,C,6,6,83.3,5,1,Unsure
+U0556,30,Female,USA,Desktop,Basic,Power User,48,Yes,5.3,17,0,7,58.0,245,4,10,Promoter,Positive,4,2,3,1,3,4,4,2,4,3,65.0,C,4,4,50.0,4,0,Unlikely
+U0557,29,Female,UK,Mobile,Pro,Power User,43,No,8.6,13,1,1,70.5,225,3,8,Passive,Neutral,4,2,3,3,5,1,4,2,5,1,80.0,A,7,4,75.0,3,0,Unsure
+U0558,30,Female,Netherlands,Tablet,Free,Power User,27,Yes,6.0,12,0,1,79.0,209,17,9,Promoter,Positive,4,3,4,3,3,3,5,2,3,1,67.5,C,4,6,66.7,3,0,Unsure
+U0559,38,Female,UK,Mobile,Basic,Returning,0,No,3.4,13,1,0,99.4,273,9,2,Detractor,Negative,4,2,3,3,3,3,3,2,5,3,62.5,C,5,2,41.7,4,0,Unsure
+U0560,30,Male,Germany,Desktop,Free,Power User,7,Yes,9.8,13,1,0,87.3,96,7,5,Detractor,Negative,5,2,4,2,4,1,5,1,5,1,90.0,A+,5,7,83.3,4,1,Unsure
+U0561,37,Female,USA,Desktop,Free,New,18,Yes,4.9,6,0,4,81.3,199,4,10,Promoter,Positive,4,4,3,4,3,4,3,3,3,3,45.0,F,3,3,33.3,3,1,Unlikely
+U0562,55,Female,UK,Mobile,Enterprise,New,6,Yes,6.5,18,1,0,93.2,286,6,10,Promoter,Positive,5,1,3,2,3,1,4,2,4,1,80.0,A,4,6,66.7,2,1,Unsure
+U0563,43,Female,UK,Desktop,Enterprise,New,43,Yes,7.7,17,1,1,100.0,47,1,9,Promoter,Positive,3,2,5,1,5,2,4,1,4,2,82.5,A,4,3,41.7,4,1,Unsure
+U0564,31,Female,UK,Mobile,Enterprise,Returning,18,Yes,12.8,12,1,2,34.2,219,14,10,Promoter,Positive,4,2,3,2,5,3,4,3,4,4,65.0,C,5,5,66.7,3,1,Unsure
+U0565,46,Female,Australia,Mobile,Basic,Returning,1,Yes,11.0,11,0,1,85.6,251,1,9,Promoter,Positive,4,1,4,2,5,1,3,2,5,3,80.0,A,6,5,75.0,3,1,Likely
+U0566,30,Female,USA,Mobile,Pro,Returning,43,Yes,9.9,9,0,3,98.7,202,23,6,Detractor,Negative,4,3,3,2,3,1,3,3,2,2,60.0,C,7,4,75.0,4,0,Unsure
+U0567,18,Male,Spain,Desktop,Free,New,57,Yes,6.7,11,2,1,60.9,216,18,9,Promoter,Positive,4,3,3,3,2,3,2,1,3,4,50.0,D,3,5,50.0,4,1,Unlikely
+U0568,24,Female,France,Desktop,Free,Returning,1,Yes,5.6,8,2,1,89.7,259,31,10,Promoter,Positive,4,2,3,2,4,3,4,2,4,4,65.0,C,2,2,16.7,5,1,Unsure
+U0569,18,Prefer not to say,USA,Desktop,Free,Power User,14,Yes,0.6,11,0,4,97.3,197,9,9,Promoter,Positive,4,2,3,1,3,2,3,1,4,3,70.0,B,5,3,50.0,4,1,Unsure
+U0570,30,Non-binary,France,Desktop,Pro,Returning,7,No,5.1,16,0,3,71.9,215,8,10,Promoter,Positive,4,2,3,2,3,3,4,2,3,1,67.5,C,4,3,41.7,3,1,Unsure
+U0571,34,Male,Germany,Desktop,Basic,Power User,9,Yes,5.8,15,0,0,73.6,166,2,3,Detractor,Negative,5,2,3,2,3,2,4,3,4,2,70.0,B,5,5,66.7,3,0,Unsure
+U0572,51,Male,Canada,Mobile,Free,New,4,Yes,1.1,15,0,0,55.6,304,16,7,Passive,Neutral,3,3,3,2,3,2,4,3,4,2,62.5,C,4,4,50.0,4,1,Unsure
+U0573,37,Male,USA,Mobile,Basic,Power User,16,Yes,4.6,11,1,0,75.1,283,9,10,Promoter,Positive,4,1,4,2,5,3,4,4,4,2,72.5,B,6,6,83.3,3,1,Likely
+U0574,32,Female,USA,Desktop,Pro,Returning,57,Yes,1.9,12,0,1,61.7,204,10,10,Promoter,Positive,4,3,3,3,2,2,4,2,5,1,67.5,C,4,5,58.3,4,0,Unsure
+U0575,42,Female,Netherlands,Desktop,Basic,New,13,No,5.0,12,1,9,70.6,169,33,10,Promoter,Positive,4,2,3,3,3,2,3,3,3,1,62.5,C,1,1,0.0,3,1,Unlikely
+U0576,18,Male,Spain,Desktop,Free,New,2,Yes,7.8,12,1,2,49.7,205,38,10,Promoter,Positive,3,2,3,3,3,1,4,4,2,3,55.0,D,5,4,58.3,3,1,Unsure
+U0577,36,Female,Netherlands,Desktop,Free,Returning,17,No,7.6,14,0,1,70.3,249,36,4,Detractor,Negative,3,2,3,3,3,3,2,2,2,4,47.5,F,2,3,25.0,2,1,Unlikely
+U0578,42,Female,USA,Mobile,Free,Power User,7,No,7.9,14,1,3,87.9,242,2,6,Detractor,Negative,3,2,3,1,4,2,3,2,3,2,67.5,C,4,4,50.0,4,1,Unsure
+U0579,19,Female,Canada,Desktop,Free,Returning,35,Yes,3.4,16,1,1,46.7,177,21,0,Detractor,Negative,2,2,4,2,2,3,3,2,3,3,55.0,D,2,4,33.3,2,1,Unlikely
+U0580,45,Female,USA,Desktop,Pro,Returning,10,Yes,2.2,14,0,1,100.0,161,1,9,Promoter,Positive,2,2,4,1,5,3,4,2,3,2,70.0,B,3,4,41.7,3,0,Unsure
+U0581,37,Female,USA,Desktop,Basic,Power User,4,Yes,3.4,17,1,3,93.7,221,13,10,Promoter,Positive,4,2,5,2,4,1,3,1,3,2,77.5,B,6,4,66.7,5,0,Likely
+U0582,30,Female,UK,Mobile,Pro,Returning,4,Yes,3.0,11,1,4,84.2,283,9,7,Passive,Neutral,3,3,4,1,2,3,4,2,4,1,67.5,C,3,1,16.7,4,1,Unsure
+U0583,40,Male,France,Mobile,Basic,Returning,26,Yes,5.1,13,0,2,72.7,162,2,9,Promoter,Positive,4,1,3,2,5,2,4,3,3,3,70.0,B,6,4,66.7,4,0,Unsure
+U0584,57,Female,UK,Desktop,Pro,Returning,6,Yes,6.2,15,0,1,85.5,138,34,6,Detractor,Negative,4,4,4,2,2,4,5,3,3,1,60.0,C,3,3,33.3,3,0,Unsure
+U0585,36,Female,USA,Mobile,Free,New,26,Yes,4.7,18,1,2,98.1,399,13,2,Detractor,Negative,3,2,4,2,3,1,4,4,3,2,65.0,C,4,3,41.7,5,0,Likely
+U0586,36,Female,Australia,Mobile,Basic,Returning,4,Yes,7.1,14,2,0,72.7,272,8,10,Promoter,Positive,3,2,2,1,4,4,3,3,4,2,60.0,C,6,1,41.7,3,0,Unsure
+U0587,29,Female,UK,Tablet,Pro,Returning,7,Yes,5.8,11,1,2,100.0,208,1,7,Passive,Neutral,4,3,4,2,3,2,4,4,3,3,60.0,C,3,4,41.7,3,1,Unsure
+U0588,26,Female,UK,Desktop,Free,Power User,11,No,7.2,17,0,6,81.9,257,11,10,Promoter,Positive,1,1,5,2,4,1,3,1,3,1,75.0,B,4,5,58.3,4,1,Likely
+U0589,42,Male,UK,Tablet,Free,Returning,52,Yes,9.0,5,1,1,89.2,221,49,9,Promoter,Positive,4,3,4,2,4,3,4,1,3,2,70.0,B,3,5,50.0,4,1,Unsure
+U0590,25,Female,Spain,Tablet,Enterprise,Returning,48,No,3.9,8,0,2,83.1,263,14,9,Promoter,Positive,4,1,4,1,4,1,4,1,5,2,87.5,A,3,2,25.0,3,1,Unsure
+U0591,35,Male,Germany,Tablet,Free,Returning,4,Yes,6.9,13,1,1,79.0,244,73,3,Detractor,Negative,4,2,3,3,3,1,2,2,3,3,60.0,C,2,4,33.3,3,0,Unlikely
+U0592,29,Male,USA,Mobile,Pro,Power User,8,Yes,7.2,13,1,0,59.0,207,2,8,Passive,Neutral,4,1,2,3,5,1,5,2,5,2,80.0,A,5,6,75.0,4,0,Likely
+U0593,39,Female,Australia,Mobile,Free,Power User,3,Yes,6.6,15,0,2,89.0,191,11,10,Promoter,Positive,5,1,4,3,4,1,4,2,4,2,80.0,A,6,4,66.7,4,1,Unsure
+U0594,37,Prefer not to say,Australia,Desktop,Pro,Returning,13,Yes,7.9,11,2,0,59.0,152,34,9,Promoter,Positive,4,2,5,2,3,2,4,1,5,3,77.5,B,2,3,25.0,4,0,Unlikely
+U0595,44,Male,USA,Mobile,Free,Power User,11,Yes,8.9,14,1,2,65.8,332,12,9,Promoter,Positive,5,1,4,2,2,2,5,3,2,2,70.0,B,6,5,75.0,3,0,Unsure
+U0596,29,Male,India,Mobile,Free,Returning,42,Yes,4.5,10,1,0,100.0,156,2,0,Detractor,Negative,5,2,4,4,5,2,4,2,3,2,72.5,B,7,5,83.3,4,1,Unsure
+U0597,31,Female,Canada,Mobile,Basic,Returning,48,No,6.4,14,0,5,76.2,129,14,3,Detractor,Negative,3,1,3,1,3,4,5,2,4,3,67.5,C,4,3,41.7,4,1,Unsure
+U0598,24,Male,India,Desktop,Free,New,9,Yes,7.6,16,1,1,65.0,199,15,10,Promoter,Positive,3,1,4,4,5,2,3,2,4,2,70.0,B,5,4,58.3,3,1,Unsure
+U0599,30,Female,UK,Mobile,Basic,Returning,12,Yes,5.9,16,2,0,71.5,161,22,9,Promoter,Positive,3,3,3,2,2,2,4,2,4,1,65.0,C,4,4,50.0,3,1,Unsure
+U0600,38,Female,Netherlands,Mobile,Free,New,41,No,7.5,17,0,0,54.1,227,28,7,Passive,Neutral,4,3,2,3,4,2,4,1,3,3,62.5,C,1,5,33.3,3,1,Unlikely
+U0601,42,Female,Germany,Desktop,Free,Power User,30,Yes,7.9,14,0,4,100.0,245,21,4,Detractor,Negative,3,3,5,1,4,2,3,1,5,1,80.0,A,5,3,50.0,3,0,Unsure
+U0602,25,Male,USA,Mobile,Free,Returning,0,No,10.7,12,0,2,62.7,290,21,9,Promoter,Positive,3,3,4,3,4,3,4,2,4,2,65.0,C,4,2,33.3,3,1,Unsure
+U0603,43,Male,USA,Mobile,Free,Power User,7,Yes,2.6,7,1,2,82.5,272,4,5,Detractor,Negative,2,2,5,3,4,1,5,3,3,2,70.0,B,5,5,66.7,4,0,Unsure
+U0604,48,Female,UK,Mobile,Enterprise,Returning,10,No,7.3,12,1,1,100.0,176,6,1,Detractor,Negative,4,1,5,2,3,4,4,2,5,2,75.0,B,7,5,83.3,3,1,Likely
+U0605,38,Female,UK,Desktop,Free,Returning,5,Yes,3.5,10,0,1,63.0,240,31,0,Detractor,Negative,4,4,3,2,2,4,5,1,3,3,57.5,D,3,2,25.0,3,0,Unsure
+U0606,53,Male,Canada,Desktop,Basic,Returning,4,Yes,7.6,15,2,0,80.2,254,60,8,Passive,Neutral,4,2,4,3,4,2,3,3,3,3,62.5,C,3,4,41.7,5,0,Unsure
+U0607,26,Female,UK,Tablet,Free,New,1,Yes,1.5,9,0,2,53.3,138,2,10,Promoter,Positive,3,2,4,2,3,3,3,4,4,3,57.5,D,3,2,25.0,2,0,Unsure
+U0608,22,Male,USA,Desktop,Free,Returning,19,No,8.1,16,1,0,100.0,237,11,7,Passive,Neutral,4,2,4,3,4,2,4,1,4,4,70.0,B,3,5,50.0,4,1,Unsure
+U0609,18,Female,Germany,Mobile,Enterprise,New,5,Yes,3.3,9,1,10,75.4,172,10,5,Detractor,Negative,3,3,4,2,4,4,4,2,3,3,60.0,C,2,1,8.3,2,1,Unlikely
+U0610,49,Male,UK,Desktop,Free,Returning,1,No,4.5,11,0,3,72.0,346,5,2,Detractor,Negative,4,3,4,2,3,3,5,2,4,4,65.0,C,5,6,75.0,3,1,Unsure
+U0611,41,Non-binary,Brazil,Mobile,Enterprise,Returning,5,Yes,3.6,14,0,1,71.0,179,10,4,Detractor,Negative,4,4,5,3,4,3,4,3,5,2,67.5,C,6,4,66.7,3,0,Unsure
+U0612,33,Male,USA,Desktop,Free,Power User,29,No,4.5,10,0,0,67.7,228,20,10,Promoter,Positive,4,3,3,3,4,2,4,3,2,1,62.5,C,3,5,50.0,3,1,Unlikely
+U0613,37,Male,USA,Mobile,Pro,New,34,Yes,9.7,12,1,2,75.4,162,0,5,Detractor,Negative,3,2,5,1,4,3,4,4,3,1,70.0,B,3,6,58.3,3,0,Likely
+U0614,23,Male,USA,Desktop,Basic,New,12,Yes,6.6,7,1,0,100.0,178,25,10,Promoter,Positive,3,2,4,1,5,2,4,2,3,2,75.0,B,2,6,50.0,4,0,Unsure
+U0615,58,Male,USA,Desktop,Enterprise,Returning,10,No,9.2,13,0,0,68.2,330,20,6,Detractor,Negative,3,2,4,3,4,3,3,2,4,2,65.0,C,5,7,83.3,4,0,Unsure
+U0616,35,Female,UK,Desktop,Basic,Power User,69,Yes,9.7,9,0,1,69.5,300,76,4,Detractor,Negative,3,2,4,3,3,2,4,1,3,1,70.0,B,5,3,50.0,2,0,Unsure
+U0617,35,Prefer not to say,India,Desktop,Basic,Power User,4,Yes,8.4,13,0,1,86.5,96,2,5,Detractor,Negative,3,2,5,1,5,1,3,3,4,2,77.5,B,5,6,75.0,5,0,Likely
+U0618,41,Male,Brazil,Tablet,Free,Returning,4,Yes,4.3,12,1,3,67.8,329,19,5,Detractor,Negative,4,3,2,1,4,4,2,1,4,3,60.0,C,3,3,33.3,3,1,Unsure
+U0619,39,Male,USA,Tablet,Free,Returning,6,Yes,7.8,14,1,1,75.9,288,9,9,Promoter,Positive,4,1,3,2,4,3,2,2,1,2,60.0,C,2,4,33.3,3,0,Likely
+U0620,36,Female,India,Desktop,Enterprise,New,3,Yes,6.0,14,0,0,81.6,182,5,8,Passive,Neutral,3,2,4,2,3,2,3,3,3,2,62.5,C,4,6,66.7,4,0,Likely
+U0621,26,Female,India,Mobile,Free,Power User,9,Yes,4.8,14,1,1,84.9,248,16,9,Promoter,Positive,3,3,4,2,4,4,4,1,4,2,67.5,C,5,4,58.3,5,1,Unsure
+U0622,39,Female,Australia,Desktop,Basic,Returning,44,Yes,3.4,15,0,2,90.2,203,22,1,Detractor,Negative,5,1,4,3,4,3,4,1,5,3,77.5,B,5,4,58.3,3,0,Unsure
+U0623,53,Male,USA,Mobile,Pro,Returning,17,Yes,9.0,11,2,0,83.7,333,0,5,Detractor,Negative,4,3,3,2,2,3,3,3,4,2,57.5,D,5,5,66.7,3,0,Unsure
+U0624,47,Male,USA,Mobile,Free,Returning,10,Yes,4.0,8,3,1,20.5,209,88,7,Passive,Neutral,3,2,4,2,4,1,4,3,4,3,70.0,B,1,2,8.3,3,0,Unlikely
+U0625,50,Female,USA,Tablet,Enterprise,New,49,Yes,8.4,15,1,3,92.0,195,17,10,Promoter,Positive,4,2,3,2,5,2,3,1,5,3,75.0,B,6,7,91.7,4,1,Likely
+U0626,29,Male,India,Desktop,Pro,Power User,1,Yes,4.0,14,2,5,53.9,191,23,7,Passive,Neutral,4,2,3,2,3,2,4,3,4,1,70.0,B,5,5,66.7,4,1,Unlikely
+U0627,24,Female,Australia,Mobile,Basic,New,4,Yes,6.8,15,2,10,78.5,153,31,7,Passive,Neutral,4,3,3,3,3,2,5,1,3,3,65.0,C,1,3,16.7,3,1,Unsure
+U0628,33,Male,UK,Desktop,Enterprise,Returning,15,Yes,5.1,16,1,2,100.0,339,7,8,Passive,Neutral,3,4,3,1,5,1,3,2,3,2,67.5,C,4,4,50.0,4,1,Unsure
+U0629,35,Female,USA,Tablet,Free,New,17,No,5.9,10,1,0,61.0,155,26,2,Detractor,Negative,3,2,3,3,5,3,4,2,4,3,65.0,C,2,2,16.7,5,1,Unsure
+U0630,45,Male,Netherlands,Desktop,Free,Power User,1,Yes,8.6,12,0,0,71.9,234,9,9,Promoter,Positive,4,1,5,4,5,2,4,2,5,3,77.5,B,4,5,58.3,3,0,Unsure
+U0631,18,Female,Canada,Mobile,Basic,Power User,9,No,9.3,15,0,1,74.6,96,31,8,Passive,Neutral,4,4,4,2,5,4,4,3,3,1,65.0,C,4,5,58.3,5,0,Unsure
+U0632,49,Female,Brazil,Mobile,Free,Returning,19,No,5.4,14,0,1,84.7,220,4,10,Promoter,Positive,4,2,3,4,3,3,3,2,2,4,50.0,D,5,2,41.7,4,0,Unsure
+U0633,32,Female,Canada,Mobile,Pro,Returning,22,No,2.1,15,1,5,77.5,245,6,10,Promoter,Positive,3,1,4,2,4,2,3,2,3,2,70.0,B,4,4,50.0,3,1,Unsure
+U0634,30,Male,USA,Desktop,Enterprise,Power User,18,Yes,14.0,14,0,2,100.0,144,10,8,Passive,Neutral,5,3,3,1,5,2,4,2,5,1,82.5,A,4,6,66.7,4,0,Unsure
+U0635,24,Female,France,Tablet,Basic,New,7,No,11.9,10,0,2,90.5,230,5,6,Detractor,Negative,4,2,5,2,2,2,4,3,3,3,65.0,C,4,5,58.3,4,0,Unsure
+U0636,18,Female,India,Desktop,Free,Returning,2,No,7.9,8,1,0,75.7,214,11,9,Promoter,Positive,5,3,3,4,2,2,4,2,5,3,62.5,C,4,6,66.7,3,0,Unlikely
+U0637,42,Female,UK,Mobile,Enterprise,New,10,Yes,5.8,15,0,3,86.9,261,8,4,Detractor,Negative,4,2,5,3,5,1,5,2,4,2,82.5,A,4,6,66.7,4,0,Unsure
+U0638,35,Female,Germany,Desktop,Basic,Power User,2,Yes,6.6,14,1,3,90.6,293,30,7,Passive,Neutral,4,3,4,2,4,2,3,3,5,2,70.0,B,5,4,58.3,4,0,Unsure
+U0639,21,Female,India,Desktop,Basic,Returning,53,Yes,5.1,9,2,0,51.3,186,13,10,Promoter,Positive,3,2,4,3,4,3,4,3,4,2,65.0,C,5,6,75.0,4,0,Unsure
+U0640,21,Female,UK,Mobile,Basic,Power User,12,Yes,10.0,13,1,3,80.2,216,7,10,Promoter,Positive,3,2,3,2,5,2,4,2,5,2,75.0,B,4,5,58.3,4,1,Unsure
+U0641,31,Male,Canada,Desktop,Enterprise,Returning,7,Yes,7.7,15,1,0,80.0,217,4,10,Promoter,Positive,3,2,4,2,5,3,5,3,4,1,75.0,B,5,5,66.7,4,0,Unsure
+U0642,51,Female,France,Desktop,Basic,New,26,Yes,4.9,9,1,0,89.0,249,8,10,Promoter,Positive,3,1,5,2,4,3,4,4,3,2,67.5,C,5,5,66.7,3,0,Likely
+U0643,31,Female,Spain,Desktop,Pro,New,12,Yes,6.4,17,0,1,82.4,195,9,0,Detractor,Negative,5,1,5,3,3,3,4,2,5,2,77.5,B,6,4,66.7,5,0,Likely
+U0644,19,Male,UK,Desktop,Pro,Returning,7,Yes,9.9,12,0,2,66.6,217,20,7,Passive,Neutral,4,2,4,2,3,1,3,3,4,2,70.0,B,5,4,58.3,3,0,Unsure
+U0645,32,Male,USA,Mobile,Free,Returning,30,Yes,11.1,17,2,0,81.5,190,2,6,Detractor,Negative,3,2,4,1,4,2,4,1,5,2,80.0,A,3,4,41.7,4,1,Unsure
+U0646,31,Male,France,Tablet,Basic,New,36,Yes,9.7,9,0,1,55.5,242,5,10,Promoter,Positive,3,3,2,3,4,3,3,2,4,2,57.5,D,4,4,50.0,3,0,Unsure
+U0647,18,Female,USA,Desktop,Pro,New,20,No,8.4,9,0,9,48.9,298,8,10,Promoter,Positive,2,1,5,2,4,3,3,2,4,2,70.0,B,2,3,25.0,3,1,Unsure
+U0648,33,Female,India,Desktop,Basic,Power User,1,Yes,5.7,10,1,2,84.9,262,8,0,Detractor,Negative,3,2,2,2,4,3,4,2,3,1,65.0,C,5,4,58.3,4,1,Unsure
+U0649,32,Female,Canada,Desktop,Pro,Power User,15,Yes,0.5,13,0,2,93.0,237,6,2,Detractor,Negative,4,3,4,3,4,2,5,1,4,2,75.0,B,6,7,91.7,3,0,Likely
+U0650,41,Female,UK,Desktop,Enterprise,Returning,26,Yes,7.8,12,0,0,87.6,249,23,7,Passive,Neutral,5,3,3,2,4,2,4,3,3,2,67.5,C,5,4,58.3,5,0,Unsure
+U0651,52,Male,Germany,Mobile,Basic,Returning,3,Yes,6.9,12,0,0,98.0,200,6,9,Promoter,Positive,3,3,3,3,4,1,5,2,3,3,65.0,C,5,7,83.3,3,0,Unsure
+U0652,45,Male,Germany,Mobile,Pro,New,5,Yes,6.4,12,0,1,62.6,251,14,9,Promoter,Positive,3,3,5,3,5,1,4,2,3,2,72.5,B,7,4,75.0,2,0,Unsure
+U0653,31,Male,USA,Desktop,Pro,Returning,39,No,7.2,12,0,0,60.9,141,14,5,Detractor,Negative,4,3,4,1,4,1,3,2,4,2,75.0,B,5,6,75.0,5,0,Unsure
+U0654,23,Male,Spain,Desktop,Pro,Power User,0,No,4.2,13,0,0,83.4,272,3,9,Promoter,Positive,5,2,3,2,4,1,2,1,5,2,77.5,B,5,7,83.3,4,0,Likely
+U0655,60,Male,Australia,Desktop,Basic,New,25,No,6.5,5,1,1,59.6,86,31,10,Promoter,Positive,2,3,3,2,5,4,3,4,3,3,50.0,D,4,3,41.7,4,1,Unlikely
+U0656,35,Male,India,Mobile,Free,New,12,Yes,9.0,15,1,1,71.9,193,10,5,Detractor,Negative,3,1,4,3,4,3,4,2,5,1,75.0,B,5,3,50.0,3,0,Likely
+U0657,34,Female,India,Tablet,Basic,Power User,11,Yes,8.5,12,0,1,77.6,281,9,10,Promoter,Positive,4,2,3,2,5,2,3,3,4,1,72.5,B,5,5,66.7,2,1,Unlikely
+U0658,34,Female,USA,Desktop,Pro,Returning,0,No,7.7,15,2,4,57.9,166,39,7,Passive,Neutral,3,2,3,4,3,3,3,3,2,2,50.0,D,2,1,8.3,4,1,Unlikely
+U0659,36,Prefer not to say,Spain,Desktop,Basic,New,31,No,8.1,9,0,0,50.9,242,5,7,Passive,Neutral,4,2,3,1,4,3,4,1,3,2,72.5,B,5,2,41.7,4,0,Unsure
+U0660,33,Non-binary,India,Mobile,Pro,Returning,8,Yes,5.9,7,0,1,73.3,169,33,7,Passive,Neutral,3,3,4,2,4,2,5,3,3,2,67.5,C,5,6,75.0,4,1,Unsure
+U0661,28,Female,India,Tablet,Basic,Returning,14,Yes,6.4,14,0,0,60.7,196,14,9,Promoter,Positive,4,2,3,1,3,2,4,2,5,2,75.0,B,5,4,58.3,4,1,Unlikely
+U0662,29,Male,Australia,Desktop,Pro,Returning,20,No,7.8,15,1,1,88.6,250,11,9,Promoter,Positive,4,3,4,1,5,1,3,2,5,1,82.5,A,4,6,66.7,4,1,Unsure
+U0663,34,Female,USA,Desktop,Free,Power User,22,Yes,7.5,10,0,0,73.0,214,29,3,Detractor,Negative,4,2,5,2,4,2,5,2,4,2,80.0,A,6,4,66.7,4,0,Unsure
+U0664,29,Female,Canada,Desktop,Pro,Power User,56,Yes,10.2,9,1,4,100.0,70,20,9,Promoter,Positive,3,1,4,3,3,1,3,3,4,1,70.0,B,6,7,91.7,5,0,Unsure
+U0665,27,Male,UK,Mobile,Basic,Returning,14,No,8.5,17,1,2,100.0,151,14,5,Detractor,Negative,3,3,4,2,5,2,4,3,2,1,67.5,C,5,4,58.3,4,1,Unsure
+U0666,35,Male,USA,Desktop,Free,Power User,9,Yes,11.8,16,1,1,86.3,276,24,10,Promoter,Positive,4,3,3,3,5,1,4,2,2,3,65.0,C,5,3,50.0,4,1,Unsure
+U0667,31,Female,USA,Desktop,Free,Returning,55,Yes,13.1,6,1,0,63.4,221,7,9,Promoter,Positive,3,3,5,2,3,1,3,2,3,3,65.0,C,4,6,66.7,3,1,Unsure
+U0668,49,Male,Brazil,Mobile,Pro,Power User,18,Yes,6.6,11,3,2,96.5,327,14,5,Detractor,Negative,4,3,3,3,4,3,3,3,5,1,65.0,C,3,4,41.7,4,0,Unsure
+U0669,18,Female,Australia,Desktop,Basic,Returning,6,Yes,0.5,17,0,2,99.2,318,1,6,Detractor,Negative,4,1,4,2,5,2,4,2,4,2,80.0,A,3,4,41.7,3,0,Unsure
+U0670,45,Female,India,Mobile,Free,Power User,2,Yes,9.7,11,0,0,76.9,198,2,9,Promoter,Positive,4,2,4,3,3,1,4,3,3,3,65.0,C,6,6,83.3,4,1,Unsure
+U0671,46,Male,India,Desktop,Enterprise,Power User,33,Yes,6.9,13,1,1,100.0,328,15,8,Passive,Neutral,4,2,5,1,5,1,3,3,5,1,85.0,A,7,7,100.0,5,1,Likely
+U0672,18,Male,Germany,Desktop,Pro,New,8,Yes,4.1,11,1,3,65.0,231,1,9,Promoter,Positive,4,1,3,2,3,2,3,4,4,5,57.5,D,4,2,33.3,3,1,Unsure
+U0673,31,Male,Spain,Mobile,Enterprise,Power User,19,Yes,5.6,9,0,2,50.6,160,3,8,Passive,Neutral,3,4,2,3,4,2,4,3,5,2,60.0,C,4,7,75.0,4,0,Unsure
+U0674,30,Male,USA,Desktop,Basic,Power User,11,No,6.0,8,0,2,70.4,167,23,10,Promoter,Positive,4,2,3,1,5,2,4,1,4,3,77.5,B,4,7,75.0,4,0,Unsure
+U0675,20,Male,USA,Tablet,Basic,Power User,4,No,8.6,16,0,3,100.0,70,0,7,Passive,Neutral,3,3,2,4,5,1,3,1,3,1,65.0,C,5,1,33.3,3,0,Unsure
+U0676,26,Female,UK,Mobile,Enterprise,New,17,Yes,4.1,9,0,3,67.7,280,3,2,Detractor,Negative,5,2,5,1,3,2,5,2,4,2,82.5,A,7,7,100.0,4,0,Unsure
+U0677,23,Male,Canada,Desktop,Basic,Power User,1,Yes,3.3,12,0,1,71.8,328,18,8,Passive,Neutral,4,2,3,3,3,3,4,3,5,2,65.0,C,3,5,50.0,5,1,Unsure
+U0678,52,Female,India,Mobile,Pro,Power User,10,No,8.9,17,1,1,89.5,122,9,10,Promoter,Positive,4,2,4,1,5,3,5,2,5,2,82.5,A,4,4,50.0,5,1,Likely
+U0679,43,Male,USA,Desktop,Free,Returning,14,Yes,9.4,10,1,2,79.9,175,16,8,Passive,Neutral,3,1,5,1,4,2,3,2,3,2,75.0,B,6,6,83.3,4,1,Unsure
+U0680,47,Non-binary,UK,Tablet,Basic,Power User,10,Yes,8.4,10,1,2,71.9,220,11,1,Detractor,Negative,5,2,4,3,2,3,4,1,5,2,72.5,B,6,5,75.0,4,0,Unsure
+U0681,41,Male,Australia,Desktop,Free,New,25,No,3.3,14,1,13,66.9,191,17,10,Promoter,Positive,4,3,4,3,5,1,4,3,4,3,70.0,B,1,3,16.7,3,1,Unlikely
+U0682,23,Male,UK,Mobile,Free,New,32,No,3.4,13,2,0,63.0,129,27,9,Promoter,Positive,3,2,5,2,4,3,2,2,5,4,65.0,C,4,1,25.0,3,0,Unlikely
+U0683,29,Female,India,Desktop,Free,Returning,27,Yes,5.1,10,0,1,55.1,210,12,5,Detractor,Negative,3,1,2,3,3,1,4,3,3,2,62.5,C,4,3,41.7,3,0,Unsure
+U0684,39,Female,Brazil,Desktop,Free,Returning,1,Yes,7.1,16,0,1,78.6,202,17,10,Promoter,Positive,4,3,3,1,5,3,4,1,4,1,77.5,B,3,5,50.0,4,0,Unsure
+U0685,22,Male,USA,Mobile,Enterprise,Returning,4,Yes,10.5,16,1,0,93.3,190,37,9,Promoter,Positive,5,3,5,2,5,2,3,2,4,2,77.5,B,3,5,50.0,4,1,Unsure
+U0686,41,Female,USA,Mobile,Free,New,14,Yes,1.9,14,1,0,92.9,220,8,0,Detractor,Negative,3,2,3,2,4,2,4,1,5,2,75.0,B,5,6,75.0,3,0,Unsure
+U0687,32,Male,India,Desktop,Pro,Power User,49,Yes,6.2,10,0,2,66.9,299,8,5,Detractor,Negative,3,3,4,3,5,5,3,3,5,3,57.5,D,3,3,33.3,5,0,Likely
+U0688,30,Female,Australia,Desktop,Pro,New,32,Yes,2.3,9,5,0,51.6,221,0,9,Promoter,Positive,2,1,3,3,4,2,2,3,4,2,60.0,C,3,3,33.3,4,1,Unsure
+U0689,41,Male,Germany,Mobile,Basic,New,33,Yes,3.1,14,0,2,77.8,214,13,10,Promoter,Positive,2,2,5,2,5,3,4,3,4,3,67.5,C,7,5,83.3,4,1,Unsure
+U0690,38,Male,Brazil,Tablet,Free,New,7,No,7.0,8,1,3,81.5,311,1,6,Detractor,Negative,4,2,3,4,3,3,3,2,4,2,60.0,C,2,1,8.3,2,1,Unlikely
+U0691,30,Female,UK,Desktop,Pro,Returning,10,No,8.1,15,0,0,87.4,246,11,4,Detractor,Negative,4,2,4,2,5,2,3,2,3,3,70.0,B,3,5,50.0,4,0,Unsure
+U0692,46,Female,Germany,Desktop,Basic,Power User,11,Yes,10.1,11,0,0,100.0,123,8,8,Passive,Neutral,5,2,3,1,5,1,4,2,5,2,85.0,A,7,7,100.0,5,1,Likely
+U0693,23,Male,India,Desktop,Pro,Returning,3,No,9.1,8,1,2,91.0,219,13,9,Promoter,Positive,4,1,4,2,4,1,3,2,3,3,72.5,B,4,5,58.3,4,0,Unsure
+U0694,40,Female,Australia,Mobile,Pro,Power User,1,No,5.2,12,3,3,81.2,255,6,0,Detractor,Negative,3,2,3,3,5,2,5,4,3,2,65.0,C,2,5,41.7,5,1,Unsure
+U0695,40,Female,UK,Desktop,Enterprise,New,53,Yes,6.0,12,0,3,83.0,137,22,5,Detractor,Negative,4,1,4,2,5,3,5,2,4,3,77.5,B,4,5,58.3,4,0,Likely
+U0696,31,Male,Canada,Desktop,Basic,Returning,5,Yes,12.0,10,3,3,85.2,296,6,9,Promoter,Positive,5,2,3,4,5,2,3,2,4,3,67.5,C,6,6,83.3,5,1,Unsure
+U0697,37,Female,Germany,Mobile,Free,Returning,5,Yes,5.7,6,2,6,66.8,310,24,9,Promoter,Positive,4,2,5,2,4,2,5,3,4,3,75.0,B,2,4,33.3,4,1,Unsure
+U0698,21,Male,USA,Desktop,Pro,Returning,2,Yes,9.0,13,0,1,62.1,160,13,7,Passive,Neutral,4,3,3,2,3,1,4,2,5,4,67.5,C,5,3,50.0,4,1,Unsure
+U0699,43,Female,UK,Desktop,Free,New,47,Yes,5.5,10,1,5,78.0,255,4,7,Passive,Neutral,4,2,4,2,4,3,5,3,3,3,67.5,C,4,3,41.7,5,1,Unlikely
+U0700,32,Female,Australia,Desktop,Enterprise,Returning,16,Yes,3.7,17,0,1,100.0,214,19,8,Passive,Neutral,4,3,5,2,4,2,5,3,5,2,77.5,B,6,5,75.0,5,0,Likely
+U0701,29,Non-binary,UK,Desktop,Free,Returning,20,Yes,1.4,12,1,4,60.4,187,4,8,Passive,Neutral,3,2,4,3,4,2,2,1,4,2,67.5,C,4,5,58.3,3,1,Unsure
+U0702,44,Male,USA,Desktop,Free,Power User,44,Yes,5.8,13,0,0,94.2,230,62,9,Promoter,Positive,4,2,4,3,4,2,3,2,4,3,67.5,C,5,4,58.3,4,0,Unsure
+U0703,27,Male,USA,Mobile,Pro,Returning,8,No,9.1,16,1,6,99.5,230,0,10,Promoter,Positive,3,2,4,2,4,2,5,3,4,3,70.0,B,3,4,41.7,4,1,Unsure
+U0704,20,Male,Netherlands,Desktop,Basic,New,17,Yes,9.2,9,0,1,82.1,114,4,3,Detractor,Negative,4,2,5,2,5,3,4,3,3,1,75.0,B,5,6,75.0,4,0,Unsure
+U0705,18,Male,India,Mobile,Basic,Returning,1,Yes,8.5,13,2,3,62.4,254,4,7,Passive,Neutral,3,3,3,2,3,2,3,1,4,3,62.5,C,3,2,25.0,4,1,Unsure
+U0706,40,Male,Canada,Mobile,Basic,New,4,Yes,4.0,7,2,0,77.3,155,0,8,Passive,Neutral,3,1,5,1,4,2,4,2,3,2,77.5,B,4,3,41.7,3,0,Unsure
+U0707,21,Female,USA,Mobile,Pro,Power User,32,Yes,10.9,10,0,1,71.1,268,21,10,Promoter,Positive,4,2,4,2,3,2,5,2,2,2,70.0,B,5,4,58.3,3,0,Unsure
+U0708,52,Male,France,Desktop,Free,Returning,26,No,3.3,7,0,1,60.9,198,25,9,Promoter,Positive,3,2,3,2,2,2,2,2,3,2,57.5,D,4,2,33.3,3,0,Unsure
+U0709,18,Male,Germany,Desktop,Pro,New,8,Yes,7.6,15,0,1,87.0,196,23,9,Promoter,Positive,3,2,5,2,3,2,4,2,3,2,70.0,B,5,4,58.3,4,0,Unsure
+U0710,51,Female,Australia,Desktop,Free,Power User,9,Yes,6.4,12,1,0,52.5,305,5,9,Promoter,Positive,3,2,4,3,5,3,3,2,4,2,67.5,C,2,3,25.0,4,0,Unsure
+U0711,36,Male,Netherlands,Desktop,Pro,Returning,14,No,6.0,12,0,3,55.0,252,11,7,Passive,Neutral,3,3,3,2,4,3,3,4,3,2,55.0,D,3,5,50.0,3,0,Unsure
+U0712,33,Female,UK,Desktop,Pro,New,0,No,9.4,8,1,0,72.1,167,22,9,Promoter,Positive,4,3,3,4,3,3,3,2,4,3,55.0,D,3,2,25.0,2,1,Unsure
+U0713,29,Male,India,Mobile,Free,Returning,5,Yes,4.9,11,0,1,77.0,155,10,10,Promoter,Positive,3,2,5,2,3,2,3,3,3,4,60.0,C,4,4,50.0,3,1,Unsure
+U0714,38,Female,UK,Desktop,Basic,Returning,4,Yes,2.7,9,0,0,77.5,193,23,10,Promoter,Positive,3,3,5,1,3,3,4,3,2,3,60.0,C,3,3,33.3,4,1,Unsure
+U0715,34,Male,Germany,Desktop,Free,Power User,5,No,6.6,13,0,2,100.0,243,17,9,Promoter,Positive,3,2,4,3,4,2,4,2,4,3,67.5,C,5,5,66.7,3,1,Unlikely
+U0716,45,Male,USA,Desktop,Pro,Power User,30,Yes,6.4,11,0,0,85.3,219,2,3,Detractor,Negative,4,2,3,2,4,3,5,2,4,2,72.5,B,6,4,66.7,4,0,Likely
+U0717,35,Female,USA,Mobile,Basic,Power User,6,Yes,14.0,15,2,1,77.8,188,33,4,Detractor,Negative,4,2,3,3,4,2,4,2,4,3,67.5,C,7,4,75.0,3,0,Unlikely
+U0718,36,Male,USA,Desktop,Pro,Returning,4,Yes,7.6,6,3,1,57.2,165,26,9,Promoter,Positive,4,2,3,1,3,1,3,3,4,2,70.0,B,4,2,33.3,3,1,Unsure
+U0719,30,Female,France,Mobile,Free,Returning,13,Yes,5.5,10,0,2,86.9,237,19,10,Promoter,Positive,4,3,3,3,3,1,3,2,4,2,65.0,C,5,3,50.0,3,1,Unsure
+U0720,33,Male,USA,Desktop,Free,Power User,36,No,3.7,17,1,0,67.2,213,3,9,Promoter,Positive,2,2,3,2,5,4,4,4,2,3,52.5,D,4,2,33.3,3,1,Unsure
+U0721,37,Male,India,Tablet,Free,New,5,Yes,1.9,11,0,0,78.2,346,5,5,Detractor,Negative,3,2,5,3,3,2,5,1,4,3,72.5,B,3,5,50.0,5,0,Unsure
+U0722,18,Female,USA,Tablet,Free,Returning,1,Yes,4.1,8,1,0,76.2,217,8,10,Promoter,Positive,4,3,4,3,5,2,3,1,4,2,72.5,B,5,5,66.7,4,1,Unsure
+U0723,21,Male,UK,Desktop,Basic,Returning,8,Yes,7.3,14,0,5,94.9,316,5,3,Detractor,Negative,3,2,4,1,4,2,4,3,3,1,72.5,B,5,5,66.7,5,1,Unsure
+U0724,41,Female,Canada,Desktop,Pro,New,25,No,11.5,13,1,1,69.7,115,3,7,Passive,Neutral,4,2,4,3,5,2,4,1,4,2,77.5,B,5,6,75.0,5,0,Likely
+U0725,36,Non-binary,USA,Desktop,Pro,Returning,14,Yes,9.7,10,2,1,47.4,116,25,6,Detractor,Negative,4,2,4,3,3,2,3,1,4,2,70.0,B,5,4,58.3,2,0,Unsure
+U0726,32,Female,USA,Desktop,Basic,Power User,31,No,8.1,10,0,0,81.6,128,13,0,Detractor,Negative,3,3,4,1,3,2,3,2,4,3,65.0,C,7,5,83.3,4,0,Unsure
+U0727,34,Non-binary,India,Mobile,Enterprise,Power User,58,No,6.6,20,1,1,90.5,269,11,4,Detractor,Negative,5,3,5,1,5,2,3,1,4,3,80.0,A,4,5,58.3,4,0,Unsure
+U0728,37,Male,USA,Mobile,Pro,New,28,Yes,9.0,14,0,0,93.7,281,2,9,Promoter,Positive,4,2,4,1,3,2,4,1,4,1,80.0,A,6,6,83.3,5,1,Likely
+U0729,29,Male,UK,Mobile,Enterprise,New,17,Yes,7.0,9,0,0,100.0,129,21,7,Passive,Neutral,3,2,3,1,4,3,4,1,4,2,72.5,B,7,7,100.0,4,0,Unsure
+U0730,26,Male,USA,Mobile,Basic,Returning,12,Yes,10.9,17,0,1,83.1,189,4,2,Detractor,Negative,4,3,4,2,4,1,4,1,4,3,75.0,B,2,6,50.0,3,1,Unsure
+U0731,36,Female,Spain,Desktop,Free,Power User,1,No,6.3,14,0,1,70.1,144,26,7,Passive,Neutral,4,2,4,2,3,3,4,3,3,3,62.5,C,1,7,50.0,3,1,Unsure
+U0732,24,Prefer not to say,France,Desktop,Free,New,75,Yes,6.9,11,0,0,48.6,97,49,2,Detractor,Negative,3,2,4,3,4,2,3,2,4,3,65.0,C,4,5,58.3,4,0,Likely
+U0733,38,Male,India,Mobile,Pro,Power User,9,Yes,1.7,10,0,2,78.6,246,18,9,Promoter,Positive,2,1,4,1,2,4,3,1,4,3,62.5,C,5,5,66.7,5,0,Unsure
+U0734,18,Female,France,Desktop,Free,New,3,No,5.0,12,1,11,82.0,257,90,8,Passive,Neutral,3,2,3,3,4,3,4,3,3,3,57.5,D,3,3,33.3,3,1,Unlikely
+U0735,44,Male,UK,Mobile,Free,Returning,20,Yes,9.0,12,0,1,73.9,211,16,7,Passive,Neutral,5,3,4,2,4,3,4,3,4,3,67.5,C,6,5,75.0,3,0,Likely
+U0736,39,Female,USA,Desktop,Basic,Returning,6,Yes,3.9,6,1,2,77.2,134,4,10,Promoter,Positive,4,1,3,2,3,2,4,2,5,2,75.0,B,3,5,50.0,5,1,Unsure
+U0737,37,Female,Canada,Desktop,Basic,Power User,16,Yes,5.3,18,2,5,87.4,303,3,9,Promoter,Positive,4,3,5,2,2,4,4,2,4,3,62.5,C,5,4,58.3,4,0,Unsure
+U0738,44,Prefer not to say,UK,Tablet,Basic,New,16,Yes,7.8,10,1,4,56.5,205,8,10,Promoter,Positive,3,3,4,2,3,3,4,3,3,2,60.0,C,4,3,41.7,4,1,Unsure
+U0739,51,Female,USA,Desktop,Free,Returning,11,No,1.5,14,0,1,73.7,284,0,9,Promoter,Positive,3,3,3,1,4,4,5,3,4,3,62.5,C,2,2,16.7,4,1,Unlikely
+U0740,44,Male,USA,Tablet,Basic,New,33,Yes,9.3,16,0,2,100.0,130,19,10,Promoter,Positive,4,1,3,2,3,1,5,2,3,3,72.5,B,1,4,25.0,3,0,Unlikely
+U0741,18,Male,USA,Tablet,Basic,Power User,6,Yes,6.2,11,1,0,82.2,184,4,5,Detractor,Negative,3,2,3,2,4,2,4,2,5,2,72.5,B,6,5,75.0,3,0,Likely
+U0742,21,Male,Brazil,Mobile,Enterprise,Power User,11,No,6.5,17,1,1,68.6,213,21,9,Promoter,Positive,4,2,2,3,4,2,5,1,5,1,77.5,B,4,6,66.7,5,0,Unsure
+U0743,28,Male,UK,Mobile,Pro,New,14,Yes,4.8,12,0,0,84.5,213,5,10,Promoter,Positive,5,2,4,1,3,1,2,2,4,3,72.5,B,5,4,58.3,4,0,Likely
+U0744,34,Male,Germany,Mobile,Enterprise,Power User,20,No,8.2,8,0,0,51.2,211,9,9,Promoter,Positive,3,2,3,2,5,2,4,1,4,1,77.5,B,7,4,75.0,4,0,Unsure
+U0745,39,Female,UK,Mobile,Pro,Returning,28,No,12.5,10,1,1,79.4,253,62,10,Promoter,Positive,4,2,4,2,4,2,4,1,4,1,80.0,A,5,3,50.0,3,1,Unlikely
+U0746,27,Female,Brazil,Desktop,Basic,New,9,Yes,8.3,13,0,0,80.7,157,5,10,Promoter,Positive,3,2,2,4,3,1,4,3,4,2,60.0,C,4,3,41.7,3,0,Unsure
+U0747,36,Female,UK,Desktop,Free,Returning,19,Yes,4.1,10,3,2,97.7,237,24,6,Detractor,Negative,4,1,4,4,2,3,4,3,4,1,65.0,C,2,4,33.3,3,0,Unsure
+U0748,26,Male,USA,Mobile,Pro,New,3,Yes,9.9,12,2,1,78.0,213,21,4,Detractor,Negative,4,2,5,2,4,3,4,1,3,3,72.5,B,5,6,75.0,4,1,Unsure
+U0749,28,Female,India,Desktop,Basic,Power User,49,Yes,5.9,16,0,1,83.1,230,4,9,Promoter,Positive,3,3,4,2,4,3,3,2,4,3,62.5,C,4,7,75.0,4,0,Unsure
+U0750,20,Female,India,Desktop,Basic,Power User,9,Yes,11.3,14,0,0,75.4,192,7,8,Passive,Neutral,5,2,4,1,5,1,4,2,3,2,82.5,A,6,6,83.3,5,1,Unsure
+U0751,25,Male,USA,Desktop,Basic,New,24,Yes,9.7,11,0,0,81.1,115,5,7,Passive,Neutral,5,2,4,2,5,3,4,2,5,2,80.0,A,4,5,58.3,5,0,Likely
+U0752,20,Female,USA,Mobile,Basic,Returning,0,No,0.5,14,1,2,53.1,145,27,9,Promoter,Positive,4,4,4,2,3,2,3,3,5,3,62.5,C,4,4,50.0,4,1,Unsure
+U0753,24,Female,USA,Mobile,Free,Power User,4,No,4.9,14,1,5,80.7,66,13,8,Passive,Neutral,4,1,5,2,4,3,4,2,4,2,77.5,B,5,4,58.3,4,0,Unsure
+U0754,45,Male,USA,Desktop,Basic,Power User,12,Yes,8.7,4,1,0,70.4,273,12,4,Detractor,Negative,4,3,3,2,4,4,3,2,5,2,65.0,C,4,4,50.0,4,1,Unsure
+U0755,25,Male,UK,Tablet,Free,Returning,38,Yes,7.5,14,0,0,85.2,255,22,10,Promoter,Positive,5,1,4,2,2,2,3,1,4,2,75.0,B,3,5,50.0,3,0,Unsure
+U0756,60,Female,USA,Mobile,Pro,Power User,13,Yes,5.5,16,0,2,80.0,234,3,9,Promoter,Positive,4,2,3,2,5,2,5,1,4,2,80.0,A,4,6,66.7,4,0,Unsure
+U0757,39,Male,USA,Mobile,Free,Returning,48,No,5.4,13,1,0,81.3,227,21,4,Detractor,Negative,3,3,4,3,5,1,4,2,4,2,72.5,B,7,5,83.3,3,0,Likely
+U0758,36,Non-binary,USA,Mobile,Free,Returning,12,Yes,1.5,14,1,4,69.5,97,37,10,Promoter,Positive,4,3,4,3,5,2,3,4,4,1,67.5,C,5,3,50.0,3,1,Unsure
+U0759,25,Female,India,Mobile,Basic,Power User,12,No,4.9,8,1,2,59.8,191,51,4,Detractor,Negative,3,2,4,2,3,3,5,3,2,2,62.5,C,4,4,50.0,3,0,Unsure
+U0760,41,Female,Brazil,Desktop,Pro,Returning,2,Yes,11.9,13,0,1,76.0,234,28,7,Passive,Neutral,5,3,5,3,3,2,2,2,2,2,62.5,C,3,3,33.3,4,1,Unsure
+U0761,28,Female,France,Mobile,Basic,Returning,29,Yes,8.3,7,0,1,74.9,233,10,4,Detractor,Negative,4,1,5,1,2,3,4,3,3,4,65.0,C,5,6,75.0,4,1,Unsure
+U0762,35,Male,UK,Desktop,Free,Returning,5,Yes,11.1,12,4,1,79.0,229,88,9,Promoter,Positive,3,3,2,3,3,3,2,2,2,3,45.0,F,1,2,8.3,3,1,Unsure
+U0763,60,Female,UK,Tablet,Basic,Power User,41,Yes,9.4,19,1,1,80.3,225,7,8,Passive,Neutral,4,2,5,3,4,2,4,2,4,2,75.0,B,5,2,41.7,4,1,Unsure
+U0764,33,Female,Spain,Tablet,Free,Power User,44,Yes,9.1,9,0,4,71.6,219,18,7,Passive,Neutral,4,2,4,3,3,2,3,2,3,1,67.5,C,4,5,58.3,4,0,Likely
+U0765,45,Male,USA,Desktop,Enterprise,Returning,52,Yes,11.8,10,1,2,76.6,218,3,9,Promoter,Positive,5,2,4,3,4,2,5,3,4,3,72.5,B,3,5,50.0,4,1,Unsure
+U0766,27,Female,UK,Desktop,Enterprise,Returning,13,Yes,7.5,10,1,2,66.7,180,67,3,Detractor,Negative,4,3,4,3,4,3,4,2,4,2,67.5,C,3,6,58.3,4,1,Unsure
+U0767,34,Female,France,Mobile,Basic,Returning,20,No,5.7,12,0,3,68.5,286,23,10,Promoter,Positive,4,3,3,2,4,2,5,3,5,2,72.5,B,3,5,50.0,4,1,Unsure
+U0768,52,Male,France,Desktop,Free,Returning,27,Yes,9.7,10,0,0,100.0,180,20,10,Promoter,Positive,3,3,5,1,4,2,3,2,4,2,72.5,B,4,6,66.7,5,1,Unsure
+U0769,28,Male,France,Mobile,Pro,New,3,No,9.8,13,1,2,60.2,149,1,10,Promoter,Positive,4,3,3,2,2,3,4,4,3,5,47.5,F,4,3,41.7,5,1,Unlikely
+U0770,52,Female,USA,Desktop,Free,Power User,17,Yes,5.2,14,1,1,71.2,176,26,10,Promoter,Positive,2,3,4,3,4,2,5,3,4,2,65.0,C,3,4,41.7,4,1,Unsure
+U0771,41,Male,UK,Desktop,Basic,Returning,1,Yes,4.3,13,1,3,67.4,208,29,6,Detractor,Negative,3,3,3,2,4,1,5,3,3,2,67.5,C,3,3,33.3,4,0,Unsure
+U0772,28,Male,Brazil,Tablet,Free,Returning,12,Yes,6.9,7,2,1,72.6,279,19,4,Detractor,Negative,2,2,3,2,3,3,3,3,3,3,52.5,D,6,5,75.0,4,1,Unsure
+U0773,40,Male,USA,Mobile,Enterprise,New,3,Yes,9.3,16,0,1,77.1,201,5,9,Promoter,Positive,4,1,4,2,3,2,3,3,4,1,72.5,B,6,4,66.7,4,1,Unsure
+U0774,44,Male,India,Mobile,Free,New,4,Yes,6.0,11,0,6,58.9,269,20,10,Promoter,Positive,3,3,3,3,1,3,2,2,3,2,47.5,F,1,1,0.0,2,1,Unlikely
+U0775,40,Female,India,Desktop,Basic,Power User,8,Yes,4.1,16,2,1,61.5,118,1,8,Passive,Neutral,4,2,3,1,3,2,5,2,4,1,77.5,B,6,6,83.3,5,1,Unsure
+U0776,18,Female,France,Mobile,Pro,Returning,10,Yes,12.6,15,0,0,100.0,235,7,10,Promoter,Positive,3,2,5,1,3,1,4,1,5,2,82.5,A,6,5,75.0,4,1,Unsure
+U0777,27,Male,USA,Mobile,Basic,New,18,Yes,4.1,11,1,2,78.5,199,6,7,Passive,Neutral,5,3,3,3,3,2,4,3,3,4,57.5,D,4,3,41.7,4,0,Unsure
+U0778,32,Female,USA,Mobile,Free,Returning,1,Yes,4.8,13,1,1,49.9,239,10,10,Promoter,Positive,4,1,4,3,3,2,4,1,4,3,72.5,B,1,1,0.0,3,0,Unsure
+U0779,33,Female,France,Mobile,Enterprise,Returning,13,No,4.7,19,1,2,48.2,297,3,10,Promoter,Positive,4,1,4,3,4,2,4,1,5,2,80.0,A,5,4,58.3,5,0,Unsure
+U0780,40,Female,Australia,Mobile,Basic,New,4,Yes,12.5,8,0,6,56.3,268,6,10,Promoter,Positive,2,2,3,1,3,2,2,4,4,1,60.0,C,4,2,33.3,3,0,Unsure
+U0781,36,Male,Spain,Desktop,Basic,Returning,15,Yes,7.4,16,1,1,74.9,116,1,9,Promoter,Positive,4,2,3,1,3,3,4,3,4,2,67.5,C,4,4,50.0,4,1,Unsure
+U0782,21,Male,UK,Desktop,Free,Returning,18,Yes,3.0,9,2,2,100.0,148,62,9,Promoter,Positive,4,3,3,3,3,2,3,4,4,2,57.5,D,4,3,41.7,3,1,Unlikely
+U0783,38,Prefer not to say,UK,Mobile,Basic,Returning,15,Yes,8.1,11,1,2,78.7,230,15,3,Detractor,Negative,3,4,2,3,3,3,4,2,4,2,55.0,D,5,3,50.0,3,1,Unsure
+U0784,40,Female,Spain,Desktop,Basic,Returning,24,Yes,9.6,9,0,0,60.5,119,6,10,Promoter,Positive,5,1,5,2,3,1,5,1,5,2,90.0,A+,6,6,83.3,5,0,Likely
+U0785,40,Male,India,Mobile,Free,Returning,7,Yes,5.2,10,0,1,59.2,279,17,9,Promoter,Positive,4,3,3,2,5,3,4,3,4,3,65.0,C,5,3,50.0,2,1,Unlikely
+U0786,45,Male,Netherlands,Desktop,Free,Power User,26,Yes,9.7,11,0,3,84.2,197,12,10,Promoter,Positive,3,2,3,2,4,2,4,1,4,2,72.5,B,4,3,41.7,4,1,Unsure
+U0787,42,Female,UK,Mobile,Pro,Returning,10,Yes,5.1,12,0,2,84.9,215,36,9,Promoter,Positive,3,2,3,3,4,4,5,2,3,2,62.5,C,7,5,83.3,4,0,Unlikely
+U0788,39,Female,France,Mobile,Free,Returning,12,Yes,3.9,7,0,0,46.1,210,5,5,Detractor,Negative,2,3,4,4,3,3,3,1,2,3,50.0,D,3,4,41.7,4,1,Unlikely
+U0789,33,Female,India,Desktop,Free,New,19,Yes,1.5,11,3,0,74.2,324,6,9,Promoter,Positive,2,2,4,1,4,3,4,2,4,2,70.0,B,2,4,33.3,3,1,Unsure
+U0790,18,Female,India,Desktop,Basic,Returning,0,No,3.0,10,1,2,63.9,396,70,9,Promoter,Positive,2,1,5,3,5,3,4,2,3,3,67.5,C,3,5,50.0,4,0,Unsure
+U0791,38,Male,USA,Desktop,Pro,Power User,19,No,11.6,13,1,2,65.5,189,7,6,Detractor,Negative,5,1,4,2,4,1,4,3,4,3,77.5,B,4,3,41.7,4,1,Likely
+U0792,36,Female,UK,Mobile,Free,New,17,Yes,10.3,7,1,3,77.5,247,0,8,Passive,Neutral,3,3,4,4,3,2,5,3,5,3,62.5,C,2,5,41.7,3,1,Unlikely
+U0793,37,Female,France,Mobile,Basic,Power User,7,Yes,7.4,9,0,0,93.3,208,2,10,Promoter,Positive,4,1,4,2,5,1,4,1,3,1,85.0,A,4,4,50.0,3,1,Unsure
+U0794,21,Male,USA,Desktop,Free,New,2,No,10.5,13,4,5,86.5,208,0,8,Passive,Neutral,3,3,4,1,4,2,4,1,4,3,72.5,B,5,3,50.0,2,1,Unsure
+U0795,23,Female,USA,Mobile,Free,Returning,2,No,6.5,10,0,1,87.3,161,72,7,Passive,Neutral,2,3,4,2,4,3,3,2,5,2,65.0,C,2,3,25.0,5,0,Unsure
+U0796,45,Non-binary,Spain,Desktop,Free,Power User,46,Yes,6.5,16,0,2,74.0,141,5,3,Detractor,Negative,4,2,4,2,3,3,3,1,4,2,70.0,B,5,5,66.7,5,1,Unsure
+U0797,34,Male,USA,Desktop,Pro,Returning,21,Yes,6.3,12,1,2,82.7,161,50,9,Promoter,Positive,5,2,4,2,5,2,3,2,4,2,77.5,B,3,4,41.7,3,1,Unlikely
+U0798,41,Female,Australia,Tablet,Free,Returning,2,No,5.5,13,2,0,74.7,260,90,9,Promoter,Positive,3,3,3,3,4,3,3,2,4,4,55.0,D,1,1,0.0,4,1,Unlikely
+U0799,34,Male,UK,Desktop,Free,New,8,Yes,7.4,18,1,3,89.6,155,10,4,Detractor,Negative,5,3,4,1,4,2,4,3,4,1,77.5,B,7,7,100.0,4,0,Likely
+U0800,34,Female,India,Desktop,Basic,Power User,16,No,10.4,13,0,0,75.9,41,0,9,Promoter,Positive,4,2,3,3,4,2,4,2,4,2,70.0,B,6,4,66.7,5,0,Unsure
+U0801,43,Female,Brazil,Desktop,Pro,New,32,Yes,8.7,13,1,0,84.2,203,1,9,Promoter,Positive,5,1,4,1,5,2,3,2,3,3,77.5,B,6,6,83.3,4,0,Likely
+U0802,29,Female,UK,Desktop,Free,Power User,1,Yes,9.2,16,0,2,84.5,196,9,0,Detractor,Negative,3,1,5,4,4,3,4,2,4,1,72.5,B,7,6,91.7,4,0,Unsure
+U0803,35,Female,UK,Desktop,Basic,New,5,Yes,9.0,13,0,2,100.0,302,9,8,Passive,Neutral,4,1,4,3,5,2,3,4,4,1,72.5,B,5,4,58.3,3,1,Unlikely
+U0804,29,Male,USA,Desktop,Free,Power User,40,Yes,8.0,12,1,3,84.5,230,14,10,Promoter,Positive,5,1,2,1,3,2,3,3,4,2,70.0,B,6,5,75.0,3,0,Unsure
+U0805,30,Female,UK,Mobile,Basic,Returning,0,No,3.9,16,2,1,65.9,136,11,8,Passive,Neutral,4,1,5,3,4,2,4,2,4,3,75.0,B,4,3,41.7,4,0,Unsure
+U0806,31,Female,India,Desktop,Basic,Power User,4,No,2.4,10,1,1,58.4,103,57,9,Promoter,Positive,2,3,2,2,4,3,3,2,3,3,52.5,D,3,2,25.0,4,0,Unlikely
+U0807,36,Male,Netherlands,Mobile,Basic,Returning,58,Yes,7.2,13,1,4,71.5,170,12,8,Passive,Neutral,3,2,4,3,5,2,3,2,5,2,72.5,B,4,4,50.0,4,0,Unsure
+U0808,29,Female,USA,Desktop,Free,Power User,17,Yes,7.1,14,1,0,100.0,158,15,2,Detractor,Negative,5,3,4,2,4,2,4,3,5,2,75.0,B,2,5,41.7,5,0,Unsure
+U0809,47,Female,USA,Desktop,Free,New,5,No,5.8,8,2,4,62.7,299,50,10,Promoter,Positive,2,3,4,3,4,2,5,3,3,2,62.5,C,1,4,25.0,2,0,Unlikely
+U0810,25,Male,USA,Mobile,Free,New,1,Yes,6.1,12,2,1,85.5,229,3,2,Detractor,Negative,4,3,4,3,4,2,3,2,5,2,70.0,B,4,3,41.7,3,1,Unsure
+U0811,32,Female,India,Tablet,Basic,Returning,1,Yes,13.4,17,1,3,74.6,277,4,10,Promoter,Positive,3,2,4,2,4,2,4,3,2,4,60.0,C,5,5,66.7,4,1,Unsure
+U0812,30,Female,UK,Desktop,Free,New,5,Yes,2.1,12,4,0,70.3,167,3,6,Detractor,Negative,4,3,2,3,3,2,4,4,4,3,55.0,D,2,5,41.7,4,1,Unlikely
+U0813,48,Male,France,Tablet,Pro,New,38,Yes,1.5,12,5,2,87.3,277,3,8,Passive,Neutral,3,3,5,3,3,1,1,2,4,2,62.5,C,3,6,58.3,4,0,Unsure
+U0814,36,Prefer not to say,France,Mobile,Enterprise,Power User,10,No,7.8,12,0,3,72.1,252,11,7,Passive,Neutral,3,2,5,3,3,3,4,3,5,2,67.5,C,4,4,50.0,2,0,Likely
+U0815,44,Male,France,Mobile,Enterprise,Power User,23,Yes,6.3,14,1,1,72.8,82,5,0,Detractor,Negative,4,2,4,2,3,1,5,2,5,1,82.5,A,4,4,50.0,3,1,Unsure
+U0816,19,Male,USA,Mobile,Pro,Returning,45,Yes,7.0,14,1,3,97.1,305,10,6,Detractor,Negative,2,2,4,1,3,2,4,2,4,1,72.5,B,5,2,41.7,4,1,Unlikely
+U0817,37,Male,India,Desktop,Basic,Power User,9,No,7.9,14,0,3,89.0,228,73,4,Detractor,Negative,3,3,3,1,4,1,4,2,3,3,67.5,C,6,3,58.3,5,1,Unlikely
+U0818,43,Female,UK,Desktop,Pro,Returning,4,Yes,10.9,13,1,2,97.5,214,2,9,Promoter,Positive,5,1,5,2,4,1,4,3,3,1,82.5,A,6,6,83.3,5,1,Likely
+U0819,35,Female,UK,Mobile,Free,Returning,13,Yes,1.9,12,0,6,80.4,187,17,9,Promoter,Positive,4,2,3,2,3,4,4,2,3,3,60.0,C,3,2,25.0,4,0,Unsure
+U0820,45,Male,Netherlands,Desktop,Pro,Power User,43,Yes,6.2,15,0,1,91.2,271,1,4,Detractor,Negative,4,1,4,3,4,3,4,2,4,2,72.5,B,6,5,75.0,4,0,Unsure
+U0821,29,Male,India,Tablet,Basic,Returning,29,Yes,7.5,9,2,0,100.0,152,7,9,Promoter,Positive,1,3,4,1,3,2,3,3,2,2,55.0,D,2,3,25.0,4,0,Unsure
+U0822,48,Female,UK,Desktop,Basic,Power User,1,Yes,9.5,14,0,0,85.6,244,9,6,Detractor,Negative,5,3,3,2,4,2,3,1,5,2,75.0,B,5,4,58.3,3,0,Likely
+U0823,57,Male,USA,Desktop,Pro,Returning,21,Yes,13.3,8,0,0,95.2,237,32,2,Detractor,Negative,5,2,4,1,3,1,3,1,5,1,85.0,A,7,6,91.7,5,0,Likely
+U0824,30,Female,UK,Mobile,Free,Returning,15,Yes,9.3,14,2,0,58.8,153,8,10,Promoter,Positive,4,3,5,2,3,2,4,1,5,2,77.5,B,4,4,50.0,4,1,Likely
+U0825,30,Female,USA,Desktop,Free,New,43,Yes,6.2,14,1,1,63.4,342,1,8,Passive,Neutral,4,3,5,3,3,3,4,1,3,2,67.5,C,3,4,41.7,4,0,Unsure
+U0826,49,Female,USA,Mobile,Enterprise,New,2,Yes,4.5,15,0,0,60.9,229,8,7,Passive,Neutral,3,3,5,2,4,2,3,2,4,1,72.5,B,3,3,33.3,4,0,Unsure
+U0827,50,Non-binary,UK,Mobile,Free,New,14,Yes,3.9,9,1,0,83.8,288,4,2,Detractor,Negative,3,3,3,3,4,4,3,3,3,3,50.0,D,3,3,33.3,3,1,Unlikely
+U0828,29,Male,USA,Tablet,Basic,Power User,38,Yes,6.9,16,0,0,56.0,83,2,10,Promoter,Positive,3,2,3,3,4,1,5,2,4,2,72.5,B,6,6,83.3,4,0,Likely
+U0829,30,Prefer not to say,India,Mobile,Enterprise,Power User,9,Yes,8.8,17,1,3,75.7,332,14,9,Promoter,Positive,4,1,3,3,5,1,4,2,4,3,75.0,B,5,5,66.7,4,1,Unsure
+U0830,31,Female,France,Mobile,Basic,Power User,12,Yes,8.1,18,1,1,42.0,124,1,4,Detractor,Negative,4,2,4,2,4,2,4,1,4,2,77.5,B,6,6,83.3,5,1,Unsure
+U0831,21,Female,India,Mobile,Basic,Returning,1,Yes,3.8,13,0,1,69.3,267,9,7,Passive,Neutral,4,2,4,2,5,2,4,2,3,3,72.5,B,3,5,50.0,3,1,Likely
+U0832,25,Male,UK,Tablet,Free,Returning,6,No,4.8,11,2,5,63.8,175,19,10,Promoter,Positive,4,3,5,1,4,1,3,2,3,3,72.5,B,1,4,25.0,2,1,Unlikely
+U0833,24,Female,Spain,Desktop,Free,New,7,No,8.9,16,1,0,96.8,179,9,10,Promoter,Positive,5,2,4,2,5,3,4,2,3,1,77.5,B,5,3,50.0,4,0,Unlikely
+U0834,26,Male,Australia,Desktop,Pro,Returning,52,Yes,8.5,9,0,5,90.6,242,0,0,Detractor,Negative,3,1,4,3,2,3,4,1,4,2,67.5,C,5,3,50.0,5,0,Likely
+U0835,34,Male,Canada,Desktop,Basic,Returning,6,No,9.1,13,1,1,74.0,254,50,8,Passive,Neutral,5,3,4,2,3,2,4,2,3,1,72.5,B,7,6,91.7,5,1,Unsure
+U0836,36,Male,Australia,Desktop,Basic,Power User,11,Yes,7.7,16,1,0,92.6,139,8,0,Detractor,Negative,3,3,5,1,4,2,5,4,4,3,70.0,B,6,6,83.3,3,0,Unlikely
+U0837,50,Female,Spain,Mobile,Free,Returning,20,No,9.6,13,1,3,68.0,309,34,7,Passive,Neutral,4,3,3,3,3,3,3,3,3,3,52.5,D,1,4,25.0,3,0,Unlikely
+U0838,24,Female,Germany,Mobile,Free,New,3,Yes,6.2,12,0,3,69.0,304,9,10,Promoter,Positive,4,3,4,3,3,2,4,2,2,3,60.0,C,5,1,33.3,2,1,Unlikely
+U0839,44,Female,UK,Mobile,Enterprise,New,12,Yes,6.2,9,0,1,64.6,148,9,7,Passive,Neutral,4,2,4,2,3,2,4,2,3,1,72.5,B,5,4,58.3,3,0,Unsure
+U0840,32,Female,France,Desktop,Basic,New,24,Yes,4.2,12,0,3,62.0,316,9,8,Passive,Neutral,3,1,4,2,5,2,5,2,5,2,82.5,A,5,1,33.3,4,0,Unsure
+U0841,34,Male,India,Mobile,Basic,Returning,36,Yes,7.1,10,0,0,64.2,133,7,10,Promoter,Positive,5,3,3,3,3,3,5,2,3,3,62.5,C,6,4,66.7,4,1,Unlikely
+U0842,41,Female,India,Desktop,Free,Power User,18,No,0.5,11,1,1,68.3,206,0,10,Promoter,Positive,3,3,3,3,4,1,2,2,5,2,65.0,C,4,3,41.7,3,1,Unlikely
+U0843,23,Male,Germany,Mobile,Pro,Returning,20,Yes,6.8,11,0,0,83.7,230,6,9,Promoter,Positive,5,2,2,2,5,2,4,3,4,1,75.0,B,6,2,50.0,4,0,Unsure
+U0844,38,Female,UK,Mobile,Enterprise,Power User,2,Yes,8.2,13,1,0,100.0,115,14,2,Detractor,Negative,4,1,4,2,4,2,3,2,5,3,75.0,B,6,7,91.7,4,0,Likely
+U0845,36,Female,USA,Desktop,Basic,Returning,52,Yes,3.7,7,0,0,86.1,222,17,9,Promoter,Positive,4,2,4,3,4,3,4,3,5,2,70.0,B,5,3,50.0,5,0,Unsure
+U0846,39,Female,Spain,Desktop,Free,Returning,3,Yes,4.2,16,0,4,38.6,233,3,10,Promoter,Positive,5,3,4,2,5,3,4,2,4,2,75.0,B,4,3,41.7,4,1,Unsure
+U0847,37,Female,France,Desktop,Basic,New,27,Yes,8.8,11,1,0,82.4,201,14,8,Passive,Neutral,5,2,4,1,3,1,4,1,5,1,87.5,A,3,3,33.3,3,1,Unsure
+U0848,59,Male,Germany,Mobile,Pro,Power User,6,Yes,8.1,14,0,1,64.3,245,28,10,Promoter,Positive,3,2,5,1,4,2,4,4,3,3,67.5,C,6,7,91.7,4,0,Likely
+U0849,28,Female,USA,Tablet,Basic,Power User,49,No,8.0,14,1,1,73.0,176,14,10,Promoter,Positive,4,1,5,2,4,2,3,1,5,2,82.5,A,7,4,75.0,5,1,Likely
+U0850,29,Female,USA,Mobile,Pro,New,23,Yes,7.8,10,0,3,68.9,222,2,9,Promoter,Positive,4,2,4,3,4,3,4,4,5,2,67.5,C,6,6,83.3,5,1,Unsure
+U0851,28,Male,Netherlands,Desktop,Pro,Returning,25,Yes,7.0,9,0,10,69.3,281,32,7,Passive,Neutral,3,1,5,3,4,2,3,2,4,3,70.0,B,4,3,41.7,4,1,Unsure
+U0852,28,Male,India,Desktop,Enterprise,Returning,4,No,9.7,9,2,2,57.9,264,6,8,Passive,Neutral,4,2,4,3,4,2,4,3,3,2,67.5,C,3,4,41.7,4,0,Unsure
+U0853,28,Female,Canada,Mobile,Basic,Returning,11,Yes,6.8,10,1,6,78.4,268,11,6,Detractor,Negative,3,1,3,3,3,2,5,2,4,1,72.5,B,4,6,66.7,4,0,Unsure
+U0854,46,Female,USA,Mobile,Free,Power User,17,Yes,3.3,14,0,2,59.9,141,11,7,Passive,Neutral,5,2,3,2,4,2,3,2,4,2,72.5,B,6,3,58.3,3,1,Likely
+U0855,48,Male,France,Desktop,Free,Returning,26,Yes,10.2,9,1,6,78.2,259,36,10,Promoter,Positive,4,2,3,2,2,1,3,1,4,2,70.0,B,3,5,50.0,3,0,Unsure
+U0856,28,Male,USA,Desktop,Free,Returning,2,No,7.3,17,1,2,100.0,171,49,8,Passive,Neutral,4,2,3,1,4,2,3,4,4,4,62.5,C,3,4,41.7,3,1,Unsure
+U0857,26,Female,India,Mobile,Enterprise,New,59,Yes,6.0,17,2,0,65.4,120,34,10,Promoter,Positive,4,2,4,2,4,2,4,1,4,2,77.5,B,3,7,66.7,4,1,Likely
+U0858,39,Female,USA,Desktop,Pro,New,40,No,4.2,16,2,1,79.2,195,0,5,Detractor,Negative,5,2,4,1,4,1,4,3,3,2,77.5,B,3,3,33.3,5,0,Unsure
+U0859,28,Male,USA,Desktop,Pro,New,6,No,8.4,13,0,1,48.6,143,33,8,Passive,Neutral,3,2,5,1,5,2,4,2,4,2,80.0,A,6,7,91.7,5,1,Likely
+U0860,40,Male,France,Desktop,Free,New,31,Yes,5.9,16,6,1,69.3,275,1,10,Promoter,Positive,4,3,4,3,3,3,4,2,3,4,57.5,D,3,4,41.7,3,1,Unsure
+U0861,36,Male,Spain,Mobile,Free,Power User,13,Yes,9.8,10,0,1,79.7,284,6,7,Passive,Neutral,3,3,4,2,3,3,4,3,4,4,57.5,D,4,4,50.0,2,1,Unlikely
+U0862,19,Male,UK,Mobile,Pro,Power User,11,Yes,6.2,13,0,1,91.2,91,10,9,Promoter,Positive,3,3,3,1,4,2,4,1,4,1,75.0,B,4,4,50.0,3,0,Unsure
+U0863,49,Male,Australia,Tablet,Basic,New,7,Yes,4.3,12,2,5,75.8,174,12,9,Promoter,Positive,5,1,4,3,4,2,4,2,4,3,75.0,B,2,4,33.3,3,1,Unsure
+U0864,52,Female,USA,Mobile,Free,Power User,16,No,7.8,13,0,0,80.4,155,21,4,Detractor,Negative,4,2,4,4,2,2,4,3,4,4,57.5,D,3,2,25.0,3,0,Unlikely
+U0865,28,Female,USA,Mobile,Basic,New,24,No,9.6,15,0,2,100.0,172,9,3,Detractor,Negative,3,1,5,3,5,3,4,3,4,2,72.5,B,4,4,50.0,5,0,Likely
+U0866,30,Female,UK,Desktop,Free,Returning,10,Yes,6.8,10,0,2,98.8,251,49,1,Detractor,Negative,4,2,4,2,3,2,5,3,5,1,77.5,B,5,5,66.7,3,0,Unsure
+U0867,37,Male,USA,Mobile,Free,New,18,Yes,8.0,10,1,6,67.3,209,5,10,Promoter,Positive,4,2,3,2,4,2,3,1,4,2,72.5,B,3,3,33.3,5,1,Unlikely
+U0868,37,Female,Germany,Desktop,Basic,Returning,22,Yes,7.5,16,1,3,64.5,159,4,7,Passive,Neutral,4,2,3,2,2,3,2,2,5,2,62.5,C,4,6,66.7,3,0,Likely
+U0869,41,Female,UK,Mobile,Free,Returning,22,Yes,6.5,13,1,3,65.7,311,51,9,Promoter,Positive,4,2,3,2,4,1,4,3,3,1,72.5,B,3,4,41.7,3,1,Unsure
+U0870,54,Prefer not to say,USA,Desktop,Enterprise,Returning,1,Yes,10.3,12,0,1,70.5,60,1,7,Passive,Neutral,4,2,4,2,4,2,5,1,3,3,75.0,B,6,5,75.0,5,0,Unsure
+U0871,32,Female,Spain,Desktop,Free,Returning,35,Yes,7.9,7,1,0,80.9,298,17,10,Promoter,Positive,4,3,4,1,3,2,3,2,4,2,70.0,B,2,3,25.0,4,0,Unsure
+U0872,26,Male,UK,Desktop,Free,Power User,11,Yes,6.1,11,2,1,60.0,186,20,10,Promoter,Positive,3,2,4,3,3,2,3,2,4,2,65.0,C,5,3,50.0,3,1,Unsure
+U0873,20,Female,Canada,Desktop,Free,New,5,Yes,8.9,12,2,3,66.4,240,16,8,Passive,Neutral,3,1,4,4,4,3,3,3,3,1,62.5,C,2,1,8.3,4,1,Unsure
+U0874,27,Male,USA,Desktop,Pro,New,5,Yes,1.8,19,0,3,97.6,160,14,7,Passive,Neutral,4,4,4,1,2,2,5,3,5,2,70.0,B,4,4,50.0,5,0,Likely
+U0875,34,Female,India,Desktop,Basic,New,12,No,11.3,8,4,3,71.5,321,4,0,Detractor,Negative,3,3,2,3,5,3,4,2,3,4,55.0,D,6,4,66.7,3,0,Unsure
+U0876,52,Male,USA,Tablet,Basic,Returning,39,No,2.9,12,1,0,68.5,130,27,7,Passive,Neutral,4,3,5,2,4,1,4,1,4,2,80.0,A,4,6,66.7,4,1,Unsure
+U0877,29,Male,UK,Desktop,Free,New,9,Yes,3.3,8,0,2,78.4,261,4,7,Passive,Neutral,3,4,3,3,4,4,3,1,3,3,52.5,D,2,4,33.3,3,0,Unsure
+U0878,36,Female,UK,Mobile,Free,Power User,25,Yes,7.4,18,0,1,58.3,227,6,7,Passive,Neutral,5,1,5,2,3,3,5,2,5,2,82.5,A,7,6,91.7,4,1,Unsure
+U0879,34,Male,UK,Mobile,Basic,Returning,2,Yes,6.8,13,0,0,76.7,108,1,9,Promoter,Positive,4,3,3,2,4,2,5,1,5,3,75.0,B,5,6,75.0,5,1,Unsure
+U0880,46,Female,UK,Tablet,Pro,Returning,12,Yes,9.5,10,1,0,79.6,153,12,9,Promoter,Positive,4,2,5,1,4,4,3,2,4,3,70.0,B,5,2,41.7,3,0,Unsure
+U0881,59,Male,India,Mobile,Enterprise,Returning,84,Yes,4.7,15,0,0,83.0,192,15,9,Promoter,Positive,5,3,3,2,3,3,4,2,3,2,65.0,C,4,4,50.0,4,0,Unsure
+U0882,29,Female,Netherlands,Mobile,Free,New,26,Yes,7.0,11,1,3,77.6,169,51,7,Passive,Neutral,4,3,5,1,3,2,5,2,3,2,75.0,B,3,6,58.3,3,0,Unsure
+U0883,29,Female,Australia,Desktop,Basic,New,4,Yes,6.3,10,0,0,94.9,141,15,10,Promoter,Positive,4,1,3,3,3,1,4,2,4,2,72.5,B,7,6,91.7,4,0,Unsure
+U0884,44,Female,India,Desktop,Enterprise,Returning,13,Yes,6.9,9,3,1,72.4,208,15,8,Passive,Neutral,4,2,4,2,4,2,2,2,4,4,65.0,C,5,1,33.3,3,1,Unsure
+U0885,41,Male,UK,Desktop,Basic,Returning,5,Yes,6.9,18,0,5,75.3,246,40,6,Detractor,Negative,2,3,3,3,5,2,4,2,4,3,62.5,C,6,6,83.3,4,1,Likely
+U0886,52,Male,USA,Mobile,Pro,New,9,Yes,6.3,12,2,1,66.8,210,13,8,Passive,Neutral,4,2,5,4,3,3,3,2,3,2,62.5,C,1,4,25.0,2,0,Unsure
+U0887,40,Male,USA,Mobile,Free,New,27,Yes,4.7,12,3,0,64.3,294,16,4,Detractor,Negative,3,3,3,2,4,1,3,1,3,2,67.5,C,2,1,8.3,4,0,Unsure
+U0888,30,Male,USA,Desktop,Enterprise,Power User,27,No,6.3,13,0,0,96.1,134,11,7,Passive,Neutral,3,2,3,1,5,2,4,2,4,1,77.5,B,7,4,75.0,4,0,Likely
+U0889,40,Female,Germany,Desktop,Pro,New,5,Yes,7.1,13,1,0,65.6,149,10,8,Passive,Neutral,3,2,3,2,3,3,3,3,3,3,55.0,D,3,5,50.0,4,1,Unsure
+U0890,45,Non-binary,Germany,Mobile,Enterprise,Power User,46,Yes,10.1,15,0,0,98.6,305,20,9,Promoter,Positive,5,1,3,2,4,1,5,2,5,2,85.0,A,5,5,66.7,4,1,Likely
+U0891,42,Female,USA,Desktop,Pro,Power User,16,Yes,5.1,13,2,0,77.4,177,3,7,Passive,Neutral,3,1,3,3,5,1,4,2,5,3,75.0,B,4,5,58.3,4,0,Unlikely
+U0892,39,Female,USA,Mobile,Basic,Returning,9,No,5.1,14,1,1,74.9,124,11,9,Promoter,Positive,5,2,3,1,5,3,3,2,4,3,72.5,B,5,5,66.7,4,1,Unsure
+U0893,45,Female,Australia,Mobile,Enterprise,New,13,Yes,7.4,14,0,0,79.4,131,26,2,Detractor,Negative,4,3,3,2,4,4,4,3,3,2,60.0,C,3,4,41.7,3,1,Unsure
+U0894,46,Female,Canada,Mobile,Free,New,17,Yes,6.4,12,0,1,65.3,286,42,3,Detractor,Negative,5,1,2,1,3,1,3,3,5,2,75.0,B,4,6,66.7,5,0,Unsure
+U0895,48,Male,USA,Mobile,Free,Returning,15,No,8.2,8,0,4,81.6,209,42,8,Passive,Neutral,3,2,4,2,3,3,4,3,4,2,65.0,C,3,3,33.3,3,0,Unsure
+U0896,40,Female,Netherlands,Mobile,Pro,Returning,12,Yes,3.9,10,3,1,76.3,212,14,10,Promoter,Positive,1,2,4,3,4,3,4,2,4,4,57.5,D,4,5,58.3,4,1,Unsure
+U0897,32,Female,Spain,Desktop,Pro,Power User,13,Yes,3.0,8,1,3,75.8,187,13,5,Detractor,Negative,3,1,4,2,3,2,5,2,3,2,72.5,B,4,5,58.3,4,1,Likely
+U0898,35,Female,USA,Mobile,Enterprise,Power User,3,Yes,5.2,18,2,1,83.6,280,9,4,Detractor,Negative,4,4,4,3,5,2,4,2,3,3,65.0,C,1,4,25.0,3,0,Likely
+U0899,46,Male,USA,Mobile,Free,Returning,30,Yes,4.5,14,0,1,82.9,211,11,8,Passive,Neutral,3,3,3,2,4,3,3,3,5,1,65.0,C,5,3,50.0,3,0,Unsure
+U0900,26,Male,Germany,Desktop,Pro,New,14,Yes,5.6,8,0,3,86.3,378,50,8,Passive,Neutral,3,2,3,3,4,3,3,2,3,4,55.0,D,3,3,33.3,3,1,Unsure
+U0901,38,Female,Spain,Desktop,Pro,New,3,Yes,5.3,12,3,0,92.6,219,42,9,Promoter,Positive,5,2,5,2,4,1,5,2,4,2,85.0,A,3,6,58.3,5,0,Unsure
+U0902,30,Female,Netherlands,Desktop,Free,Power User,26,Yes,8.0,10,0,0,80.2,291,43,8,Passive,Neutral,4,3,4,3,4,1,5,1,4,4,72.5,B,2,4,33.3,5,1,Unsure
+U0903,34,Female,UK,Desktop,Basic,New,49,Yes,5.5,16,3,2,57.9,275,3,6,Detractor,Negative,3,4,3,4,4,2,4,3,4,2,57.5,D,4,3,41.7,4,1,Unsure
+U0904,47,Male,USA,Mobile,Free,New,53,Yes,6.8,8,0,1,100.0,220,34,9,Promoter,Positive,4,3,3,2,2,3,4,3,3,1,60.0,C,4,3,41.7,4,1,Likely
+U0905,36,Prefer not to say,Germany,Mobile,Free,Power User,8,Yes,6.6,12,0,3,53.5,193,57,5,Detractor,Negative,3,2,4,3,4,3,4,1,4,2,70.0,B,4,2,33.3,4,1,Unlikely
+U0906,34,Male,Germany,Desktop,Enterprise,Returning,3,Yes,7.6,13,1,4,94.2,226,7,10,Promoter,Positive,4,4,4,1,3,3,3,3,4,2,62.5,C,4,4,50.0,4,0,Unsure
+U0907,20,Male,UK,Desktop,Pro,Power User,13,No,6.3,14,4,1,81.0,254,13,10,Promoter,Positive,3,3,4,3,4,2,3,2,3,3,60.0,C,5,4,58.3,4,0,Unsure
+U0908,41,Male,Australia,Tablet,Pro,Returning,2,Yes,8.5,13,2,1,65.3,169,21,10,Promoter,Positive,4,2,4,3,3,3,3,2,5,2,67.5,C,6,5,75.0,4,1,Unsure
+U0909,40,Female,India,Desktop,Enterprise,New,49,Yes,6.3,10,0,1,89.3,187,7,7,Passive,Neutral,4,3,3,2,3,3,4,1,4,3,65.0,C,7,6,91.7,4,0,Likely
+U0910,56,Female,Australia,Desktop,Basic,Power User,4,Yes,12.2,15,0,3,93.4,241,33,10,Promoter,Positive,5,2,5,1,4,1,5,3,5,2,87.5,A,7,6,91.7,4,0,Likely
+U0911,31,Male,Australia,Mobile,Pro,Returning,5,Yes,6.3,10,1,3,97.7,334,9,7,Passive,Neutral,5,2,4,3,4,2,4,1,5,3,77.5,B,2,4,33.3,3,0,Unsure
+U0912,36,Female,India,Mobile,Basic,Returning,9,Yes,3.8,13,1,4,71.0,257,18,9,Promoter,Positive,3,3,5,2,5,3,4,3,4,4,65.0,C,5,3,50.0,2,1,Unsure
+U0913,36,Male,USA,Desktop,Pro,Returning,9,Yes,6.2,15,1,1,66.2,349,33,8,Passive,Neutral,3,3,4,3,3,2,3,2,4,3,60.0,C,2,2,16.7,4,1,Unsure
+U0914,50,Female,France,Desktop,Free,New,28,Yes,5.0,8,0,2,48.3,168,10,7,Passive,Neutral,3,3,3,1,5,3,3,3,5,2,67.5,C,6,7,91.7,4,0,Unsure
+U0915,33,Female,UK,Desktop,Enterprise,Returning,11,Yes,9.4,12,2,0,100.0,232,22,10,Promoter,Positive,4,2,3,1,5,1,4,2,3,1,80.0,A,5,6,75.0,4,1,Unsure
+U0916,37,Female,India,Mobile,Free,New,3,No,11.1,9,1,1,53.6,322,17,4,Detractor,Negative,3,1,4,3,3,4,4,3,3,5,52.5,D,4,5,58.3,2,0,Unlikely
+U0917,40,Male,UK,Mobile,Free,Returning,6,Yes,5.1,12,1,4,84.9,154,8,9,Promoter,Positive,4,2,4,2,2,2,4,2,4,4,65.0,C,4,4,50.0,3,1,Unsure
+U0918,36,Non-binary,India,Desktop,Pro,Returning,13,Yes,7.6,15,1,0,76.9,184,2,9,Promoter,Positive,3,2,4,1,3,2,4,2,4,2,72.5,B,4,4,50.0,3,0,Unsure
+U0919,30,Female,USA,Mobile,Basic,Power User,3,Yes,2.2,12,0,6,75.4,322,9,7,Passive,Neutral,3,3,5,1,4,4,5,2,5,2,75.0,B,7,4,75.0,3,0,Unlikely
+U0920,36,Male,UK,Mobile,Basic,Power User,17,Yes,8.5,15,3,0,94.5,141,18,7,Passive,Neutral,5,4,5,2,4,2,4,1,3,2,75.0,B,4,4,50.0,4,1,Unsure
+U0921,45,Female,UK,Desktop,Basic,New,15,Yes,3.5,9,1,4,92.8,158,54,8,Passive,Neutral,4,3,3,2,4,3,5,2,3,2,67.5,C,5,2,41.7,3,1,Unsure
+U0922,24,Male,UK,Desktop,Pro,Returning,23,Yes,6.1,15,1,0,89.2,284,3,10,Promoter,Positive,3,2,4,1,4,1,5,1,4,3,80.0,A,6,5,75.0,3,0,Likely
+U0923,35,Female,India,Mobile,Free,Returning,50,Yes,3.0,13,3,1,79.0,309,9,3,Detractor,Negative,4,4,3,2,3,1,3,4,3,2,57.5,D,2,4,33.3,2,1,Unlikely
+U0924,27,Male,India,Desktop,Free,New,44,Yes,7.3,8,1,1,72.3,270,4,9,Promoter,Positive,3,2,4,2,4,3,3,3,2,2,60.0,C,2,3,25.0,2,0,Unsure
+U0925,46,Female,Germany,Desktop,Free,Power User,53,No,8.8,14,1,2,88.3,223,22,9,Promoter,Positive,4,2,3,2,4,3,5,2,4,4,67.5,C,4,4,50.0,5,1,Unsure
+U0926,19,Female,UK,Mobile,Basic,Power User,5,Yes,7.5,14,0,1,77.2,172,42,10,Promoter,Positive,4,2,4,1,5,2,3,2,4,2,77.5,B,5,6,75.0,5,1,Unsure
+U0927,28,Male,UK,Tablet,Free,New,3,Yes,3.4,14,0,2,82.9,260,23,10,Promoter,Positive,4,3,3,2,4,1,3,1,3,3,67.5,C,2,1,8.3,3,1,Unsure
+U0928,38,Male,UK,Mobile,Basic,Returning,6,No,9.7,10,0,0,84.7,334,21,10,Promoter,Positive,2,3,4,3,4,3,3,2,5,3,60.0,C,4,3,41.7,2,1,Unlikely
+U0929,50,Male,UK,Mobile,Basic,New,41,Yes,4.2,13,0,0,87.9,244,16,3,Detractor,Negative,5,2,4,1,5,3,4,2,3,1,80.0,A,3,2,25.0,4,1,Unsure
+U0930,33,Female,Netherlands,Mobile,Free,Returning,64,Yes,1.0,12,0,0,66.3,351,2,7,Passive,Neutral,5,3,3,2,3,1,5,4,3,3,65.0,C,1,4,25.0,4,0,Unsure
+U0931,28,Male,USA,Desktop,Basic,New,35,Yes,6.9,10,0,1,67.1,185,28,3,Detractor,Negative,4,2,4,1,4,3,2,3,4,2,67.5,C,5,3,50.0,3,0,Unsure
+U0932,53,Female,USA,Mobile,Enterprise,Power User,2,Yes,4.0,13,0,3,81.5,213,15,9,Promoter,Positive,4,3,3,2,4,2,4,3,4,3,65.0,C,4,4,50.0,4,0,Unlikely
+U0933,20,Male,UK,Desktop,Free,Power User,53,Yes,10.7,16,0,2,71.1,157,10,9,Promoter,Positive,4,2,4,1,5,3,4,2,5,1,82.5,A,7,7,100.0,5,0,Likely
+U0934,18,Male,USA,Desktop,Basic,Returning,10,Yes,5.1,8,0,1,94.5,166,45,9,Promoter,Positive,2,4,3,2,3,1,5,2,3,1,65.0,C,2,3,25.0,3,0,Unsure
+U0935,38,Female,Germany,Mobile,Pro,Returning,0,No,8.0,16,0,2,75.4,212,27,10,Promoter,Positive,3,2,3,2,2,2,5,1,4,5,62.5,C,4,3,41.7,4,0,Unlikely
+U0936,29,Male,France,Mobile,Basic,Power User,11,Yes,10.3,7,1,2,82.2,239,25,8,Passive,Neutral,4,3,3,3,2,1,3,3,5,3,60.0,C,5,3,50.0,4,0,Unsure
+U0937,24,Female,USA,Desktop,Pro,Returning,1,No,3.4,10,1,1,67.6,252,46,5,Detractor,Negative,4,3,4,1,2,2,3,2,3,3,62.5,C,2,4,33.3,3,1,Unsure
+U0938,41,Female,UK,Tablet,Basic,New,14,Yes,5.4,12,0,1,59.8,343,74,7,Passive,Neutral,4,2,3,2,5,2,3,2,5,3,72.5,B,4,4,50.0,4,0,Unsure
+U0939,36,Female,USA,Desktop,Basic,Returning,7,Yes,7.0,14,1,1,73.1,232,12,5,Detractor,Negative,4,2,5,1,4,2,3,2,4,2,77.5,B,4,4,50.0,4,1,Unsure
+U0940,28,Female,USA,Desktop,Free,Power User,12,Yes,10.3,17,2,0,79.0,289,2,9,Promoter,Positive,5,3,5,3,4,2,4,4,4,2,70.0,B,5,5,66.7,5,0,Unsure
+U0941,21,Female,UK,Desktop,Pro,Returning,17,Yes,4.5,6,1,0,82.7,232,12,2,Detractor,Negative,5,3,3,3,4,3,5,3,2,2,62.5,C,2,1,8.3,3,0,Unsure
+U0942,43,Male,Spain,Mobile,Pro,Returning,37,No,6.4,13,1,0,89.7,288,17,10,Promoter,Positive,3,1,5,1,4,1,4,3,4,1,82.5,A,5,6,75.0,5,0,Likely
+U0943,41,Male,France,Mobile,Free,Power User,20,Yes,7.9,6,3,2,82.4,360,0,10,Promoter,Positive,3,2,3,2,4,3,3,2,5,2,67.5,C,3,3,33.3,3,0,Unsure
+U0944,33,Male,Germany,Desktop,Basic,Power User,10,Yes,6.7,15,1,0,84.7,213,1,8,Passive,Neutral,3,4,4,2,4,1,5,1,4,3,72.5,B,5,6,75.0,5,0,Unsure
+U0945,52,Female,USA,Mobile,Enterprise,Power User,31,Yes,6.7,13,1,0,81.4,165,1,5,Detractor,Negative,5,2,4,3,4,3,3,2,5,3,70.0,B,5,4,58.3,3,0,Unsure
+U0946,23,Male,USA,Desktop,Basic,New,42,Yes,2.7,17,1,1,97.8,184,22,8,Passive,Neutral,5,2,4,3,4,2,4,3,3,1,72.5,B,4,4,50.0,4,0,Unsure
+U0947,19,Female,Germany,Mobile,Basic,Returning,2,Yes,13.2,14,0,0,95.8,209,8,7,Passive,Neutral,4,1,5,3,3,2,4,3,3,2,70.0,B,5,6,75.0,3,0,Unsure
+U0948,27,Prefer not to say,India,Desktop,Enterprise,Power User,14,Yes,4.1,17,1,0,95.2,225,6,9,Promoter,Positive,4,3,3,3,4,2,3,1,3,2,65.0,C,6,7,91.7,3,0,Likely
+U0949,34,Female,India,Desktop,Pro,Power User,6,Yes,6.3,15,3,3,85.3,247,2,6,Detractor,Negative,2,2,5,2,3,1,3,3,4,1,70.0,B,5,4,58.3,5,1,Unsure
+U0950,36,Female,UK,Tablet,Basic,Returning,1,Yes,6.5,11,1,0,55.8,245,22,10,Promoter,Positive,3,4,4,3,3,3,5,4,3,2,55.0,D,3,5,50.0,4,0,Unsure
+U0951,32,Male,Germany,Desktop,Pro,New,20,Yes,11.2,8,2,2,60.4,223,7,9,Promoter,Positive,3,2,4,2,3,2,3,3,4,3,62.5,C,3,5,50.0,4,1,Unsure
+U0952,38,Female,USA,Desktop,Pro,Power User,36,Yes,3.9,14,0,1,88.6,164,4,4,Detractor,Negative,3,2,4,3,4,2,3,1,4,4,65.0,C,4,5,58.3,4,1,Unsure
+U0953,21,Female,Netherlands,Mobile,Basic,Power User,3,No,11.6,8,6,2,77.3,240,18,9,Promoter,Positive,4,2,4,2,5,3,4,4,5,3,70.0,B,3,5,50.0,4,0,Likely
+U0954,48,Male,France,Tablet,Basic,New,30,No,8.0,15,1,2,78.5,342,16,9,Promoter,Positive,4,2,4,3,4,3,4,3,5,4,65.0,C,2,4,33.3,3,0,Unsure
+U0955,33,Male,Germany,Desktop,Basic,Returning,35,No,8.6,13,0,0,100.0,257,6,10,Promoter,Positive,5,2,5,3,4,4,5,1,5,1,82.5,A,5,5,66.7,3,0,Likely
+U0956,45,Female,UK,Desktop,Enterprise,New,44,No,5.0,17,1,2,94.1,229,13,0,Detractor,Negative,5,4,4,2,4,2,4,2,5,3,72.5,B,5,5,66.7,4,0,Unsure
+U0957,37,Female,France,Desktop,Pro,Returning,6,Yes,8.5,11,0,1,98.0,269,5,4,Detractor,Negative,5,1,5,3,4,2,5,1,3,2,82.5,A,5,3,50.0,3,1,Unsure
+U0958,39,Female,UK,Mobile,Free,New,42,Yes,4.9,13,0,3,79.0,193,26,2,Detractor,Negative,4,3,3,1,3,2,4,3,3,2,65.0,C,3,4,41.7,4,0,Unsure
+U0959,40,Female,USA,Desktop,Pro,Returning,7,Yes,9.9,13,1,1,66.5,184,4,8,Passive,Neutral,5,2,3,4,3,2,3,1,4,4,62.5,C,4,3,41.7,4,0,Likely
+U0960,38,Female,UK,Mobile,Basic,Returning,14,No,3.7,11,0,8,72.1,184,3,10,Promoter,Positive,2,3,4,1,3,3,2,3,3,1,57.5,D,5,3,50.0,3,0,Unsure
+U0961,40,Female,India,Tablet,Free,Returning,1,Yes,5.4,9,2,3,58.1,232,33,9,Promoter,Positive,3,2,5,3,4,3,3,3,4,3,62.5,C,3,1,16.7,4,0,Unsure
+U0962,47,Male,UK,Desktop,Basic,Returning,1,No,5.0,13,0,6,97.1,197,22,9,Promoter,Positive,3,3,3,2,3,3,4,2,5,3,62.5,C,6,7,91.7,4,0,Unsure
+U0963,36,Male,USA,Desktop,Basic,Power User,23,Yes,3.9,9,0,1,86.2,295,4,0,Detractor,Negative,3,3,5,2,4,2,2,2,4,1,70.0,B,3,5,50.0,4,1,Unlikely
+U0964,41,Male,Netherlands,Desktop,Pro,New,11,No,8.2,8,3,1,82.1,195,2,6,Detractor,Negative,2,4,5,2,3,1,5,1,5,2,75.0,B,4,6,66.7,3,0,Unlikely
+U0965,33,Female,UK,Desktop,Free,New,5,Yes,7.0,14,0,3,86.1,193,40,10,Promoter,Positive,2,2,3,3,3,2,2,3,3,3,50.0,D,3,3,33.3,4,0,Unlikely
+U0966,48,Female,Germany,Tablet,Pro,Power User,4,Yes,11.6,18,0,1,65.3,286,11,2,Detractor,Negative,4,3,4,2,3,2,5,2,5,1,77.5,B,4,5,58.3,5,0,Likely
+U0967,27,Female,USA,Desktop,Basic,New,20,No,0.5,9,1,9,68.7,237,11,7,Passive,Neutral,2,3,3,4,3,5,2,2,3,3,40.0,F,2,2,16.7,3,0,Unlikely
+U0968,52,Male,UK,Desktop,Free,Power User,0,No,9.0,17,1,1,56.0,234,20,8,Passive,Neutral,4,2,4,2,3,2,3,2,4,2,70.0,B,2,3,25.0,5,0,Unlikely
+U0969,34,Female,Canada,Mobile,Enterprise,Power User,30,No,14.0,15,1,1,95.7,191,1,4,Detractor,Negative,4,2,4,2,4,1,5,3,5,1,82.5,A,7,5,83.3,5,0,Likely
+U0970,20,Female,UK,Desktop,Basic,Returning,1,Yes,5.4,16,1,0,71.5,152,12,9,Promoter,Positive,4,4,4,2,3,2,5,2,4,1,72.5,B,4,5,58.3,3,0,Unsure
+U0971,35,Female,USA,Mobile,Free,Power User,4,Yes,11.8,13,0,1,90.1,280,0,7,Passive,Neutral,4,3,4,3,4,1,3,3,4,2,67.5,C,5,5,66.7,3,0,Unsure
+U0972,27,Female,Germany,Desktop,Basic,New,9,Yes,5.8,9,2,0,78.4,260,9,9,Promoter,Positive,4,3,2,3,5,3,4,2,2,2,60.0,C,1,3,16.7,4,0,Unsure
+U0973,42,Male,France,Mobile,Pro,Returning,12,Yes,3.1,18,0,1,94.9,313,1,9,Promoter,Positive,3,1,4,4,3,4,3,2,4,1,62.5,C,6,3,58.3,4,1,Likely
+U0974,27,Female,India,Tablet,Free,Returning,8,Yes,4.1,12,1,7,53.4,220,17,0,Detractor,Negative,3,3,3,2,4,3,3,3,4,3,57.5,D,3,1,16.7,4,1,Unlikely
+U0975,30,Male,USA,Mobile,Free,Returning,7,Yes,9.0,11,3,0,84.8,229,10,10,Promoter,Positive,4,2,3,3,5,1,4,3,3,2,70.0,B,4,4,50.0,2,1,Unlikely
+U0976,18,Male,UK,Tablet,Free,Power User,60,Yes,4.3,14,1,2,77.1,226,11,8,Passive,Neutral,5,2,4,3,5,2,3,3,3,2,70.0,B,4,4,50.0,4,0,Unsure
+U0977,29,Female,India,Desktop,Free,New,18,Yes,4.1,9,2,2,45.4,258,1,9,Promoter,Positive,2,4,4,2,3,3,3,2,5,2,60.0,C,2,2,16.7,3,1,Unsure
+U0978,18,Female,Germany,Desktop,Pro,Returning,0,No,7.8,14,1,0,61.8,137,8,3,Detractor,Negative,3,3,2,2,4,2,4,3,3,1,62.5,C,3,3,33.3,3,0,Unsure
+U0979,18,Non-binary,Australia,Mobile,Basic,Returning,10,Yes,7.7,7,1,0,84.1,198,16,10,Promoter,Positive,5,1,4,1,5,1,5,3,5,2,90.0,A+,5,7,83.3,4,0,Likely
+U0980,42,Female,Australia,Mobile,Free,Returning,37,Yes,9.4,11,2,1,100.0,100,5,7,Passive,Neutral,4,2,4,2,5,2,5,2,4,2,80.0,A,6,6,83.3,5,0,Unsure
+U0981,42,Female,Australia,Desktop,Free,Returning,6,Yes,7.0,15,0,0,81.4,245,23,10,Promoter,Positive,4,3,4,2,3,3,4,2,4,3,65.0,C,4,2,33.3,4,0,Unlikely
+U0982,38,Female,USA,Desktop,Free,Returning,2,Yes,7.0,10,0,3,54.1,108,10,10,Promoter,Positive,3,3,3,3,4,3,3,2,5,3,60.0,C,3,3,33.3,3,0,Unsure
+U0983,24,Female,USA,Desktop,Enterprise,Power User,26,Yes,5.9,13,1,5,78.1,97,8,8,Passive,Neutral,5,2,5,3,3,4,3,2,3,2,65.0,C,5,3,50.0,4,1,Unsure
+U0984,34,Male,Canada,Desktop,Free,New,17,Yes,7.0,8,1,0,100.0,272,15,10,Promoter,Positive,3,3,4,3,5,2,5,2,5,2,75.0,B,1,4,25.0,4,0,Unsure
+U0985,34,Male,USA,Desktop,Enterprise,Power User,15,Yes,6.5,20,0,0,97.0,132,18,8,Passive,Neutral,5,1,3,2,4,1,4,3,5,1,82.5,A,7,7,100.0,5,0,Likely
+U0986,22,Male,UK,Mobile,Basic,Returning,1,No,9.5,15,0,1,69.3,167,2,1,Detractor,Negative,4,3,3,2,3,2,4,2,4,2,67.5,C,4,5,58.3,4,0,Unsure
+U0987,49,Female,Australia,Desktop,Free,Power User,3,No,3.5,9,1,3,70.6,331,1,10,Promoter,Positive,3,2,3,2,4,3,3,4,3,3,55.0,D,2,2,16.7,3,0,Unlikely
+U0988,43,Male,Netherlands,Desktop,Enterprise,Power User,18,Yes,10.9,13,2,0,100.0,201,9,9,Promoter,Positive,4,2,5,1,4,1,5,1,4,2,87.5,A,6,4,66.7,3,0,Likely
+U0989,32,Male,USA,Mobile,Basic,New,4,Yes,6.3,16,1,0,73.0,263,46,8,Passive,Neutral,4,3,4,2,4,3,3,3,5,2,67.5,C,4,4,50.0,4,0,Unsure
+U0990,34,Male,UK,Mobile,Pro,Returning,13,No,6.4,17,1,2,78.2,224,90,8,Passive,Neutral,3,1,4,3,2,1,3,3,3,3,60.0,C,5,3,50.0,3,1,Unlikely
+U0991,36,Prefer not to say,USA,Mobile,Enterprise,Power User,14,Yes,6.5,17,0,3,82.2,350,7,9,Promoter,Positive,4,1,4,1,4,2,4,2,5,3,80.0,A,6,7,91.7,4,0,Likely
+U0992,18,Male,Canada,Mobile,Free,Returning,6,Yes,4.0,19,0,1,86.2,183,11,9,Promoter,Positive,4,3,4,2,3,3,5,3,5,3,67.5,C,3,6,58.3,4,0,Unsure
+U0993,32,Female,Netherlands,Desktop,Free,Power User,53,Yes,2.4,10,0,1,80.9,317,17,6,Detractor,Negative,3,2,5,3,4,2,5,2,4,1,77.5,B,6,4,66.7,2,0,Likely
+U0994,27,Male,UK,Mobile,Pro,Returning,33,Yes,3.9,10,0,6,83.0,216,14,5,Detractor,Negative,4,1,3,2,3,3,3,1,4,2,70.0,B,3,6,58.3,3,0,Unsure
+U0995,24,Female,UK,Mobile,Free,New,23,No,6.0,9,2,2,67.6,114,16,10,Promoter,Positive,3,2,3,2,5,1,2,3,4,2,67.5,C,5,4,58.3,3,1,Unsure
+U0996,31,Male,Netherlands,Desktop,Free,Returning,1,Yes,6.4,12,6,3,58.9,265,43,10,Promoter,Positive,3,3,4,1,3,2,2,2,3,2,62.5,C,5,5,66.7,2,1,Unlikely
+U0997,52,Male,USA,Mobile,Free,Power User,2,Yes,8.1,11,0,2,81.5,261,30,10,Promoter,Positive,3,4,3,2,3,4,3,2,4,3,52.5,D,2,3,25.0,3,0,Unlikely
+U0998,40,Female,Germany,Tablet,Free,Returning,12,Yes,3.9,9,0,9,62.1,193,17,8,Passive,Neutral,5,3,3,4,2,2,3,3,3,2,55.0,D,3,2,25.0,3,1,Unlikely
+U0999,28,Male,Brazil,Desktop,Pro,Power User,3,No,5.8,17,0,1,92.7,128,6,9,Promoter,Positive,4,2,5,3,4,1,4,3,4,3,72.5,B,4,5,58.3,4,1,Unsure
+U1000,40,Male,UK,Desktop,Free,Power User,69,No,3.7,17,0,3,78.2,200,14,9,Promoter,Positive,5,3,4,2,5,2,3,1,3,2,75.0,B,3,6,58.3,3,0,Unsure
