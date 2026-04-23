@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Card } from '@haydywoo/dave-react';
+import { Card, Table } from '@haydywoo/dave-react';
 
 export const metadata: Metadata = { title: 'Typography' };
 
@@ -69,8 +69,8 @@ export default function TypographyPage() {
       <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Scale</h2>
       <p className="text-sm text-fg-secondary mb-6">Standard Tailwind text sizes — no custom scale needed.</p>
 
-      <Card noPadding className="overflow-hidden mb-12">
-        <table className="w-full">
+      <div className="mb-12">
+        <Table>
           <thead>
             <tr className="bg-surface border-b border-border">
               <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Class</th>
@@ -89,34 +89,32 @@ export default function TypographyPage() {
               </tr>
             ))}
           </tbody>
-        </table>
-      </Card>
+        </Table>
+      </div>
 
       {/* Weights */}
       <h2 className="font-display font-semibold text-2xl text-foreground mt-12 mb-4 pt-8 border-t border-border">Weight</h2>
 
-      <Card noPadding className="overflow-hidden">
-        <table className="w-full">
-          <thead>
-            <tr className="bg-surface border-b border-border">
-              <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Class</th>
-              <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Value</th>
-              <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider w-1/2">Preview</th>
-              <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Usage</th>
+      <Table>
+        <thead>
+          <tr className="bg-surface border-b border-border">
+            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Class</th>
+            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Value</th>
+            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider w-1/2">Preview</th>
+            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Usage</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-border bg-card">
+          {weights.map(({ class: cls, value, usage }) => (
+            <tr key={cls}>
+              <td className="px-4 py-3 font-code text-xs text-accent-foreground whitespace-nowrap">{cls}</td>
+              <td className="px-4 py-3 font-code text-xs text-fg-secondary">{value}</td>
+              <td className={`px-4 py-3 text-base text-foreground ${cls}`}>The quick brown fox</td>
+              <td className="px-4 py-3 text-xs text-fg-secondary">{usage}</td>
             </tr>
-          </thead>
-          <tbody className="divide-y divide-border bg-card">
-            {weights.map(({ class: cls, value, usage }) => (
-              <tr key={cls}>
-                <td className="px-4 py-3 font-code text-xs text-accent-foreground whitespace-nowrap">{cls}</td>
-                <td className="px-4 py-3 font-code text-xs text-fg-secondary">{value}</td>
-                <td className={`px-4 py-3 text-base text-foreground ${cls}`}>The quick brown fox</td>
-                <td className="px-4 py-3 text-xs text-fg-secondary">{usage}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </Card>
+          ))}
+        </tbody>
+      </Table>
     </div>
   );
 }

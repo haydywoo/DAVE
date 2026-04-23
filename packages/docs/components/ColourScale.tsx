@@ -1,3 +1,5 @@
+import { Table } from '@haydywoo/dave-react';
+
 interface Swatch {
   step: string;
   value: string;
@@ -73,22 +75,20 @@ interface SemanticTableProps {
 
 export function SemanticTable({ groups }: SemanticTableProps) {
   return (
-    <div className="rounded-[3px] border border-border overflow-hidden">
-      <table className="w-full">
-        <thead>
-          <tr className="bg-surface border-b border-border">
-            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider w-10"></th>
-            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Token</th>
-            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Value</th>
-            <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Description</th>
-          </tr>
-        </thead>
-        <tbody className="bg-card">
-          {groups.map((group) => (
-            <SemanticTokenGroup key={group.label} {...group} />
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Table>
+      <thead>
+        <tr className="bg-surface border-b border-border">
+          <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider w-10"></th>
+          <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Token</th>
+          <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Value</th>
+          <th className="px-4 py-3 text-left text-xs font-semibold text-fg-secondary uppercase tracking-wider">Description</th>
+        </tr>
+      </thead>
+      <tbody className="bg-card">
+        {groups.map((group) => (
+          <SemanticTokenGroup key={group.label} {...group} />
+        ))}
+      </tbody>
+    </Table>
   );
 }

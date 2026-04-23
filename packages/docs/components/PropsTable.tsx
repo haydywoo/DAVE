@@ -1,3 +1,5 @@
+import { Table } from '@haydywoo/dave-react';
+
 interface Prop {
   name: string;
   type: string;
@@ -37,8 +39,8 @@ export function PropsTable({ props }: PropsTableProps) {
       </div>
 
       {/* ── Desktop: table ────────────────────────────────────────────── */}
-      <div className="hidden sm:block rounded-[3px] border border-border overflow-hidden mb-8">
-        <table className="w-full text-sm">
+      <div className="hidden sm:block mb-8">
+        <Table>
           <thead>
             <tr className="bg-surface border-b border-border">
               <th className="text-left px-4 py-3 text-xs font-semibold text-fg-secondary uppercase tracking-wider">Prop</th>
@@ -62,7 +64,7 @@ export function PropsTable({ props }: PropsTableProps) {
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       </div>
     </>
   );
