@@ -5,16 +5,24 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased] — 2026-04-21
+## [Unreleased] — 2026-04-23
 
 ### Added
+- **`List` + `ListItem`** — minimal stacked-row component for settings pages, activity feeds, inboxes, and file listings. Props: `divided`, `bordered`, `ordered`, `size` (`sm` | `md`). Items accept `onClick` (renders as `<button>`) or `href` (renders as `<a>`) with built-in hover + focus-ring treatment and optional `selected` state. No named slots — compose leading/trailing content with inline flex.
 - **`Banner`** — fixed top-of-viewport notification strip for outages, maintenance windows, and global announcements. Four variants (`info`, `success`, `warning`, `error`). Optional action link and dismiss button. Mounts a `--banner-height` CSS custom property so the sticky nav offsets automatically. Controlled — caller owns visibility and can persist dismissal via `localStorage`.
-- **Docs sidebar badges** — `new` (primary solid) and `updated` (success solid) badges on nav items to surface recently shipped work. Currently applied to `Banner` and `Badge`.
+- **Docs `FeedbackWidget` — now live** — the previously-unmounted in-page feedback popover (thumbs + optional comment + page URL) is wired to a Formspree endpoint and mounted in the root layout. Optimistic UX — the "thanks" view shows immediately, POST runs in the background, errors swallowed.
+- **Docs `ConsentGate`** — small bottom-left consent card shown on first visit; loads Microsoft Clarity via `next/script` only after the user accepts. Choice persisted in `localStorage` (`dave-analytics-consent`). Clarity is no longer loaded unconditionally from the root layout.
+- **Legal page — §7 Feedback & Privacy, §8 Analytics** — disclosure of Formspree as feedback processor (no cookies) and Microsoft Clarity as the analytics processor (cookies — loaded only after consent). "Changes to These Terms" renumbered to §9.
+- **Docs sidebar badges** — `new` (primary solid) and `updated` (success solid) badges on nav items to surface recently shipped work. Currently applied to `Banner`, `Badge`, and `List`.
 - **Observable Plot — Experimental section** — four example pages added under Charts › Experimental: Bar, Line, Scatter, and Calendar Heatmap. Uses a shared `PlotPage` wrapper for consistent layout. `@observablehq/plot` installed in docs. All examples use DAVE token CSS variables directly — no hex values.
   - **Calendar Heatmap** — GitHub-style 365-day contribution grid using `Plot.cell`. 5-step discrete accent colour scale via `color-mix()`. `Plot.tip` + `Plot.pointer` for instant hover tooltips. Month and day-of-week labels.
 
 ### Changed
 - **`Badge`** — `appearance` prop (`solid` | `outline` | `dashed`). `dot` boolean prop renders a small status dot before the label. Neutral border token applied for better light/dark contrast.
+- **Docs tables — horizontal-scroll dogfooding** — every table (MDX-rendered, `SemanticTable`, `PropsTable` desktop variant, typography scale/weight tables) is now wrapped in `@dave/react`'s `Table`, picking up left/right scroll shadows on narrow viewports. Replaces inline `overflow-hidden` wrappers that were clipping content on mobile.
+- **MDX inline `<code>` pills** — `whitespace-nowrap` applied so token identifiers like `--color-accent-subtle-border` stay on one line instead of fragmenting across multiple mini-pills on narrow screens.
+- **Body-text link style unified** — all prose links (legal page, `ConsentGate`, home roadmap callout, MDX content) now flow through a single `.prose-link` utility in `globals.css`: accent-foreground text, always-underlined at `underline-offset-4`, hover brightens to `text-accent`. Replaces three competing inline-className patterns.
+- **Docs pricing card demo** — equal-width tiers, Pro differentiates via a 3px `border-t-accent` top rail, `shadow-raised` elevation, hero `text-5xl` display price, accent-foreground micro-type labels, and a primary CTA. Starter uses secondary CTA. Check icons dropped — plain text features. No dark-mode stunt.
 - **Docs nav** — `v1.1` version badge added next to the DAVE wordmark. Uses `font-body` to stay in Instrument Sans rather than inheriting the display font. GitHub icon is now icon-only (`w-8 h-8`, matching ThemeToggle). Tooltips added to GitHub and theme toggle icons via `@dave/react` `Tooltip`. `ThemeToggle` refactored to `forwardRef` to support Radix trigger wiring.
 - **AI overview** — amber "Under development" badge added inline with the `AI Components` page heading.
 - **Docs favicon** — indigo geometric mark added; displayed next to the DAVE wordmark in the nav.
@@ -22,6 +30,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Token cascade** — dark mode refactored to a primitive-driven cascade. Status border contrast lifted.
 
 ### Fixed
+- **Tailwind content paths** — `./mdx-components.tsx` was missing from the `content` glob, so any unique utility class used only in MDX renderers silently failed to compile. Added to the glob.
 - **Heading + badge mobile wrapping** — `flex-wrap` added to all heading/badge flex containers (AI overview, Observable Plot overview, Plot example pages) so badges drop to the next line on small screens rather than squishing against the heading.
 
 ---
