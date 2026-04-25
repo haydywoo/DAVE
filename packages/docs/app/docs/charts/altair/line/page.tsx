@@ -2,7 +2,7 @@
 
 import type { VisualizationSpec } from 'vega-embed';
 import { useDaveTokens, VegaChart } from '@/components/VegaChart';
-import { PlotPage } from '@/components/PlotPage';
+import { ExperimentalChartPage } from '@/components/ExperimentalChartPage';
 
 type Series = 'Components' | 'Charts' | 'AI';
 
@@ -68,7 +68,7 @@ function LineChart() {
 
 export default function AltairLinePage() {
   return (
-    <PlotPage
+    <ExperimentalChartPage
       title="Altair — Line Chart"
       description={<>Multi-series line chart with point markers and direct end-of-line labels — no separate legend element. Each series uses a status colour token.</>}
       notes={[
@@ -78,6 +78,6 @@ export default function AltairLinePage() {
       ]}
     >
       <LineChart />
-    </PlotPage>
+    </ExperimentalChartPage>
   );
 }

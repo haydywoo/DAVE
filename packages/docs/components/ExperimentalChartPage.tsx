@@ -1,20 +1,13 @@
 import { Badge } from '@haydywoo/dave-react';
 
-export const plotStyle = {
-  background: 'transparent',
-  color: 'var(--color-foreground-secondary)',
-  fontFamily: 'var(--font-body)',
-  fontSize: '12px',
-} as const;
-
-interface PlotPageProps {
-  title: string;
+interface ExperimentalChartPageProps {
+  title:       string;
   description: React.ReactNode;
-  children: React.ReactNode;
-  notes: React.ReactNode[];
+  children:    React.ReactNode;
+  notes:       React.ReactNode[];
 }
 
-export function PlotPage({ title, description, children, notes }: PlotPageProps) {
+export function ExperimentalChartPage({ title, description, children, notes }: ExperimentalChartPageProps) {
   return (
     <div>
       <div className="flex flex-wrap items-center gap-3 mb-2">
