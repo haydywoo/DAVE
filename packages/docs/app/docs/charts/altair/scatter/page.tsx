@@ -2,7 +2,7 @@
 
 import type { VisualizationSpec } from 'vega-embed';
 import { useDaveTokens, VegaChart } from '@/components/VegaChart';
-import { PlotPage } from '@/components/PlotPage';
+import { ExperimentalChartPage } from '@/components/ExperimentalChartPage';
 
 type Group = 'A' | 'B' | 'C';
 
@@ -83,7 +83,7 @@ function ScatterChart() {
 
 export default function AltairScatterPage() {
   return (
-    <PlotPage
+    <ExperimentalChartPage
       title="Altair — Scatter Plot"
       description={<>Bubble scatter where size encodes component popularity, colour groups by category, and every point carries a four-field tooltip on hover.</>}
       notes={[
@@ -93,6 +93,6 @@ export default function AltairScatterPage() {
       ]}
     >
       <ScatterChart />
-    </PlotPage>
+    </ExperimentalChartPage>
   );
 }

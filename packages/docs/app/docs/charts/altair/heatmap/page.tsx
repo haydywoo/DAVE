@@ -2,7 +2,7 @@
 
 import type { VisualizationSpec } from 'vega-embed';
 import { useDaveTokens, VegaChart } from '@/components/VegaChart';
-import { PlotPage } from '@/components/PlotPage';
+import { ExperimentalChartPage } from '@/components/ExperimentalChartPage';
 
 interface CalendarDay {
   date:    string; // ISO date for tooltip readability
@@ -102,7 +102,7 @@ function CalendarHeatmap() {
 
 export default function AltairHeatmapPage() {
   return (
-    <PlotPage
+    <ExperimentalChartPage
       title="Altair — Calendar Heatmap"
       description={<>GitHub-style 365-day grid: weeks across, days of the week down. Colour interpolates from <Code>surface</Code> to <Code>accent</Code> based on activity. Hover any cell for the exact date.</>}
       notes={[
@@ -113,6 +113,6 @@ export default function AltairHeatmapPage() {
       ]}
     >
       <CalendarHeatmap />
-    </PlotPage>
+    </ExperimentalChartPage>
   );
 }

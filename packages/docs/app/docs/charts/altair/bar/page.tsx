@@ -2,7 +2,7 @@
 
 import type { VisualizationSpec } from 'vega-embed';
 import { useDaveTokens, VegaChart } from '@/components/VegaChart';
-import { PlotPage } from '@/components/PlotPage';
+import { ExperimentalChartPage } from '@/components/ExperimentalChartPage';
 
 const data = [
   { category: 'Components', count: 52 },
@@ -52,7 +52,7 @@ function BarChart() {
 
 export default function AltairBarPage() {
   return (
-    <PlotPage
+    <ExperimentalChartPage
       title="Altair — Bar Chart"
       description={<>Horizontal bar chart specified in Vega-Lite. Sorted descending by count. Hover any bar for an exact tooltip.</>}
       notes={[
@@ -62,6 +62,6 @@ export default function AltairBarPage() {
       ]}
     >
       <BarChart />
-    </PlotPage>
+    </ExperimentalChartPage>
   );
 }
