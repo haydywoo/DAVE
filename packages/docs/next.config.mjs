@@ -39,6 +39,9 @@ const nextConfig = {
   webpack: (config) => {
     config.resolve.alias['@haydywoo/dave-react'] = daveDist;
     config.resolve.alias['@haydywoo/dave-charts'] = chartsDist;
+    // Vega's geo helpers reach for the optional `canvas` package; we render to SVG
+    // only, so stub it out to prevent webpack from trying to resolve the binary dep.
+    config.resolve.alias.canvas = false;
     return config;
   },
 };

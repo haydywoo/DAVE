@@ -5,6 +5,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-04-25
+
+### Changed
+- **Experimental Charts section — Observable Plot replaced with Altair / Vega-Lite** — the four `/docs/charts/observable-plot/{bar,line,scatter,heatmap}` example pages have been re-implemented in Vega-Lite specs rendered via `react-vega`. Path renamed to `/docs/charts/altair/*`; sidebar entries relabelled from "Plot — *" to "Altair — *". Specs live as plain `VisualizationSpec` JSON objects, the exact shape Python's Altair emits, so analyses authored in a notebook can be lifted into the docs site without rewriting the chart layer. New shared `<VegaChart>` + `useDaveTokens()` helper in `components/VegaChart.tsx` reads DAVE design tokens via `getComputedStyle` and re-reads on theme toggle so colours in the resulting SVG follow the active light/dark theme. `react-vega`, `vega`, and `vega-lite` added as docs dependencies; `@observablehq/plot` no longer used by these pages but stays installed for now.
+
 ## [Unreleased] — 2026-04-23
 
 ### Added

@@ -137,11 +137,11 @@ export const chartsNavigation: NavSection[] = [
   {
     title: 'Experimental',
     items: [
-      { title: 'Observable Plot',  href: '/docs/charts/observable-plot',         badge: 'new' },
-      { title: 'Plot — Bar',       href: '/docs/charts/observable-plot/bar',      badge: 'new' },
-      { title: 'Plot — Line',      href: '/docs/charts/observable-plot/line',     badge: 'new' },
-      { title: 'Plot — Scatter',   href: '/docs/charts/observable-plot/scatter',  badge: 'new' },
-      { title: 'Plot — Heatmap',   href: '/docs/charts/observable-plot/heatmap',  badge: 'new' },
+      { title: 'Altair',           href: '/docs/charts/altair',          badge: 'updated' },
+      { title: 'Altair — Bar',     href: '/docs/charts/altair/bar',      badge: 'updated' },
+      { title: 'Altair — Line',    href: '/docs/charts/altair/line',     badge: 'updated' },
+      { title: 'Altair — Scatter', href: '/docs/charts/altair/scatter',  badge: 'updated' },
+      { title: 'Altair — Heatmap', href: '/docs/charts/altair/heatmap',  badge: 'updated' },
     ],
   },
 ];
