@@ -65,29 +65,23 @@ function CalendarHeatmap() {
   const t = useDaveTokens();
   if (!t) return <div className="h-[200px]" />;
 
-  // 5-step diverging-from-empty: surface, then accent at progressive opacities
-  // Vega-Lite needs concrete colours, so we let it interpolate over real strings.
-  const heatRange = [t.surface, t.accent];
-
+  // Single-colour fill modulated by an opacity encoding — readable over either
+  // theme's background, no muddy low-end blend, GitHub-style visual.
   const spec: VisualizationSpec = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     width:  'container',
     height: 160,
     data:   { values: calendarData },
-    mark:   { type: 'rect', cornerRadius: 2, stroke: t.border, strokeWidth: 0.5 },
+    mark:   { type: 'rect', cornerRadius: 2, color: t.accent, stroke: t.border, strokeWidth: 0.5 },
     encoding: {
-      x: {
-        field: 'week', type: 'ordinal',
-        axis: null,
-      },
+      x: { field: 'week',    type: 'ordinal', axis: null },
       y: {
-        field: 'weekday', type: 'ordinal',
-        sort: WEEKDAYS,
+        field: 'weekday', type: 'ordinal', sort: WEEKDAYS,
         axis: { title: null, domain: false, ticks: false, labelColor: t.fgSecondary, labelFontSize: 10, labelPadding: 4 },
       },
-      color: {
+      opacity: {
         field: 'value', type: 'quantitative',
-        scale: { range: heatRange, domain: [0, 12] },
+        scale:  { range: [0.08, 1], domain: [0, 12] },
         legend: { title: 'Activity', titleColor: t.fgSecondary, labelColor: t.fgSecondary, gradientLength: 80 },
       },
       tooltip: [
