@@ -435,8 +435,7 @@ Run a Claude agent against the prompt in [Appendix A](#appendix-a-agent-prompt) 
 Use this prompt with the Explore subagent (or general-purpose agent) for a thorough audit pass. Saved here so it's runnable from anywhere with `claude` or via the Agent tool.
 
 ```
-Audit the DAVE monorepo against docs/audit-rules.md. The repo lives at
-/Users/haydynphillips/Desktop/DAVE.
+Audit the DAVE monorepo against docs/audit-rules.md. Run from the repo root.
 
 For each rule (DS-001 through CODE-003):
 1. Run the detection command exactly as specified.
