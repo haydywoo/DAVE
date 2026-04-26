@@ -83,7 +83,7 @@ export function TabsContent({ value, children, className }: TabsContentProps) {
   return (
     <RadixTabs.Content
       value={value}
-      className={cn('focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2', className)}
+      className={cn('focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1', className)}
     >
       {children}
     </RadixTabs.Content>

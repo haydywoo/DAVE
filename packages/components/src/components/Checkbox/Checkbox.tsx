@@ -27,7 +27,7 @@ export function Checkbox({ label, indeterminate, className, id, ...props }: Chec
         ref={ref}
         id={inputId}
         type="checkbox"
-        className="h-4 w-4 rounded-[3px] border border-border-strong bg-card text-accent transition-colors checked:bg-accent checked:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed accent-[var(--color-accent)]"
+        className="h-4 w-4 rounded-[3px] border border-border-strong bg-card text-accent transition-colors checked:bg-accent checked:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 disabled:cursor-not-allowed accent-[var(--color-accent)]"
         {...props}
       />
       {label && (

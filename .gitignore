@@ -4,6 +4,7 @@ dist
 .next
 out
 storybook-static
+*.tsbuildinfo
 *.log
 .DS_Store
 .env

@@ -85,7 +85,7 @@ export const Chip = React.forwardRef<HTMLButtonElement | HTMLSpanElement, ChipPr
         chipSize,
         variantStyle,
         isInteractive && !disabled && 'cursor-pointer',
-        isInteractive && 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+        isInteractive && 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background',
         disabled && 'opacity-40 pointer-events-none',
         className,
       )}

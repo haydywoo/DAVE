@@ -64,7 +64,7 @@ export function FeedbackWidget() {
         <button
           type="button"
           aria-label="Give feedback on this page"
-          className="hidden sm:flex fixed bottom-6 right-6 z-40 w-11 h-11 items-center justify-center rounded-full bg-accent text-accent-on shadow-raised hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors"
+          className="hidden sm:flex fixed bottom-6 right-6 z-40 w-11 h-11 items-center justify-center rounded-full bg-accent text-accent-on shadow-raised hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background transition-colors"
         >
           <ChatIcon />
         </button>

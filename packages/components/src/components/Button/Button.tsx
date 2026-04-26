@@ -18,7 +18,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 active:opacity-80';
+  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 active:opacity-80';
 
 const variants: Record<ButtonVariant, string> = {
   primary:   'bg-accent text-accent-on visited:text-accent-on hover:bg-accent-hover',

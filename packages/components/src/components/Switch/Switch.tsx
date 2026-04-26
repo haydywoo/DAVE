@@ -53,7 +53,7 @@ export function Switch({
         trackSizes[size],
         'shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
         'bg-border data-[state=checked]:bg-accent',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         'disabled:cursor-not-allowed disabled:opacity-40',
       )}
     >
