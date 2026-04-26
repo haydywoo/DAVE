@@ -169,7 +169,7 @@ const goals = [
 const activityItems = [
   { color: 'success' as const, title: 'Enterprise plan purchased', description: 'Mara Hoffman upgraded from Pro', time: '2m ago' },
   { color: 'error'   as const, title: 'Payment failed',            description: 'Priya Nair — $720.00 declined',  time: '18m ago' },
-  { color: 'info'    as const, title: 'New user signup',           description: 'noah@bergmann.io joined',        time: '1h ago' },
+  { color: 'info'    as const, title: 'New user signup',           description: 'noah@example.com joined',        time: '1h ago' },
   { color: 'success' as const, title: 'Milestone reached',         description: 'April MRR exceeded target',      time: '2h ago' },
   { color: 'warning' as const, title: 'Subscription expiring',     description: 'Fatima Al-Rashid — renews in 3d', time: '3h ago' },
   { color: 'info'    as const, title: 'Feature flag enabled',      description: 'New onboarding flow live',       time: '5h ago' },
