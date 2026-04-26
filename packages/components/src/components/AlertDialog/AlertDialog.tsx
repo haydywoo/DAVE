@@ -77,7 +77,7 @@ export function AlertDialogCancel({ children, className }: { children: React.Rea
         className={cn(
           'inline-flex items-center justify-center gap-2 h-9 px-4 text-sm font-semibold rounded-[3px] transition-colors',
           'bg-background text-foreground border border-border hover:border-border-strong',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background',
           className,
         )}
       >
@@ -100,7 +100,7 @@ export function AlertDialogAction({ children, variant = 'default', className }: 
         type="button"
         className={cn(
           'inline-flex items-center justify-center gap-2 h-9 px-4 text-sm font-semibold rounded-[3px] transition-colors',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-offset-background',
           variant === 'destructive'
             ? 'bg-error text-accent-on hover:bg-error-hover focus-visible:ring-error'
             : 'bg-accent text-accent-on hover:bg-accent-hover focus-visible:ring-accent',

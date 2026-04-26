@@ -44,7 +44,7 @@ export function CollapsibleTrigger({ children, showChevron = true, className }: 
       className={cn(
         'flex w-full items-center justify-between py-3 text-sm font-medium text-foreground',
         'transition-colors hover:text-fg-secondary',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         'disabled:pointer-events-none disabled:opacity-40',
         '[&[data-state=open]>svg]:rotate-180',
         className,

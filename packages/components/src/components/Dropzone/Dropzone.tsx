@@ -116,7 +116,7 @@ export function Dropzone({
         className={cn(
           'relative flex flex-col items-center justify-center gap-3 rounded-[3px] border-2 border-dashed px-6 py-10',
           'text-center transition-colors cursor-pointer',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
           dragging
             ? 'border-accent bg-accent-subtle'
             : error

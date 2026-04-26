@@ -67,7 +67,7 @@ export function DialogHeader({ children, className }: { children: React.ReactNod
   return (
     <div className={cn('flex items-start justify-between gap-4 px-6 pt-6 pb-4 border-b border-border', className)}>
       <div className="flex flex-col gap-1">{children}</div>
-      <RadixDialog.Close className="shrink-0 rounded-[3px] p-1 text-fg-secondary hover:text-foreground hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-card">
+      <RadixDialog.Close className="shrink-0 rounded-[3px] p-1 text-fg-secondary hover:text-foreground hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-card">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M18 6 6 18M6 6l12 12" />
         </svg>

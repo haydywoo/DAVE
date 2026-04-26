@@ -5,6 +5,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-04-26
+
+### Added
+- **`docs/audit-rules.md` — versioned audit rubric** — 16 stable-ID rules across design system (radii, tokens, focus rings, hover surfaces, opacity, shadows, dogfooding), TypeScript hygiene (`any`, `@ts-ignore`, `tsbuildinfo`), accessibility (icon-button labels, keyboard reach), and code hygiene (console logs, OS artefacts, orphan TODOs). Each rule has a severity, a greppable detection command, an auto-fix verdict, and a resolution path. Includes a six-class testing layer (visual regression, Vitest + axe unit tests, type tests, a11y, Playwright E2E, bundle budgets) and seven code-based alignment protocols binding the rules to `CLAUDE.md`, the token pipeline, the component-add checklist, and PR-time CI sweeps. Companion to `docs/code-quality.md` — the layers doc defines *what consistency means*; the audit rules doc defines *what to check, how, and when*.
+
+### Fixed
+- **Focus ring offset drift** — flipped `ring-offset-2` → `ring-offset-1` across 16 files (Accordion, Alert, AlertDialog, Button, Checkbox, Chip, Collapsible, Dialog, Drawer, Dropzone, Radio, Slider, Switch, Tabs, Toast, plus `FeedbackWidget` in docs). CLAUDE.md mandates `ring-offset-1`; multiple components had drifted to `ring-offset-2`. Now codified as audit rule **DS-001**.
+
+### Changed
+- **`.gitignore` — `*.tsbuildinfo` ignored** — `packages/docs/tsconfig.tsbuildinfo` was tracked and dirty in working tree. Build artefact, no value in version control. Untracked via `git rm --cached`. Now codified as audit rule **TS-003**.
+
 ## [Unreleased] — 2026-04-25
 
 ### Changed

@@ -160,7 +160,7 @@ export function AccordionTrigger({ children, className }: AccordionTriggerProps)
       className={cn(
         'flex w-full items-center justify-between py-4 text-sm font-semibold text-foreground',
         'hover:text-fg-secondary transition-colors text-left',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background',
         className,
       )}
     >

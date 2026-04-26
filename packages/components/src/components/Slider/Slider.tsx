@@ -108,7 +108,7 @@ export function Slider({
               thumbSize[size],
               'block rounded-full border-2 border-accent bg-card',
               'transition-colors',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
               'disabled:pointer-events-none disabled:opacity-40',
             )}
           />
