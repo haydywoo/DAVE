@@ -9,3 +9,5 @@ storybook-static
 .DS_Store
 .env
 .env.local
+sandbox/
+PUBLISHING.md
