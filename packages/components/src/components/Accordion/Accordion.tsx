@@ -6,7 +6,7 @@ import { cn } from '../../lib/cn';
 interface AccordionCtx {
   openValues: string[];
   onToggle: (value: string) => void;
-  rootRef: React.RefObject<HTMLDivElement>;
+  rootRef: React.RefObject<HTMLDivElement | null>;
 }
 
 const AccordionContext = React.createContext<AccordionCtx | null>(null);
