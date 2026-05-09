@@ -94,6 +94,67 @@ Docs deploy via `output: 'export'` to GitHub Pages under `/DAVE`. Next's `basePa
 
 `NEXT_PUBLIC_BASE_PATH` is wired in `next.config.mjs` (empty in dev, `/DAVE` in prod).
 
+## Commit messages
+
+Conventional Commits, present tense, lowercase after the prefix.
+
+**Type prefixes used in this repo:** `feat` (new feature), `fix` (bug fix), `chore` (housekeeping, deps, tooling), `docs` (docs site or README), `refactor` (no behaviour change), `revert` (revert).
+
+**Subject line:** under 70 chars, lowercase after the prefix, no trailing period. Use a scope when one applies — `feat(docs):`, `fix(@dave/react):`, `chore(tooling):`.
+
+**Body:** wrap at ~72 chars, explain *why* the change is needed; the *what* is in the diff. Bullet points for multiple distinct changes in one commit.
+
+**Co-Authored-By trailer:** when Claude helps, end the message with
+```
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+```
+
+### Generic phrasing in chore messages — non-negotiable
+
+The public commit history is permanent. A message that says "remove leaked X path" *names X in the same breath as scrubbing it* — anyone reading `git log` learns exactly what used to be there. Fixing it after the fact requires a `git filter-repo` history rewrite + force-push to `main`, which is destructive and disruptive.
+
+Apply generic phrasing in any commit — chore especially — that removes, renames, or scrubs something privacy-sensitive:
+
+- Local-machine paths (anything containing `/Users/...`, `~/Desktop/...`, `~/dev/...`, `/home/...`)
+- Personal email addresses
+- Real third-party domains used as fake placeholders (use `example.com` / `example.org` / `example.net` instead — RFC 2606 reserves these so they never resolve to real services)
+- Internal-only filenames you don't want catalogued in `git log` (private notes, draft checklists, scratch directories)
+- Account identifiers tied to personal services (analytics IDs, form endpoints, dashboard URLs, third-party tokens of any kind)
+- Any "personal" / "private" / "local-only" framing — even without specifics, this signals there was something worth scrubbing
+
+The rule of thumb: **describe what the repo looks like *after* the change, not what was removed.** "Tidy demo data" describes the new state; "remove leaked personal email" describes the old state and signposts what to look for in the history.
+
+### Bad → Good
+
+| Avoid | Prefer |
+|---|---|
+| `chore: remove /Users/<user>/<folder> path from agent-rules` | `chore: replace example path in agent-rules` |
+| `chore: scrub <category> references from public repo` | `chore: tidy <specific-file> and <specific-area>` |
+| `chore: untrack local-only sandbox and <internal-doc>.md` | `chore: stop tracking stale sandbox and top-level checklist` |
+| `chore: <name>@<real-domain>.com → placeholder@example.com (was real)` | `chore: use example.com placeholder in <demo-name>` |
+| `docs: address findings from ~/Desktop/<folder>/<file>.md` | `docs: address findings from a fresh-install smoke test` |
+| `chore: remove personal Clarity ID hardcoding` | `chore: move analytics ID to env var` |
+
+### When specifics ARE fine
+
+Don't go overly generic for non-sensitive cleanup. The rule kicks in only when the specific thing being named could itself be embarrassing or privacy-leaking after the cleanup is in. These are all fine to name verbatim:
+
+- File paths inside the repo: `chore: delete unused packages/docs/components/old-Hero.tsx`
+- Library names being removed: `chore: drop @observablehq/plot dep`
+- Component or symbol renames: `refactor: rename PlotPage → ExperimentalChartPage`
+- Specific bug fixes: `fix: avatar basePath prefix in production`
+- Public APIs and public dependency names
+
+### Never put in any commit message
+
+- Absolute home-directory paths (`/Users/...`, `/home/...`, `~/Desktop/...`)
+- Personal email addresses
+- API keys, tokens, secrets — even ones being removed in that very commit
+- Real third-party domains being used as fake placeholders (sanitize them on the way in, before they hit any commit)
+- Internal-only filenames you wouldn't want on the front page
+
+If the diff itself removes one of the above, the message describes the cleanup in *generic terms* — never quote the leaked value verbatim.
+
 ## How to work here
 
 Behavioural rules, adapted from common LLM-coding failure modes. For trivial tasks use judgement — these bias toward caution over speed.
