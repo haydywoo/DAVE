@@ -1,5 +1,4 @@
 import { Disclaimer } from '@/components/Disclaimer';
-import { RefactorNotice } from '@/components/RefactorNotice';
 
 export const metadata = { title: 'Getting Started' }
 
@@ -13,12 +12,10 @@ DAVE is a React component library built on Tailwind CSS. Components are unstyled
 
 ## Prerequisites
 
-<RefactorNotice />
-
-DAVE targets **Next.js 14 App Router** (other React frameworks work but aren't tested). Start from a fresh `create-next-app` scaffold with TypeScript and Tailwind enabled:
+DAVE targets the **Next.js App Router** (tested with Next 14 and 15; other React frameworks work but aren't tested). Start from a fresh `create-next-app` scaffold with TypeScript and Tailwind enabled:
 
 ```bash
-pnpm create next-app@14 my-app --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"
+pnpm create next-app@15 my-app --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"
 cd my-app
 ```
 

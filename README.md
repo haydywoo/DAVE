@@ -185,7 +185,7 @@ DAVE/
 │   ├── components/     # @haydywoo/dave-react
 │   ├── charts/         # @haydywoo/dave-charts
 │   ├── tokens/         # @haydywoo/dave-tokens — tokens.css
-│   ├── docs/           # Next.js 14 docs site
+│   ├── docs/           # Next.js 15 docs site
 │   └── storybook/      # Storybook 8
 └── .github/
     └── workflows/
@@ -198,7 +198,7 @@ DAVE/
 
 Live at **[haydywoo.github.io/DAVE](https://haydywoo.github.io/DAVE)**
 
-Built with Next.js 14, MDX, and DAVE itself. Auto-deploys to GitHub Pages on every push to `main`.
+Built with Next.js 15, MDX, and DAVE itself. Auto-deploys to GitHub Pages on every push to `main`.
 
 ---
 

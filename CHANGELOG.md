@@ -5,6 +5,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-05-09
+
+### Changed
+- **Stack upgrade — React 18 → 19, Next.js 14 → 15** — bumped `react`, `react-dom`, `@types/react*` to `^19` across docs, storybook, components, and charts. Library peerDeps widened to `^18.0.0 || ^19.0.0` so consumers on React 18 stay compatible (additive — no breaking change for downstream npm packages). `next` `^14` → `^15.5.15`, `@next/mdx` matched. No code migration required for the docs site (no dynamic `params`/`searchParams`, no `cookies()`/`headers()`/`draftMode()`, no server-side fetch caching to update; static export + `basePath` unaffected).
+- **Docs `RefactorNotice` banner removed** — the "refactor in progress, repo unavailable" notice on the getting-started page is no longer accurate. Banner unmounted and the component deleted.
+- **Getting-started install command** — `pnpm create next-app@14` → `pnpm create next-app@15`, matching the page's updated "Next 14 and 15 supported" framing.
+
+### Fixed
+- **React 19 type strictness** — two ref-related call sites updated: `Accordion` `RefObject<HTMLDivElement>` → `RefObject<HTMLDivElement | null>`; `DotField` `useRef<number>()` → `useRef<number | undefined>(undefined)` (React 19's `useRef` typings require an explicit initial value).
+
 ## [Unreleased] — 2026-04-26
 
 ### Added
