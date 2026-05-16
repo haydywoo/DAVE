@@ -5,6 +5,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.2.0] — 2026-05-16
+
+First npm publish since `0.1.0` (2026-04-20). All `[Unreleased]` entries below ship in this release — see those sections for the component-by-component detail across the April and May work.
+
+### Release-only changes (2026-05-16)
+- **Library `peerDependencies` widened to React 18 + 19** — `@haydywoo/dave-react` and `@haydywoo/dave-charts` now accept `react@^18.0.0 || ^19.0.0` (same for `react-dom`). Source change landed 2026-05-09 in PR #5 but was never published; this is the publish that puts it on npm.
+- **Install docs rewritten for Tailwind 4 + Next 15 defaults** — `create-next-app@15` now scaffolds Tailwind 4 and `next.config.ts`. The previous Tailwind 3 instructions (`tailwind.config.js`, `@tailwind base/components/utilities`) silently emitted zero utility classes against the new defaults — build went green, components rendered unstyled. Rewrote `app/globals.css` example to a TW4-native form (`@import "tailwindcss"`, `@source` for content scanning, `@theme inline` to alias DAVE tokens as Tailwind utilities). Switched config example to `next.config.ts`. Added `--turbopack` to the CNA command so the scaffold's new interactive prompt doesn't hang a copy-paste install. Removed the now-redundant "Pin TypeScript to 5.x" step — CNA15 scaffolds `typescript@^5` by default.
+
 ## [Unreleased] — 2026-05-09
 
 ### Changed
