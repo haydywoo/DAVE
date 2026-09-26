@@ -121,7 +121,7 @@ export function Dropzone({
             ? 'border-accent bg-accent-subtle'
             : error
             ? 'border-error bg-error-subtle'
-            : 'border-border bg-card hover:border-border-strong hover:bg-surface',
+            : 'border-border bg-card hover:border-border-strong hover:bg-surface-hovered',
           disabled && 'pointer-events-none opacity-40 cursor-not-allowed',
         )}
       >

@@ -41,7 +41,7 @@ export function SourceCard({ title, url, favicon, snippet, index, className }: S
       rel="noopener noreferrer"
       className={cn(
         'group flex flex-col gap-1.5 rounded-[6px] border border-border bg-card p-3',
-        'transition-colors hover:bg-surface hover:border-border-strong',
+        'transition-colors hover:bg-surface-hovered hover:border-border-strong',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         className,
       )}
@@ -58,12 +58,12 @@ export function SourceCard({ title, url, favicon, snippet, index, className }: S
         </span>
 
         {/* Title + external icon */}
-        <span className="flex-1 min-w-0 text-xs font-medium text-foreground leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+        <span className="flex-1 min-w-0 text-xs font-medium text-foreground leading-snug line-clamp-2 group-hover:text-accent-foreground transition-colors">
           {title}
         </span>
 
         {index !== undefined && (
-          <span className="shrink-0 flex h-4 w-4 items-center justify-center rounded-full bg-accent-subtle text-accent text-[10px] font-semibold leading-none">
+          <span className="shrink-0 flex h-4 w-4 items-center justify-center rounded-full bg-accent-subtle text-accent-foreground text-[10px] font-semibold leading-none">
             {index}
           </span>
         )}
@@ -77,7 +77,7 @@ export function SourceCard({ title, url, favicon, snippet, index, className }: S
 
       {/* Snippet */}
       {snippet && (
-        <p className="text-[11px] text-fg-secondary leading-relaxed line-clamp-2">{snippet}</p>
+        <p className="text-xs text-fg-secondary leading-relaxed line-clamp-2">{snippet}</p>
       )}
     </a>
   );

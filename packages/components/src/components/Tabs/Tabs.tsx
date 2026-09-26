@@ -46,7 +46,7 @@ export function TabsTrigger({ value, children, variant = 'line', disabled, class
     'px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset',
     'data-[state=active]:border-foreground data-[state=active]:text-foreground',
-    'data-[state=inactive]:border-transparent data-[state=inactive]:text-fg-secondary hover:text-foreground hover:bg-surface',
+    'data-[state=inactive]:border-transparent data-[state=inactive]:text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
   );
 
   const pillClasses = cn(

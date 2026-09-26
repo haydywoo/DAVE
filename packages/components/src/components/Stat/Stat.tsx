@@ -35,8 +35,8 @@ export function Stat({ label, value, change, changeLabel, icon, sparkline, class
             <div className="flex items-center gap-1.5">
               <span className={cn(
                 'inline-flex items-center gap-0.5 text-xs font-semibold',
-                isPositive && 'text-success',
-                isNegative && 'text-error',
+                isPositive && 'text-success-foreground',
+                isNegative && 'text-error-foreground',
               )}>
                 {isPositive ? (
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

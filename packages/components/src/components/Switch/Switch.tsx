@@ -54,11 +54,12 @@ export function Switch({
         'shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
         'bg-border data-[state=checked]:bg-accent',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
-        'disabled:cursor-not-allowed disabled:opacity-40',
+        'disabled:cursor-not-allowed',
+        !label && !description && 'disabled:opacity-40',
       )}
     >
       <RadixSwitch.Thumb
-        className={cn(thumbSizes[size], 'block rounded-full bg-white transition-transform', 'data-[state=unchecked]:translate-x-0')}
+        className={cn(thumbSizes[size], 'block rounded-full bg-white shadow-control transition-transform', 'data-[state=unchecked]:translate-x-0')}
       />
     </RadixSwitch.Root>
   );

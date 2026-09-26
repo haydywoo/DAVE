@@ -124,7 +124,7 @@ export function ToastAction({ children, altText, onClick, className }: ToastActi
       onClick={onClick}
       className={cn(
         'inline-flex items-center justify-center rounded-[3px] border border-border bg-transparent px-2.5 py-1 text-xs font-semibold text-foreground transition-colors',
-        'hover:bg-surface hover:border-border-strong',
+        'hover:bg-surface-hovered hover:border-border-strong',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-card',
         className,
       )}

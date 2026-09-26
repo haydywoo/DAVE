@@ -61,7 +61,7 @@ export function RadioItem({ value, children, label, description, disabled, id }:
         value={value}
         disabled={disabled}
         className={cn(
-          'mt-0.5 h-4 w-4 shrink-0 rounded-full border border-border bg-card',
+          'mt-0.5 h-4 w-4 shrink-0 rounded-full border border-border-strong bg-card shadow-control',
           'transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
           'data-[state=checked]:border-accent data-[state=checked]:bg-accent',
           disabled ? 'cursor-not-allowed' : 'cursor-pointer',

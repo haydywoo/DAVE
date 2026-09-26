@@ -64,7 +64,7 @@ export function FormLabel({ children, className }: FormLabelProps) {
       )}
     >
       {children}
-      {required && <span className="ml-0.5 text-error" aria-hidden="true">*</span>}
+      {required && <span className="ml-0.5 text-error-foreground" aria-hidden="true">*</span>}
     </label>
   );
 }

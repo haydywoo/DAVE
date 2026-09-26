@@ -131,7 +131,7 @@ export function NavbarLink({
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         active
           ? 'text-foreground font-semibold bg-surface'
-          : 'text-fg-secondary hover:text-foreground hover:bg-surface',
+          : 'text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
         className,
       )}
       {...props}
@@ -218,7 +218,7 @@ export function NavbarMenuButton({ open = false, onClick, className }: NavbarMen
       onClick={onClick}
       className={cn(
         'flex md:hidden h-8 w-8 items-center justify-center rounded-[3px]',
-        'text-fg-secondary hover:bg-surface hover:text-foreground transition-colors',
+        'text-fg-secondary hover:bg-surface-hovered hover:text-foreground transition-colors',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         className,
       )}
@@ -285,7 +285,7 @@ export function NavbarMobileLink({
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         active
           ? 'text-foreground font-semibold bg-surface'
-          : 'text-fg-secondary hover:text-foreground hover:bg-surface',
+          : 'text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
         className,
       )}
       {...props}

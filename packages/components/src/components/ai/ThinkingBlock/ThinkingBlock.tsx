@@ -28,7 +28,7 @@ export function ThinkingBlock({
         {/* Header */}
         <CollapsibleTrigger showChevron={false} className="flex w-full items-center gap-2 px-3 py-2 text-left">
           {isStreaming ? (
-            <Spinner size="xs" className="shrink-0 text-accent" />
+            <Spinner size="xs" className="shrink-0 text-accent-foreground" />
           ) : (
             <span className="shrink-0 flex items-center text-fg-secondary transition-transform duration-200 [[data-state=open]_&]:rotate-90">
               <svg

@@ -30,8 +30,8 @@ const sizesWithLabel: Record<CopyButtonSize, string> = {
 };
 
 const variants: Record<CopyButtonVariant, string> = {
-  ghost:   'text-fg-secondary hover:text-foreground hover:bg-surface',
-  outline: 'border border-border text-fg-secondary hover:text-foreground hover:bg-surface hover:border-border-strong',
+  ghost:   'text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
+  outline: 'border border-border text-fg-secondary hover:text-foreground hover:bg-surface-hovered hover:border-border-strong',
   solid:   'bg-surface border border-border text-fg-secondary hover:text-foreground hover:bg-border',
 };
 

@@ -64,7 +64,7 @@ export function ModelSelector({ models, value, onValueChange, placeholder = 'Sel
           className={cn(
             'inline-flex items-center gap-1.5 rounded-[3px] border border-border bg-card px-2.5 py-1.5',
             'text-sm text-foreground transition-colors',
-            'hover:bg-surface hover:border-border-strong',
+            'hover:bg-surface-hovered hover:border-border-strong',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
             className,
           )}

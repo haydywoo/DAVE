@@ -49,8 +49,8 @@ const dots: Record<BadgeVariant, string> = {
 };
 
 const sizes: Record<BadgeSize, string> = {
-  xs: 'px-1 py-px text-[9px] leading-none gap-1',
-  sm: 'px-1.5 py-0.5 text-[10px] leading-none gap-1',
+  xs: 'px-1 py-px text-[10px] leading-none gap-1',
+  sm: 'px-1.5 py-0.5 text-[11px] leading-none gap-1',
   md: 'px-2.5 py-1 text-xs leading-none gap-1.5',
   lg: 'px-3 py-1.5 text-sm leading-none gap-1.5',
 };

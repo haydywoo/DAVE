@@ -42,7 +42,7 @@ function StepIndicator({ index, status }: IndicatorProps) {
       className={cn(
         'flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 text-sm font-semibold transition-colors',
         status === 'complete' && 'bg-accent border-accent text-accent-on',
-        status === 'current'  && 'bg-card border-accent text-accent',
+        status === 'current'  && 'bg-card border-accent text-accent-foreground',
         status === 'upcoming' && 'bg-card border-border text-fg-secondary',
       )}
     >

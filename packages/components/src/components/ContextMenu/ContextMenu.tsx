@@ -23,7 +23,7 @@ const surfaceClasses = [
 // Shared item base classes
 const itemBase = [
   'relative flex cursor-default select-none items-center gap-2 rounded-[2px] px-2.5 py-1.5 outline-none transition-colors',
-  'focus:bg-surface',
+  'focus:bg-surface-hovered',
 ].join(' ');
 
 // ─── Content ──────────────────────────────────────────────────────────────────
@@ -76,7 +76,7 @@ export function ContextMenuItem({
       disabled={disabled}
       className={cn(
         itemBase,
-        destructive ? 'text-error focus:bg-error-subtle focus:text-error' : 'text-foreground',
+        destructive ? 'text-error-foreground focus:bg-error-subtle focus:text-error-foreground' : 'text-foreground',
         disabled && 'pointer-events-none opacity-40',
         className,
       )}
@@ -121,12 +121,12 @@ export function ContextMenuCheckboxItem({
       disabled={disabled}
       className={cn(
         'relative flex cursor-default select-none items-center gap-2 rounded-[2px] pl-8 pr-2.5 py-1.5 outline-none transition-colors',
-        'text-foreground focus:bg-surface',
+        'text-foreground focus:bg-surface-hovered',
         disabled && 'pointer-events-none opacity-40',
         className,
       )}
     >
-      <span className="absolute left-2 flex h-4 w-4 items-center justify-center text-accent">
+      <span className="absolute left-2 flex h-4 w-4 items-center justify-center text-accent-foreground">
         <RadixContextMenu.ItemIndicator>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M20 6 9 17l-5-5" />
@@ -166,12 +166,12 @@ export function ContextMenuRadioItem({
       disabled={disabled}
       className={cn(
         'relative flex cursor-default select-none items-center gap-2 rounded-[2px] pl-8 pr-2.5 py-1.5 outline-none transition-colors',
-        'text-foreground focus:bg-surface',
+        'text-foreground focus:bg-surface-hovered',
         disabled && 'pointer-events-none opacity-40',
         className,
       )}
     >
-      <span className="absolute left-2 flex h-4 w-4 items-center justify-center text-accent">
+      <span className="absolute left-2 flex h-4 w-4 items-center justify-center text-accent-foreground">
         <RadixContextMenu.ItemIndicator>
           <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true">
             <circle cx="4" cy="4" r="4" fill="currentColor" />
@@ -217,7 +217,7 @@ export function ContextMenuSubTrigger({ children, icon, className }: { children:
     <RadixContextMenu.SubTrigger
       className={cn(
         itemBase,
-        'text-foreground focus:bg-surface data-[state=open]:bg-surface',
+        'text-foreground focus:bg-surface-hovered data-[state=open]:bg-surface-hovered',
         className,
       )}
     >

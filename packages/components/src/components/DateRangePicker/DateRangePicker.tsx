@@ -160,10 +160,10 @@ function MonthGrid({
                   isEndpoints
                     ? 'bg-accent text-accent-on font-semibold'
                     : isCurrent && inMonth
-                    ? 'border border-accent text-accent font-semibold hover:bg-accent-subtle'
+                    ? 'border border-accent text-accent-foreground font-semibold hover:bg-accent-subtle'
                     : inMonth
-                    ? 'text-foreground hover:bg-surface'
-                    : 'text-fg-secondary hover:bg-surface',
+                    ? 'text-foreground hover:bg-surface-hovered'
+                    : 'text-fg-secondary hover:bg-surface-hovered',
                 )}
               >
                 {format(date, 'd')}
@@ -252,7 +252,7 @@ export function RangeCalendar({
           type="button"
           onClick={() => setLeftMonth((m) => subMonths(m, 1))}
           aria-label="Previous month"
-          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
+          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface-hovered hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <ChevronLeft />
         </button>
@@ -266,7 +266,7 @@ export function RangeCalendar({
           type="button"
           onClick={() => setLeftMonth((m) => addMonths(m, 1))}
           aria-label="Next month"
-          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
+          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface-hovered hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <ChevronRight />
         </button>
@@ -438,9 +438,9 @@ export function DateRangePicker({
             aria-haspopup="dialog"
             aria-expanded={open}
             className={cn(
-              'relative flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-left transition-colors',
+              'relative flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-left shadow-control transition-[color,background-color,border-color,box-shadow] duration-150',
               'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
-              'disabled:cursor-not-allowed disabled:bg-surface disabled:opacity-40',
+              'disabled:cursor-not-allowed disabled:opacity-40',
               error ? 'border-error bg-error-subtle focus-visible:ring-error' : 'border-border',
               triggerSizes[size],
             )}

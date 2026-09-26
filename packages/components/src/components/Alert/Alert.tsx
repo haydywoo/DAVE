@@ -12,7 +12,7 @@ export interface AlertProps {
 }
 
 const styles: Record<AlertVariant, { container: string; icon: string }> = {
-  info:    { container: 'bg-card border border-border border-l-[3px] border-l-accent',   icon: 'text-accent'   },
+  info:    { container: 'bg-card border border-border border-l-[3px] border-l-accent',   icon: 'text-accent-foreground'   },
   success: { container: 'bg-card border border-border border-l-[3px] border-l-success', icon: 'text-success'  },
   warning: { container: 'bg-card border border-border border-l-[3px] border-l-warning', icon: 'text-warning'  },
   error:   { container: 'bg-card border border-border border-l-[3px] border-l-error',   icon: 'text-error'    },

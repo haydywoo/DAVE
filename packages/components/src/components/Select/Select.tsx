@@ -45,17 +45,17 @@ const iconOnlySizes: Record<SelectSize, string> = {
 
 const triggerVariants: Record<SelectVariant, string> = {
   outline:
-    'border-border bg-card text-foreground ' +
+    'border-border bg-card text-foreground shadow-control ' +
     'data-[placeholder]:text-fg-secondary ' +
-    'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
+    'disabled:cursor-not-allowed disabled:opacity-40',
   secondary:
-    'border-border bg-card text-foreground ' +
-    'hover:bg-surface data-[state=open]:bg-surface ' +
+    'border-border bg-card text-foreground shadow-control ' +
+    'hover:bg-surface-hovered data-[state=open]:bg-surface-hovered ' +
     'data-[placeholder]:text-fg-secondary ' +
     'disabled:cursor-not-allowed disabled:opacity-40',
   ghost:
     'border-transparent bg-transparent text-foreground ' +
-    'hover:bg-surface data-[state=open]:bg-surface ' +
+    'hover:bg-surface-hovered data-[state=open]:bg-surface-hovered ' +
     'data-[placeholder]:text-fg-secondary ' +
     'disabled:cursor-not-allowed disabled:opacity-40',
 };
@@ -86,7 +86,7 @@ export function Select({
       <RadixSelect.Trigger
         id={id}
         className={cn(
-          'inline-flex items-center rounded-[3px] border transition-colors',
+          'inline-flex items-center rounded-[3px] border transition-[color,background-color,border-color,box-shadow] duration-150',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
           iconOnly ? 'justify-center' : 'justify-between gap-2',
           triggerVariants[variant],
@@ -152,7 +152,7 @@ export function SelectItem({ value, children, disabled, icon }: SelectItemProps)
       disabled={disabled}
       className={cn(
         'relative flex cursor-default select-none items-center gap-2 rounded-[2px] py-1.5 pl-2.5 pr-7 text-sm text-foreground outline-none transition-colors',
-        'focus:bg-surface',
+        'focus:bg-surface-hovered',
         'data-[state=checked]:font-semibold data-[state=checked]:text-accent-foreground',
         disabled && 'pointer-events-none opacity-40',
       )}
