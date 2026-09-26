@@ -24,6 +24,8 @@ Components glow-up. Requires a matching `@haydywoo/dave-tokens` release — the 
 - **Minimum text sizes** — Badge `xs` 9→10px, `sm` 10→11px; TagInput `sm` tags and FileAttachment sizes 10→11px; SourceCard snippet 11→12px.
 - **Colours docs page** — swatches render from live CSS variables (theme-aware) and list alias mappings instead of stale hex values.
 - **Docs Tailwind config uses `darkMode: 'class'`**; consumer guide adds the Tailwind 4 `@custom-variant dark` line.
+- **CodeBlock follows the theme** — Shiki renders `github-light` and `github-dark` together (`defaultColor: false`); a `.dark` selector picks the palette. Frame, label and line numbers use tokens instead of hardcoded GitHub hex. Docs MDX fences (`rehype-pretty-code`) and `DocCodeBlock` match.
+- **Tokens package build** — `dist/tokens.css` is now a copy of `tokens.css`. The previous style-dictionary step compiled a stale JSON palette and could overwrite the published file on any workspace build; its config, JSON sources and devDependency are removed.
 
 ### Fixed
 - **Destructive button contrast** — was `text-error-foreground` on `bg-error` (1.9:1). Now white on red, 5.2:1 light / 4.8:1 dark.
@@ -36,6 +38,7 @@ Components glow-up. Requires a matching `@haydywoo/dave-tokens` release — the 
 - **`dark:` variants followed the OS, not the theme toggle** (Table scroll shadows, docs Preview tabs).
 - **Hand-rolled destructive buttons** in docs, settings demo and Storybook replaced with `variant="destructive"`.
 - **Theming docs** — dark mode section claimed DAVE ships light tokens only; rewritten to describe the `.dark` palette.
+- **Theming docs** — border radius section described a `--radius` token that doesn't exist; now documents the fixed 3px / 6px radii.
 
 ## [0.2.0] — 2026-05-16
 
