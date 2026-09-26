@@ -64,25 +64,7 @@ To customise dark mode, override primitives inside `.dark`, the same way you wou
 
 ## Border radius
 
-DAVE uses a subtle 3px radius on most elements. To apply a different radius system-wide, set the `--radius` primitive and reference it in your Tailwind config:
-
-```css
-:root {
-  --radius: 8px; /* default is 3px */
-}
-```
-
-Then update your `tailwind.config.js` to use it:
-
-```js
-theme: {
-  extend: {
-    borderRadius: {
-      DEFAULT: 'var(--radius)',
-    },
-  },
-},
-```
+Radii are fixed in the components rather than tokenised: `3px` on controls (buttons, inputs, badges, tags) and `6px` on surfaces (cards, popovers, dialogs). They can't currently be themed from CSS — to change an individual instance, pass a `className` such as `rounded-[8px]`.
 
 ## What not to override
 
