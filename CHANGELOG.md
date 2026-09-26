@@ -5,6 +5,38 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-09-26
+
+Components glow-up. Requires a matching `@haydywoo/dave-tokens` release — the components now reference new tokens.
+
+### Added
+- **Elevation tokens** — `--shadow-control` (bordered controls: secondary buttons, inputs, triggers, radio, switch thumb) and `--shadow-solid` (filled buttons and checked checkboxes: 1px top highlight + drop). Mapped as `shadow-control` / `shadow-solid`.
+- **Motion token** — `--ease-standard` is now the default transition timing function; `tokens.css` includes a `prefers-reduced-motion` block that collapses transitions and enter/exit animations (spinners excluded).
+- **`surface-hovered` Tailwind mapping** — the existing `--color-surface-hovered` token is now exposed as `bg-surface-hovered`.
+- **Button `destructive` variant documented** — shown in the Variants demo and props table.
+
+### Changed
+- **One accent across light and dark** — `--accent-9` is `oklch(50% 0.20 265)` in both modes (was a dark navy in light, a brighter blue in dark). Hover moved to `--accent-10`.
+- **Hover / highlight states lift in dark mode** — 48 `hover:` / `focus:` / open states across the library moved from `bg-surface` (darker than cards in dark mode) to `bg-surface-hovered`.
+- **Press feedback** — buttons nudge 1px on `:active` instead of dropping to 80% opacity. Secondary button sits on `bg-card` with a control shadow (was `bg-background`, which read as a hole in dark mode).
+- **Disabled state is `opacity-40` everywhere** — Input, Textarea, Select, Combobox, OTPInput, NumberInput, DatePicker, DateRangePicker, FileInput previously swapped to `bg-surface` + disabled text, which was indistinguishable from enabled in dark mode.
+- **Checkbox** — custom-drawn box, tick and indeterminate dash on top of the native input (`appearance-none`), so it follows tokens. API unchanged.
+- **Minimum text sizes** — Badge `xs` 9→10px, `sm` 10→11px; TagInput `sm` tags and FileAttachment sizes 10→11px; SourceCard snippet 11→12px.
+- **Colours docs page** — swatches render from live CSS variables (theme-aware) and list alias mappings instead of stale hex values.
+- **Docs Tailwind config uses `darkMode: 'class'`**; consumer guide adds the Tailwind 4 `@custom-variant dark` line.
+
+### Fixed
+- **Destructive button contrast** — was `text-error-foreground` on `bg-error` (1.9:1). Now white on red, 5.2:1 light / 4.8:1 dark.
+- **Accent and status text contrast in dark mode** — 16 `text-accent` uses (links, calendar today, stepper, menu checkmarks, AI components) and solid-colour status text (Dropdown/ContextMenu destructive items, FormField asterisk, Stat change) moved to their `-foreground` tokens.
+- **`fg-subdued` inverted in light mode** — was darker than `fg-secondary`; now `--neutral-8` (54%), lighter than secondary and ≥4.5:1 on all surfaces.
+- **Incomplete dark scales** — dark mode now defines neutral 5/7/8, accent 1/4/5/6/10/12, and status 2/10 steps instead of inheriting light values. Dark neutral scale is monotonic.
+- **Dark status subtle backgrounds** — raised from 14% to 24% lightness so solid badges and tinted alerts read against cards.
+- **Double disabled fade** — labelled Switch and Radio items faded twice (wrapper + control).
+- **Radio** — unchecked border now `border-strong`, matching Checkbox.
+- **`dark:` variants followed the OS, not the theme toggle** (Table scroll shadows, docs Preview tabs).
+- **Hand-rolled destructive buttons** in docs, settings demo and Storybook replaced with `variant="destructive"`.
+- **Theming docs** — dark mode section claimed DAVE ships light tokens only; rewritten to describe the `.dark` palette.
+
 ## [0.2.0] — 2026-05-16
 
 First npm publish since `0.1.0` (2026-04-20). All `[Unreleased]` entries below ship in this release — see those sections for the component-by-component detail across the April and May work.
