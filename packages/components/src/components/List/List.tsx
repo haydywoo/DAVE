@@ -90,7 +90,7 @@ export function ListItem({ children, onClick, href, selected, className }: ListI
     padding,
     'block w-full text-left text-foreground transition-colors',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent',
-    selected ? 'bg-accent-subtle' : 'hover:bg-surface',
+    selected ? 'bg-accent-subtle' : 'hover:bg-surface-hovered',
     className,
   );
 

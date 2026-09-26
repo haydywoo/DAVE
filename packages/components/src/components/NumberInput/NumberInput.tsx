@@ -136,7 +136,7 @@ export function NumberInput({
         </label>
       )}
 
-      <div className={cn('flex rounded-[3px] border overflow-hidden', error ? 'border-error' : 'border-border')}>
+      <div className={cn('flex rounded-[3px] border overflow-hidden shadow-control', error ? 'border-error' : 'border-border')}>
         {/* Decrement */}
         <button
           type="button"
@@ -166,7 +166,7 @@ export function NumberInput({
           className={cn(
             'flex-1 min-w-0 bg-card text-foreground text-center font-[family-name:var(--font-body)]',
             'placeholder:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent transition-colors',
-            'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled',
+            'disabled:cursor-not-allowed disabled:opacity-40',
             error && 'bg-error-subtle',
             s.input,
           )}

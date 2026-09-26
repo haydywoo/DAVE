@@ -96,7 +96,7 @@ export function FileInput({
         className={cn(
           'inline-flex shrink-0 items-center justify-center rounded-r-[3px] border border-l-0 bg-surface font-[family-name:var(--font-body)] font-medium text-foreground transition-colors',
           'hover:bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
-          'disabled:cursor-not-allowed disabled:text-fg-disabled',
+          'disabled:cursor-not-allowed disabled:opacity-40',
           error ? 'border-error' : 'border-border',
           btnSizes[size],
         )}

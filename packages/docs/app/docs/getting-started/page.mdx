@@ -41,9 +41,13 @@ Replace `app/globals.css` with the DAVE setup. This file is doing three things a
 @source "../node_modules/@haydywoo/dave-react/dist/**/*.js";
 @source "../node_modules/@haydywoo/dave-charts/dist/**/*.js";
 
+/* DAVE's dark mode is class-based (.dark on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-background:           var(--color-background);
   --color-surface:              var(--color-surface);
+  --color-surface-hovered:      var(--color-surface-hovered);
   --color-card:                 var(--color-card);
   --color-raised:               var(--color-raised);
 
@@ -90,6 +94,10 @@ Replace `app/globals.css` with the DAVE setup. This file is doing three things a
 
   --shadow-card:   var(--shadow-card);
   --shadow-raised: var(--shadow-raised);
+  --shadow-control: var(--shadow-control);
+  --shadow-solid:   var(--shadow-solid);
+
+  --default-transition-timing-function: var(--ease-standard);
 
   --font-display: var(--font-display, ui-sans-serif), sans-serif;
   --font-body:    var(--font-body,    ui-sans-serif), sans-serif;

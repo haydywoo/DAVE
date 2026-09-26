@@ -33,7 +33,7 @@ const containerSizes: Record<TagInputSize, string> = {
 };
 
 const tagSizes: Record<TagInputSize, string> = {
-  sm: 'px-1.5 py-0 text-[10px]',
+  sm: 'px-1.5 py-0 text-[11px]',
   md: 'px-2 py-0.5 text-xs',
   lg: 'px-2.5 py-1 text-sm',
   xl: 'px-3 py-1 text-sm',
@@ -135,7 +135,7 @@ export function TagInput({
 
       <div
         className={cn(
-          'flex flex-wrap items-center w-full rounded-[3px] border bg-card transition-colors',
+          'flex flex-wrap items-center w-full rounded-[3px] border bg-card shadow-control transition-[color,background-color,border-color,box-shadow] duration-150',
           'focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-0 focus-within:border-accent',
           containerSizes[size],
           error

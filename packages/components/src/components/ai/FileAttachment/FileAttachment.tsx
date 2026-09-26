@@ -200,7 +200,7 @@ export function FileAttachment({
       <div className="flex flex-col min-w-0">
         <span className="text-xs font-medium text-foreground truncate max-w-[140px]">{name}</span>
         {size !== undefined && (
-          <span className="text-[10px] text-fg-secondary">{formatBytes(size)}</span>
+          <span className="text-[11px] text-fg-secondary">{formatBytes(size)}</span>
         )}
       </div>
 

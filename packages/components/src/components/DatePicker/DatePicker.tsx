@@ -131,10 +131,10 @@ export function DatePicker({
         <RadixPopover.Anchor asChild>
           <div
             className={cn(
-              'relative flex w-full items-center rounded-[3px] border bg-card transition-colors',
+              'relative flex w-full items-center rounded-[3px] border bg-card shadow-control transition-[color,background-color,border-color,box-shadow] duration-150',
               'focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-0 focus-within:border-accent',
               error ? 'border-error bg-error-subtle focus-within:ring-error' : 'border-border',
-              disabled && 'opacity-40 cursor-not-allowed bg-surface',
+              disabled && 'opacity-40 cursor-not-allowed',
             )}
           >
             <input

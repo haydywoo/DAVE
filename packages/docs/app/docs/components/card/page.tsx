@@ -25,7 +25,7 @@ export default function CardPage() {
     <div>
       <h1 className="font-display font-semibold text-4xl text-foreground mb-2">Card</h1>
       <p className="text-sm text-fg-secondary leading-relaxed mb-10 max-w-xl">
-        Surface container with white background and subtle border. Compose with sub-components or use as a bare wrapper.
+        Surface container with a raised card background and subtle border. Compose with sub-components or use as a bare wrapper.
       </p>
 
       <AnatomyBlock>{`<Card>

@@ -49,7 +49,7 @@ export function ToolCall({ name, input, status = 'running', defaultOpen = false,
       <div className={cn('rounded-[6px] border border-border bg-surface overflow-hidden', className)}>
         <CollapsibleTrigger showChevron={false} className={cn('flex w-full items-center gap-2 px-3 py-2.5 text-left', !hasInput && 'cursor-default')}>
           {/* Tool icon */}
-          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[3px] bg-accent-subtle text-accent">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[3px] bg-accent-subtle text-accent-foreground">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>
@@ -58,7 +58,7 @@ export function ToolCall({ name, input, status = 'running', defaultOpen = false,
           <span className="flex-1 font-mono text-xs font-medium text-foreground truncate">{name}</span>
 
           <div className="flex items-center gap-2 shrink-0">
-            {isRunning && <Spinner size="xs" className="text-accent" />}
+            {isRunning && <Spinner size="xs" className="text-accent-foreground" />}
             <Badge variant={variant} size="sm">{label}</Badge>
             {hasInput && (
               <svg

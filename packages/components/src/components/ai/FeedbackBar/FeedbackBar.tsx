@@ -52,9 +52,9 @@ function IconButton({ tooltip, onClick, active, className, children }: {
         aria-pressed={active}
         className={cn(
           'inline-flex h-7 w-7 items-center justify-center rounded-[3px] transition-colors',
-          'text-fg-secondary hover:text-foreground hover:bg-surface',
+          'text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
-          active && 'text-accent hover:text-accent',
+          active && 'text-accent-foreground hover:text-accent-foreground',
           className,
         )}
       >

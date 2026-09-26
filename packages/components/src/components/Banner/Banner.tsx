@@ -19,7 +19,7 @@ export interface BannerProps {
 }
 
 const styles: Record<BannerVariant, { root: string; icon: string }> = {
-  info:    { root: 'bg-accent/10 border-b border-accent/30',       icon: 'text-accent'                          },
+  info:    { root: 'bg-accent/10 border-b border-accent/30',       icon: 'text-accent-foreground'                          },
   success: { root: 'bg-success/10 border-b border-success/30',     icon: 'text-success'                         },
   warning: { root: 'bg-warning-subtle border-b border-warning-border', icon: 'text-warning-foreground' },
   error:   { root: 'bg-error/10 border-b border-error/30',         icon: 'text-error'                           },

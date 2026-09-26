@@ -57,7 +57,7 @@ export function SemanticTokenGroup({ label, tokens }: SemanticGroupProps) {
           <td className="px-4 py-3 w-8">
             <div
               className="h-6 w-6 rounded-[3px] border border-black/10 shrink-0"
-              style={{ backgroundColor: value }}
+              style={{ backgroundColor: `var(${token})` }}
             />
           </td>
           <td className="px-4 py-3 font-code text-xs text-foreground whitespace-nowrap">{token}</td>

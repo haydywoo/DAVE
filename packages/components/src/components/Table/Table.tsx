@@ -136,7 +136,7 @@ export function TableRow({ children, selected, onClick, className }: TableRowPro
       className={cn(
         'transition-colors',
         selected && 'bg-accent-subtle',
-        onClick && !selected && 'cursor-pointer hover:bg-surface',
+        onClick && !selected && 'cursor-pointer hover:bg-surface-hovered',
         onClick && selected && 'cursor-pointer hover:bg-accent-subtle',
         onClick && 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent',
         className,

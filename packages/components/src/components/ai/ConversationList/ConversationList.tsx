@@ -91,7 +91,7 @@ function ConversationItem({
         'transition-colors',
         isActive
           ? 'bg-accent-subtle text-accent-foreground'
-          : 'text-foreground hover:bg-surface',
+          : 'text-foreground hover:bg-surface-hovered',
       )}
       role="button"
       tabIndex={0}
@@ -137,7 +137,7 @@ function ConversationItem({
                 onClick={e => { e.stopPropagation(); onDelete(conversation.id); }}
                 className={cn(
                   'shrink-0 rounded p-1 -mr-1',
-                  'text-fg-secondary hover:text-error hover:bg-error-subtle transition-colors',
+                  'text-fg-secondary hover:text-error-foreground hover:bg-error-subtle transition-colors',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
                 )}
               >

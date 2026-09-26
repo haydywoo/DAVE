@@ -129,7 +129,7 @@ export function NavItem({
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
         active
           ? 'selected font-medium'
-          : 'text-fg-secondary hover:text-foreground hover:bg-surface',
+          : 'text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
         disabled && 'pointer-events-none opacity-40',
         isIconOnly
           ? cn('justify-center self-center', iconOnlySizes[size])
@@ -214,7 +214,7 @@ export function NavGroup({
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1',
           active
             ? 'bg-surface text-foreground font-semibold'
-            : 'text-fg-secondary hover:text-foreground hover:bg-surface',
+            : 'text-fg-secondary hover:text-foreground hover:bg-surface-hovered',
           depth === 0 && cn('border-l-2', active ? 'border-accent' : 'border-transparent'),
         )}
       >

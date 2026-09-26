@@ -25,7 +25,7 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
 }
 
 const base =
-  'w-full rounded-[3px] border bg-card text-foreground font-[family-name:var(--font-body)] transition-colors placeholder:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border';
+  'w-full rounded-[3px] border bg-card text-foreground shadow-control font-[family-name:var(--font-body)] transition-[color,background-color,border-color,box-shadow] duration-150 placeholder:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent disabled:cursor-not-allowed disabled:opacity-40';
 
 const sizes: Record<InputSize, string> = {
   sm: 'h-7 text-xs',
@@ -151,7 +151,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
           sizes[size],
           paddingLeft[size][leftIcon ? 'icon' : 'default'],
           paddingRight[size][hasRightSlot ? 'icon' : 'default'],
-          error ? 'border-error bg-error-subtle focus-visible:ring-error focus-visible:border-error' : 'border-border',
+          error ? 'border-error bg-error-subtle focus-visible:ring-error focus-visible:border-error' : 'border-border enabled:hover:[&:not(:focus)]:border-border-strong',
           hasPrefix && 'rounded-l-none border-l-0',
           hasSuffix && 'rounded-r-none border-r-0',
           className,

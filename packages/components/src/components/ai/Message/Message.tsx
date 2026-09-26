@@ -83,7 +83,7 @@ const markdownComponents: React.ComponentProps<typeof ReactMarkdown>['components
   h2({ children })       { return <h2 className="text-base font-semibold mt-4 mb-2 first:mt-0">{children}</h2>; },
   h3({ children })       { return <h3 className="text-sm font-semibold mt-3 mb-1 first:mt-0">{children}</h3>; },
   hr()                   { return <hr className="my-4 border-border" />; },
-  a({ href, children })  { return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 hover:no-underline">{children}</a>; },
+  a({ href, children })  { return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent-foreground underline underline-offset-2 hover:no-underline">{children}</a>; },
   strong({ children })   { return <strong className="font-semibold text-foreground">{children}</strong>; },
   table({ children })    { return <div className="my-3 overflow-x-auto rounded-[3px] border border-border"><table className="w-full text-sm">{children}</table></div>; },
   thead({ children })    { return <thead className="bg-surface">{children}</thead>; },

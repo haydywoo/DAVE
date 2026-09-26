@@ -57,7 +57,7 @@ export const WithAlert: StoryObj = {
           <DialogClose asChild>
             <Button variant="secondary">Cancel</Button>
           </DialogClose>
-          <Button variant="primary" className="bg-error hover:bg-error-hover text-accent-on">Delete workspace</Button>
+          <Button variant="destructive">Delete workspace</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

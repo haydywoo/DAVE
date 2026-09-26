@@ -194,7 +194,7 @@ export function Calendar({
           type="button"
           onClick={navPrev}
           aria-label={navPrevLabel}
-          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
+          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface-hovered hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <ChevronLeft />
         </button>
@@ -204,14 +204,14 @@ export function Calendar({
             type="button"
             onClick={() => setView('months')}
             aria-label="Select month and year"
-            className="group flex items-center gap-1 text-sm font-semibold text-foreground hover:text-accent transition-colors focus-visible:outline-none"
+            className="group flex items-center gap-1 text-sm font-semibold text-foreground hover:text-accent-foreground transition-colors focus-visible:outline-none"
           >
             {format(viewMonth, 'MMMM yyyy')}
             <svg
               width="12" height="12" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
               aria-hidden="true"
-              className="text-fg-secondary group-hover:text-accent transition-colors"
+              className="text-fg-secondary group-hover:text-accent-foreground transition-colors"
             >
               <path d="m6 9 6 6 6-6" />
             </svg>
@@ -221,13 +221,13 @@ export function Calendar({
             type="button"
             onClick={() => setView('days')}
             aria-label="Back to day view"
-            className="group flex items-center gap-1 text-sm font-semibold text-foreground hover:text-accent transition-colors focus-visible:outline-none"
+            className="group flex items-center gap-1 text-sm font-semibold text-foreground hover:text-accent-foreground transition-colors focus-visible:outline-none"
           >
             <svg
               width="12" height="12" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
               aria-hidden="true"
-              className="text-fg-secondary group-hover:text-accent transition-colors"
+              className="text-fg-secondary group-hover:text-accent-foreground transition-colors"
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
@@ -239,7 +239,7 @@ export function Calendar({
           type="button"
           onClick={navNext}
           aria-label={navNextLabel}
-          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
+          className="touch-target flex h-7 w-7 items-center justify-center rounded-[3px] text-fg-secondary hover:bg-surface-hovered hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
         >
           <ChevronRight />
         </button>
@@ -286,10 +286,10 @@ export function Calendar({
                   isSelected
                     ? 'bg-accent text-accent-on font-semibold'
                     : isCurrentDay && inMonth
-                    ? 'border border-accent text-accent font-semibold hover:bg-accent-subtle'
+                    ? 'border border-accent text-accent-foreground font-semibold hover:bg-accent-subtle'
                     : inMonth
-                    ? 'text-foreground hover:bg-surface'
-                    : 'text-fg-secondary hover:bg-surface',
+                    ? 'text-foreground hover:bg-surface-hovered'
+                    : 'text-fg-secondary hover:bg-surface-hovered',
                 )}
               >
                 {format(date, 'd')}
@@ -324,8 +324,8 @@ export function Calendar({
                   isSelected
                     ? 'bg-accent text-accent-on font-semibold'
                     : isCurrent
-                    ? 'border border-accent text-accent hover:bg-accent-subtle'
-                    : 'text-foreground hover:bg-surface',
+                    ? 'border border-accent text-accent-foreground hover:bg-accent-subtle'
+                    : 'text-foreground hover:bg-surface-hovered',
                 )}
               >
                 {label}

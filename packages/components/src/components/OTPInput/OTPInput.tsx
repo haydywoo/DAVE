@@ -113,9 +113,9 @@ export function OTPInput({
   }
 
   const slotBase = cn(
-    'rounded-[3px] border bg-card text-center font-[family-name:var(--font-body)] font-semibold tabular-nums',
-    'transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
-    'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
+    'rounded-[3px] border bg-card shadow-control text-center font-[family-name:var(--font-body)] font-semibold tabular-nums',
+    'transition-[color,background-color,border-color,box-shadow] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
+    'disabled:cursor-not-allowed disabled:opacity-40',
     slotSizes[size],
     error ? 'border-error bg-error-subtle text-error-foreground' : 'border-border text-foreground',
   );

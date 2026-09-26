@@ -43,7 +43,7 @@ function getPages(page: number, pageCount: number, siblings: number): (number | 
 }
 
 const btnBase = 'inline-flex items-center justify-center rounded-[3px] text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 h-8 w-8';
-const btnDefault = 'text-fg-secondary hover:bg-surface hover:text-foreground';
+const btnDefault = 'text-fg-secondary hover:bg-surface-hovered hover:text-foreground';
 const btnActive  = 'bg-accent text-accent-on font-semibold';
 
 export function Pagination({

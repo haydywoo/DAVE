@@ -78,7 +78,7 @@ export function ChatContainer({ children, onScrollUp, className }: ChatContainer
             className={cn(
               'flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 shadow-raised',
               'text-xs font-medium text-foreground transition-colors',
-              'hover:bg-surface hover:border-border-strong',
+              'hover:bg-surface-hovered hover:border-border-strong',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent',
             )}
           >

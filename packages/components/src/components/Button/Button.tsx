@@ -18,15 +18,15 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 active:opacity-80';
+  'inline-flex items-center justify-center gap-2 font-semibold rounded-[3px] transition-[color,background-color,border-color,box-shadow,transform] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-40 active:translate-y-px';
 
 const variants: Record<ButtonVariant, string> = {
-  primary:   'bg-accent text-accent-on visited:text-accent-on hover:bg-accent-hover',
-  secondary: 'bg-background text-foreground visited:text-foreground border border-border hover:bg-surface hover:border-border-strong',
-  ghost:     'bg-transparent text-foreground visited:text-foreground hover:bg-surface',
+  primary:   'bg-accent text-accent-on visited:text-accent-on shadow-solid hover:bg-accent-hover',
+  secondary: 'bg-card text-foreground visited:text-foreground border border-border shadow-control hover:bg-surface-hovered hover:border-border-strong',
+  ghost:     'bg-transparent text-foreground visited:text-foreground hover:bg-surface-hovered',
   soft:      'bg-accent-subtle text-accent-foreground visited:text-accent-foreground hover:bg-accent-subtle-border',
-  link:      'bg-transparent text-accent visited:text-accent underline underline-offset-4 hover:text-accent-hover',
-  destructive: 'bg-error text-error-foreground visited:text-error-foreground hover:bg-error-hover',
+  link:      'bg-transparent text-accent-foreground visited:text-accent-foreground underline underline-offset-4 decoration-accent-border hover:decoration-current',
+  destructive: 'bg-error text-accent-on visited:text-accent-on shadow-solid hover:bg-error-hover',
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -65,7 +65,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
   return (
     <Comp
       ref={ref}
-      className={cn(base, variants[variant], variant !== 'link' && (isIconOnly ? iconSizes[size] : sizes[size]), className)}
+      className={cn(base, variants[variant], variant !== 'link' && (isIconOnly ? iconSizes[size] : sizes[size]), isLoading && 'disabled:opacity-100', className)}
       disabled={!asChild ? (disabled || isLoading) : undefined}
       aria-busy={isLoading || undefined}
       {...props}

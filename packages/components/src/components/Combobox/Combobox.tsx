@@ -145,9 +145,9 @@ export function Combobox({
           aria-haspopup="listbox"
           aria-expanded={open}
           className={cn(
-            'inline-flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-foreground transition-colors',
+            'inline-flex w-full items-center justify-between gap-2 rounded-[3px] border bg-card text-foreground shadow-control transition-[color,background-color,border-color,box-shadow] duration-150',
             'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus:border-accent',
-            'disabled:cursor-not-allowed disabled:bg-surface disabled:text-fg-disabled disabled:border-border',
+            'disabled:cursor-not-allowed disabled:opacity-40',
             error ? 'border-error' : 'border-border',
             triggerSizes[size],
             className,
@@ -280,7 +280,7 @@ function OptionItem({ opt, index, active, selected, onSelect, onHover, idPrefix 
       onClick={() => !opt.disabled && onSelect(opt.value)}
       className={cn(
         'relative flex cursor-default select-none items-center justify-between rounded-[2px] px-2.5 py-1.5 text-sm transition-colors',
-        active && !opt.disabled && 'bg-surface',
+        active && !opt.disabled && 'bg-surface-hovered',
         opt.disabled ? 'pointer-events-none opacity-40 text-fg-secondary' : 'text-foreground',
         selected && 'font-semibold text-accent-foreground',
       )}
