@@ -1,6 +1,6 @@
 {
   "name": "@haydywoo/dave-tokens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "DAVE design tokens — colours, shadows, radii as CSS custom properties. Source of truth for the DAVE design system.",
   "main": "./dist/tokens.css",
   "style": "./dist/tokens.css",
