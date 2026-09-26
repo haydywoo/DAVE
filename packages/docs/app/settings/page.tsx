@@ -466,7 +466,7 @@ function SecuritySection() {
                     </DialogHeader>
                     <DialogFooter>
                       <Button variant="secondary" onClick={() => setRevokeId(null)}>Cancel</Button>
-                      <Button variant="primary" className="bg-error hover:bg-error-hover" onClick={() => setRevokeId(null)}>
+                      <Button variant="destructive" onClick={() => setRevokeId(null)}>
                         Revoke token
                       </Button>
                     </DialogFooter>
@@ -811,7 +811,7 @@ function DangerSection() {
             </div>
             <Dialog open={deleteOpen} onOpenChange={open => { setDeleteOpen(open); if (!open) setConfirmText(''); }}>
               <DialogTrigger asChild>
-                <Button variant="primary" size="sm" className="shrink-0 bg-error hover:bg-error-hover">Delete account</Button>
+                <Button variant="destructive" size="sm" className="shrink-0">Delete account</Button>
               </DialogTrigger>
               <DialogContent size="sm">
                 <DialogHeader>
@@ -835,8 +835,7 @@ function DangerSection() {
                     Cancel
                   </Button>
                   <Button
-                    variant="primary"
-                    className="bg-error hover:bg-error-hover"
+                    variant="destructive"
                     disabled={confirmText !== 'delete my account'}
                     onClick={() => setDeleteOpen(false)}
                   >
@@ -1326,7 +1325,7 @@ function TeamSection() {
           </DialogHeader>
           <DialogFooter>
             <Button variant="secondary" onClick={() => setRemoveTarget(null)}>Cancel</Button>
-            <Button variant="primary" className="bg-error hover:bg-error-hover" onClick={handleRemove}>
+            <Button variant="destructive" onClick={handleRemove}>
               Remove member
             </Button>
           </DialogFooter>
@@ -1345,7 +1344,7 @@ function TeamSection() {
           <DialogBody>
             <div className="rounded-[3px] border border-border bg-surface divide-y divide-border">
               {ROLE_OPTIONS.filter(r => r.value !== 'owner').map(r => (
-                <label key={r.value} aria-label={r.label} className="flex items-start gap-3 px-3 py-2.5 cursor-pointer hover:bg-surface-hovered transition-colors">
+                <label key={r.value} aria-label={r.label} className="flex items-start gap-3 px-3 py-2.5 cursor-pointer interactive">
                   <input
                     type="radio"
                     name="role"
@@ -1476,7 +1475,7 @@ function SecurityTokensSection() {
                   </DialogHeader>
                   <DialogFooter>
                     <Button variant="secondary" onClick={() => setRevokeId(null)}>Cancel</Button>
-                    <Button variant="primary" className="bg-error hover:bg-error-hover" onClick={() => setRevokeId(null)}>
+                    <Button variant="destructive" onClick={() => setRevokeId(null)}>
                       Revoke token
                     </Button>
                   </DialogFooter>

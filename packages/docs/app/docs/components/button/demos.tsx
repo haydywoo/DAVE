@@ -24,13 +24,15 @@ export function ButtonDemos() {
 <Button variant="secondary">Secondary</Button>
 <Button variant="ghost">Ghost</Button>
 <Button variant="soft">Soft</Button>
-<Button variant="link">Link</Button>`}
+<Button variant="link">Link</Button>
+<Button variant="destructive">Delete</Button>`}
       >
         <Button variant="primary">Primary</Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="ghost">Ghost</Button>
         <Button variant="soft">Soft</Button>
         <Button variant="link">Link</Button>
+        <Button variant="destructive">Delete</Button>
       </Preview>
 
       <h3 className="font-semibold text-base text-foreground mt-8 mb-3">Sizes</h3>

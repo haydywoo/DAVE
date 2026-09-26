@@ -45,23 +45,22 @@ See the [Tokens](/docs/foundations/tokens) page for the full primitive and seman
 
 ## Dark mode
 
-DAVE ships light-mode tokens only. To add dark mode, wrap your overrides in a `prefers-color-scheme` query (or a `.dark` class if you're using a JS toggle):
+DAVE ships a full dark palette under a `.dark` class. Put the class on `<html>` — for example with `next-themes` using `attribute="class"` — and every semantic token switches over:
 
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background:       #0f0e0c;
-    --color-surface:          #1a1917;
-    --color-card:             #242220;
-    --color-border:           #2e2b27;
-    --color-border-strong:    #3d3a35;
-    --color-foreground:       #f7f5f0;
-    --color-foreground-secondary: #9e9890;
-  }
-}
+```tsx
+<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 ```
 
-Only the semantic aliases need overriding — status colours (success, warning, error) are intentionally fixed regardless of mode.
+The class must sit on `<html>`: semantic aliases are resolved at the root, so a `.dark` wrapper further down the tree won't re-theme its children.
+
+To customise dark mode, override primitives inside `.dark`, the same way you would for light:
+
+```css
+.dark {
+  --accent-9:  oklch(55% 0.20 265);   /* solid */
+  --accent-10: oklch(60% 0.20 265);   /* hover */
+}
+```
 
 ## Border radius
 

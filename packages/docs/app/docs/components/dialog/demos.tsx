@@ -70,7 +70,7 @@ export function DialogDemos() {
     </DialogBody>
     <DialogFooter>
       <DialogClose asChild><Button variant="secondary">Cancel</Button></DialogClose>
-      <Button className="bg-error hover:bg-error-hover text-accent-on">Delete workspace</Button>
+      <Button variant="destructive">Delete workspace</Button>
     </DialogFooter>
   </DialogContent>
 </Dialog>`}>
@@ -89,7 +89,7 @@ export function DialogDemos() {
             </DialogBody>
             <DialogFooter>
               <DialogClose asChild><Button variant="secondary">Cancel</Button></DialogClose>
-              <Button className="bg-error hover:bg-error-hover text-accent-on">Delete workspace</Button>
+              <Button variant="destructive">Delete workspace</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
