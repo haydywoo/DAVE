@@ -11,7 +11,10 @@ module.exports = {
       },
       colors: {
         background:   'var(--color-background)',
-        surface:      'var(--color-surface)',
+        surface: {
+          DEFAULT: 'var(--color-surface)',
+          hovered: 'var(--color-surface-hovered)',
+        },
         card:         'var(--color-card)',
         raised:       'var(--color-raised)',
         foreground:   'var(--color-foreground)',
@@ -75,6 +78,11 @@ module.exports = {
       boxShadow: {
         card:   'var(--shadow-card)',
         raised: 'var(--shadow-raised)',
+        control: 'var(--shadow-control)',
+        solid:   'var(--shadow-solid)',
+      },
+      transitionTimingFunction: {
+        DEFAULT: 'var(--ease-standard)',
       },
       keyframes: {
         'collapsible-down': {
