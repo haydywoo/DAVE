@@ -5,14 +5,13 @@
   "main": "./dist/tokens.css",
   "style": "./dist/tokens.css",
   "scripts": {
-    "build": "style-dictionary build --config style-dictionary.config.json",
+    "build": "mkdir -p dist && cp tokens.css dist/tokens.css",
     "clean": "rm -rf dist"
   },
   "keywords": [
     "design-tokens",
     "design-system",
-    "css-variables",
-    "dtcg"
+    "css-variables"
   ],
   "author": "Haydyn Phillips",
   "license": "MIT",
@@ -32,8 +31,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "style-dictionary": "^4.0.0"
   }
 }
