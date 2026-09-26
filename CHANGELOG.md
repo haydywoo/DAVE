@@ -5,6 +5,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.3.0] — 2026-09-26
+
+Publishes the components glow-up. The `[Unreleased] — 2026-09-26` entry below ships in this release.
+
+### Release-only changes (2026-09-26)
+- **`@haydywoo/dave-tokens` 0.1.0 → 0.2.0** — first token publish since 0.1.0. Required: `dave-react` 0.3.0 references the new `--shadow-control`, `--shadow-solid`, `--ease-standard` and `--color-surface-hovered` tokens. Consumers should add the new lines from the Getting Started `@theme inline` block (`--color-surface-hovered`, `--shadow-control`, `--shadow-solid`, `--default-transition-timing-function`) and the `@custom-variant dark` line; without them the components still render, just without the new shadows and lifted hovers.
+- **`@haydywoo/dave-react` 0.2.0 → 0.3.0.** `@haydywoo/dave-charts` stays at 0.2.0 — no changes.
+
 ## [Unreleased] — 2026-09-26
 
 Components glow-up. Requires a matching `@haydywoo/dave-tokens` release — the components now reference new tokens.
