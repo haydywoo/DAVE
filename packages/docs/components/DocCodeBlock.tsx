@@ -27,20 +27,19 @@ export function DocCodeBlock({ children, language, code, ...preProps }: DocCodeB
   const label = language ? (LANG_LABELS[language.toLowerCase()] ?? language) : null;
 
   return (
-    <div className="group relative rounded-[6px] overflow-hidden bg-[#0d1117] mb-6">
-      <div className="flex items-center justify-between px-4 py-2 bg-[#161b22] border-b border-white/10">
-        <span className="text-xs text-white/40 font-mono select-none">{label ?? ''}</span>
+    <div className="group relative rounded-[6px] overflow-hidden border border-border bg-surface mb-6">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-border">
+        <span className="text-xs text-fg-secondary font-mono select-none">{label ?? ''}</span>
         <CopyButton
           value={code}
           size="sm"
           variant="ghost"
-          className="opacity-0 group-hover:opacity-100 transition-opacity text-white/40 hover:text-white/80 hover:bg-white/10"
+          className="opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
         />
       </div>
       <pre
-        className="p-4 overflow-x-auto text-sm leading-relaxed font-mono m-0"
+        className="p-4 overflow-x-auto text-sm leading-relaxed font-mono m-0 text-foreground [&_span]:text-[color:var(--shiki-light)] [.dark_&_span]:text-[color:var(--shiki-dark)]"
         {...preProps}
-        style={{ color: '#e6edf3' }}
       >
         {children}
       </pre>
